@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Population : MonoBehaviour {
+public class Population {
 
 	public int totalPopulation;             // Population totale du pays
 
@@ -12,13 +12,4 @@ public class Population : MonoBehaviour {
 	private int repartitionTransports;      // Pourcentage de la population assignée aux transports
 	private int repartitionLoisirs;         // Pourcentage de la population assignée aux loisirs
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

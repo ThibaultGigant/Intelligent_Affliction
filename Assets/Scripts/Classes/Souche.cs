@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Souche : MonoBehaviour {
+public class Souche {
 
 	private int nbInfected;     // Nombre de personnes infectées par cette souche dans ce pays
 
@@ -14,17 +14,6 @@ public class Souche : MonoBehaviour {
 	int airPropagation;         // Propagation dans l'air
 	int waterPropagation;       // Propagation dans l'eau
 	int contactPropagation;     // Propagation par contact
-
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	/**
 	 * Retourne le nombre d'infectés du pays
