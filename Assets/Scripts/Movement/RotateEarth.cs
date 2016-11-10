@@ -10,7 +10,7 @@ public class RotateEarth : MonoBehaviour {
 	 * Position du centre de la Terre, pour le calcul de l'angle entre les deux directions : 
 	 * centre-point_précédent et centre-point_courant
 	 */
-	public Vector3 earthCenter = new Vector3(0f, -15.77f, -5.79f);
+	public Transform earthCenter;
 	/**
 	 * Transform de l'objet auquel on applique la rotation
 	 */
@@ -106,7 +106,7 @@ public class RotateEarth : MonoBehaviour {
 		ray = camera.ScreenPointToRay (Input.mousePosition);
 		if (Physics.Raycast (ray, out hit)) {
 			if (startingDirection == Vector3.zero && Input.GetMouseButton(1)) {
-				startingDirection = hit.point - earthCenter;
+				startingDirection = hit.point - earthCenter.position;
 			}
 			else if (Input.GetMouseButton(1)) {
 				currentDirection = hit.point;
@@ -117,7 +117,7 @@ public class RotateEarth : MonoBehaviour {
 				//rotationAxis.z = 0;
 
 				float rotationAngle = Vector3.Angle (startingDirection, currentDirection);
-				tr.RotateAround(earthCenter, rotationAxis, rotationAngle);
+				tr.RotateAround(earthCenter.position, rotationAxis, rotationAngle);
 				startingDirection = currentDirection;
 			}
 			else {
