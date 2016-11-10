@@ -1,26 +1,46 @@
 fileFormatVersion: 2
-guid: 66a9c375f96c1a84aa235ae09facfe65
-timeCreated: 1477663214
+guid: 5f6b1641640956e40b4937d3e8b5a485
+timeCreated: 1478735913
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Camera
-    100002: Earth
-    100004: Lamp
-    100006: Ocean
-    100008: //RootNode
-    400000: Camera
-    400002: Earth
-    400004: Lamp
-    400006: Ocean
-    400008: //RootNode
-    2300000: Earth
-    2300002: Ocean
-    3300000: Earth
-    3300002: Ocean
-    4300000: Ocean
-    4300002: Earth
+    100000: Afrique
+    100002: "Am\xE9rique du Nord"
+    100004: "Am\xE9rique du Sud"
+    100006: Camera
+    100008: Eurasie
+    100010: Lamp
+    100012: "Oc\xE9anie"
+    100014: Sphere
+    100016: //RootNode
+    400000: Afrique
+    400002: "Am\xE9rique du Nord"
+    400004: "Am\xE9rique du Sud"
+    400006: Camera
+    400008: Eurasie
+    400010: Lamp
+    400012: "Oc\xE9anie"
+    400014: Sphere
+    400016: //RootNode
+    2300000: Afrique
+    2300002: "Am\xE9rique du Nord"
+    2300004: "Am\xE9rique du Sud"
+    2300006: Eurasie
+    2300008: "Oc\xE9anie"
+    2300010: Sphere
+    3300000: Afrique
+    3300002: "Am\xE9rique du Nord"
+    3300004: "Am\xE9rique du Sud"
+    3300006: Eurasie
+    3300008: "Oc\xE9anie"
+    3300010: Sphere
+    4300000: Afrique
+    4300002: "Am\xE9rique du Nord"
+    4300004: "Oc\xE9anie"
+    4300006: Eurasie
+    4300008: Sphere
+    4300010: "Am\xE9rique du Sud"
   materials:
     importMaterials: 1
     materialName: 0
