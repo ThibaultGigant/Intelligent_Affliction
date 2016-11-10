@@ -52,17 +52,44 @@ public class RotateEarth : MonoBehaviour {
 	 * Booléen permettant de bloquer toute action durant l'animation du reset
 	 */
 	private bool resetFlag = false;
+	/**
+	 * Marge tolérée pour le zoom de la caméra
+	 */
+	private float marginScreen = 5f;
+	/**
+	 * Garde en mémoire la taille de la fenpetre, en cas de redimensionnement
+	 */
+	private float lastScreenSize;
 
 	// Use this for initialization
 	void Start () {
+		// Initialisation de la vue de la caméra
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
+		camera.orthographicSize = distanceMax;
+
+		// Garde en mémoire les valeurs de références
 		startingDirection = Vector3.zero;
+		lastScreenSize = Mathf.Min(Screen.width, Screen.height);
 	}
 	
-	// Update is called once per frame
+	/**
+	 * Update is called once per frame
+	 * ---
+	 * Fait tourner la terre en suivant la souris lorsque le clique droit est enfoncé
+	 * Fait un zoom lorsque la molette de la souris est actionnée
+	 * Fait en sorte que le zoom reste le même après un redimensionnement de la fenêtre
+	 */
 	void Update () {
+		// Mise à jour de la distance maximale, en cas de redimensionnement de la fenêtre
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
+
+		// Mouvements de la caméra
 		rotate ();
 		zoom();
+
+		// Correction
 		tr.position = Vector3.zero;
+		checkScreenResized ();
 	}
 
 	/**
@@ -99,6 +126,12 @@ public class RotateEarth : MonoBehaviour {
 		}
 	}
 
+	/**
+	 * resetRotationButton
+	 * ---
+	 * Fonction appelée lorsque le boutton associé est activé
+	 * Pour replacer la caméra au point initial
+	 */
 	public void resetRotationButton() {
 		resetFlag = true;
 		//tr.rotation = Quaternion.identity;
@@ -106,6 +139,12 @@ public class RotateEarth : MonoBehaviour {
 		//camera.orthographicSize = 65f;
 	}
 
+	/**
+	 * resetRotation
+	 * ---
+	 * Replace la caméra au point initial
+	 * La terre tourne à une certaine vitesse, ce n'est pas instantané
+	 */
 	private void resetRotation() {
 		float angleToTurn = Quaternion.Angle (tr.rotation, Quaternion.identity);
 		float turnSpeed = Mathf.Min (angleToTurn, speedReset);
@@ -114,12 +153,13 @@ public class RotateEarth : MonoBehaviour {
 
 		tr.rotation = Quaternion.Lerp (tr.rotation, Quaternion.identity, Mathf.Clamp01 (angleToTurn > 0 ? speedReset / angleToTurn : 0f));
 
-		if (camera.orthographicSize < 64f)
-			camera.orthographicSize = Mathf.Min (camera.orthographicSize + speedReset / 2f, 65f);
+		//if (camera.orthographicSize < 64f)
+		if (camera.orthographicSize < distanceMax)
+			camera.orthographicSize = Mathf.Min (camera.orthographicSize + speedReset / 2f, distanceMax);
 		else
-			camera.orthographicSize = 65f;
+			camera.orthographicSize = distanceMax;
 
-		if (tr.rotation == old && camera.orthographicSize == 65f)
+		if (tr.rotation == old && camera.orthographicSize == distanceMax)
 			resetFlag = false;
 	}
 
@@ -143,5 +183,13 @@ public class RotateEarth : MonoBehaviour {
 			return;
 
 		camera.orthographicSize += zoom * sensitivity;
+	}
+
+	private void checkScreenResized() {
+		float currentScreenSize = Mathf.Min (Screen.width, Screen.height);
+		if (lastScreenSize != currentScreenSize) {
+			camera.orthographicSize /= currentScreenSize / lastScreenSize;
+			lastScreenSize = currentScreenSize;
+		}
 	}
 }
