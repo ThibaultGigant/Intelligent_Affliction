@@ -18,6 +18,8 @@ public static class Parametres {
 								6,			// 100 frames = 6 jour, soit 2 secondes pour 6 jours (10 secondes par mois) 
 							};
 
+	public static int timeOfADay = 300;
+
 	public static void setSimuSpeed(int speed) {
 		simuSpeed = speed;
 	}
@@ -38,11 +40,6 @@ public static class Parametres {
 	 * earthAxis : Axe de rotation de la terre
 	 */
 	public static Quaternion earthAxis = Quaternion.Euler(new Vector3(Mathf.Sin(theta1 * 2 * Mathf.PI / 360), Mathf.Cos(theta1 * 2 * Mathf.PI / 360), Mathf.Cos((90 - theta1) * 2 * Mathf.PI / 360)));
-
-	/**
-	 * 
-	 */
-	public static int timeOfADay = 0;
 
 	public static Date date = new Date(1, 1, 2016);
 

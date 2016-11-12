@@ -11,17 +11,17 @@ public class ClockManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		
+		displayDate ();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		countTime += Parametres.getTimeSpeed ();
-		if (countTime >= 100) {
+		if (countTime >= Parametres.timeOfADay) {
 			Parametres.date.Tomorow ();
 			displayDate ();
-			countTime -= 100;
+			countTime -= Parametres.timeOfADay;
 		}
 	}
 

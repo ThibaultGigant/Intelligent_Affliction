@@ -64,7 +64,7 @@ public class RotateEarth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Initialisation de la vue de la caméra
-		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen + Screen.height / Parametres.hauteurMenuPrincipal;
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
 		camera.orthographicSize = distanceMax;
 
 		// Garde en mémoire les valeurs de références
@@ -81,7 +81,7 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	void Update () {
 		// Mise à jour de la distance maximale, en cas de redimensionnement de la fenêtre
-		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen + Screen.height / Parametres.hauteurMenuPrincipal;
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
 
 		// Mouvements de la caméra
 		rotate ();

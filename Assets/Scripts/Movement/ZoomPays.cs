@@ -16,7 +16,7 @@ public class ZoomPays : MonoBehaviour {
 	/**
 	 * Vitesse de déplacement de la terre lors du reset
 	 */
-	private float speedReset = 0.5f;
+	private float speedReset = 2f;
 
 	private bool zoomIn;
 
@@ -47,7 +47,7 @@ public class ZoomPays : MonoBehaviour {
 			float distanceToEarth = Vector3.Distance(cameraPlan, earthPlan);
 			float distanceToPays = Vector3.Distance(cameraPlan, paysPlan);
 
-			angleToTurn = Mathf.Acos ((Mathf.Pow (distancePaysToEarth, 2) + Mathf.Pow (distanceToEarth, 2) - Mathf.Pow (distanceToPays, 2)) / (2 * distancePaysToEarth * distanceToEarth));
+			//angleToTurn = Mathf.Acos ((Mathf.Pow (distancePaysToEarth, 2) + Mathf.Pow (distanceToEarth, 2) - Mathf.Pow (distanceToPays, 2)) / (2 * distancePaysToEarth * distanceToEarth));
 
 			float turnSpeed = Mathf.Min (angleToTurn, speedReset);
 
@@ -56,20 +56,25 @@ public class ZoomPays : MonoBehaviour {
 			aimedPointOfView.x = currentPointOfVieuw.x;
 
 			trEarth.rotation = Quaternion.Lerp (trEarth.rotation, new Quaternion(0.0f, 1.0f, 0.05f, 0.1f), Mathf.Clamp01 (angleToTurn > 0 ? speedReset / angleToTurn : 0f));
+			Debug.Log (Quaternion.Lerp (trEarth.rotation, new Quaternion(0.0f, 1.0f, 0.05f, 0.1f),1f));// Mathf.Clamp01 (angleToTurn > 0 ? speedReset / angleToTurn : 0f)));
 
-			if (Quaternion.Angle (trEarth.rotation, new Quaternion (0.0f, 1.0f, 0.05f, 0.1f)) < speedReset) {
-				distanceMax = Mathf.Max (GetComponent<MeshRenderer> ().bounds.extents.y, GetComponent<MeshRenderer> ().bounds.extents.x / Camera.main.aspect) + marginScreen + Screen.height / Parametres.hauteurMenuPrincipal;
-				if (Camera.main.orthographicSize > distanceMax + 1) {
-					Camera.main.orthographicSize = Mathf.Max (Camera.main.orthographicSize - speedReset * 2f, distanceMax);
-				}
-				else if (Camera.main.orthographicSize < distanceMax - 1) {
-					Camera.main.orthographicSize = Mathf.Min (Camera.main.orthographicSize + speedReset * 2f, distanceMax);
-				}
-				else
-					Camera.main.orthographicSize = distanceMax;
+
+			if (Quaternion.Angle (trEarth.rotation, new Quaternion (0.0f, 1.0f, 0.05f, 0.1f)) < 15f * speedReset) {
 			}
 
-			if (oldOrthographicSize == Camera.main.orthographicSize && Quaternion.Angle(trEarth.rotation, new Quaternion(0.0f, 1.0f, 0.05f, 0.1f)) < speedReset) {
+
+			distanceMax = Mathf.Max (GetComponent<MeshRenderer> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<MeshRenderer> ().bounds.extents.x / Camera.main.aspect) + marginScreen;
+			Debug.Log(Quaternion.Angle (trEarth.rotation, new Quaternion (0.0f, 1.0f, 0.05f, 0.1f)));
+			if (Camera.main.orthographicSize > distanceMax + 1) {
+				Camera.main.orthographicSize = Mathf.Max (Camera.main.orthographicSize - speedReset / Mathf.Max(Quaternion.Angle (trEarth.rotation, new Quaternion (0.0f, 1.0f, 0.05f, 0.1f)) / 20f, 1f), distanceMax);
+			}
+			else if (Camera.main.orthographicSize < distanceMax - 1) {
+				Camera.main.orthographicSize = Mathf.Min (Camera.main.orthographicSize + speedReset / Mathf.Max(Quaternion.Angle (trEarth.rotation, new Quaternion (0.0f, 1.0f, 0.05f, 0.1f)) / 20f, 1f), distanceMax);
+			}
+			else
+				Camera.main.orthographicSize = distanceMax;
+
+			if (Camera.main.orthographicSize == distanceMax && Quaternion.Angle(trEarth.rotation, new Quaternion(0.0f, 1.0f, 0.05f, 0.1f)) < 0.001f) {
 				buttonCalled = false;
 			}
 		}
