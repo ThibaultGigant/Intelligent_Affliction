@@ -55,7 +55,7 @@ public class RotateEarth : MonoBehaviour {
 	/**
 	 * Marge tolérée pour le zoom de la caméra
 	 */
-	private float marginScreen = 5f;
+	private float marginScreen = 10f;
 	/**
 	 * Garde en mémoire la taille de la fenpetre, en cas de redimensionnement
 	 */
@@ -64,7 +64,7 @@ public class RotateEarth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Initialisation de la vue de la caméra
-		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen + Screen.height / Parametres.hauteurMenuPrincipal;
 		camera.orthographicSize = distanceMax;
 
 		// Garde en mémoire les valeurs de références
@@ -81,7 +81,7 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	void Update () {
 		// Mise à jour de la distance maximale, en cas de redimensionnement de la fenêtre
-		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen + Screen.height / Parametres.hauteurMenuPrincipal;
 
 		// Mouvements de la caméra
 		rotate ();
@@ -165,10 +165,10 @@ public class RotateEarth : MonoBehaviour {
 
 	private void zoom() {
 		float wheel = Input.GetAxis ("Mouse ScrollWheel");
-		if (wheel < 0)
-			zoomIn (wheel);
-		else if (wheel > 0 )
-			zoomOut (wheel);
+		if (wheel > 0)
+			zoomIn (-1.0f * wheel);
+		else if (wheel < 0 )
+			zoomOut (-1.0f * wheel);
 	}
 
 	private void zoomIn(float zoom) {
