@@ -3,35 +3,31 @@ using System.Collections;
 
 public class RotateEarth : MonoBehaviour {
 	/**
-	 * Camera qui voit la scene
-	 */
-	public Camera camera;
-	/**
 	 * Position du centre de la Terre, pour le calcul de l'angle entre les deux directions : 
 	 * centre-point_précédent et centre-point_courant
 	 */
-	public Transform earthCenter;
+	private Transform earthCenter;
 	/**
 	 * Transform de l'objet auquel on applique la rotation
 	 */
-	public Transform tr;
+	private Transform tr;
 
 	/**
 	 * rayon qui va vers la souris
 	 */
-	Ray ray;
+	private Ray ray;
 	/**
 	 * hit du Raycast
 	 */
-	RaycastHit hit;
+	private RaycastHit hit;
 	/**
 	 * Direction du rayon allant du centre de la terre au point visé précédemment
 	 */
-	Vector3 startingDirection;
+	private Vector3 startingDirection;
 	/**
 	 * Direction courante du rayon allant du centre de la terre au point visé actuellement
 	 */
-	Vector3 currentDirection;
+	private Vector3 currentDirection;
 	/**
 	 * Distance minimale de la caméra par rapport à la terre
 	 */
@@ -64,8 +60,10 @@ public class RotateEarth : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Initialisation de la vue de la caméra
-		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
-		camera.orthographicSize = distanceMax;
+		earthCenter = transform;
+		tr = transform;
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / Camera.main.aspect) + marginScreen;
+		Camera.main.orthographicSize = distanceMax;
 
 		// Garde en mémoire les valeurs de références
 		startingDirection = Vector3.zero;
@@ -81,7 +79,7 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	void Update () {
 		// Mise à jour de la distance maximale, en cas de redimensionnement de la fenêtre
-		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / camera.aspect) + marginScreen;
+		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / Camera.main.aspect) + marginScreen;
 
 		// Mouvements de la caméra
 		rotate ();
@@ -103,7 +101,7 @@ public class RotateEarth : MonoBehaviour {
 			return;
 		}
 
-		ray = camera.ScreenPointToRay (Input.mousePosition);
+		ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		if (Physics.Raycast (ray, out hit)) {
 			if (startingDirection == Vector3.zero && Input.GetMouseButton(1)) {
 				startingDirection = hit.point - earthCenter.position;
@@ -134,9 +132,6 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	public void resetRotationButton() {
 		resetFlag = true;
-		//tr.rotation = Quaternion.identity;
-		//tr.position = Vector3.zero;
-		//camera.orthographicSize = 65f;
 	}
 
 	/**
@@ -147,19 +142,17 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	private void resetRotation() {
 		float angleToTurn = Quaternion.Angle (tr.rotation, Quaternion.identity);
-		float turnSpeed = Mathf.Min (angleToTurn, speedReset);
 
 		Quaternion old = tr.rotation;
 
 		tr.rotation = Quaternion.Lerp (tr.rotation, Quaternion.identity, Mathf.Clamp01 (angleToTurn > 0 ? speedReset / angleToTurn : 0f));
 
-		//if (camera.orthographicSize < 64f)
-		if (camera.orthographicSize < distanceMax)
-			camera.orthographicSize = Mathf.Min (camera.orthographicSize + speedReset / 2f, distanceMax);
+		if (Camera.main.orthographicSize < distanceMax)
+			Camera.main.orthographicSize = Mathf.Min (Camera.main.orthographicSize + speedReset / 2f, distanceMax);
 		else
-			camera.orthographicSize = distanceMax;
+			Camera.main.orthographicSize = distanceMax;
 
-		if (tr.rotation == old && camera.orthographicSize == distanceMax)
+		if (tr.rotation == old && Camera.main.orthographicSize == distanceMax)
 			resetFlag = false;
 	}
 
@@ -172,23 +165,23 @@ public class RotateEarth : MonoBehaviour {
 	}
 
 	private void zoomIn(float zoom) {
-		if (camera.orthographicSize <= distanceMin)
+		if (Camera.main.orthographicSize <= distanceMin)
 			return;
 
-		camera.orthographicSize += zoom * sensitivity;
+		Camera.main.orthographicSize += zoom * sensitivity;
 	}
 
 	private void zoomOut(float zoom) {
-		if (camera.orthographicSize >= distanceMax)
+		if (Camera.main.orthographicSize >= distanceMax)
 			return;
 
-		camera.orthographicSize += zoom * sensitivity;
+		Camera.main.orthographicSize += zoom * sensitivity;
 	}
 
 	private void checkScreenResized() {
 		float currentScreenSize = Mathf.Min (Screen.width, Screen.height);
 		if (lastScreenSize != currentScreenSize) {
-			camera.orthographicSize /= currentScreenSize / lastScreenSize;
+			Camera.main.orthographicSize /= currentScreenSize / lastScreenSize;
 			lastScreenSize = currentScreenSize;
 		}
 	}
