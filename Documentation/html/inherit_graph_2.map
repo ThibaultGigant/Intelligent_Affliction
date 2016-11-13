@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$class_clock_manager.html" title="ClockManager" alt="" coords="171,5,279,32"/>
+<area shape="rect" id="node3" href="$class_game_manager.html" title="GameManager" alt="" coords="169,56,280,83"/>
+<area shape="rect" id="node4" href="$class_pays.html" title="Pays" alt="" coords="199,107,251,133"/>
+<area shape="rect" id="node5" href="$class_pays_manager.html" title="PaysManager" alt="" coords="173,157,277,184"/>
+<area shape="rect" id="node6" href="$class_rotate_earth.html" title="RotateEarth" alt="" coords="178,208,271,235"/>
+<area shape="rect" id="node7" href="$class_sun_rotation.html" title="SunRotation" alt="" coords="177,259,273,285"/>
+<area shape="rect" id="node8" href="$class_zoom_pays.html" title="ZoomPays" alt="" coords="182,309,267,336"/>
+</map>
