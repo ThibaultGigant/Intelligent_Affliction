@@ -1,0 +1,8 @@
+<map id="Pays" name="Pays">
+<area shape="rect" id="node7" href="$dd/d36/class_population.html" title="Population" alt="" coords="249,375,334,401"/>
+<area shape="rect" id="node3" href="$de/d73/class_links.html" title="Links" alt="" coords="211,5,265,32"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="289,5,355,32"/>
+<area shape="rect" id="node5" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="380,5,440,32"/>
+<area shape="rect" id="node6" href="$d4/d33/class_ressource.html" title="Ressource" alt="" coords="465,5,550,32"/>
+<area shape="rect" id="node8" href="$db/dbb/class_a_population_category.html" title="APopulationCategory" alt="" coords="5,212,153,239"/>
+</map>

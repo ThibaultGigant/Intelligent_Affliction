@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['maritimes',['maritimes',['../class_links.html#a91151e563ecced87de19ae1e9b6e3374',1,'Links']]]
+  ['happinessindex',['happinessIndex',['../dd/d36/class_population.html#ac805ea03d85c7b85e56dba210d485f0e',1,'Population']]],
+  ['hit',['hit',['../d7/db3/class_rotate_earth.html#a4c0e0a0f92a126acd4488b7e5f42eaad',1,'RotateEarth']]],
+  ['humidite',['humidite',['../d9/d71/class_climat.html#a479a140994cf54b8f5a0b89ff4a4044d',1,'Climat']]]
 ];

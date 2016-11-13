@@ -1,0 +1,11 @@
+<map id="Ressource" name="Ressource">
+<area shape="rect" id="node2" href="$de/d75/class_knowledge_arret_organes.html" title="KnowledgeArretOrganes" alt="" coords="139,5,307,32"/>
+<area shape="rect" id="node3" href="$da/d46/class_knowledge_diarrhees.html" title="KnowledgeDiarrhees" alt="" coords="150,56,295,83"/>
+<area shape="rect" id="node4" href="$db/dd1/class_knowledge_eternuments.html" title="KnowledgeEternuments" alt="" coords="141,107,305,133"/>
+<area shape="rect" id="node5" href="$de/d8e/class_knowledge_fievre.html" title="KnowledgeFievre" alt="" coords="160,157,285,184"/>
+<area shape="rect" id="node6" href="$df/d54/class_knowledge_resistance.html" title="KnowledgeResistance" alt="" coords="146,208,299,235"/>
+<area shape="rect" id="node7" href="$d5/d6e/class_knowledge_spreading.html" title="KnowledgeSpreading" alt="" coords="148,259,297,285"/>
+<area shape="rect" id="node8" href="$d7/da0/class_knowledge_sueurs.html" title="KnowledgeSueurs" alt="" coords="157,309,288,336"/>
+<area shape="rect" id="node9" href="$d7/d05/class_knowledge_toux.html" title="KnowledgeToux" alt="" coords="164,360,281,387"/>
+<area shape="rect" id="node10" href="$d4/dbc/class_nourriture.html" title="Nourriture" alt="" coords="182,411,263,437"/>
+</map>

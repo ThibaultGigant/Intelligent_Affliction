@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['terrestres',['terrestres',['../class_links.html#aff17a04a3563c72fcc06707ae40f6565',1,'Links']]],
-  ['textdate',['textDate',['../class_clock_manager.html#a77a090a2384af863d158793a83ff6f4c',1,'ClockManager']]],
-  ['totalpopulation',['totalPopulation',['../class_population.html#ad182c01395fd66953cbe5f7d291b8144',1,'Population']]]
+  ['pays',['pays',['../dd/d36/class_population.html#a907b3fbe16cf86cd9ddeb1bb460dfb89',1,'Population']]],
+  ['population',['population',['../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29',1,'Pays']]]
 ];

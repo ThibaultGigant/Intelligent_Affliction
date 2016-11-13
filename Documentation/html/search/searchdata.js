@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "acdeghiklmnpqrstuz",
   1: "acdgiklmnprstz",
   2: "acdegilmnprstu",
-  3: "achimnpqrst"
+  3: "acdehiklmnpqrst"
 };
 
 var indexSectionNames =
@@ -16,9 +16,9 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "All",
+  0: "Tout",
   1: "Classes",
-  2: "Functions",
+  2: "Fonctions",
   3: "Variables"
 };
 
