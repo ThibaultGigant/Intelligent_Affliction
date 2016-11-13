@@ -21,7 +21,7 @@ public class SunRotation : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		float rotationAngle = speedRotation * Parametres.getTimeSpeed (); // / (1.0f * Parametres.timeOfADay);
-		Quaternion rotationAxis = Parametres.earthAxis;// * tr.rotation;
-		transform.RotateAround(Parametres.earthCenter, rotationAxis.eulerAngles, rotationAngle);
+		// Quaternion rotationAxis = Parametres.earthAxis;// * tr.rotation; // Rotation de la terre au lieu de rotation du soleil. C'est pareil, mais en pas pareil... Ça me paraît plus naturel
+		transform.RotateAround(Parametres.earthCenter, Vector3.up /*rotationAxis.eulerAngles*/, rotationAngle);
 	}
 }
