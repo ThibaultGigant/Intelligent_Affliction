@@ -15,7 +15,7 @@ public abstract class Ressource
 	}
 
 	/**
-	 * Ajout de ressource
+	 * Ajout de ressources
 	 * @param nb nombre de ressources à rajouter. Doit être positif
 	 */
 	public void addRessource(int nb) {
@@ -25,7 +25,7 @@ public abstract class Ressource
 	}
 
 	/**
-	 * Retrait de ressource
+	 * Retrait de ressources
 	 * @param nb nombre de ressources à enlever. Doit être positif et inférieur à la quantité
 	 */
 	public void removeRessource(int nb) {

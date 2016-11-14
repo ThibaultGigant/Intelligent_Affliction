@@ -12,10 +12,10 @@ public class Pays : MonoBehaviour
 	 */
 	public float superficie;
 	/**
-	 * Intérêt que le pays à au yeux de tous.
+	 * Intérêt que le pays à aux yeux de tous.
 	 * Monuments, avancées, qualité de vie en sont quelques facteurs
 	 */
-	public float intérêt;
+	public float interet;
 	/**
 	 * Richesse du pays
 	 */
@@ -25,7 +25,7 @@ public class Pays : MonoBehaviour
 	 */
 	public int initialNumberPopulation;
 	/**
-	 * La population assicié à ce pays
+	 * La population associée à ce pays
 	 */
 	private Population population;
 	/**

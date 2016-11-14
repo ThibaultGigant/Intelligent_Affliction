@@ -58,6 +58,9 @@ public class RotateEarth : MonoBehaviour {
 	private float lastScreenSize;
 
 	// Use this for initialization
+	/**
+	 * Appelée à la création de la classe, elle initialise les attributs aux valeurs par défaut
+	 */
 	void Start () {
 		// Initialisation de la vue de la caméra
 		earthCenter = transform;
@@ -73,9 +76,9 @@ public class RotateEarth : MonoBehaviour {
 	/**
 	 * Update is called once per frame
 	 * ---
-	 * Fait tourner la terre en suivant la souris lorsque le clique droit est enfoncé
-	 * Fait un zoom lorsque la molette de la souris est actionnée
-	 * Fait en sorte que le zoom reste le même après un redimensionnement de la fenêtre
+	 * Fait tourner la terre en suivant la souris lorsque le clique droit est enfoncé<br />
+	 * Fait un zoom lorsque la molette de la souris est actionnée<br />
+	 * Fait en sorte que le zoom reste le même après un redimensionnement de la fenêtre<br />
 	 */
 	void Update () {
 		// Mise à jour de la distance maximale, en cas de redimensionnement de la fenêtre
@@ -93,7 +96,7 @@ public class RotateEarth : MonoBehaviour {
 	/**
 	 * Rotation de la terre
 	 * ---
-	 * Suit le curseur, lorsque le clique droit de la souris est enfoncé
+	 * Suit le curseur, lorsque le clic droit de la souris est enfoncé
 	 */
 	private void rotate() {
 		if (resetFlag) {
@@ -101,24 +104,25 @@ public class RotateEarth : MonoBehaviour {
 			return;
 		}
 
+		// Rayon lancé de la caméra pour voir s'il y a clic sur un pays
 		ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		if (Physics.Raycast (ray, out hit)) {
+			// Si c'est la première fois qu'on clique, on stocke le point de collision
 			if (startingDirection == Vector3.zero && Input.GetMouseButton(1)) {
 				startingDirection = hit.point - earthCenter.position;
 			}
-			else if (Input.GetMouseButton(1)) {
+			else if (Input.GetMouseButton(1)) { // Sinon on bouge
 				currentDirection = hit.point;
 
 				// Axe de rotation
 				Vector3 rotationAxis = Vector3.Cross (startingDirection, currentDirection);
-				//rotationAxis.x = 0;
-				//rotationAxis.z = 0;
 
+				// Application de la rotation
 				float rotationAngle = Vector3.Angle (startingDirection, currentDirection);
 				tr.RotateAround(earthCenter.position, rotationAxis, rotationAngle);
 				startingDirection = currentDirection;
 			}
-			else {
+			else { // Remise à zéro de la valeur quand on relache
 				startingDirection = Vector3.zero;
 			}
 		}
@@ -128,6 +132,7 @@ public class RotateEarth : MonoBehaviour {
 	 * resetRotationButton
 	 * ---
 	 * Fonction appelée lorsque le boutton associé est activé
+	 * 
 	 * Pour replacer la caméra au point initial
 	 */
 	public void resetRotationButton() {
@@ -138,6 +143,7 @@ public class RotateEarth : MonoBehaviour {
 	 * resetRotation
 	 * ---
 	 * Replace la caméra au point initial
+	 * 
 	 * La terre tourne à une certaine vitesse, ce n'est pas instantané
 	 */
 	private void resetRotation() {
@@ -156,6 +162,9 @@ public class RotateEarth : MonoBehaviour {
 			resetFlag = false;
 	}
 
+	/**
+	 * Applique un zoom sur la terre selon le scroll
+	 */
 	private void zoom() {
 		float wheel = Input.GetAxis ("Mouse ScrollWheel");
 		if (wheel > 0)
@@ -164,6 +173,9 @@ public class RotateEarth : MonoBehaviour {
 			zoomOut (-1.0f * wheel);
 	}
 
+	/**
+	 * Zoome vers la terre en fonction du scroll
+	 */
 	private void zoomIn(float zoom) {
 		if (Camera.main.orthographicSize <= distanceMin)
 			return;
@@ -171,6 +183,9 @@ public class RotateEarth : MonoBehaviour {
 		Camera.main.orthographicSize += zoom * sensitivity;
 	}
 
+	/**
+	 * Dézoome de la terre en fonction du scroll
+	 */
 	private void zoomOut(float zoom) {
 		if (Camera.main.orthographicSize >= distanceMax)
 			return;

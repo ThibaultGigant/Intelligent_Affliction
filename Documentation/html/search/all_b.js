@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['parametres',['Parametres',['../df/dfc/class_parametres.html',1,'']]],
   ['pays',['Pays',['../dd/dbe/class_pays.html',1,'Pays'],['../dd/d36/class_population.html#a907b3fbe16cf86cd9ddeb1bb460dfb89',1,'Population.pays()']]],
   ['paysmanager',['PaysManager',['../df/da2/class_pays_manager.html',1,'']]],
   ['population',['Population',['../dd/d36/class_population.html',1,'Population'],['../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29',1,'Pays.population()'],['../dd/d36/class_population.html#a2e404944a87b3097b12f2a6c0311ba76',1,'Population.Population()']]],

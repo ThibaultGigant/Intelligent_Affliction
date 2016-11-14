@@ -5,7 +5,7 @@ public class Transports : APopulationCategory
 {
 	/**
 	 * Constructeur
-	 * @param nb Taille de la population initialement assigné à cette catégorie, en nombre d'habitant
+	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
 	public Transports(int nb) : base(nb) {
 	}

@@ -10,6 +10,7 @@ public class Population {
 	/**
 	 * "Contentement" de la population
 	 * ---
+	 * TODO :
 	 * Quelle est la valeur par défaut ?
 	 */
 	private int happinessIndex;
@@ -55,15 +56,15 @@ public class Population {
 	}
 
 	/**
-	 * Répartie la population entre les différentes catégories, lors du premier lancement du jeu
+	 * Répartit la population entre les différentes catégories, lors du premier lancement du jeu
 	 */
 	private void SetupCategories () {
 		if (totalPopulation < 0) {
-			Debug.LogError (pays.nomPays + ", Repartition : Le nombre de population doit être positif");
+			Debug.LogError (pays.nomPays + ", Repartition : Le nombre de personnes doit être positif");
 			totalPopulation = 0;
 		}
 
-		// Repartition uniforme, parmis les 6 catégories. (A revoir...)
+		// Repartition uniforme, parmis les 6 catégories. (TODO : A revoir...)
 		int nbReparti = totalPopulation / 6;
 
 		agriculturePopulationCategory = new Agriculture (nbReparti);
@@ -71,11 +72,11 @@ public class Population {
 		loisirsPopulationCategory = new Loisirs (nbReparti);
 		medecinePopulationCategory = new Medecine (nbReparti);
 		recherchePopulationCategory = new Recherche (nbReparti);
-		transportsPopulationCategory = new Transports (totalPopulation - 5 * nbReparti); // Pour eviter les imprécisions du à la discrétisation des pourcentages
+		transportsPopulationCategory = new Transports (totalPopulation - 5 * nbReparti); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
 	}
 
 	/**
-	 * Définie la valeur du happinessIndex
+	 * Définit la valeur du happinessIndex
 	 * @param happy Valeur de happiness que l'on veut affecter
 	 */
 	public void setHappinessIndex(int happy) {
@@ -86,7 +87,7 @@ public class Population {
 	 * Ajoute des habitants à la population
 	 * @param nb Nombre d'habitants que l'on veut ajouter
 	 * ---
-	 * Comment définir la catégorie d'affection ?
+	 * TODO : Comment définir la catégorie d'affection ?
 	 */
 	public void addPeople(int nb) {
 		totalPopulation += nb;
@@ -98,7 +99,7 @@ public class Population {
 	 * Retire des habitants de la population
 	 * @param nb Nombre d'habitants que l'on veut retirer
 	 * ---
-	 * De quelle catégorie les enlever ?
+	 * TODO : De quelle catégorie les enlever ?
 	 */
 	public void removePeople(int nb) {
 		totalPopulation -= nb;
@@ -158,18 +159,18 @@ public class Population {
 	}
 
 	/**
-	 * Nombre de naissance "fix" en fonction de la taille de la population. 1.2% de leur nombre par année
-	 * Appel de la fonction tous les mois (?) (d'où la division par douze)
+	 * Nombre de naissances "fixe" en fonction de la taille de la population. 1.2% de leur nombre par année
+	 * Appel de la fonction tous les mois (TODO : ?) (d'où la division par douze)
 	 */
 	public int naissances() {
-		int nbNaissances = Mathf.Max(0, Mathf.FloorToInt(0.0012f * totalPopulation / 12f));
+		int nbNaissances = Mathf.Max(0, Mathf.FloorToInt(0.0012f * totalPopulation / 12f)); // TODO : Max ? On n'est jamais < 0, si ?
 		addPeople (nbNaissances);
 		return nbNaissances;
 	}
 
 	/**
-	 * Nombre de décès "fix" en fonction de la taille de la population. 0.9% de leur nombre par année
-	 * Appel de la fonction tous les mois (?) (d'où la division par douze)
+	 * Nombre de décès "fixe" en fonction de la taille de la population. 0.9% de leur nombre par année
+	 * Appel de la fonction tous les mois (TODO : ?) (d'où la division par douze)
 	 */
 	public int deces() {
 		int nbDeces = Mathf.Max(0, Mathf.FloorToInt(0.009f * totalPopulation / 12f));
