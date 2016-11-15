@@ -85,7 +85,7 @@ public class Pays : MonoBehaviour
 	/**
 	 * Light
 	 */
-	private GameObject light = null;
+	//private GameObject light = null;
 
 	/**
 	 * Fonction appelée lorsque le pays s'active pour la première fois
@@ -99,10 +99,10 @@ public class Pays : MonoBehaviour
 
 		SetupRessources ();
 
-		foreach (Transform t in transform) {
-			if (t.gameObject.layer == LayerMask.NameToLayer("Light") )
-				light = t.gameObject;
-		}
+//		foreach (Transform t in transform) {
+//			if (t.gameObject.layer == LayerMask.NameToLayer("Light") )
+//				light = t.gameObject;
+//		}
 	}
 
 	/**
@@ -156,22 +156,22 @@ public class Pays : MonoBehaviour
 
 		if (Parametres.paysSelected && Parametres.paysSelected.name == name && mat.GetFloat ("_Metallic") != 0f) {
 			mat.SetFloat ("_Metallic", 0f);
-			if (light)
-				light.SetActive (true);
+//			if (light)
+//				light.SetActive (true);
 		}
 		else if (Parametres.paysSelected && Parametres.paysSelected.name != name && mat.GetFloat ("_Metallic") == 0f) {
 			mat.SetFloat ("_Metallic", 0.5f);
-			if (light)
-				light.SetActive (false);
+//			if (light)
+//				light.SetActive (false);
 		}
 		else if (!Parametres.paysSelected && mat.GetFloat ("_Metallic") != 0f) {
 			mat.SetFloat ("_Metallic", 0f);
-			if (light)
-				light.SetActive (false);
+//			if (light)
+//				light.SetActive (false);
 		}
-		else if (Parametres.paysSelected && Parametres.paysSelected.name == name && light && !light.activeSelf) {
-			light.SetActive (true);
-		}
+//		else if (Parametres.paysSelected && Parametres.paysSelected.name == name && light && !light.activeSelf) {
+//			light.SetActive (true);
+//		}
 			
 	}
 
