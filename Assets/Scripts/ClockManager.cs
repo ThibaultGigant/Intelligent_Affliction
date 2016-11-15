@@ -10,7 +10,7 @@ public class ClockManager : MonoBehaviour
 	public Text textDate;
 
 	/**
-	 * Booléen informant si durant la frame courrante, une nouvelel journée démarre
+	 * Booléen informant si durant la frame courrante, une nouvelle journée démarre
 	 * true si c'est le cas, false sinon
 	 */
 	public static bool newDay = true;

@@ -24,7 +24,7 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	private float distanceMax;
 	/**
-	 * Sensibilité du zoom de la  caméra
+	 * Sensibilité du zoom de la caméra
 	 */
 	private float sensitivity = 10f;
 	/**
@@ -40,7 +40,7 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	private float marginScreen = 10f;
 	/**
-	 * Garde en mémoire la taille de la fenpetre, en cas de redimensionnement
+	 * Garde en mémoire la taille de la fenêtre, en cas de redimensionnement
 	 */
 	private float lastScreenSize;
 	/**
