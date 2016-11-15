@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['earthaxis',['earthAxis',['../df/dfc/class_parametres.html#ac78c92da0b68fc710e7a37e3af719e7d',1,'Parametres']]],
-  ['earthcenter',['earthCenter',['../d7/db3/class_rotate_earth.html#aff06731c50704ce363edf14d4734fd23',1,'RotateEarth.earthCenter()'],['../df/dfc/class_parametres.html#aae80de6a17617da1ea48502b692f708a',1,'Parametres.earthCenter()']]],
-  ['exchangeressource',['exchangeRessource',['../dd/dbe/class_pays.html#a94d8fa772d6d783c231551cc4778f58a',1,'Pays']]]
+  ['date',['Date',['../de/db5/class_date.html',1,'']]],
+  ['deces',['deces',['../dd/d36/class_population.html#a09830714f63b6080a1cce3af42bd8f0e',1,'Population']]],
+  ['displaydate',['displayDate',['../de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707',1,'ClockManager']]],
+  ['distancemax',['distanceMax',['../d7/db3/class_rotate_earth.html#a3c0dd0c38a60abc58053c5dde4cefa6f',1,'RotateEarth.distanceMax()'],['../d6/da4/class_zoom_pays.html#a763c6e03b63982238503dca434ba10d3',1,'ZoomPays.distanceMax()']]],
+  ['distancemin',['distanceMin',['../d7/db3/class_rotate_earth.html#a515af066915a1f0977b7ed1787a95e7d',1,'RotateEarth']]]
 ];

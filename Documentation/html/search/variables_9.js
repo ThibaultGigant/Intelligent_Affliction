@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['nbinfected',['nbInfected',['../d9/db4/class_souche.html#a2e5f5d1363573038c47839676f72ade7',1,'Souche']]],
-  ['newday',['newDay',['../de/d73/class_clock_manager.html#a5ff3e15862bd43d1fce4d8d1ce968fe0',1,'ClockManager']]],
-  ['nompays',['nomPays',['../dd/dbe/class_pays.html#a93e2eee362a3804bcd38c68729e27262',1,'Pays']]],
-  ['nourriture',['nourriture',['../dd/dbe/class_pays.html#a1961ca0a06226af97a97b1e9fe8a03e0',1,'Pays']]]
+  ['marginscreen',['marginScreen',['../d7/db3/class_rotate_earth.html#aafc996cf08c1d74b8ff8cf96929f5606',1,'RotateEarth.marginScreen()'],['../d6/da4/class_zoom_pays.html#a74b4ad295f45c7a9f3ef22e71b78a7ee',1,'ZoomPays.marginScreen()']]],
+  ['maritimes',['maritimes',['../de/d73/class_links.html#a91151e563ecced87de19ae1e9b6e3374',1,'Links']]],
+  ['medecinepopulationcategory',['medecinePopulationCategory',['../dd/d36/class_population.html#a77f5c41e9b694db8d1d3af9e8f39b9e4',1,'Population']]]
 ];

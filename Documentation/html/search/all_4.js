@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['gamemanager',['GameManager',['../db/d10/class_game_manager.html',1,'']]],
-  ['getnbinfected',['getNbInfected',['../d9/db4/class_souche.html#a91d168071b06701006d23219e6fd9f48',1,'Souche']]],
-  ['gorogue',['goRogue',['../dd/d36/class_population.html#adee3e3db3ac0638e68c7c2d95e2d0a35',1,'Population']]]
+  ['earth',['earth',['../df/dfc/class_parametres.html#a2f468d42284cca3b224ddd34acb76129',1,'Parametres']]],
+  ['earthaxis',['earthAxis',['../df/dfc/class_parametres.html#ac78c92da0b68fc710e7a37e3af719e7d',1,'Parametres']]],
+  ['earthcenter',['earthCenter',['../d7/db3/class_rotate_earth.html#aff06731c50704ce363edf14d4734fd23',1,'RotateEarth.earthCenter()'],['../df/dfc/class_parametres.html#aae80de6a17617da1ea48502b692f708a',1,'Parametres.earthCenter()']]],
+  ['exchangeressource',['exchangeRessource',['../dd/dbe/class_pays.html#a94d8fa772d6d783c231551cc4778f58a',1,'Pays']]]
 ];
