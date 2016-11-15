@@ -1,0 +1,9 @@
+<map id="Pays.TestFunctions" name="Pays.TestFunctions">
+<area shape="rect" id="node2" href="$dd/d36/class_population.html#a073c713ba7706f5ddae7eaa4f64d2ebb" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="192,8,348,35"/>
+<area shape="rect" id="node5" href="$dd/d36/class_population.html#a09830714f63b6080a1cce3af42bd8f0e" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="208,60,332,87"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a18239a6e3b93530dc19d619ccb3d4b2d" title="Ajoute des habitants à la population. " alt="" coords="407,7,559,33"/>
+<area shape="rect" id="node4" href="$db/dbb/class_a_population_category.html#a93edc4815516c57e61d836c8de02cfa9" title="Ajoute des personnes à cette catégorie. " alt="" coords="619,5,848,32"/>
+<area shape="rect" id="node6" href="$dd/d36/class_population.html#a8564e9c0e453dcf3a1dd14dee9546769" title="Retire des habitants de la population. " alt="" coords="396,60,571,87"/>
+<area shape="rect" id="node7" href="$db/dbb/class_a_population_category.html#a93410dd4adf053bec40462d0c42be977" title="Enlève des personnes de cette catégorie. " alt="" coords="635,57,831,98"/>
+<area shape="rect" id="node8" href="$db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="896,64,1096,91"/>
+</map>

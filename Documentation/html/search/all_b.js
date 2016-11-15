@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['naissances',['naissances',['../dd/d36/class_population.html#a073c713ba7706f5ddae7eaa4f64d2ebb',1,'Population']]],
-  ['nbinfected',['nbInfected',['../d9/db4/class_souche.html#a2e5f5d1363573038c47839676f72ade7',1,'Souche']]],
-  ['newday',['newDay',['../de/d73/class_clock_manager.html#a5ff3e15862bd43d1fce4d8d1ce968fe0',1,'ClockManager']]],
-  ['nompays',['nomPays',['../dd/dbe/class_pays.html#a93e2eee362a3804bcd38c68729e27262',1,'Pays']]],
-  ['nourriture',['Nourriture',['../d4/dbc/class_nourriture.html',1,'Nourriture'],['../dd/dbe/class_pays.html#a1961ca0a06226af97a97b1e9fe8a03e0',1,'Pays.nourriture()']]]
+  ['largeurmenuprincipal',['largeurMenuPrincipal',['../db/d10/class_game_manager.html#aa001fc987f9e80f0c69494ea67ba299e',1,'GameManager']]],
+  ['lastscreensize',['lastScreenSize',['../d7/db3/class_rotate_earth.html#a36ec7f804fead668d30a0ddc51938693',1,'RotateEarth']]],
+  ['links',['Links',['../de/d73/class_links.html',1,'Links'],['../de/d73/class_links.html#aca478e5e071869ab06d19e9957b3ac78',1,'Links.Links()'],['../dd/dbe/class_pays.html#aad124467a1bd693c4d75e8c6c4b338a6',1,'Pays.links()']]],
+  ['links_2ecs',['Links.cs',['../d6/d10/_links_8cs.html',1,'']]],
+  ['loisirs',['Loisirs',['../da/d41/class_loisirs.html',1,'Loisirs'],['../da/d41/class_loisirs.html#a921dd258109e025aa5c8dcb50bb55123',1,'Loisirs.Loisirs()']]],
+  ['loisirs_2ecs',['Loisirs.cs',['../d4/d2c/_loisirs_8cs.html',1,'']]],
+  ['loisirspopulationcategory',['loisirsPopulationCategory',['../dd/d36/class_population.html#a9cad365c5c0c5624353305c07c290808',1,'Population']]]
 ];

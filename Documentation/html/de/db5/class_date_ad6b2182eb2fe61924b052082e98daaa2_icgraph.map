@@ -1,0 +1,6 @@
+<map id="Date.getMois" name="Date.getMois">
+<area shape="rect" id="node2" href="$de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707" title="Mise à jour de l&#39;affichage de la date. " alt="" coords="153,31,335,57"/>
+<area shape="rect" id="node5" href="$de/db5/class_date.html#ae03bdfa4a1b4bdce0e35ee945665ea0e" title="Date.Equals" alt="" coords="197,81,291,108"/>
+<area shape="rect" id="node3" href="$de/d73/class_clock_manager.html#aa1331d7cdc340014da350227f9d6d7db" title="ClockManager.Start" alt="" coords="390,5,530,32"/>
+<area shape="rect" id="node4" href="$de/d73/class_clock_manager.html#aaf2b126530e01e1ba4960f83062b46ef" title="Fonction appelée à chaque frame. " alt="" coords="383,56,537,83"/>
+</map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['makemigrations',['makeMigrations',['../dd/dbe/class_pays.html#a469722f4aef187320a13b8597a503ac1',1,'Pays']]],
-  ['medecine',['Medecine',['../d2/de3/class_medecine.html#aad06c6c765b5dc7ca75278ffe39c2b5d',1,'Medecine']]]
+  ['links',['Links',['../de/d73/class_links.html#aca478e5e071869ab06d19e9957b3ac78',1,'Links']]],
+  ['loisirs',['Loisirs',['../da/d41/class_loisirs.html#a921dd258109e025aa5c8dcb50bb55123',1,'Loisirs']]]
 ];

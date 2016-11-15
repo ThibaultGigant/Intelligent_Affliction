@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['pays',['pays',['../dd/d36/class_population.html#a907b3fbe16cf86cd9ddeb1bb460dfb89',1,'Population']]],
-  ['paysselected',['paysSelected',['../df/dfc/class_parametres.html#a3208346c635d499ab01401096e426768',1,'Parametres']]],
-  ['population',['population',['../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29',1,'Pays']]]
+  ['marginscreen',['marginScreen',['../d7/db3/class_rotate_earth.html#aafc996cf08c1d74b8ff8cf96929f5606',1,'RotateEarth.marginScreen()'],['../d6/da4/class_zoom_pays.html#a74b4ad295f45c7a9f3ef22e71b78a7ee',1,'ZoomPays.marginScreen()']]],
+  ['maritimes',['maritimes',['../de/d73/class_links.html#a91151e563ecced87de19ae1e9b6e3374',1,'Links']]],
+  ['medecinepopulationcategory',['medecinePopulationCategory',['../dd/d36/class_population.html#a77f5c41e9b694db8d1d3af9e8f39b9e4',1,'Population']]],
+  ['menuprincipal',['menuPrincipal',['../db/d10/class_game_manager.html#a839b46b0c176d06eebe013abd2270baa',1,'GameManager']]],
+  ['mois',['mois',['../de/db5/class_date.html#a340fe94938c332ff02936ef52533c2cb',1,'Date']]]
 ];

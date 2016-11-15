@@ -1,0 +1,4 @@
+<map id="GameManager.resizeMenuPrincipal" name="GameManager.resizeMenuPrincipal">
+<area shape="rect" id="node2" href="$db/d10/class_game_manager.html#a5ccfacd027ad08eeb4ff1f25a7f59c98" title="GameManager.Start" alt="" coords="312,5,455,32"/>
+<area shape="rect" id="node3" href="$db/d10/class_game_manager.html#aa4ff3a1f060639bc05d0e3db306848df" title="GameManager.FixedUpdate" alt="" coords="288,56,479,83"/>
+</map>

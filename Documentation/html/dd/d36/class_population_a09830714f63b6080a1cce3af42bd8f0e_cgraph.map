@@ -1,0 +1,5 @@
+<map id="Population.deces" name="Population.deces">
+<area shape="rect" id="node2" href="$dd/d36/class_population.html#a8564e9c0e453dcf3a1dd14dee9546769" title="Retire des habitants de la population. " alt="" coords="177,13,352,39"/>
+<area shape="rect" id="node3" href="$db/dbb/class_a_population_category.html#a93410dd4adf053bec40462d0c42be977" title="Enlève des personnes de cette catégorie. " alt="" coords="400,5,596,47"/>
+<area shape="rect" id="node4" href="$db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="644,13,844,39"/>
+</map>

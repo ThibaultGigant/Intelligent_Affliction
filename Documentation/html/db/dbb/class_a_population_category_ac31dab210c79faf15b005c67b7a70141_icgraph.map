@@ -1,0 +1,7 @@
+<map id="APopulationCategory.produce" name="APopulationCategory.produce">
+<area shape="rect" id="node2" href="$db/dbb/class_a_population_category.html#a93410dd4adf053bec40462d0c42be977" title="Enlève des personnes de cette catégorie. " alt="" coords="253,5,449,47"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a8564e9c0e453dcf3a1dd14dee9546769" title="Retire des habitants de la population. " alt="" coords="497,13,672,39"/>
+<area shape="rect" id="node4" href="$dd/d36/class_population.html#a09830714f63b6080a1cce3af42bd8f0e" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="720,13,844,39"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="892,13,1031,39"/>
+<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="1079,13,1177,39"/>
+</map>

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['nbinfected',['nbInfected',['../d9/db4/class_souche.html#a2e5f5d1363573038c47839676f72ade7',1,'Souche']]],
-  ['newday',['newDay',['../de/d73/class_clock_manager.html#a5ff3e15862bd43d1fce4d8d1ce968fe0',1,'ClockManager']]],
-  ['nompays',['nomPays',['../dd/dbe/class_pays.html#a93e2eee362a3804bcd38c68729e27262',1,'Pays']]],
-  ['nourriture',['nourriture',['../dd/dbe/class_pays.html#a1961ca0a06226af97a97b1e9fe8a03e0',1,'Pays']]]
+  ['largeurmenuprincipal',['largeurMenuPrincipal',['../db/d10/class_game_manager.html#aa001fc987f9e80f0c69494ea67ba299e',1,'GameManager']]],
+  ['lastscreensize',['lastScreenSize',['../d7/db3/class_rotate_earth.html#a36ec7f804fead668d30a0ddc51938693',1,'RotateEarth']]],
+  ['links',['links',['../dd/dbe/class_pays.html#aad124467a1bd693c4d75e8c6c4b338a6',1,'Pays']]],
+  ['loisirspopulationcategory',['loisirsPopulationCategory',['../dd/d36/class_population.html#a9cad365c5c0c5624353305c07c290808',1,'Population']]]
 ];

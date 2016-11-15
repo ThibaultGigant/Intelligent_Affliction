@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['parametres',['Parametres',['../df/dfc/class_parametres.html',1,'']]],
-  ['pays',['Pays',['../dd/dbe/class_pays.html',1,'Pays'],['../dd/d36/class_population.html#a907b3fbe16cf86cd9ddeb1bb460dfb89',1,'Population.pays()']]],
-  ['paysmanager',['PaysManager',['../df/da2/class_pays_manager.html',1,'']]],
-  ['paysselected',['paysSelected',['../df/dfc/class_parametres.html#a3208346c635d499ab01401096e426768',1,'Parametres']]],
-  ['population',['Population',['../dd/d36/class_population.html',1,'Population'],['../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29',1,'Pays.population()'],['../dd/d36/class_population.html#a2e404944a87b3097b12f2a6c0311ba76',1,'Population.Population()']]],
-  ['produce',['produce',['../d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1',1,'Agriculture.produce()'],['../db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141',1,'APopulationCategory.produce()'],['../df/dee/class_inactifs.html#ac0463ac47ab4c738c3ea563e735eba94',1,'Inactifs.produce()'],['../da/d41/class_loisirs.html#a6d234487c20c891d1d9b7ba985813761',1,'Loisirs.produce()'],['../d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e',1,'Medecine.produce()'],['../dd/d10/class_recherche.html#ada9a65031923dfc821cfd5c4b5b240b8',1,'Recherche.produce()'],['../d6/d8e/class_transports.html#a0aa448dcce1df02b979452eeb01298d7',1,'Transports.produce()']]]
+  ['makemigrations',['makeMigrations',['../dd/dbe/class_pays.html#a469722f4aef187320a13b8597a503ac1',1,'Pays']]],
+  ['marginscreen',['marginScreen',['../d7/db3/class_rotate_earth.html#aafc996cf08c1d74b8ff8cf96929f5606',1,'RotateEarth.marginScreen()'],['../d6/da4/class_zoom_pays.html#a74b4ad295f45c7a9f3ef22e71b78a7ee',1,'ZoomPays.marginScreen()']]],
+  ['maritimes',['maritimes',['../de/d73/class_links.html#a91151e563ecced87de19ae1e9b6e3374',1,'Links']]],
+  ['medecine',['Medecine',['../d2/de3/class_medecine.html',1,'Medecine'],['../d2/de3/class_medecine.html#aad06c6c765b5dc7ca75278ffe39c2b5d',1,'Medecine.Medecine()']]],
+  ['medecine_2ecs',['Medecine.cs',['../d0/def/_medecine_8cs.html',1,'']]],
+  ['medecinepopulationcategory',['medecinePopulationCategory',['../dd/d36/class_population.html#a77f5c41e9b694db8d1d3af9e8f39b9e4',1,'Population']]],
+  ['menuprincipal',['menuPrincipal',['../db/d10/class_game_manager.html#a839b46b0c176d06eebe013abd2270baa',1,'GameManager']]],
+  ['mois',['mois',['../de/db5/class_date.html#a340fe94938c332ff02936ef52533c2cb',1,'Date']]]
 ];

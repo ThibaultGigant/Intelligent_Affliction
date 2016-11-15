@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['links',['Links',['../de/d73/class_links.html#aca478e5e071869ab06d19e9957b3ac78',1,'Links']]],
-  ['loisirs',['Loisirs',['../da/d41/class_loisirs.html#a921dd258109e025aa5c8dcb50bb55123',1,'Loisirs']]]
+  ['inactifs',['Inactifs',['../df/dee/class_inactifs.html#a970f5271df0bf2d9a1de677bf459c5ec',1,'Inactifs']]]
 ];
