@@ -3,26 +3,30 @@ using System.Collections;
 
 public class ZoomPays : MonoBehaviour {
 
-	public Transform trEarth;
-
-	private Vector3 boundsSize;
-	private float size;
+	/**
+	 * Composant Transform de la Terre
+	 */
+	private Transform trEarth;
+	/**
+	 * Taille que la caméra doit respercter afin de pouvoir afficher tout le pays
+	 */
 	private float distanceMax;
+	/**
+	 * Marge à prendre en compte lors du zoom de la caméra
+	 */
 	private float marginScreen = 5f;
+	/**
+	 * Booléen indiquant si l'action est demandée, ou en cours d'execution
+	 */
 	private bool buttonCalled = false;
-	private float oldOrthographicSize;
 	/**
 	 * Vitesse de déplacement de la terre lors du reset
 	 */
 	private float speedReset = 2f;
 
-	private bool zoomIn;
-
 	// Use this for initialization
 	void Start () {
-		oldOrthographicSize = Camera.main.orthographicSize;
-		boundsSize = GetComponent<MeshCollider> ().bounds.size;
-		size = Mathf.Max (boundsSize.x, Mathf.Max (boundsSize.y, boundsSize.z));
+		trEarth = Parametres.earth.transform;
 	}
 	
 	// Update is called once per frame
@@ -72,8 +76,6 @@ public class ZoomPays : MonoBehaviour {
 				buttonCalled = false;
 			}
 		}
-			
-		oldOrthographicSize = Camera.main.orthographicSize;
 	}
 
 	public void activeButton() {

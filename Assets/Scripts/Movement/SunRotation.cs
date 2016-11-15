@@ -4,7 +4,7 @@ using System.Collections;
 public class SunRotation : MonoBehaviour {
 
 	/**
-	 * Composant Transform de la terre
+	 * Composant Transform du Soleil
 	 */
 	private Transform tr;
 

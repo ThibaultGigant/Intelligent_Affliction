@@ -8,19 +8,6 @@ public class RotateEarth : MonoBehaviour {
 	 */
 	private Transform earthCenter;
 	/**
-	 * Transform de l'objet auquel on applique la rotation
-	 */
-	private Transform tr;
-
-	/**
-	 * rayon qui va vers la souris
-	 */
-	private Ray ray;
-	/**
-	 * hit du Raycast
-	 */
-	private RaycastHit hit;
-	/**
 	 * Direction du rayon allant du centre de la terre au point visé précédemment
 	 */
 	private Vector3 startingDirection;
@@ -35,7 +22,7 @@ public class RotateEarth : MonoBehaviour {
 	/**
 	 * Distance maximale de la caméra par rapport à la terre
 	 */
-	private float distanceMax = 65f;
+	private float distanceMax;
 	/**
 	 * Sensibilité du zoom de la  caméra
 	 */
@@ -56,12 +43,15 @@ public class RotateEarth : MonoBehaviour {
 	 * Garde en mémoire la taille de la fenpetre, en cas de redimensionnement
 	 */
 	private float lastScreenSize;
+	/**
+	 * Permet de la consistance de l'action
+	 */
+	private bool actionRotateEarth = false;
 
 	// Use this for initialization
 	void Start () {
 		// Initialisation de la vue de la caméra
 		earthCenter = transform;
-		tr = transform;
 		distanceMax = Mathf.Max(GetComponent<Collider> ().bounds.extents.y + Screen.height / Parametres.hauteurMenuPrincipal, GetComponent<Collider> ().bounds.extents.x / Camera.main.aspect) + marginScreen;
 		Camera.main.orthographicSize = distanceMax;
 
@@ -86,7 +76,6 @@ public class RotateEarth : MonoBehaviour {
 		zoom();
 
 		// Correction
-		tr.position = Vector3.zero;
 		checkScreenResized ();
 	}
 
@@ -101,12 +90,15 @@ public class RotateEarth : MonoBehaviour {
 			return;
 		}
 
-		ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-		if (Physics.Raycast (ray, out hit)) {
-			if (startingDirection == Vector3.zero && Input.GetMouseButton(1)) {
+		RaycastHit hit = MouseManager.getHitEarth ();
+		// Si le clique droit et appuyé et que la Terre est visée
+		if (MouseManager.rightClickPushed && MouseManager.doesHit(gameObject)) {
+			// Initialisation
+			if (startingDirection == Vector3.zero) {
 				startingDirection = hit.point - earthCenter.position;
 			}
-			else if (Input.GetMouseButton(1)) {
+			// La Terre suit la souris
+			else {
 				currentDirection = hit.point;
 
 				// Axe de rotation
@@ -115,12 +107,13 @@ public class RotateEarth : MonoBehaviour {
 				//rotationAxis.z = 0;
 
 				float rotationAngle = Vector3.Angle (startingDirection, currentDirection);
-				tr.RotateAround(earthCenter.position, rotationAxis, rotationAngle);
+				earthCenter.RotateAround(earthCenter.position, rotationAxis, rotationAngle);
 				startingDirection = currentDirection;
 			}
-			else {
-				startingDirection = Vector3.zero;
-			}
+		}
+		// Réinitialisation pour la prochaine rotation
+		else if (startingDirection != Vector3.zero) {
+			startingDirection = Vector3.zero;
 		}
 	}
 
@@ -141,18 +134,18 @@ public class RotateEarth : MonoBehaviour {
 	 * La terre tourne à une certaine vitesse, ce n'est pas instantané
 	 */
 	private void resetRotation() {
-		float angleToTurn = Quaternion.Angle (tr.rotation, Quaternion.identity);
+		float angleToTurn = Quaternion.Angle (earthCenter.rotation, Quaternion.identity);
 
-		Quaternion old = tr.rotation;
+		Quaternion old = earthCenter.rotation;
 
-		tr.rotation = Quaternion.Lerp (tr.rotation, Quaternion.identity, Mathf.Clamp01 (angleToTurn > 0 ? speedReset / angleToTurn : 0f));
+		earthCenter.rotation = Quaternion.Lerp (earthCenter.rotation, Quaternion.identity, Mathf.Clamp01 (angleToTurn > 0 ? speedReset / angleToTurn : 0f));
 
 		if (Camera.main.orthographicSize < distanceMax)
 			Camera.main.orthographicSize = Mathf.Min (Camera.main.orthographicSize + speedReset / 2f, distanceMax);
 		else
 			Camera.main.orthographicSize = distanceMax;
 
-		if (tr.rotation == old && Camera.main.orthographicSize == distanceMax)
+		if (earthCenter.rotation == old && Camera.main.orthographicSize == distanceMax)
 			resetFlag = false;
 	}
 

@@ -78,6 +78,16 @@ public class Pays : MonoBehaviour
 	public Souche souche;
 
 	/**
+	 * Indique si le pays est sélectionné
+	 */
+	public bool isSelected = false;
+
+	/**
+	 * Light
+	 */
+	private GameObject light = null;
+
+	/**
 	 * Fonction appelée lorsque le pays s'active pour la première fois
 	 * Initialisation du pays
 	 */
@@ -88,6 +98,11 @@ public class Pays : MonoBehaviour
 		links = new Links ();
 
 		SetupRessources ();
+
+		foreach (Transform t in transform) {
+			if (t.gameObject.layer == LayerMask.NameToLayer("Light") )
+				light = t.gameObject;
+		}
 	}
 
 	/**
@@ -111,6 +126,53 @@ public class Pays : MonoBehaviour
 	 */
 	public void Update() {
 		TestFunctions ();
+
+		SelectionPays ();
+		checkSelection ();
+
+	}
+
+	private void SelectionPays() {
+		RaycastHit hit = MouseManager.getHit ();
+		// Sélection du pays
+		if (!isSelected && MouseManager.doubleLeftClick && MouseManager.doesHit(gameObject)) {
+			Parametres.SetPaysSelected(gameObject);
+			Debug.Log (name);
+			isSelected = true;
+		}
+		// Déselection du pays, par un simple clique en dehors de la zone
+		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject)) {
+			Parametres.SetPaysSelected(null);
+			isSelected = false;
+		}
+		// Déselection du pays, si un autre à été sélectionné
+		else if (Parametres.paysSelected != null && Parametres.paysSelected.name != name) {
+			isSelected = false;
+		}
+	}
+
+	private void checkSelection() {
+		Material mat = GetComponent<Renderer> ().material;
+
+		if (Parametres.paysSelected && Parametres.paysSelected.name == name && mat.GetFloat ("_Metallic") != 0f) {
+			mat.SetFloat ("_Metallic", 0f);
+			if (light)
+				light.SetActive (true);
+		}
+		else if (Parametres.paysSelected && Parametres.paysSelected.name != name && mat.GetFloat ("_Metallic") == 0f) {
+			mat.SetFloat ("_Metallic", 0.5f);
+			if (light)
+				light.SetActive (false);
+		}
+		else if (!Parametres.paysSelected && mat.GetFloat ("_Metallic") != 0f) {
+			mat.SetFloat ("_Metallic", 0f);
+			if (light)
+				light.SetActive (false);
+		}
+		else if (Parametres.paysSelected && Parametres.paysSelected.name == name && light && !light.activeSelf) {
+			light.SetActive (true);
+		}
+			
 	}
 
 	/**

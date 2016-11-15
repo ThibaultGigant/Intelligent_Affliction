@@ -5,12 +5,15 @@ using System.Collections;
 public class GameManager : MonoBehaviour {
 
 	public RawImage menuPrincipal;
+	public GameObject earth;
 
 	private float largeurMenuPrincipal = Screen.width * 1.0f;
 
 	// Use this for initialization
 	void Start () {
 		resizeMenuPrincipal ();
+		Parametres.earth = earth;
+		earth.SetActive (true);
 	}
 	
 	// Update is called once per frame

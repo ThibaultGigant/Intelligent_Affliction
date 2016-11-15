@@ -44,4 +44,18 @@ public static class Parametres {
 	public static Date date = new Date(1, 1, 2016);
 
 	public static float hauteurMenuPrincipal = 85f;
+
+	/**
+	 * earth : La Terre
+	 */
+	public static GameObject earth;
+
+	/**
+	 * Référence sur le pays sélectionné
+	 */
+	public static GameObject paysSelected = null;
+
+	public static void SetPaysSelected(GameObject pays) {
+		paysSelected = pays;
+	}
 }
