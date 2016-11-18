@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Globalization;
+using System.Threading;
 
 public class ClockManager : MonoBehaviour
 {
@@ -25,6 +27,7 @@ public class ClockManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		Thread.CurrentThread.CurrentCulture = new CultureInfo ("fr-FR");
 		displayDate ();
 	}
 	
@@ -41,7 +44,7 @@ public class ClockManager : MonoBehaviour
 		
 		countTime += Parametres.getTimeSpeed ();
 		if (countTime >= Parametres.timeOfADay) {
-			Parametres.date.Tomorow ();
+			Parametres.date = Parametres.date.AddDays(1);
 			displayDate ();
 			countTime -= Parametres.timeOfADay;
 			newDay = true;
@@ -51,8 +54,8 @@ public class ClockManager : MonoBehaviour
 	/**
 	 * Mise à jour de l'affichage de la date
 	 */
-	private void displayDate() {
-		textDate.text = Parametres.date.getJour() + "/" + Parametres.date.getMois() + "/" + Parametres.date.getAnnee();
+	public void displayDate() {
+		textDate.text = Parametres.date.ToString("d MMM yyyy");
 	}
 }
 
