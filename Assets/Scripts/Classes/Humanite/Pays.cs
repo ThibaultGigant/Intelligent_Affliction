@@ -70,14 +70,14 @@ public class Pays : MonoBehaviour
 	private void SetupRessources() {
 		resources = new Dictionary<string, Ressource> ();
 		resources.Add ("Nourriture", new Nourriture ());
-		resources.Add ("KnowledgeToux", new KnowledgeToux ());
-		resources.Add ("KnowledgeEternuements", new KnowledgeEternuements ());
-		resources.Add ("KnowledgeFievre", new KnowledgeFievre ());
-		resources.Add ("KnowledgeDiarrhees", new KnowledgeDiarrhees ());
-		resources.Add ("KnowledgeSueurs", new KnowledgeSueurs ());
-		resources.Add ("KnowledgeArretOrganes", new KnowledgeArretOrganes ());
-		resources.Add ("KnowledgeResistance", new KnowledgeResistance ());
-		resources.Add ("KnowledgeSpreading", new KnowledgeSpreading ());
+		resources.Add ("KnowledgeToux", new Knowledge ("Toux", 1));
+		resources.Add ("KnowledgeEternuements", new Knowledge ("Eternuements", 1));
+		resources.Add ("KnowledgeFievre", new Knowledge ("Fievre", 1));
+		resources.Add ("KnowledgeDiarrhees", new Knowledge ("Diarrhees", 1));
+		resources.Add ("KnowledgeSueurs", new Knowledge ("Sueurs", 1));
+		resources.Add ("KnowledgeArretOrganes", new Knowledge ("ArretOrganes", 1));
+		resources.Add ("KnowledgeResistance", new Knowledge ("Resistance", 1));
+		resources.Add ("KnowledgeSpreading", new Knowledge ("Spreading", 1));
 	}
 
 	/**
@@ -93,7 +93,6 @@ public class Pays : MonoBehaviour
 	}
 
 	private void SelectionPays() {
-		RaycastHit hit = MouseManager.getHit ();
 		// Sélection du pays
 		if (!isSelected && MouseManager.doubleLeftClick && MouseManager.doesHit(gameObject)) {
 			Parametres.SetPaysSelected(gameObject);
@@ -206,6 +205,26 @@ public class Pays : MonoBehaviour
 	 * @param ressourceIn Les ressources reçues par l'autre pays
 	 */
 	public void exchangeRessource(Pays pays, Ressource ressourceOut, Ressource ressourceIn) {
+	}
+
+	/**
+	 * Retourne le nombre d'habitants actuel du pays
+	 * @return le nombre d'habitants actuel du pays
+	 */
+	public uint getNbPopulation()
+	{
+		if (population == null)
+			return 0;
+		return population.totalPopulation;
+	}
+
+	/**
+	 * Retourne le nombre d'habitants initial du pays
+	 * @return le nombre d'habitants initial du pays
+	 */
+	public uint getInitialNbPopulation()
+	{
+		return population.initialNumberPopulation;
 	}
 }
 

@@ -25,6 +25,7 @@ public abstract class Ressource
 		if (nb < 0)
 			return 0;
 		quantity += nb;
+		return nb;
 	}
 
 	/**
@@ -51,7 +52,7 @@ public abstract class Ressource
 	 * @param toSend Quantité de ressource que l'on doit envoyer
 	 * @return Nombre de ressources envoyé
 	 */
-	public abstract int send(int toSend) {}
+	public abstract int send (int toSend);
 
 	/**
 	 * Effectue la réception d'une ressource d'un autre pays.
@@ -59,5 +60,5 @@ public abstract class Ressource
 	 * @param toReceive Quantité de ressource que l'on reçoit
 	 * @return Nombre de ressources reçu
 	 */
-	public abstract int receive(int toReceive) {}
+	public abstract int receive (int toReceive);
 }

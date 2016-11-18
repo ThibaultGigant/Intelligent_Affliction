@@ -43,10 +43,6 @@ public class RotateEarth : MonoBehaviour {
 	 * Garde en mémoire la taille de la fenêtre, en cas de redimensionnement
 	 */
 	private float lastScreenSize;
-	/**
-	 * Permet de la consistance de l'action
-	 */
-	private bool actionRotateEarth = false;
 
 	// Use this for initialization
 	void Start () {
@@ -61,8 +57,6 @@ public class RotateEarth : MonoBehaviour {
 	}
 	
 	/**
-	 * Update is called once per frame
-	 * ---
 	 * Fait tourner la terre en suivant la souris lorsque le clique droit est enfoncé
 	 * Fait un zoom lorsque la molette de la souris est actionnée
 	 * Fait en sorte que le zoom reste le même après un redimensionnement de la fenêtre
@@ -81,7 +75,6 @@ public class RotateEarth : MonoBehaviour {
 
 	/**
 	 * Rotation de la terre
-	 * ---
 	 * Suit le curseur, lorsque le clique droit de la souris est enfoncé
 	 */
 	private void rotate() {

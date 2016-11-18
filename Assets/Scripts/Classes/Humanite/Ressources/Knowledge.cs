@@ -11,6 +11,12 @@ public class Knowledge : Ressource {
 	 */
 	public int coutDeRecherche;
 
+	public Knowledge (string sujet, int cout)
+	{
+		sujetKnowledge = sujet;
+		coutDeRecherche = cout;
+	}
+
 	/**
 	 * Effectue l'envoi de la ressource à un autre pays.
 	 * Retire la quantité de ressource voulu à la ressource
