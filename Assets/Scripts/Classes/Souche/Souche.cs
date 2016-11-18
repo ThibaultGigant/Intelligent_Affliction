@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Souche {
 
@@ -12,16 +13,27 @@ public class Souche {
 		Les attributs suivants représentent en réalité des pourcentages :
 		ce seront des entiers de 0 à 100 (pourcentage d'acquisition de la capacité)
 	*/
-	/** Résistance au froid de la souche */
-	int coldResistance;
-	/** Résistance à la chaleur de la souche */
-	int heatResistance;
-	/** Propagation dans l'air */
-	int airPropagation;
-	/** Propagation dans l'eau */
-	int waterPropagation;
-	/** Propagation par contact */
-	int contactPropagation;
+	/**
+	* Ensemble des symptomes de la souche
+	*/
+	public IDictionary<string, ISymptom> symptoms;
+	/**
+	 * Ensemble des skills de la souche
+	 */
+	public Skills skills;
+
+	/**
+	 * Constructeur
+	 */
+	public Souche() {
+		symptoms = new Dictionary<string, ISymptom> ();
+		symptoms.Add ("Toux",new Toux(Parametres.coutToux));
+		symptoms.Add ("Eternuements",new Eternuements(Parametres.coutEternuements));
+		symptoms.Add ("Diarrhee",new Diarrhee(Parametres.coutDiarrhee));
+		symptoms.Add ("Sueurs",new Sueurs(Parametres.coutSueurs));
+		symptoms.Add ("Fievre",new Fievre(Parametres.coutFievre));
+		symptoms.Add ("ArretDesOrganes",new ArretDesOrganes(Parametres.coutArretDesOrganes));
+	}
 
 	/**
 	 * Retourne le nombre d'infectés du pays

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public static class Parametres {
 	/**
@@ -41,7 +42,7 @@ public static class Parametres {
 	 */
 	public static Quaternion earthAxis = Quaternion.Euler(new Vector3(Mathf.Sin(theta1 * 2 * Mathf.PI / 360), Mathf.Cos(theta1 * 2 * Mathf.PI / 360), Mathf.Cos((90 - theta1) * 2 * Mathf.PI / 360)));
 
-	public static Date date = new Date(1, 1, 2016);
+	public static DateTime date = new DateTime(2016, 1, 1);
 
 	public static float hauteurMenuPrincipal = 85f;
 
@@ -54,6 +55,59 @@ public static class Parametres {
 	 * Référence sur le pays sélectionné
 	 */
 	public static GameObject paysSelected = null;
+
+	public static var coutSympotoms =
+	{
+		/**
+		 * Coût de l'évolution du symptom Toux
+		 */
+			public static int coutToux = 1;
+			/**
+		 * Coût de l'évolution du symptom Diarrhee
+		 */
+			public static int coutDiarrhee = 1;
+			/**
+		 * Coût de l'évolution du symptom Eternuements
+		 */
+			public static int coutEternuements = 1;
+			/**
+		 * Coût de l'évolution du symptom Sueurs
+		 */
+			public static int coutSueurs = 1;
+			/**
+		 * Coût de l'évolution du symptom ArretDesOrganes
+		 */
+			public static int coutArretDesOrganes = 1;
+			/**
+		 * Coût de l'évolution du symptom Fievre
+		 */
+			public static int coutFievre = 1;
+	}
+
+	/**
+	 * Coût de l'évolution du symptom Toux
+	 */
+	public static int coutToux = 1;
+	/**
+	 * Coût de l'évolution du symptom Diarrhee
+	 */
+	public static int coutDiarrhee = 1;
+	/**
+	 * Coût de l'évolution du symptom Eternuements
+	 */
+	public static int coutEternuements = 1;
+	/**
+	 * Coût de l'évolution du symptom Sueurs
+	 */
+	public static int coutSueurs = 1;
+	/**
+	 * Coût de l'évolution du symptom ArretDesOrganes
+	 */
+	public static int coutArretDesOrganes = 1;
+	/**
+	 * Coût de l'évolution du symptom Fievre
+	 */
+	public static int coutFievre = 1;
 
 	public static void SetPaysSelected(GameObject pays) {
 		paysSelected = pays;
