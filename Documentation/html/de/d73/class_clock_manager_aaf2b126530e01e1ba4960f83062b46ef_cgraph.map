@@ -1,8 +1,4 @@
 <map id="ClockManager.Update" name="ClockManager.Update">
 <area shape="rect" id="node2" href="$df/dfc/class_parametres.html#a80ac598651a0e85d8fd9ce2b158366c0" title="Parametres.getTimeSpeed" alt="" coords="208,5,389,32"/>
-<area shape="rect" id="node3" href="$de/db5/class_date.html#afaa9d32145a491c54f3e848a0cafee2e" title="Date.Tomorow" alt="" coords="244,56,353,83"/>
-<area shape="rect" id="node4" href="$de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707" title="Mise à jour de l&#39;affichage de la date. " alt="" coords="208,107,389,133"/>
-<area shape="rect" id="node5" href="$de/db5/class_date.html#af48e1012bc97d23f1c688f22fb86a316" title="Date.getJour" alt="" coords="443,56,542,83"/>
-<area shape="rect" id="node6" href="$de/db5/class_date.html#ad6b2182eb2fe61924b052082e98daaa2" title="Date.getMois" alt="" coords="443,107,543,133"/>
-<area shape="rect" id="node7" href="$de/db5/class_date.html#ada1856019203557aecdea6f709a33f3a" title="Date.getAnnee" alt="" coords="437,157,548,184"/>
+<area shape="rect" id="node3" href="$de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707" title="Mise à jour de l&#39;affichage de la date. " alt="" coords="208,56,389,83"/>
 </map>

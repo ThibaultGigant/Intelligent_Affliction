@@ -24,6 +24,7 @@
    <div id="projectname">Intelligent Affliction
    &#160;<span id="projectnumber">0.1</span>
    </div>
+   <div id="projectbrief">Projet de l&#39;UE EVIJV - M2 ANDROIDE - 2016/2017</div>
   </td>
  </tr>
  </tbody>
@@ -61,15 +62,31 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-attribs">Attributs publics</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="../../d9/dcd/class_souche-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Souche</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Graphe de collaboration de Souche:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/da7/class_souche__coll__graph.png" border="0" usemap="#_souche_coll__map" alt="Collaboration graph"/></div>
+<map name="_souche_coll__map" id="_souche_coll__map">
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="217,184,269,211"/>
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="341,5,394,32"/>
+<area shape="rect" id="node7" href="../../dd/d36/class_population.html" title="Population" alt="" coords="201,273,286,300"/>
+<area shape="rect" id="node5" href="../../de/d73/class_links.html" title="Links" alt="" coords="146,95,199,121"/>
+<area shape="rect" id="node6" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="224,95,284,121"/>
+</map>
+<center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5ccd498345fbf837e1e4388b8a4dfb8b">Souche</a> (<a class="el" href="../../dd/dbe/class_pays.html">Pays</a> pays)</td></tr>
+<tr class="memdesc:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a5ccd498345fbf837e1e4388b8a4dfb8b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91d168071b06701006d23219e6fd9f48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a91d168071b06701006d23219e6fd9f48">getNbInfected</a> ()</td></tr>
 <tr class="memdesc:a91d168071b06701006d23219e6fd9f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre d'infectés du pays.  <a href="#a91d168071b06701006d23219e6fd9f48">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a91d168071b06701006d23219e6fd9f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -80,27 +97,45 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memdesc:a4528db49a284375f869eeec40575675a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression de Personnes infectées, probablement soignées.  <a href="#a4528db49a284375f869eeec40575675a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4528db49a284375f869eeec40575675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
+<tr class="memitem:a83e37b941effdc02e615a6b36d4bfc9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a83e37b941effdc02e615a6b36d4bfc9d">country</a></td></tr>
+<tr class="memdesc:a83e37b941effdc02e615a6b36d4bfc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> que la souche a infecté  <a href="#a83e37b941effdc02e615a6b36d4bfc9d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a83e37b941effdc02e615a6b36d4bfc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3cfd15dcdb4c7ae880ab53fff126b31"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../de/dd8/interface_i_symptom.html">ISymptom</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ac3cfd15dcdb4c7ae880ab53fff126b31">symptoms</a></td></tr>
+<tr class="memdesc:ac3cfd15dcdb4c7ae880ab53fff126b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des symptomes de la souche.  <a href="#ac3cfd15dcdb4c7ae880ab53fff126b31">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac3cfd15dcdb4c7ae880ab53fff126b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499998f4af10da48bf2feb5fdfbb319b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d3b/class_skills.html">Skills</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a499998f4af10da48bf2feb5fdfbb319b">skills</a></td></tr>
+<tr class="memdesc:a499998f4af10da48bf2feb5fdfbb319b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des skills de la souche.  <a href="#a499998f4af10da48bf2feb5fdfbb319b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a499998f4af10da48bf2feb5fdfbb319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a2e5f5d1363573038c47839676f72ade7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a2e5f5d1363573038c47839676f72ade7">nbInfected</a></td></tr>
 <tr class="memdesc:a2e5f5d1363573038c47839676f72ade7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de personnes infectées par cette souche dans ce pays.  <a href="#a2e5f5d1363573038c47839676f72ade7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2e5f5d1363573038c47839676f72ade7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e7f890d0778affa0b57f1ec51311e67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a0e7f890d0778affa0b57f1ec51311e67">coldResistance</a></td></tr>
-<tr class="memdesc:a0e7f890d0778affa0b57f1ec51311e67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résistance au froid de la souche.  <a href="#a0e7f890d0778affa0b57f1ec51311e67">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0e7f890d0778affa0b57f1ec51311e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18fa4295266c40b7ac32e762e5a7e92d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a18fa4295266c40b7ac32e762e5a7e92d">heatResistance</a></td></tr>
-<tr class="memdesc:a18fa4295266c40b7ac32e762e5a7e92d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Résistance à la chaleur de la souche.  <a href="#a18fa4295266c40b7ac32e762e5a7e92d">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a18fa4295266c40b7ac32e762e5a7e92d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82b3a4c6045d6fb78fe6fcc70fbedaa7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a82b3a4c6045d6fb78fe6fcc70fbedaa7">airPropagation</a></td></tr>
-<tr class="memdesc:a82b3a4c6045d6fb78fe6fcc70fbedaa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagation dans l'air.  <a href="#a82b3a4c6045d6fb78fe6fcc70fbedaa7">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a82b3a4c6045d6fb78fe6fcc70fbedaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a238f636e724c8d2137a17c28af978630"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a238f636e724c8d2137a17c28af978630">waterPropagation</a></td></tr>
-<tr class="memdesc:a238f636e724c8d2137a17c28af978630"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagation dans l'eau.  <a href="#a238f636e724c8d2137a17c28af978630">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a238f636e724c8d2137a17c28af978630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4f2977500b2e0bc1f781c5de7cb5067"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae4f2977500b2e0bc1f781c5de7cb5067">contactPropagation</a></td></tr>
-<tr class="memdesc:ae4f2977500b2e0bc1f781c5de7cb5067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propagation par contact.  <a href="#ae4f2977500b2e0bc1f781c5de7cb5067">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae4f2977500b2e0bc1f781c5de7cb5067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a5ccd498345fbf837e1e4388b8a4dfb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccd498345fbf837e1e4388b8a4dfb8b">&sect;&nbsp;</a></span>Souche()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Souche.Souche </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td>
+          <td class="paramname"><em>pays</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructeur. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="ae10e340614c58acafc84612f810cd3aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae10e340614c58acafc84612f810cd3aa">&sect;&nbsp;</a></span>addInfectedPeople()</h2>
@@ -121,10 +156,18 @@ Attributs privés</h2></td></tr>
 <p>Ajout de Personnes infectées. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">toAdd</td><td>Nombre de personnes infectées à rajouter. Ce nombre doit être positif. </td></tr>
+    <tr><td class="paramname">toAdd</td><td>Nombre de personnes infectées à rajouter. Ce nombre doit être positif et inférieur à la population non-infectée. </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph.png" border="0" usemap="#d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph" id="d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="236,5,389,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -175,99 +218,19 @@ Attributs privés</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a id="a82b3a4c6045d6fb78fe6fcc70fbedaa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82b3a4c6045d6fb78fe6fcc70fbedaa7">&sect;&nbsp;</a></span>airPropagation</h2>
+<a id="a83e37b941effdc02e615a6b36d4bfc9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e37b941effdc02e615a6b36d4bfc9d">&sect;&nbsp;</a></span>country</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Souche.airPropagation</td>
+          <td class="memname"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> Souche.country</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Propagation dans l'air. </p>
-
-</div>
-</div>
-<a id="a0e7f890d0778affa0b57f1ec51311e67"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e7f890d0778affa0b57f1ec51311e67">&sect;&nbsp;</a></span>coldResistance</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Souche.coldResistance</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Résistance au froid de la souche. </p>
-
-</div>
-</div>
-<a id="ae4f2977500b2e0bc1f781c5de7cb5067"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4f2977500b2e0bc1f781c5de7cb5067">&sect;&nbsp;</a></span>contactPropagation</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Souche.contactPropagation</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Propagation par contact. </p>
-
-</div>
-</div>
-<a id="a18fa4295266c40b7ac32e762e5a7e92d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18fa4295266c40b7ac32e762e5a7e92d">&sect;&nbsp;</a></span>heatResistance</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Souche.heatResistance</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Résistance à la chaleur de la souche. </p>
+<p><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> que la souche a infecté </p>
 
 </div>
 </div>
@@ -295,32 +258,40 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="a238f636e724c8d2137a17c28af978630"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a238f636e724c8d2137a17c28af978630">&sect;&nbsp;</a></span>waterPropagation</h2>
+<a id="a499998f4af10da48bf2feb5fdfbb319b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499998f4af10da48bf2feb5fdfbb319b">&sect;&nbsp;</a></span>skills</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Souche.waterPropagation</td>
+          <td class="memname"><a class="el" href="../../d4/d3b/class_skills.html">Skills</a> Souche.skills</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Propagation dans l'eau. </p>
+<p>Ensemble des skills de la souche. </p>
+
+</div>
+</div>
+<a id="ac3cfd15dcdb4c7ae880ab53fff126b31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3cfd15dcdb4c7ae880ab53fff126b31">&sect;&nbsp;</a></span>symptoms</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDictionary&lt;string, <a class="el" href="../../de/dd8/interface_i_symptom.html">ISymptom</a>&gt; Souche.symptoms</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ensemble des symptomes de la souche. </p>
 
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Classes/<a class="el" href="../../d6/d4e/_souche_8cs.html">Souche.cs</a></li>
+<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Classes/Souche/<a class="el" href="../../d6/d4e/_souche_8cs.html">Souche.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

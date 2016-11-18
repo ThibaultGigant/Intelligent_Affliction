@@ -6,28 +6,28 @@ public class Population {
 	/**
 	 * Pays associé
 	 */
-	public Pays country { get; set;}
+	public Pays country;
 	/**
 	 * "Contentement" de la population
-	 * TODO : Quelle est la valeur par défaut ?
+	 * TODO : Quelle est la valeur par défaut ? Comment on l'utilise ?
 	 */
-	private int happinessIndex { get; set;}
+	private int happinessIndex;
 	/**
 	 * Taille initiale de la population, en nombre d'habitants
 	 */
-	public uint initialNumberPopulation { get; set;}
+	public uint initialNumberPopulation;
 	/**
 	 * Population totale du pays
 	 */
-	public uint totalPopulation { get; set;}
+	public uint totalPopulation;
 	/**
 	 * Nombre de personnes détectées comme infectées (peut être différent du nombre réel d'infectés)
 	 */
-	public uint nbInfectedDetected { get; set;}
+	public uint nbInfectedDetected;
 	/**
 	 * Ensemble des Catégories de population, accessibles par leur nom
 	 */
-	public IDictionary<string, APopulationCategory> categories { get; set;}
+	public IDictionary<string, APopulationCategory> categories;
 
 	/**
 	 * Constructeur

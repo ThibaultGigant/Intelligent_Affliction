@@ -11,15 +11,15 @@ public class Skills {
 	 */
 	public int resistanceToHeat;
 	/**
-	 * Habilité de propagation par les eaux
+	 * Habileté de propagation par les eaux
 	 */
 	public int waterSpreading;
 	/**
-	 * Habilité de propagation par les airs
+	 * Habileté de propagation par les airs
 	 */
 	public int airSpreading;
 	/**
-	 * Habilité de propagation par le contact
+	 * Habileté de propagation par le contact
 	 */
 	public int contactSpreading;
 }

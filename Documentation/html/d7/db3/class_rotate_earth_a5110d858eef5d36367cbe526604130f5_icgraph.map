@@ -1,4 +1,4 @@
 <map id="RotateEarth.zoomIn" name="RotateEarth.zoomIn">
-<area shape="rect" id="node2" href="$d7/db3/class_rotate_earth.html#af71e5d7956d6205440d834658466b0ad" title="RotateEarth.zoom" alt="" coords="193,5,323,32"/>
-<area shape="rect" id="node3" href="$d7/db3/class_rotate_earth.html#a6bed28f8b4574f58d6dc5d3f51b5fe2f" title="Update is called once per frame Fait tourner la terre en suivant la souris lorsque le clique droit es..." alt="" coords="371,5,511,32"/>
+<area shape="rect" id="node2" href="$d7/db3/class_rotate_earth.html#af71e5d7956d6205440d834658466b0ad" title="Effectue le zoom demandé sur la planète. " alt="" coords="193,5,323,32"/>
+<area shape="rect" id="node3" href="$d7/db3/class_rotate_earth.html#a6bed28f8b4574f58d6dc5d3f51b5fe2f" title="Fait tourner la terre en suivant la souris lorsque le clique droit est enfoncé Fait un zoom lorsque l..." alt="" coords="371,5,511,32"/>
 </map>

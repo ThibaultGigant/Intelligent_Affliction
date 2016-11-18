@@ -1,3 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$de/db5/class_date.html" title="Date" alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" href="$de/dd8/interface_i_symptom.html" title="ISymptom" alt="" coords="5,132,88,159"/>
+<area shape="rect" id="node2" href="$d1/d6f/class_arret_des_organes.html" title="ArretDesOrganes" alt="" coords="136,5,261,32"/>
+<area shape="rect" id="node3" href="$d7/d32/class_diarrhee.html" title="Diarrhee" alt="" coords="162,56,235,83"/>
+<area shape="rect" id="node4" href="$d9/d48/class_eternuements.html" title="Eternuements" alt="" coords="146,107,251,133"/>
+<area shape="rect" id="node5" href="$d2/d9c/class_fievre.html" title="Fievre" alt="" coords="169,157,228,184"/>
+<area shape="rect" id="node6" href="$d0/dc6/class_sueurs.html" title="Sueurs" alt="" coords="167,208,231,235"/>
+<area shape="rect" id="node7" href="$d1/d49/class_toux.html" title="Toux" alt="" coords="173,259,225,285"/>
 </map>

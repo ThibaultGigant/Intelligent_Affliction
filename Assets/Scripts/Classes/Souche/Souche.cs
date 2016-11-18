@@ -3,7 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Souche {
-
+	/**
+	 * Pays que la souche a infecté
+	 */
+	public Pays country;
 	/**
 	 * Nombre de personnes infectées par cette souche dans ce pays
 	 */
@@ -25,7 +28,8 @@ public class Souche {
 	/**
 	 * Constructeur
 	 */
-	public Souche() {
+	public Souche(Pays pays) {
+		country = pays;
 		symptoms = new Dictionary<string, ISymptom> ();
 		symptoms.Add ("Toux",new Toux(Parametres.coutToux));
 		symptoms.Add ("Eternuements",new Eternuements(Parametres.coutEternuements));
@@ -46,12 +50,15 @@ public class Souche {
 
 	/**
 	 * Ajout de Personnes infectées
-	 * @param toAdd: Nombre de personnes infectées à rajouter. Ce nombre doit être positif.
+	 * @param toAdd: Nombre de personnes infectées à rajouter. Ce nombre doit être positif et inférieur à la population non-infectée.
 	*/
 	public void addInfectedPeople(int toAdd)
 	{
 		if (toAdd < 0)
 			return;
+		int nbNotInfected = (int) country.getNbPopulation () - nbInfected;
+		if (nbNotInfected < toAdd)
+			nbInfected += nbNotInfected;
 		nbInfected += toAdd;
 	}
 

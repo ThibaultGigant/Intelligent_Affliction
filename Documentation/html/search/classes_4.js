@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inactifs',['Inactifs',['../df/dee/class_inactifs.html',1,'']]]
+  ['fievre',['Fievre',['../d2/d9c/class_fievre.html',1,'']]]
 ];

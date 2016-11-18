@@ -1,0 +1,6 @@
+<map id="MouseManager.doesHit" name="MouseManager.doesHit">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a0dadfb2f559f59b3001436a608f60326" title="Pays.SelectionPays" alt="" coords="217,5,357,32"/>
+<area shape="rect" id="node4" href="$d7/db3/class_rotate_earth.html#adc960e9c7d441a5ebe64df0cf10510b0" title="Rotation de la terre Suit le curseur, lorsque le clique droit de la souris est enfoncé ..." alt="" coords="222,56,353,83"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="426,5,525,32"/>
+<area shape="rect" id="node5" href="$d7/db3/class_rotate_earth.html#a6bed28f8b4574f58d6dc5d3f51b5fe2f" title="Fait tourner la terre en suivant la souris lorsque le clique droit est enfoncé Fait un zoom lorsque l..." alt="" coords="405,56,545,83"/>
+</map>

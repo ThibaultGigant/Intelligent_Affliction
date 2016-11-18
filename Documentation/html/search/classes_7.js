@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['medecine',['Medecine',['../d2/de3/class_medecine.html',1,'']]]
+  ['knowledge',['Knowledge',['../d9/db1/class_knowledge.html',1,'']]]
 ];

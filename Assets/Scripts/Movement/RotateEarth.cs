@@ -111,18 +111,14 @@ public class RotateEarth : MonoBehaviour {
 	}
 
 	/**
-	 * resetRotationButton
-	 * ---
-	 * Fonction appelée lorsque le boutton associé est activé
-	 * Pour replacer la caméra au point initial
+	 * Demande le replacement de la caméra à l'angle initial, sur le pays initial
+	 * Fonction appelée lorsque le bouton associé est activé
 	 */
 	public void resetRotationButton() {
 		resetFlag = true;
 	}
 
 	/**
-	 * resetRotation
-	 * ---
 	 * Replace la caméra au point initial
 	 * La terre tourne à une certaine vitesse, ce n'est pas instantané
 	 */
@@ -142,6 +138,9 @@ public class RotateEarth : MonoBehaviour {
 			resetFlag = false;
 	}
 
+	/**
+	 * Effectue le zoom demandé sur la planète
+	 */
 	private void zoom() {
 		float wheel = Input.GetAxis ("Mouse ScrollWheel");
 		if (wheel > 0)
@@ -150,6 +149,10 @@ public class RotateEarth : MonoBehaviour {
 			zoomOut (-1.0f * wheel);
 	}
 
+	/**
+	 * Zoome vers la planète
+	 * @param zoom Valeur de zoom demandée
+	 */
 	private void zoomIn(float zoom) {
 		if (Camera.main.orthographicSize <= distanceMin)
 			return;
@@ -157,6 +160,10 @@ public class RotateEarth : MonoBehaviour {
 		Camera.main.orthographicSize += zoom * sensitivity;
 	}
 
+	/**
+	 * Dézoome de la planète
+	 * @param zoom Valeur de zoom demandée
+	 */
 	private void zoomOut(float zoom) {
 		if (Camera.main.orthographicSize >= distanceMax)
 			return;
@@ -164,6 +171,9 @@ public class RotateEarth : MonoBehaviour {
 		Camera.main.orthographicSize += zoom * sensitivity;
 	}
 
+	/**
+	 * Effectue un zoom ou dézoom sur la Terre pour garder la même taille relativement à la fenêtre
+	 */
 	private void checkScreenResized() {
 		float currentScreenSize = Mathf.Min (Screen.width, Screen.height);
 		if (lastScreenSize != currentScreenSize) {

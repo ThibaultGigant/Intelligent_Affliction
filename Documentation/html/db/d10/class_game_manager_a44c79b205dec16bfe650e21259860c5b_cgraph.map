@@ -1,0 +1,6 @@
+<map id="GameManager.Update" name="GameManager.Update">
+<area shape="rect" id="node2" href="$db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295" title="GameManager.updateMenuPricipal" alt="" coords="211,31,443,57"/>
+<area shape="rect" id="node3" href="$db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="491,5,725,32"/>
+<area shape="rect" id="node4" href="$df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="499,56,717,83"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="773,56,927,83"/>
+</map>

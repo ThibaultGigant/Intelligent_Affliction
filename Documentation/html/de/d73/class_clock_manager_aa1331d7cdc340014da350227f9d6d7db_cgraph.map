@@ -1,6 +1,3 @@
 <map id="ClockManager.Start" name="ClockManager.Start">
-<area shape="rect" id="node2" href="$de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707" title="Mise à jour de l&#39;affichage de la date. " alt="" coords="193,56,375,83"/>
-<area shape="rect" id="node3" href="$de/db5/class_date.html#af48e1012bc97d23f1c688f22fb86a316" title="Date.getJour" alt="" coords="429,5,527,32"/>
-<area shape="rect" id="node4" href="$de/db5/class_date.html#ad6b2182eb2fe61924b052082e98daaa2" title="Date.getMois" alt="" coords="428,56,528,83"/>
-<area shape="rect" id="node5" href="$de/db5/class_date.html#ada1856019203557aecdea6f709a33f3a" title="Date.getAnnee" alt="" coords="423,107,533,133"/>
+<area shape="rect" id="node2" href="$de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707" title="Mise à jour de l&#39;affichage de la date. " alt="" coords="193,5,375,32"/>
 </map>

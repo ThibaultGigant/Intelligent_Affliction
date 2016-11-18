@@ -1,8 +1,10 @@
 <map id="RotateEarth.Update" name="RotateEarth.Update">
-<area shape="rect" id="node2" href="$d7/db3/class_rotate_earth.html#adc960e9c7d441a5ebe64df0cf10510b0" title="Rotation de la terre Suit le curseur, lorsque le clique droit de la souris est enfoncé ..." alt="" coords="239,5,370,32"/>
-<area shape="rect" id="node4" href="$d7/db3/class_rotate_earth.html#af71e5d7956d6205440d834658466b0ad" title="RotateEarth.zoom" alt="" coords="240,56,369,83"/>
-<area shape="rect" id="node7" href="$d7/db3/class_rotate_earth.html#a9fda986660c8d513ff97beaae285bccc" title="RotateEarth.checkScreenResized" alt="" coords="193,107,416,133"/>
-<area shape="rect" id="node3" href="$d7/db3/class_rotate_earth.html#aba3ec14270b1ef054704c787e57371bc" title="resetRotation Replace la caméra au point initial La terre tourne à une certaine vitesse, ce n&#39;est pas instantané " alt="" coords="464,5,640,32"/>
-<area shape="rect" id="node5" href="$d7/db3/class_rotate_earth.html#a5110d858eef5d36367cbe526604130f5" title="RotateEarth.zoomIn" alt="" coords="482,56,622,83"/>
-<area shape="rect" id="node6" href="$d7/db3/class_rotate_earth.html#a61ea67949e81ce40497accc0cb188812" title="RotateEarth.zoomOut" alt="" coords="477,107,627,133"/>
+<area shape="rect" id="node2" href="$d7/db3/class_rotate_earth.html#adc960e9c7d441a5ebe64df0cf10510b0" title="Rotation de la terre Suit le curseur, lorsque le clique droit de la souris est enfoncé ..." alt="" coords="239,81,370,108"/>
+<area shape="rect" id="node6" href="$d7/db3/class_rotate_earth.html#af71e5d7956d6205440d834658466b0ad" title="Effectue le zoom demandé sur la planète. " alt="" coords="240,157,369,184"/>
+<area shape="rect" id="node9" href="$d7/db3/class_rotate_earth.html#a9fda986660c8d513ff97beaae285bccc" title="Effectue un zoom ou dézoom sur la Terre pour garder la même taille relativement à la fenêtre..." alt="" coords="193,208,416,235"/>
+<area shape="rect" id="node3" href="$d7/db3/class_rotate_earth.html#aba3ec14270b1ef054704c787e57371bc" title="Replace la caméra au point initial La terre tourne à une certaine vitesse, ce n&#39;est pas instantané ..." alt="" coords="469,5,645,32"/>
+<area shape="rect" id="node4" href="$dd/dc5/class_mouse_manager.html#a090c51754d1d0798636b3747fac4fd6d" title="MouseManager.getHitEarth" alt="" coords="464,56,649,83"/>
+<area shape="rect" id="node5" href="$dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="475,107,639,133"/>
+<area shape="rect" id="node7" href="$d7/db3/class_rotate_earth.html#a5110d858eef5d36367cbe526604130f5" title="Zoome vers la planète. " alt="" coords="487,157,627,184"/>
+<area shape="rect" id="node8" href="$d7/db3/class_rotate_earth.html#a61ea67949e81ce40497accc0cb188812" title="Dézoome de la planète. " alt="" coords="481,208,632,235"/>
 </map>

@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Simule l'alternance jour/nuit par rotation du Soleil autour de la Terre et non l'inverse
+ */
 public class SunRotation : MonoBehaviour {
 
 	/**

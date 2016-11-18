@@ -78,6 +78,9 @@ public class ZoomPays : MonoBehaviour {
 		}
 	}
 
+	/**
+	 * Active l'animation de zoom sur le pays sélectionné
+	 */
 	public void activeButton() {
 		buttonCalled = true;
 	}

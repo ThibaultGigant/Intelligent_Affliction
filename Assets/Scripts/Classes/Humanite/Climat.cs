@@ -7,12 +7,12 @@ public class Climat
 	 * "Indice de chaleur" du pays
 	 * Sera un entier entre 0 et 100, 0 représentant le pays le plus froid et 100 le pays le plus chaud
 	 */
-	public int chaleur { get; set;}
+	public int chaleur;
 	/**
 	 * Humidité du pays
 	 * Sera un entier entre 0 et 100, 0 représentant le pays le plus sec et 100 le pays le plus humide
 	 */
-	public int humidite { get; set;}
+	public int humidite;
 
 	/**
 	 * Constructeur

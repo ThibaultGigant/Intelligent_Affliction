@@ -7,44 +7,44 @@ public class Pays : MonoBehaviour
 	/**
 	 * Nom du pays
 	 */
-	public string nomPays { get; set;}
+	public string nomPays;
 	/**
 	 * Superficie du pays, en km²
 	 */
-	public float superficie { get; set;}
+	public float superficie;
 	/**
 	 * Intérêt que le pays à aux yeux de tous.
 	 * Monuments, avancées, qualité de vie en sont quelques facteurs
 	 */
-	public float interet { get; set;}
+	public float interet;
 	/**
 	 * Richesse du pays
 	 */
-	public float richesse { get; set;}
+	public float richesse;
 	/**
 	 * Nombre de points de recherche accumulés jusqu'à présent par les chercheurs
 	 */
-	private int pointsRecherche { get; set;}
+	private int pointsRecherche;
 	/**
 	 * Ensemble des Ressource du pays, accessibles par leur nom
 	 */
-	private IDictionary<string, Ressource> resources { get; set;}
+	private IDictionary<string, Ressource> resources;
 	/**
 	 * La population associée à ce pays
 	 */
-	private Population population { get; set;}
+	private Population population;
 	/**
 	 * Liens que ce pays entretient avec d'autres
 	 */
-	private Links links { get; set;}
+	private Links links;
 	/**
 	 * Climat du pays
 	 */
-	public Climat climat { get; set;}
+	public Climat climat;
 	/**
 	 * Souche infectant le pays
 	 */
-	public Souche souche { get; set;}
+	public Souche souche;
 
 	/**
 	 * Indique si le pays est sélectionné
@@ -161,6 +161,7 @@ public class Pays : MonoBehaviour
 	 * @param pays Le pays avec lequel le lien doit être créé
 	 */
 	public void addTerrestrialLink(Pays pays) {
+		links.addTerrestre (pays);
 	}
 
 	/**
@@ -168,6 +169,7 @@ public class Pays : MonoBehaviour
 	 * @param pays Le pays avec lequel le lien doit être créé
 	 */
 	public void addMaritimeLink(Pays pays) {
+		links.addMaritime (pays);
 	}
 
 	/**
@@ -175,6 +177,7 @@ public class Pays : MonoBehaviour
 	 * @param pays Le pays avec lequel le lien doit être créé
 	 */
 	public void addAirLink(Pays pays) {
+		links.addAerien (pays);
 	}
 
 	/**
@@ -182,6 +185,7 @@ public class Pays : MonoBehaviour
 	 * @param pays Le pays avec lequel le lien doit être supprimé
 	 */
 	public void removeTerrestrialLink(Pays pays) {
+		links.removeTerrestre (pays);
 	}
 
 	/**
@@ -189,6 +193,7 @@ public class Pays : MonoBehaviour
 	 * @param pays Le pays avec lequel le lien doit être supprimé
 	 */
 	public void removeMaritimeLink(Pays pays) {
+		links.removeMaritime (pays);
 	}
 
 	/**
@@ -196,6 +201,7 @@ public class Pays : MonoBehaviour
 	 * @param pays Le pays avec lequel le lien doit être supprimé
 	 */
 	public void removeAirLink(Pays pays) {
+		links.removeAerien (pays);
 	}
 
 	/**

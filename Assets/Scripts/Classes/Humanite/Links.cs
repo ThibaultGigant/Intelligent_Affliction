@@ -7,15 +7,15 @@ public class Links
 	/**
 	 * Liens terrestres
 	 */
-	private IDictionary<string, Pays> terrestres { get; set;}
+	private IDictionary<string, Pays> terrestres;
 	/**
 	 * Liens aériens
 	 */
-	private IDictionary<string, Pays> aeriens { get; set;}
+	private IDictionary<string, Pays> aeriens;
 	/**
 	 * Liens maritimes
 	 */
-	private IDictionary<string, Pays> maritimes { get; set;}
+	private IDictionary<string, Pays> maritimes;
 
 	/**
 	 * Constructeur

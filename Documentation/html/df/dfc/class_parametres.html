@@ -24,6 +24,7 @@
    <div id="projectname">Intelligent Affliction
    &#160;<span id="projectnumber">0.1</span>
    </div>
+   <div id="projectbrief">Projet de l&#39;UE EVIJV - M2 ANDROIDE - 2016/2017</div>
   </td>
  </tr>
  </tbody>
@@ -68,14 +69,6 @@ $(function() {
 <div class="title">Référence de la classe Parametres</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Graphe de collaboration de Parametres:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../de/dc5/class_parametres__coll__graph.png" border="0" usemap="#_parametres_coll__map" alt="Collaboration graph"/></div>
-<map name="_parametres_coll__map" id="_parametres_coll__map">
-<area shape="rect" id="node2" href="../../de/db5/class_date.html" title="Date" alt="" coords="25,5,76,32"/>
-</map>
-<center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Fonctions membres publiques statiques</h2></td></tr>
@@ -97,11 +90,8 @@ Attributs publics statiques</h2></td></tr>
 <tr class="memitem:aae80de6a17617da1ea48502b692f708a"><td class="memItemLeft" align="right" valign="top">static Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#aae80de6a17617da1ea48502b692f708a">earthCenter</a> = new Vector3(0f, -15.77f, -5.79f)</td></tr>
 <tr class="memdesc:aae80de6a17617da1ea48502b692f708a"><td class="mdescLeft">&#160;</td><td class="mdescRight">earthCentre : Centre de la terre  <a href="#aae80de6a17617da1ea48502b692f708a">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aae80de6a17617da1ea48502b692f708a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac78c92da0b68fc710e7a37e3af719e7d"><td class="memItemLeft" align="right" valign="top">static Quaternion&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#ac78c92da0b68fc710e7a37e3af719e7d">earthAxis</a> = Quaternion.Euler(new Vector3(Mathf.Sin(<a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a> * 2 * Mathf.PI / 360), Mathf.Cos(<a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a> * 2 * Mathf.PI / 360), Mathf.Cos((90 - <a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a>) * 2 * Mathf.PI / 360)))</td></tr>
-<tr class="memdesc:ac78c92da0b68fc710e7a37e3af719e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">earthAxis : Axe de rotation de la terre  <a href="#ac78c92da0b68fc710e7a37e3af719e7d">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac78c92da0b68fc710e7a37e3af719e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf9a54d2c83f566507e3554b0ae3d732"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../de/db5/class_date.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#aaf9a54d2c83f566507e3554b0ae3d732">date</a> = new <a class="el" href="../../de/db5/class_date.html">Date</a>(1, 1, 2016)</td></tr>
-<tr class="separator:aaf9a54d2c83f566507e3554b0ae3d732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa09661c99e61010cda00821cc7b1797c"><td class="memItemLeft" align="right" valign="top">static DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#aa09661c99e61010cda00821cc7b1797c">date</a> = new DateTime(2016, 1, 1)</td></tr>
+<tr class="separator:aa09661c99e61010cda00821cc7b1797c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada566c6a6cbb213d964ab54d9e3d3e9b"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#ada566c6a6cbb213d964ab54d9e3d3e9b">hauteurMenuPrincipal</a> = 85f</td></tr>
 <tr class="separator:ada566c6a6cbb213d964ab54d9e3d3e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f468d42284cca3b224ddd34acb76129"><td class="memItemLeft" align="right" valign="top">static GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a2f468d42284cca3b224ddd34acb76129">earth</a></td></tr>
@@ -110,15 +100,29 @@ Attributs publics statiques</h2></td></tr>
 <tr class="memitem:a3208346c635d499ab01401096e426768"><td class="memItemLeft" align="right" valign="top">static GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a3208346c635d499ab01401096e426768">paysSelected</a> = null</td></tr>
 <tr class="memdesc:a3208346c635d499ab01401096e426768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Référence sur le pays sélectionné  <a href="#a3208346c635d499ab01401096e426768">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3208346c635d499ab01401096e426768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3af8a1314581410a48075cb5b94b22d6"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a3af8a1314581410a48075cb5b94b22d6">coutToux</a> = 1</td></tr>
+<tr class="memdesc:a3af8a1314581410a48075cb5b94b22d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût de l'évolution du symptom <a class="el" href="../../d1/d49/class_toux.html">Toux</a>.  <a href="#a3af8a1314581410a48075cb5b94b22d6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3af8a1314581410a48075cb5b94b22d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a002c903add5f569d6ae384e683fd158c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a002c903add5f569d6ae384e683fd158c">coutDiarrhee</a> = 1</td></tr>
+<tr class="memdesc:a002c903add5f569d6ae384e683fd158c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût de l'évolution du symptom <a class="el" href="../../d7/d32/class_diarrhee.html">Diarrhee</a>.  <a href="#a002c903add5f569d6ae384e683fd158c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a002c903add5f569d6ae384e683fd158c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8631697ae58571146818b029aa3a0da2"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a8631697ae58571146818b029aa3a0da2">coutEternuements</a> = 1</td></tr>
+<tr class="memdesc:a8631697ae58571146818b029aa3a0da2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût de l'évolution du symptom <a class="el" href="../../d9/d48/class_eternuements.html">Eternuements</a>.  <a href="#a8631697ae58571146818b029aa3a0da2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8631697ae58571146818b029aa3a0da2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1726af822dbbacc75681caa670f76d19"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a1726af822dbbacc75681caa670f76d19">coutSueurs</a> = 1</td></tr>
+<tr class="memdesc:a1726af822dbbacc75681caa670f76d19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût de l'évolution du symptom <a class="el" href="../../d0/dc6/class_sueurs.html">Sueurs</a>.  <a href="#a1726af822dbbacc75681caa670f76d19">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1726af822dbbacc75681caa670f76d19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3927d7058fcaf72a96d0d473187ec222"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a3927d7058fcaf72a96d0d473187ec222">coutArretDesOrganes</a> = 1</td></tr>
+<tr class="memdesc:a3927d7058fcaf72a96d0d473187ec222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût de l'évolution du symptom <a class="el" href="../../d1/d6f/class_arret_des_organes.html">ArretDesOrganes</a>.  <a href="#a3927d7058fcaf72a96d0d473187ec222">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3927d7058fcaf72a96d0d473187ec222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e14b731596ae3806b6dc5bd2d5906e8"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a3e14b731596ae3806b6dc5bd2d5906e8">coutFievre</a> = 1</td></tr>
+<tr class="memdesc:a3e14b731596ae3806b6dc5bd2d5906e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût de l'évolution du symptom <a class="el" href="../../d2/d9c/class_fievre.html">Fievre</a>.  <a href="#a3e14b731596ae3806b6dc5bd2d5906e8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3e14b731596ae3806b6dc5bd2d5906e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Attributs privés statiques</h2></td></tr>
 <tr class="memitem:af5ad3b745acac23059407b17d4886ee0"><td class="memItemLeft" align="right" valign="top">static int []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#af5ad3b745acac23059407b17d4886ee0">timeSpeed</a></td></tr>
 <tr class="separator:af5ad3b745acac23059407b17d4886ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace18ad79d0858732cdd8abc17c991fa6"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a> = 23f</td></tr>
-<tr class="separator:ace18ad79d0858732cdd8abc17c991fa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22f6167ccc307ce6f18e1ab8c2400137"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dfc/class_parametres.html#a22f6167ccc307ce6f18e1ab8c2400137">theta2</a> = 180f</td></tr>
-<tr class="separator:a22f6167ccc307ce6f18e1ab8c2400137"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
 <a id="a80ac598651a0e85d8fd9ce2b158366c0"></a>
@@ -217,8 +221,8 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 <h2 class="groupheader">Documentation des données membres</h2>
-<a id="aaf9a54d2c83f566507e3554b0ae3d732"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf9a54d2c83f566507e3554b0ae3d732">&sect;&nbsp;</a></span>date</h2>
+<a id="a3927d7058fcaf72a96d0d473187ec222"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3927d7058fcaf72a96d0d473187ec222">&sect;&nbsp;</a></span>coutArretDesOrganes</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,7 +231,151 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../de/db5/class_date.html">Date</a> Parametres.date = new <a class="el" href="../../de/db5/class_date.html">Date</a>(1, 1, 2016)</td>
+          <td class="memname">int Parametres.coutArretDesOrganes = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coût de l'évolution du symptom <a class="el" href="../../d1/d6f/class_arret_des_organes.html">ArretDesOrganes</a>. </p>
+
+</div>
+</div>
+<a id="a002c903add5f569d6ae384e683fd158c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a002c903add5f569d6ae384e683fd158c">&sect;&nbsp;</a></span>coutDiarrhee</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Parametres.coutDiarrhee = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coût de l'évolution du symptom <a class="el" href="../../d7/d32/class_diarrhee.html">Diarrhee</a>. </p>
+
+</div>
+</div>
+<a id="a8631697ae58571146818b029aa3a0da2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8631697ae58571146818b029aa3a0da2">&sect;&nbsp;</a></span>coutEternuements</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Parametres.coutEternuements = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coût de l'évolution du symptom <a class="el" href="../../d9/d48/class_eternuements.html">Eternuements</a>. </p>
+
+</div>
+</div>
+<a id="a3e14b731596ae3806b6dc5bd2d5906e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e14b731596ae3806b6dc5bd2d5906e8">&sect;&nbsp;</a></span>coutFievre</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Parametres.coutFievre = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coût de l'évolution du symptom <a class="el" href="../../d2/d9c/class_fievre.html">Fievre</a>. </p>
+
+</div>
+</div>
+<a id="a1726af822dbbacc75681caa670f76d19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1726af822dbbacc75681caa670f76d19">&sect;&nbsp;</a></span>coutSueurs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Parametres.coutSueurs = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coût de l'évolution du symptom <a class="el" href="../../d0/dc6/class_sueurs.html">Sueurs</a>. </p>
+
+</div>
+</div>
+<a id="a3af8a1314581410a48075cb5b94b22d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3af8a1314581410a48075cb5b94b22d6">&sect;&nbsp;</a></span>coutToux</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Parametres.coutToux = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Coût de l'évolution du symptom <a class="el" href="../../d1/d49/class_toux.html">Toux</a>. </p>
+
+</div>
+</div>
+<a id="aa09661c99e61010cda00821cc7b1797c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa09661c99e61010cda00821cc7b1797c">&sect;&nbsp;</a></span>date</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime Parametres.date = new DateTime(2016, 1, 1)</td>
         </tr>
       </table>
   </td>
@@ -260,30 +408,6 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>earth : La Terre </p>
-
-</div>
-</div>
-<a id="ac78c92da0b68fc710e7a37e3af719e7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac78c92da0b68fc710e7a37e3af719e7d">&sect;&nbsp;</a></span>earthAxis</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Quaternion Parametres.earthAxis = Quaternion.Euler(new Vector3(Mathf.Sin(<a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a> * 2 * Mathf.PI / 360), Mathf.Cos(<a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a> * 2 * Mathf.PI / 360), Mathf.Cos((90 - <a class="el" href="../../df/dfc/class_parametres.html#ace18ad79d0858732cdd8abc17c991fa6">theta1</a>) * 2 * Mathf.PI / 360)))</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>earthAxis : Axe de rotation de la terre </p>
 
 </div>
 </div>
@@ -382,50 +506,6 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="ace18ad79d0858732cdd8abc17c991fa6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ace18ad79d0858732cdd8abc17c991fa6">&sect;&nbsp;</a></span>theta1</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Parametres.theta1 = 23f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a22f6167ccc307ce6f18e1ab8c2400137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f6167ccc307ce6f18e1ab8c2400137">&sect;&nbsp;</a></span>theta2</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Parametres.theta2 = 180f</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a0d05405800ff8284ce57360275233463"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0d05405800ff8284ce57360275233463">&sect;&nbsp;</a></span>timeOfADay</h2>
 
@@ -471,7 +551,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/<a class="el" href="../../d2/df8/_parametres_8cs.html">Parametres.cs</a></li>
+<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Globals/<a class="el" href="../../d2/df8/_parametres_8cs.html">Parametres.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

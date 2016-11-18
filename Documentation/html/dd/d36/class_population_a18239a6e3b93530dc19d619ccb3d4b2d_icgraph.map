@@ -1,5 +1,0 @@
-<map id="Population.addPeople" name="Population.addPeople">
-<area shape="rect" id="node2" href="$dd/d36/class_population.html#a073c713ba7706f5ddae7eaa4f64d2ebb" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="205,5,361,32"/>
-<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="409,5,548,32"/>
-<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="596,5,695,32"/>
-</map>
