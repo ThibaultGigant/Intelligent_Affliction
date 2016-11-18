@@ -7,24 +7,24 @@ public class Links
 	/**
 	 * Liens terrestres
 	 */
-	public List<Pays> terrestres;
+	private IDictionary<string, Pays> terrestres { get; set;}
 	/**
 	 * Liens aériens
 	 */
-	public List<Pays> aeriens;
+	private IDictionary<string, Pays> aeriens { get; set;}
 	/**
 	 * Liens maritimes
 	 */
-	public List<Pays> maritimes;
+	private IDictionary<string, Pays> maritimes { get; set;}
 
 	/**
 	 * Constructeur
 	 */
 	public Links ()
 	{
-		terrestres = new List<Pays> ();
-		aeriens = new List<Pays> ();
-		maritimes = new List<Pays> ();
+		terrestres = new Dictionary<string, Pays> ();
+		aeriens = new Dictionary<string, Pays> ();
+		maritimes = new Dictionary<string, Pays> ();
 	}
 
 	/**
@@ -32,8 +32,8 @@ public class Links
 	 * @param pays Pays avec lequel le lien est créé. Le lien ne doit pas déjà exister
 	 */
 	public void addTerrestre(Pays pays) {
-		if (!terrestres.Contains(pays))
-			terrestres.Add (pays);
+		if (!terrestres.ContainsKey(pays.nomPays))
+			terrestres.Add (pays.nomPays, pays);
 	}
 
 	/**
@@ -41,8 +41,8 @@ public class Links
 	 * @param pays Pays avec lequel le lien est créé. Le lien ne doit pas déjà exister
 	 */
 	public void addAerien(Pays pays) {
-		if (!aeriens.Contains(pays))
-			aeriens.Add (pays);
+		if (!aeriens.ContainsKey(pays.nomPays))
+			aeriens.Add (pays.nomPays, pays);
 	}
 
 	/**
@@ -50,8 +50,8 @@ public class Links
 	 * @param pays Pays avec lequel le lien est créé. Le lien ne doit pas déjà exister
 	 */
 	public void addMaritime(Pays pays) {
-		if (!maritimes.Contains(pays))
-			maritimes.Add (pays);
+		if (!maritimes.ContainsKey(pays.nomPays))
+			maritimes.Add (pays.nomPays, pays);
 	}
 
 	/**
@@ -59,8 +59,8 @@ public class Links
 	 * @param pays Pays avec lequel le lien est supprimé. Le lien doit exister
 	 */
 	public void removeTerrestre(Pays pays) {
-		if (terrestres.Contains(pays))
-			terrestres.Remove (pays);
+		if (terrestres.ContainsKey(pays.nomPays))
+			terrestres.Remove (pays.nomPays);
 	}
 
 	/**
@@ -68,8 +68,8 @@ public class Links
 	 * @param pays Pays avec lequel le lien est supprimé. Le lien doit exister
 	 */
 	public void removeAerien(Pays pays) {
-		if (aeriens.Contains(pays))
-			aeriens.Remove (pays);
+		if (aeriens.ContainsKey(pays.nomPays))
+			aeriens.Remove (pays.nomPays);
 	}
 
 	/**
@@ -77,8 +77,8 @@ public class Links
 	 * @param pays Pays avec lequel le lien est supprimé. Le lien doit exister
 	 */
 	public void removeMaritime(Pays pays) {
-		if (maritimes.Contains(pays))
-			maritimes.Remove (pays);
+		if (maritimes.ContainsKey(pays.nomPays))
+			maritimes.Remove (pays.nomPays);
 	}
 }
 

@@ -6,50 +6,38 @@ public class Population {
 	/**
 	 * Pays associé
 	 */
-	public Pays pays;
+	public Pays country { get; set;}
 	/**
 	 * "Contentement" de la population
-	 * ---
-	 * TODO :
-	 * Quelle est la valeur par défaut ?
+	 * TODO : Quelle est la valeur par défaut ?
 	 */
-	private int happinessIndex;
+	private int happinessIndex { get; set;}
+	/**
+	 * Taille initiale de la population, en nombre d'habitants
+	 */
+	public uint initialNumberPopulation { get; set;}
 	/**
 	 * Population totale du pays
 	 */
-	public int totalPopulation;
+	public uint totalPopulation { get; set;}
 	/**
-	 * Catégorie de population : Agriculture
+	 * Nombre de personnes détectées comme infectées (peut être différent du nombre réel d'infectés)
 	 */
-	private APopulationCategory agriculturePopulationCategory;
+	public uint nbInfectedDetected { get; set;}
 	/**
-	 * Catégorie de population : Inactifs
+	 * Ensemble des Catégories de population, accessibles par leur nom
 	 */
-	private APopulationCategory inactifsPopulationCategory;
-	/**
-	 * Catégorie de population : Loisirs
-	 */
-	private APopulationCategory loisirsPopulationCategory;
-	/**
-	 * Catégorie de population : Medecine
-	 */
-	private APopulationCategory medecinePopulationCategory;
-	/**
-	 * Catégorie de population : Recherche
-	 */
-	private APopulationCategory recherchePopulationCategory;
-	/**
-	 * Catégorie de population : Transports
-	 */
-	private APopulationCategory transportsPopulationCategory;
+	public IDictionary<string, APopulationCategory> categories { get; set;}
 
 	/**
 	 * Constructeur
 	 * @param p Pays associé
 	 * @param nb Taille de la population, en nombre d'habitant
 	 */
-	public Population(Pays p, int nb) {
-		pays = p;
+	public Population(Pays p) {
+		country = p;
+		uint nb = (uint) Random.Range (100000, 20000000);
+		initialNumberPopulation = nb;
 		totalPopulation = nb;
 
 		SetupCategories ();
@@ -60,19 +48,20 @@ public class Population {
 	 */
 	private void SetupCategories () {
 		if (totalPopulation < 0) {
-			Debug.LogError (pays.nomPays + ", Repartition : Le nombre de personnes doit être positif");
+			Debug.LogError (country.nomPays + ", Repartition : Le nombre de personnes doit être positif");
 			totalPopulation = 0;
 		}
 
 		// Repartition uniforme, parmis les 6 catégories. (TODO : A revoir...)
-		int nbReparti = totalPopulation / 6;
+		uint nbReparti = (uint) totalPopulation / 6;
 
-		agriculturePopulationCategory = new Agriculture (nbReparti);
-		inactifsPopulationCategory =new Inactifs (nbReparti);
-		loisirsPopulationCategory = new Loisirs (nbReparti);
-		medecinePopulationCategory = new Medecine (nbReparti);
-		recherchePopulationCategory = new Recherche (nbReparti);
-		transportsPopulationCategory = new Transports (totalPopulation - 5 * nbReparti); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
+		categories = new Dictionary<string, APopulationCategory> ();
+		categories.Add ("Agriculture", new Agriculture (nbReparti));
+		categories.Add ("Inactifs", new Inactifs (nbReparti));
+		categories.Add ("Loisirs", new Loisirs (nbReparti));
+		categories.Add ("Medecine", new Medecine (nbReparti));
+		categories.Add ("Recherche", new Recherche (nbReparti));
+		categories.Add ("Transports", new Transports (totalPopulation - 5 * nbReparti)); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
 	}
 
 	/**
@@ -85,71 +74,41 @@ public class Population {
 
 	/**
 	 * Ajoute des habitants à la population
-	 * @param nb Nombre d'habitants que l'on veut ajouter
-	 * ---
 	 * TODO : Comment définir la catégorie d'affection ?
+	 * @param nb Nombre d'habitants que l'on veut ajouter
 	 */
-	public void addPeople(int nb) {
+	public void addPeople(uint nb) {
 		totalPopulation += nb;
 		// Pour l'instant, les nouveaux seront des inactifs
-		inactifsPopulationCategory.addAssigned (nb);
+		categories["Inactifs"].addAssigned (nb);
 	}
 
 	/**
 	 * Retire des habitants de la population
-	 * @param nb Nombre d'habitants que l'on veut retirer
-	 * ---
 	 * TODO : De quelle catégorie les enlever ?
+	 * @param nb Nombre d'habitants que l'on veut retirer
 	 */
-	public void removePeople(int nb) {
-		totalPopulation -= nb;
-		// Pour l'instant, ils seront retirés selon un ordre arbitraire
-		// Inactifs
-		if (inactifsPopulationCategory.assignedPopulation >= nb) {
-			inactifsPopulationCategory.removeAssigned (nb);
-			return;
-		}
-		inactifsPopulationCategory.removeAssigned (inactifsPopulationCategory.assignedPopulation);
-		nb -= inactifsPopulationCategory.assignedPopulation;
+	public void removePeople(uint nb) {
+		uint temp = nb;
 
-		// Loisirs
-		if (loisirsPopulationCategory.assignedPopulation >= nb) {
-			loisirsPopulationCategory.removeAssigned (nb);
-			return;
+		foreach (string cat in categories.Keys) {
+			if (temp == 0)
+				return;
+			temp -= categories [cat].removeAssigned (temp);
 		}
-		loisirsPopulationCategory.removeAssigned (loisirsPopulationCategory.assignedPopulation);
-		nb -= loisirsPopulationCategory.assignedPopulation;
 
-		// Transports
-		if (transportsPopulationCategory.assignedPopulation >= nb) {
-			transportsPopulationCategory.removeAssigned (nb);
-			return;
-		}
-		transportsPopulationCategory.removeAssigned (transportsPopulationCategory.assignedPopulation);
-		nb -= transportsPopulationCategory.assignedPopulation;
+		totalPopulation -= nb - temp;
+	}
 
-		// Recherche
-		if (recherchePopulationCategory.assignedPopulation >= nb) {
-			recherchePopulationCategory.removeAssigned (nb);
-			return;
-		}
-		recherchePopulationCategory.removeAssigned (recherchePopulationCategory.assignedPopulation);
-		nb -= recherchePopulationCategory.assignedPopulation;
-
-		// Medecine
-		if (medecinePopulationCategory.assignedPopulation >= nb) {
-			medecinePopulationCategory.removeAssigned (nb);
-			return;
-		}
-		medecinePopulationCategory.removeAssigned (medecinePopulationCategory.assignedPopulation);
-		nb -= medecinePopulationCategory.assignedPopulation;
-
-		// Agriculture
-		if (agriculturePopulationCategory.assignedPopulation >= nb) {
-			agriculturePopulationCategory.removeAssigned (nb);
-			return;
-		}
-		agriculturePopulationCategory.removeAssigned (agriculturePopulationCategory.assignedPopulation);
+	/**
+	 * Transfert de personnes entre deux catégories de population
+	 * quantity personnes sont transférées de la catégorie source à la catégorie destination
+	 * @param source Catégorie où on récupère les personnes à transférer
+	 * @param destination Catégorie où on rajoute les personnes à transférer
+	 * @return Nombre de personnes réellement transférées entre les catégories
+	 */
+	public uint transfertBetweenCategories(string source, string destination, uint quantity) {
+		return categories [destination].addAssigned (categories [source].removeAssigned (quantity));
 	}
 
 	/**
@@ -162,8 +121,8 @@ public class Population {
 	 * Nombre de naissances "fixe" en fonction de la taille de la population. 1.2% de leur nombre par année
 	 * Appel de la fonction tous les mois (TODO : ?) (d'où la division par douze)
 	 */
-	public int naissances() {
-		int nbNaissances = Mathf.Max(0, Mathf.FloorToInt(0.0012f * totalPopulation / 12f)); // TODO : Max ? On n'est jamais < 0, si ?
+	public uint naissances() {
+		uint nbNaissances = (uint) Mathf.Max(0, Mathf.FloorToInt(0.0012f * totalPopulation / 12f)); // TODO : Max ? On n'est jamais < 0, si ?
 		addPeople (nbNaissances);
 		return nbNaissances;
 	}
@@ -172,8 +131,8 @@ public class Population {
 	 * Nombre de décès "fixe" en fonction de la taille de la population. 0.9% de leur nombre par année
 	 * Appel de la fonction tous les mois (TODO : ?) (d'où la division par douze)
 	 */
-	public int deces() {
-		int nbDeces = Mathf.Max(0, Mathf.FloorToInt(0.009f * totalPopulation / 12f));
+	public uint deces() {
+		uint nbDeces = (uint) Mathf.Max(0, Mathf.FloorToInt(0.009f * totalPopulation / 12f));
 		removePeople (nbDeces);
 		return nbDeces;
 	}

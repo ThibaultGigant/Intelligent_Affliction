@@ -5,10 +5,12 @@ public abstract class Ressource
 {
 	/**
 	 * Quantité possédée de cette ressource
-	 * ---
-	 * Faut-il un float ?
 	 */
 	public int quantity = 0;
+	/**
+	 * La ressource est-elle échangeable ?
+	 */
+	public bool exchangeable;
 
 	public Ressource ()
 	{
@@ -17,24 +19,45 @@ public abstract class Ressource
 	/**
 	 * Ajout de ressources
 	 * @param nb nombre de ressources à rajouter. Doit être positif
+	 * @return Le nombre de ressource réellement ajouté
 	 */
-	public void addRessource(int nb) {
+	public int addRessource(int nb) {
 		if (nb < 0)
-			return;
+			return 0;
 		quantity += nb;
 	}
 
 	/**
 	 * Retrait de ressources
 	 * @param nb nombre de ressources à enlever. Doit être positif et inférieur à la quantité
+	 * @return Le nombre de ressource réellement retiré
 	 */
-	public void removeRessource(int nb) {
+	public int removeRessource(int nb) {
 		if (nb < 0)
-			return;
+			return 0;
 		
-		if (nb > quantity)
+		if (nb > quantity) {
+			int temp = quantity;
 			quantity = 0;
-		else
-			quantity -= nb;
+			return temp;
+		}
+		quantity -= nb;
+		return nb;
 	}
+
+	/**
+	 * Effectue l'envoi de la ressource à un autre pays.
+	 * Retire la quantité de ressource voulu à la ressource
+	 * @param toSend Quantité de ressource que l'on doit envoyer
+	 * @return Nombre de ressources envoyé
+	 */
+	public abstract int send(int toSend) {}
+
+	/**
+	 * Effectue la réception d'une ressource d'un autre pays.
+	 * Ajoute la quantité de ressource voulu à la ressource
+	 * @param toReceive Quantité de ressource que l'on reçoit
+	 * @return Nombre de ressources reçu
+	 */
+	public abstract int receive(int toReceive) {}
 }

@@ -6,44 +6,44 @@ public abstract class APopulationCategory
 	/**
 	 * Taille de la population assignée à cette catégorie, en nombre d'habitants
 	 */
-	public int assignedPopulation;
+	public uint assignedPopulation;
 
 
 	/**
 	 * Constructeur
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public APopulationCategory(int nb) {
+	public APopulationCategory(uint nb) {
 		assignedPopulation = nb;
 	}
 
 	/**
 	 * Ajoute des personnes à cette catégorie
 	 * @param nb Nombre de personnes à ajouter à cette cotégorie. Doit être positif, sinon rien n'est fait
-	 * ---
-	 * TODO :
-	 * Ajouter une valeur de retour qui donnerait le nombre effectif de personne ajoutées, en cas de rébellion sociale ?
+	 * @return Le nombre de personnes réellement ajoutées à la catégorie
 	 */
-	public void addAssigned(int nb) {
+	public uint addAssigned(uint nb) {
 		if (nb < 0)
-			return;
+			return 0;
 		assignedPopulation += nb;
+		return nb;
 	}
 
 	/**
 	 * Enlève des personnes de cette catégorie
 	 * @param nb Nombre de personnes à retirer de cette catégorie. Doit être positif, sinon rien n'est fait
-	 * ---
-	 * TODO :
-	 * Ajouter une valeur de retour qui donnerai le nombre effectif de personne retirées, en cas de rébellion sociale ?
+	 * @return Le nombre de personnes réellement retirées de la catégorie
 	 */
-	public void removeAssigned(int nb) {
+	public uint removeAssigned(uint nb) {
 		if (nb < 0)
-			return;
-		if (nb > assignedPopulation)
+			return 0;
+		if (nb > assignedPopulation) {
+			uint temp = assignedPopulation;
 			assignedPopulation = 0;
-		else
-			assignedPopulation -= nb;
+			return temp;
+		}
+		assignedPopulation -= nb;
+		return nb;
 	}
 
 	/**

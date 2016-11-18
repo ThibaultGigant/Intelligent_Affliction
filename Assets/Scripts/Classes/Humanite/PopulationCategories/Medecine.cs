@@ -7,7 +7,7 @@ public class Medecine : APopulationCategory
 	 * Constructeur
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public Medecine(int nb) : base(nb) {
+	public Medecine(uint nb) : base(nb) {
 	}
 
 	/**

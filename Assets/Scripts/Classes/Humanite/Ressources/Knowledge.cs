@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Nourriture : Ressource
-{
+public class Knowledge : Ressource {
+	/**
+	 * Sujet sur lequel la connaissance s'applique (symptôme ou skill)
+	 */
+	public string sujetKnowledge;
+	/**
+	 * Coût en point de recherche nécessaire pour acquérir une connaissance de ce sujet
+	 */
+	public int coutDeRecherche;
+
 	/**
 	 * Effectue l'envoi de la ressource à un autre pays.
 	 * Retire la quantité de ressource voulu à la ressource

@@ -7,7 +7,7 @@ public class Inactifs : APopulationCategory
 	 * Constructeur
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public Inactifs(int nb) : base(nb) {
+	public Inactifs(uint nb) : base(nb) {
 	}
 
 	/**

@@ -7,7 +7,7 @@ public class Loisirs : APopulationCategory
 	 * Constructeur
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public Loisirs(int nb) : base(nb) {
+	public Loisirs(uint nb) : base(nb) {
 	}
 
 	/**

@@ -1,91 +1,55 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Pays : MonoBehaviour
 {
 	/**
 	 * Nom du pays
 	 */
-	public string nomPays;
+	public string nomPays { get; set;}
 	/**
 	 * Superficie du pays, en km²
 	 */
-	public float superficie;
+	public float superficie { get; set;}
 	/**
 	 * Intérêt que le pays à aux yeux de tous.
 	 * Monuments, avancées, qualité de vie en sont quelques facteurs
 	 */
-	public float interet;
+	public float interet { get; set;}
 	/**
 	 * Richesse du pays
 	 */
-	public float richesse;
+	public float richesse { get; set;}
 	/**
-	 * Taille initiale de la population, en nombre d'habitants
+	 * Nombre de points de recherche accumulés jusqu'à présent par les chercheurs
 	 */
-	public int initialNumberPopulation;
+	private int pointsRecherche { get; set;}
+	/**
+	 * Ensemble des Ressource du pays, accessibles par leur nom
+	 */
+	private IDictionary<string, Ressource> resources { get; set;}
 	/**
 	 * La population associée à ce pays
 	 */
-	private Population population;
+	private Population population { get; set;}
 	/**
 	 * Liens que ce pays entretient avec d'autres
 	 */
-	private Links links;
-	/**
-	 * Ressources : Nourriture
-	 */
-	private Ressource nourriture;
-	/**
-	 * Ressources : KnowledgeToux
-	 */
-	private Ressource knowledgeToux;
-	/**
-	 * Ressources : KnowledgeEternuements
-	 */
-	private Ressource knowledgeEternuements;
-	/**
-	 * Ressources : KnowledgeFievre
-	 */
-	private Ressource knowledgeFievre;
-	/**
-	 * Ressources : KnowledgeDiarrhees
-	 */
-	private Ressource knowledgeDiarrhees;
-	/**
-	 * Ressources : KnowledgeSueurs
-	 */
-	private Ressource knowledgeSueurs;
-	/**
-	 * Ressources : KnowledgeArretOrganes
-	 */
-	private Ressource knowledgeArretOrganes;
-	/**
-	 * Ressources : KnowledgeResistance
-	 */
-	private Ressource knowledgeResistance;
-	/**
-	 * Ressources : KnowledgeSpreading
-	 */
-	private Ressource knowledgeSpreading;
+	private Links links { get; set;}
 	/**
 	 * Climat du pays
 	 */
-	public Climat climat;
+	public Climat climat { get; set;}
 	/**
 	 * Souche infectant le pays
 	 */
-	public Souche souche;
+	public Souche souche { get; set;}
 
 	/**
 	 * Indique si le pays est sélectionné
 	 */
 	public bool isSelected = false;
-
-	/**
-	 * Light
-	 */
-	//private GameObject light = null;
 
 	/**
 	 * Fonction appelée lorsque le pays s'active pour la première fois
@@ -94,30 +58,26 @@ public class Pays : MonoBehaviour
 	public void Start ()
 	{
 		nomPays = gameObject.name;
-		population = new Population(this, initialNumberPopulation);
+		population = new Population(this);
 		links = new Links ();
 
 		SetupRessources ();
-
-//		foreach (Transform t in transform) {
-//			if (t.gameObject.layer == LayerMask.NameToLayer("Light") )
-//				light = t.gameObject;
-//		}
 	}
 
 	/**
 	 * Initialisation des ressources du pays
 	 */
 	private void SetupRessources() {
-		nourriture = new Nourriture ();
-		knowledgeToux = new KnowledgeToux ();
-		knowledgeEternuements = new KnowledgeEternuments ();
-		knowledgeFievre = new KnowledgeFievre ();
-		knowledgeDiarrhees = new KnowledgeEternuments ();
-		knowledgeSueurs = new KnowledgeSueurs ();
-		knowledgeArretOrganes = new KnowledgeArretOrganes ();
-		knowledgeResistance = new KnowledgeResistance ();
-		knowledgeSpreading = new KnowledgeSpreading ();
+		resources = new Dictionary<string, Ressource> ();
+		resources.Add ("Nourriture", new Nourriture ());
+		resources.Add ("KnowledgeToux", new KnowledgeToux ());
+		resources.Add ("KnowledgeEternuements", new KnowledgeEternuements ());
+		resources.Add ("KnowledgeFievre", new KnowledgeFievre ());
+		resources.Add ("KnowledgeDiarrhees", new KnowledgeDiarrhees ());
+		resources.Add ("KnowledgeSueurs", new KnowledgeSueurs ());
+		resources.Add ("KnowledgeArretOrganes", new KnowledgeArretOrganes ());
+		resources.Add ("KnowledgeResistance", new KnowledgeResistance ());
+		resources.Add ("KnowledgeSpreading", new KnowledgeSpreading ());
 	}
 
 	/**

@@ -7,7 +7,7 @@ public class Agriculture : APopulationCategory
 	 * Constructeur
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public Agriculture(int nb) : base(nb) {
+	public Agriculture(uint nb) : base(nb) {
 	}
 
 	/**
