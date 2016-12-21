@@ -28,7 +28,7 @@ public class Pays : MonoBehaviour
 	/**
 	 * Ensemble des Ressource du pays, accessibles par leur nom
 	 */
-	private IDictionary<string, Ressource> resources;
+	public IDictionary<string, Ressource> resources;
 	/**
 	 * La population associée à ce pays
 	 */
@@ -78,6 +78,8 @@ public class Pays : MonoBehaviour
 		resources.Add ("KnowledgeArretOrganes", new Knowledge ("ArretOrganes", 1));
 		resources.Add ("KnowledgeResistance", new Knowledge ("Resistance", 1));
 		resources.Add ("KnowledgeSpreading", new Knowledge ("Spreading", 1));
+		resources.Add ("Transport", new RessourceTransports ());
+		resources.Add("Loisirs", new RessourceLoisirs())
 	}
 
 	/**

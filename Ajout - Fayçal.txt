@@ -1,0 +1,25 @@
+Pour les catégories
+
+	Plutôt que  de  mettre  un dictionnaire de
+catégorie, je propose de faire une classe qui aura
+exactement  le  même  fonctionnement  (il  aura le
+dictionnaire en attribut),  qui servira  à  englo-
+ber la structure tout  en fournissant des méthodes
+liés spécifiqument aux catégories.
+	Ainsi, pour la répartition des catégories,
+lorsque c'est la population elle-même  qui gère ça
+la méthode qui décidera des  changement sera codée
+dans cette classe, plutôt que  dans la classe "Po-
+pulation."
+
+	Pour  chaque   catégorie,  j'ai  également
+ajouté  une référence sur  la  population.  Il est
+toujours utile  d'avoir un  oeil sur le Happinnes-
+Index. Une méthode "offre" a  été implémentée, cf.
+le code  et les commentaires (Respect du diagramme
+"Mind Map" représentant les dépendances.)
+
+	Tu as cassé notre jouet T.T Les ressources
+n'apparaissent  plus dans  le diagramme  des Pays.
+Qui les possède ? Dans le code, c'est le Pays lui-
+même,  confirmes-tu ?

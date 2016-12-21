@@ -56,12 +56,12 @@ public class Population {
 		uint nbReparti = (uint) totalPopulation / 6;
 
 		categories = new Dictionary<string, APopulationCategory> ();
-		categories.Add ("Agriculture", new Agriculture (nbReparti));
-		categories.Add ("Inactifs", new Inactifs (nbReparti));
-		categories.Add ("Loisirs", new Loisirs (nbReparti));
-		categories.Add ("Medecine", new Medecine (nbReparti));
-		categories.Add ("Recherche", new Recherche (nbReparti));
-		categories.Add ("Transports", new Transports (totalPopulation - 5 * nbReparti)); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
+		categories.Add ("Agriculture", new Agriculture (this, nbReparti));
+		categories.Add ("Inactifs", new Inactifs (this, nbReparti));
+		categories.Add ("Loisirs", new Loisirs (this, nbReparti));
+		categories.Add ("Medecine", new Medecine (this, nbReparti));
+		categories.Add ("Recherche", new Recherche (this, nbReparti));
+		categories.Add ("Transports", new Transports (this, totalPopulation - 5 * nbReparti)); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
 	}
 
 	/**
@@ -70,6 +70,14 @@ public class Population {
 	 */
 	public void setHappinessIndex(int happy) {
 		happinessIndex = happy;
+	}
+
+	/**
+	 * Revoi la valeur du happinessIndex
+	 * @return La valeur de happiness de la population du pays
+	 */
+	public int getHappinessIndex() {
+		return happinessIndex;
 	}
 
 	/**
