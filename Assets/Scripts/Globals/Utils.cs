@@ -16,7 +16,7 @@ public static class Utils
 	 * 					Les valeures doivent êtres positives et leur somme doit être égale à 100
 	 * @return			Revoie un entier tiré aléatoirement selon la distribution
 	 */
-	int tirageAlatoireList(List<int> liste)
+	public static int tirageAlatoireList(List<int> liste)
 	{
 		// La liste doit exister
 		if (liste == null || liste.Count == 0)

@@ -60,6 +60,8 @@ public class Pays : MonoBehaviour
 		nomPays = gameObject.name;
 		population = new Population(this);
 		links = new Links ();
+		climat = new Climat (68, 35);
+		superficie = 643801;
 
 		SetupRessources ();
 	}
@@ -79,7 +81,7 @@ public class Pays : MonoBehaviour
 		resources.Add ("KnowledgeResistance", new Knowledge ("Resistance", 1));
 		resources.Add ("KnowledgeSpreading", new Knowledge ("Spreading", 1));
 		resources.Add ("Transport", new RessourceTransports ());
-		resources.Add("Loisirs", new RessourceLoisirs())
+		resources.Add ("Loisirs", new RessourceLoisirs ());
 	}
 
 	/**
@@ -87,10 +89,13 @@ public class Pays : MonoBehaviour
 	 * Fait vivre la population
 	 */
 	public void Update() {
-		TestFunctions ();
+		//TestFunctions ();
 
 		SelectionPays ();
 		checkSelection ();
+
+		if (ClockManager.newDay)
+			population.categories ["Agriculture"].produce ();
 
 	}
 

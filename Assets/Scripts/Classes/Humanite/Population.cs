@@ -36,7 +36,8 @@ public class Population {
 	 */
 	public Population(Pays p) {
 		country = p;
-		uint nb = (uint) Random.Range (100000, 20000000);
+		//uint nb = (uint) Random.Range (100000, 20000000);
+		uint nb = 66030000;
 		initialNumberPopulation = nb;
 		totalPopulation = nb;
 
