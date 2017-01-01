@@ -1,0 +1,39 @@
+TODO : Agriculture. Comment simuler une famine ?
+La  plupart part  en inactifs et  on laisse peut
+d'agriculteurs ?
+Prendre en compte les malades ?  Donner un malus
+de production dans chacune des catégories.
+
+	Ajout  du  dossier data,  contenant pour
+l'instant quelques valeurs concernant les super-
+ficies et les populations de pays/continents.
+	Les  méthodes  indiceClimat  et  indice-
+TransportSuperficie  ont été  déplacées dans  la
+classe Pays.
+	Changement de la formule de l'indice des
+Transports et  de  la  superficie (cf.  la class
+Pays)  TODO :  Changer de nouveau, en prenant en
+compte la nouvelle production des transports.
+
+Transport
+	Implémentation de  la fonction  produce.
+Les ressources produits représentent la longueur
+du  réseau  de transport  du pays, ainsi  que la
+moyenne de la vitesse. La valeur correspond à la
+multiplication des deux grandeurs (étant propor-
+tionelle au deux). TODO Il faudra en conséquence
+changer la fonction indiceTransportSuperficie.
+	Les valeurs choisies  sont telles  qu'il
+faut trente ans pour  qu'un pays comme la France
+puisse obtenir  un réseau  de  51 000km avec une
+vitesse moyenne de 160 km/h  (le réseau ferrovi-
+ère de la France s'étandant sur 29 640km.J'ajou-
+te les lignes de bus, taxis, etc).
+	Pour le coup, on  ne fera jamais la dif-
+férence entre la longueur et la vitesse. Si j'ai
+voulu prendre la vitesse en compte, c'était pour
+avoir  des chiffres  assez significatif  dans la
+production,  mais après l'établissement final de
+la formule, je ne sais pas si c'est toujours né-
+cessaire... Il est 4h du mat',  j'ai manger trop
+de nombre, une prochaine fois.

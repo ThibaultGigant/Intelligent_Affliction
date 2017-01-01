@@ -5,14 +5,12 @@ public class Agriculture : APopulationCategory
 {
 	/**
 	 * La chaleure idéale du pays pour une bonne agriculture
-	 * (cf. la méthode offre)
 	 */
-	int CHALEUR_IDEALE = 65;
+	private int CHALEUR_IDEALE = 65;
 	/**
 	 * L'humidité idéale du pays pour une bonne agriculture
-	 * (cf. la méthode offre)
 	 */
-	int HUMIDITE_IDEALE = 45;
+	private int HUMIDITE_IDEALE = 45;
 
 	/**
 	 * Constructeur
@@ -43,16 +41,16 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * 10 * [nombre d'agriculteurs] * [indice Climat] * ([indice Transport])
 		 */
-		float newAgr = 10f * assignedPopulation * indiceClimat () * indiceTransportSuperficie();
+		float newAgr = 10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransportSuperficie();
 
 		if (population.country.name == "Afrique") {
 			Debug.Log ("ap " + assignedPopulation);
-			Debug.Log ("clim " + indiceClimat());
-			Debug.Log ("sup " + indiceTransportSuperficie());
+			Debug.Log ("clim " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
+			Debug.Log ("sup " + population.country.indiceTransportSuperficie());
 			Debug.Log (newAgr);
 		}
 
-		//population.country.resources ["Agriculture"].addRessource (newAgr);
+		population.country.resources ["Agriculture"].addRessource (Mathf.FloorToInt(newAgr));
 	}
 
 	/**
@@ -99,63 +97,10 @@ public class Agriculture : APopulationCategory
 
 
 		Debug.Log ("HI = " + indiceHI);
-		Debug.Log ("Climat = " + indiceClimat());
+		Debug.Log ("Climat = " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
 		Debug.Log ("Nourriture = " + indiceNourriture);
-		Debug.Log ("Transport = " + indiceTransportSuperficie());
+		Debug.Log ("Transport = " + population.country.indiceTransportSuperficie());
 
-		return indiceHI * indiceNourriture * indiceTransportSuperficie() / indiceClimat();
-	}
-
-	/**
-	 * indiceClimat
-	 * Donne une indication quant à la condition climatique du pays
-	 * Plus la chaleur et l'humidité d'un pays est proche des valeurs
-	 * idéale, plus la valeur retournée sera grande
-	 * @return Une valeur entre 0 et 1. Zéro si les conditions sont catastrophiques,
-	 * un s'ils sont parfaits
-	 // L'idéal étant un pays avec une chaleur de 65
-	 // et une humidité de 45 (valeure arbitraire, à revoir)
-	 */
-	private float indiceClimat()
-	{
-		/**
-		 * Formule :
-		 * x² / 4 - x + 1,
-		 * où x = (|CHAULEUR_IDEALE - chaleur| + |HUMIDITE_IDEALE - humidite|) / 100
-		 * et x appartient à [0, 2]
-		 * Ainsi, en 0, le facteur atteind son maximum, 1
-		 * en 1, le facteur atteind 1/4
-		 * en 2, le facteur atteind 0
-		 */
-		Climat clim = population.country.climat;
-		float ind = (float)(Mathf.Abs (CHALEUR_IDEALE - clim.chaleur) +
-			Mathf.Abs (HUMIDITE_IDEALE - clim.humidite)) / 100f;
-		return Mathf.Pow (ind, 2f) / 4f - ind + 1;
-	}
-
-	/**
-	 * indiceTransportSuperficie
-	 * @return Une valeur entre 0,75 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
-	 */
-	private float indiceTransportSuperficie()
-	{
-		/**
-		 * Formule
-		 * • La "quantité" de transport par rapport à la superficie totale.
-		 * [quantité de Transport] / sqrt([Superficie])
-		 * Racine carrée de la superficie car elle se mesure en m², tandis que les lignes de
-		 * Transport (TGV, bus, ...) se mesurent en m
-		 * • Plus la superficie est grande, mieux c'est.
-		 * 
-		 * ( [quantité de Transport] / sqrt([Superficie]) ) * [Superficie]
-		 * Cela donne [quantité de Transport] * sqrt([Superficie])
-		 * 
-		 * Le résultat est bornée supérieurement par 1.
-		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
-		 */
-		int quantityTransport = population.country.resources ["Transport"].quantity;
-		float ind =  (float) quantityTransport * Mathf.Sqrt(population.country.superficie);
-
-		return (Mathf.Min (1f, ind) / 4f) + 0.75f;
+		return indiceHI * indiceNourriture * population.country.indiceTransportSuperficie() / population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE);
 	}
 }

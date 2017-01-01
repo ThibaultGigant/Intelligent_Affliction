@@ -80,7 +80,7 @@ public class Pays : MonoBehaviour
 		resources.Add ("KnowledgeArretOrganes", new Knowledge ("ArretOrganes", 1));
 		resources.Add ("KnowledgeResistance", new Knowledge ("Resistance", 1));
 		resources.Add ("KnowledgeSpreading", new Knowledge ("Spreading", 1));
-		resources.Add ("Transport", new RessourceTransports ());
+		resources.Add ("Transports", new RessourceTransports ());
 		resources.Add ("Loisirs", new RessourceLoisirs ());
 	}
 
@@ -95,7 +95,7 @@ public class Pays : MonoBehaviour
 		checkSelection ();
 
 		if (ClockManager.newDay)
-			population.categories ["Agriculture"].produce ();
+			population.categories ["Transports"].produce ();
 
 	}
 
@@ -238,6 +238,57 @@ public class Pays : MonoBehaviour
 	public uint getInitialNbPopulation()
 	{
 		return population.initialNumberPopulation;
+	}
+
+	/**
+	 * indiceClimat
+	 * Donne une indication quant à la condition climatique du pays
+	 * Plus la chaleur et l'humidité d'un pays est proche des valeurs
+	 * idéale, plus la valeur retournée sera grande
+	 * @return Une valeur entre 0 et 1. Zéro si les conditions sont catastrophiques,
+	 * un s'ils sont parfaits
+	 // L'idéal étant un pays avec une chaleur de 65
+	 // et une humidité de 45 (valeure arbitraire, à revoir)
+	 */
+	public float indiceClimat(int CHALEUR_IDEALE, int HUMIDITE_IDEALE)
+	{
+		/**
+		 * Formule :
+		 * x² / 4 - x + 1,
+		 * où x = (|CHAULEUR_IDEALE - chaleur| + |HUMIDITE_IDEALE - humidite|) / 100
+		 * et x appartient à [0, 2]
+		 * Ainsi, en 0, le facteur atteind son maximum, 1
+		 * en 1, le facteur atteind 1/4
+		 * en 2, le facteur atteind 0
+		 */
+		Climat clim = population.country.climat;
+		float ind = (float)(Mathf.Abs (CHALEUR_IDEALE - clim.chaleur) +
+			Mathf.Abs (HUMIDITE_IDEALE - clim.humidite)) / 100f;
+		return Mathf.Pow (ind, 2f) / 4f - ind + 1;
+	}
+
+	/**
+	 * indiceTransportSuperficie
+	 * @return Une valeur entre 0,75 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
+	 */
+	public float indiceTransportSuperficie()
+	{
+		/**
+		 * Formule
+		 * • La "quantité" de transport par rapport à la superficie totale.
+		 * (100 * [quantité de Transport]) / (5 * [Superficie])
+		 * En France, la longueur du réseau férroviaire correspond à 5% de la
+		 * superficie du pays (en comparant seulement les valeurs, sans se soucier
+		 * de leurs unités de mesure). On monte la valeur à 8% arbitrairement
+		 * pour prendre en compte les bus et taxis, etc.
+		 * 
+		 * Le résultat est bornée supérieurement par 1.
+		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
+		 */
+		int quantityTransport = population.country.resources ["Transport"].quantity;
+		float ind =  (100f * (float) quantityTransport) / (8f * Mathf.Sqrt(population.country.superficie));
+
+		return (Mathf.Min (1f, ind) / 4f) + 0.75f;
 	}
 }
 

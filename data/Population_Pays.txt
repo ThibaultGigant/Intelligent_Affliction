@@ -1,0 +1,13 @@
+(à mettre sous forme xml)
+
+Pays		| Superficie	| Population
+France		| 643 801	| 66 030 000
+Afrique		| 30 370 000	| 1 216 000 000
+Océanie		| 8 525 989	| 38 000 000
+Europe		| 10 180 000	| 743 100 000
+Asie		| 44 580 000	| 4 436 000 000
+Eurasie		| 54 760 000	| 5 179 100 000
+Amérique du Nord| 24 710 000	| 579 000 000
+Amérique du Sud | 17 840 000	| 422 500 000
+Inde		| 3 287 000	| 1 252 000 000
+Chine		| 9 597 000	| 1 357 000 000

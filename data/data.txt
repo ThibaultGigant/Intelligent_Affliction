@@ -1,0 +1,5 @@
+Ce dossier contiendra des informations nécessaires
+au  chargement d'une partie  (que ce soit une nou-
+velle ou non).
+
+• Les populations de chaque pays.
