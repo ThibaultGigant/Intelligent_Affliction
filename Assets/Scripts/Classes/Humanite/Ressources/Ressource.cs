@@ -57,8 +57,8 @@ public abstract class Ressource
 	/**
 	 * Effectue la réception d'une ressource d'un autre pays.
 	 * Ajoute la quantité de ressource voulu à la ressource
-	 * @param toReceive Quantité de ressource que l'on reçoit
+	 * @param toReceive Ressource reçue
 	 * @return Nombre de ressources reçu
 	 */
-	public abstract int receive (int toReceive);
+	public abstract int receive (Ressource toReceive);
 }

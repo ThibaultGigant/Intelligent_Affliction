@@ -30,6 +30,16 @@ public class Agriculture : APopulationCategory
 	 * travailler
 	 */
 	public override void produce () {
+
+		float newAgr = production ();
+
+		population.country.resources ["Agriculture"].addRessource (Mathf.FloorToInt(newAgr));
+	}
+
+	/**
+	 * Estimation de la production de Nourriture chaque jour
+	 */
+	public override int production() {
 		/**
 		 * Formule
 		 * • Dans le meilleur des mondes, considérons que 10% d'agriculteurs est une portion
@@ -41,16 +51,16 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * 10 * [nombre d'agriculteurs] * [indice Climat] * ([indice Transport])
 		 */
-		float newAgr = 10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransportSuperficie();
+		float newAgr = 10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransports();
 
 		if (population.country.name == "Afrique") {
 			Debug.Log ("ap " + assignedPopulation);
 			Debug.Log ("clim " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
-			Debug.Log ("sup " + population.country.indiceTransportSuperficie());
+			Debug.Log ("sup " + population.country.indiceTransports());
 			Debug.Log (newAgr);
 		}
 
-		population.country.resources ["Agriculture"].addRessource (Mathf.FloorToInt(newAgr));
+		return Mathf.FloorToInt (newAgr);
 	}
 
 	/**
@@ -61,7 +71,7 @@ public class Agriculture : APopulationCategory
 	 * (des normalisations sont nécessaires)
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
-	public override float offre()
+	public override float besoins()
 	{
 		// TODO prendre en compte les stocks
 
@@ -99,8 +109,8 @@ public class Agriculture : APopulationCategory
 		Debug.Log ("HI = " + indiceHI);
 		Debug.Log ("Climat = " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
 		Debug.Log ("Nourriture = " + indiceNourriture);
-		Debug.Log ("Transport = " + population.country.indiceTransportSuperficie());
+		Debug.Log ("Transport = " + population.country.indiceTransports());
 
-		return indiceHI * indiceNourriture * population.country.indiceTransportSuperficie() / population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE);
+		return population.country.indiceHI() * indiceNourriture * population.country.indiceTransports() * population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE);
 	}
 }

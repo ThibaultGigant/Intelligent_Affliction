@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public static class Parametres {
+public class Parametres : MonoBehaviour {
 	/**
 	 * simuSpeed	: Vitesse à laquelle s'écoule le temps
 	 * ---
@@ -37,6 +37,8 @@ public static class Parametres {
 	public static DateTime date = new DateTime(2016, 1, 1);
 
 	public static float hauteurMenuPrincipal = 85f;
+
+	public GameObject m_earth;
 
 	/**
 	 * earth : La Terre
@@ -101,6 +103,11 @@ public static class Parametres {
 	 * Coût de l'évolution du symptom Fievre
 	 */
 	public static int coutFievre = 1;
+
+	void Start()
+	{
+		earth = m_earth;
+	}
 
 	public static void SetPaysSelected(GameObject pays) {
 		paysSelected = pays;

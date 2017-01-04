@@ -29,6 +29,8 @@ public class Population {
 	 */
 	public IDictionary<string, APopulationCategory> categories;
 
+	public PopulationCategories categoriesPop;
+
 	/**
 	 * Constructeur
 	 * @param p Pays associé
@@ -144,5 +146,10 @@ public class Population {
 		uint nbDeces = (uint) Mathf.Max(0, Mathf.FloorToInt(0.009f * totalPopulation / 12f));
 		removePeople (nbDeces);
 		return nbDeces;
+	}
+
+	public void reorganizePopulationCategories()
+	{
+		categoriesPop.reorganizePopulationCategories ();
 	}
 }

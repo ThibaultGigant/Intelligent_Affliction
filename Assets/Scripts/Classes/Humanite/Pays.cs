@@ -97,6 +97,13 @@ public class Pays : MonoBehaviour
 		if (ClockManager.newDay)
 			population.categories ["Transports"].produce ();
 
+		/*
+		exchangeResources ();
+		applyPlayerOrders ();
+		// TODO : modification des liens
+		//
+		*/
+
 	}
 
 	private void SelectionPays() {
@@ -245,7 +252,7 @@ public class Pays : MonoBehaviour
 	 * Donne une indication quant à la condition climatique du pays
 	 * Plus la chaleur et l'humidité d'un pays est proche des valeurs
 	 * idéale, plus la valeur retournée sera grande
-	 * @return Une valeur entre 0 et 1. Zéro si les conditions sont catastrophiques,
+	 * @return Une valeur entre 0.75 et 1. 0.75 si les conditions sont catastrophiques,
 	 * un s'ils sont parfaits
 	 // L'idéal étant un pays avec une chaleur de 65
 	 // et une humidité de 45 (valeure arbitraire, à revoir)
@@ -260,18 +267,21 @@ public class Pays : MonoBehaviour
 		 * Ainsi, en 0, le facteur atteind son maximum, 1
 		 * en 1, le facteur atteind 1/4
 		 * en 2, le facteur atteind 0
+		 * On "inverse" le résultat x -> 1 - x
+		 * On ramène le domaine de l'image de [0,1] à [0.75, 1]
 		 */
 		Climat clim = population.country.climat;
 		float ind = (float)(Mathf.Abs (CHALEUR_IDEALE - clim.chaleur) +
 			Mathf.Abs (HUMIDITE_IDEALE - clim.humidite)) / 100f;
-		return Mathf.Pow (ind, 2f) / 4f - ind + 1;
+		ind = Mathf.Pow (ind, 2f) / 4f - ind + 1;
+		return (1f - ind) / 4f + 0.75f;
 	}
 
 	/**
 	 * indiceTransportSuperficie
 	 * @return Une valeur entre 0,75 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
 	 */
-	public float indiceTransportSuperficie()
+	public float indiceTransports()
 	{
 		/**
 		 * Formule
@@ -286,9 +296,61 @@ public class Pays : MonoBehaviour
 		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
 		 */
 		int quantityTransport = population.country.resources ["Transport"].quantity;
-		float ind =  (100f * (float) quantityTransport) / (8f * Mathf.Sqrt(population.country.superficie));
+		float ind =  (100f * (float) quantityTransport) / (12f * 160f * Mathf.Sqrt(population.country.superficie));
 
 		return (Mathf.Min (1f, ind) / 4f) + 0.75f;
+	}
+
+	/**
+	 * indiceHI
+	 * Renvoie un facteur prenant en considération le HappinessIndex du pays
+	 * Formule : la même que pour indiceClimat
+	 * HI² / 4 - HI + 1, où HI = HappinessIndex / 50
+	 * Ainsi, pour la valeur maximale 100, on obtient 0
+	 * pour la moitié 50, on obtient 1/4
+	 * et pour la valeur minimale 0, on obtient 1
+	 * Ainsi, pour HI = 100, la valeur vaudra moins de 0.1 pourcent
+	 * On ramène le domaine de l'image de [0,1] à [0.25, 1]
+	 * @return Un facteur, entre 0.75 et 1, prenant en considération le HappinessIndex du pays, utile pour certains calculs (rebellions, besoins, ...)
+	 */
+	public float indiceHI() {
+		float HI_normalize = (float)population.getHappinessIndex () / 50f;
+		float ind = Mathf.Pow (HI_normalize, 2f) / 4f - HI_normalize + 1;
+		return (3f * ind / 4f) + 0.25f;
+ 	}
+
+	/**
+	 * Crée un cargo (avion, camion ou bateau) avec les ressources à envoyer au pays voulu et la population migrante
+	 */
+	public void exchangeResources()
+	{
+		
+	}
+
+	public void applyPlayerOrders()
+	{
+		this.population.reorganizePopulationCategories ();
+		// TODO : modification des liens
+	}
+
+	public void addPeople(uint nbPeople)
+	{
+		this.population.addPeople (nbPeople);
+	}
+
+	public void removePeople(uint nbPeople)
+	{
+		this.population.removePeople (nbPeople);
+	}
+
+	public void addInfectedPeople(uint nbPeople)
+	{
+		this.souche.addInfectedPeople (nbPeople);
+	}
+
+	public void removeInfectedPeople(uint nbPeople)
+	{
+		this.souche.removeInfectedPeople (nbPeople);
 	}
 }
 

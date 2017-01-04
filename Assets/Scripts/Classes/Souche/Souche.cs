@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 public class Souche {
 	/**
@@ -10,7 +11,32 @@ public class Souche {
 	/**
 	 * Nombre de personnes infectées par cette souche dans ce pays
 	 */
-	private int nbInfected;
+	private uint nbInfected;
+
+	/**
+	 * Points qui serviront à évoluer
+	 */
+	private int evolutionPoints = 0;
+
+	/**
+	 * Facteur vitesse d'évolution de la souche
+	 */
+	private float evolutionSpeed = 0;
+
+	/**
+	 * Date de la dernière évolution
+	 */
+	private DateTime lastEvolutionDate;
+
+	/**
+	 * Date de la dernière fois où on a produit des points d'évolution
+	 */
+	private DateTime lastProductionDate;
+
+	/**
+	 * A changer en limitedqueue
+	 */
+	private int infectionGradient;
 
 	/*
 		Les attributs suivants représentent en réalité des pourcentages :
@@ -43,7 +69,7 @@ public class Souche {
 	 * Retourne le nombre d'infectés du pays
 	 * @return Entier donnant ce nombre
 	*/
-	public int getNbInfected() 
+	public uint getNbInfected() 
 	{
 		return nbInfected;
 	}
@@ -52,11 +78,11 @@ public class Souche {
 	 * Ajout de Personnes infectées
 	 * @param toAdd: Nombre de personnes infectées à rajouter. Ce nombre doit être positif et inférieur à la population non-infectée.
 	*/
-	public void addInfectedPeople(int toAdd)
+	public void addInfectedPeople(uint toAdd)
 	{
 		if (toAdd < 0)
 			return;
-		int nbNotInfected = (int) country.getNbPopulation () - nbInfected;
+		uint nbNotInfected = country.getNbPopulation () - nbInfected;
 		if (nbNotInfected < toAdd)
 			nbInfected += nbNotInfected;
 		nbInfected += toAdd;
@@ -66,7 +92,7 @@ public class Souche {
 	 * Suppression de Personnes infectées, probablement soignées
 	 * @param toRemove: Nombre de personnes infectées à rajouter. Ce nombre doit être positif et inférieur au nombre de personnes infectées.
 	*/
-	public void removeInfectedPeople(int toRemove)
+	public void removeInfectedPeople(uint toRemove)
 	{
 		if (toRemove < 0)
 			return;
@@ -75,4 +101,70 @@ public class Souche {
 		else
 			nbInfected = 0;
 	}
+
+	/**
+	 * Effectue une évolution de la souche en fonction des motivations et points disponibles.
+	 * Inhibition des connaissances de la population
+	 */
+	public void evolve()
+	{
+	}
+
+	/**
+	 * Production de points d'évolution
+	 * En fonction de gradient d'infection et/ou ratio des infectés, vitesse d'évolution
+	 */
+	public void produce()
+	{
+	}
+
+	private float motivationTransmission()
+	{
+		return 0;
+	}
+
+
+	private float motivationResistance()
+	{
+		return 0;
+	}
+
+	private float motivationEvolutionSpeed()
+	{
+		return 0;
+	}
+
+	private float motivationLethality()
+	{
+		return 0;
+	}
+
+	private void evolveTransmission()
+	{
+	}
+
+
+	private void evolveResistance()
+	{
+	}
+
+	private void evolveEvolutionSpeed()
+	{
+	}
+
+	private void evolveLethality()
+	{
+	}
+
+	public void fusion(Souche souche, uint nbInfectedComing)
+	{
+		
+	}
+
+	public void contamination()
+	{
+		// Contamination et meurtre
+	}
+
+
 }

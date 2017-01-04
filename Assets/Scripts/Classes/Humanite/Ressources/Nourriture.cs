@@ -18,10 +18,10 @@ public class Nourriture : Ressource
 	/**
 	 * Effectue la réception d'une ressource d'un autre pays.
 	 * Ajoute la quantité de ressource voulu à la ressource
-	 * @param toReceive Quantité de ressource que l'on reçoit
+	 * @param toReceive Ressource que l'on reçoit
 	 * @return Nombre de ressources reçu
 	 */
-	public override int receive(int toReceive)
+	public override int receive(Ressource toReceive)
 	{
 		// TODO
 		return 0;

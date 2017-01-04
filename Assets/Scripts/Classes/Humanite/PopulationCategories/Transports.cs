@@ -28,6 +28,16 @@ public class Transports : APopulationCategory
 	 * moyenne (la grandeur des nombres est assez grande)
 	 */
 	public override void produce () {
+		
+		float newTrs = production ();
+
+		population.country.resources ["Transports"].addRessource (Mathf.FloorToInt(newTrs));
+	}
+
+	/**
+	 * Estimation de la production de Transport chaque jour
+	 */
+	public override int production() {
 		/**
 		 * Formule
 		 * • Considérons que seul le quart des personnes assignées à cette
@@ -58,7 +68,7 @@ public class Transports : APopulationCategory
 		 * 
 		 * Une dernière division par 30 est possible, pour pouvoir faire l'opération jour par jour
 		 */
-		float newTrs = (float) (assignedPopulation / 30000) * population.country.superficie / 281250f;
+		float newTrs = (float) (assignedPopulation / 30f) * population.country.superficie / 281250000f;
 
 		if (population.country.name == "Afrique") {
 			Debug.Log (assignedPopulation / 4f);
@@ -66,7 +76,8 @@ public class Transports : APopulationCategory
 			Debug.Log (newTrs);
 		}
 
-		population.country.resources ["Transports"].addRessource (Mathf.FloorToInt(newTrs));
+		return (int) newTrs;
+		
 	}
 
 	/**
@@ -76,7 +87,7 @@ public class Transports : APopulationCategory
 	 * à besoin d'effectif supplémentaire, et inversement
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
-	public override float offre () {
+	public override float besoins () {
 		return 0f;
 	}
 }

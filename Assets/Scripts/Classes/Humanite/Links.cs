@@ -7,24 +7,24 @@ public class Links
 	/**
 	 * Liens terrestres
 	 */
-	private IDictionary<string, Pays> terrestres;
+	private IDictionary<string, Link> terrestres;
 	/**
 	 * Liens aériens
 	 */
-	private IDictionary<string, Pays> aeriens;
+	private IDictionary<string, Link> aeriens;
 	/**
 	 * Liens maritimes
 	 */
-	private IDictionary<string, Pays> maritimes;
+	private IDictionary<string, Link> maritimes;
 
 	/**
 	 * Constructeur
 	 */
 	public Links ()
 	{
-		terrestres = new Dictionary<string, Pays> ();
-		aeriens = new Dictionary<string, Pays> ();
-		maritimes = new Dictionary<string, Pays> ();
+		terrestres = new Dictionary<string, Link> ();
+		aeriens = new Dictionary<string, Link> ();
+		maritimes = new Dictionary<string, Link> ();
 	}
 
 	/**
@@ -33,7 +33,7 @@ public class Links
 	 */
 	public void addTerrestre(Pays pays) {
 		if (!terrestres.ContainsKey(pays.nomPays))
-			terrestres.Add (pays.nomPays, pays);
+			terrestres.Add (pays.nomPays, new Link(pays, "Terrestre"));
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class Links
 	 */
 	public void addAerien(Pays pays) {
 		if (!aeriens.ContainsKey(pays.nomPays))
-			aeriens.Add (pays.nomPays, pays);
+			aeriens.Add (pays.nomPays, new Link(pays, "Aerien"));
 	}
 
 	/**
@@ -51,7 +51,7 @@ public class Links
 	 */
 	public void addMaritime(Pays pays) {
 		if (!maritimes.ContainsKey(pays.nomPays))
-			maritimes.Add (pays.nomPays, pays);
+			maritimes.Add (pays.nomPays, new Link(pays, "Maritime"));
 	}
 
 	/**

@@ -15,6 +15,11 @@ public abstract class APopulationCategory
 	public uint assignedPopulation;
 
 	/**
+	 * Pourcentage de population que le joueur souhaiterait voir affectée à cette catégorie
+	 */
+	public float wantedPercentage = -1f;
+
+	/**
 	 * Valeur maximale que l'offre peut atteindre
 	 * (cf. la méthode offre)
 	 */
@@ -71,12 +76,17 @@ public abstract class APopulationCategory
 	public abstract void produce ();
 
 	/**
+	 * Estimation de la production de "ressources"
+	 */
+	public abstract int production ();
+
+	/**
 	 * offre
 	 * Indique les besoins de la catégorie
 	 * La valeur est d'autant plus élevée que la catégorie
 	 * à besoin d'effectif supplémentaire, et inversement
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
-	public abstract float offre();
+	public abstract float besoins();
 }
 

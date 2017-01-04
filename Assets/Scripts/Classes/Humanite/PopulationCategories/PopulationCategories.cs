@@ -13,6 +13,9 @@ public class PopulationCategories
 	{
 	}
 
-
+	public void reorganizePopulationCategories()
+	{
+		
+	}
 }
 

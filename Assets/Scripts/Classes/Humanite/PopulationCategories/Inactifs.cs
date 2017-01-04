@@ -23,7 +23,12 @@ public class Inactifs : APopulationCategory
 	 * à besoin d'effectif supplémentaire, et inversement
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
-	public override float offre () {
+	public override float besoins () {
 		return 0f;
+	}
+
+	public override int production()
+	{
+		return 0;
 	}
 }
