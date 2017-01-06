@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Agriculture : APopulationCategory
@@ -17,7 +18,10 @@ public class Agriculture : APopulationCategory
 	 * @param population La population à laquelle est ratachée
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public Agriculture(Population population, uint nb) : base(population, nb) {
+	public Agriculture(Population pop, uint nb) : base(pop, nb) {
+		panelItem = GameObject.Find("Menu Gauche/Catégories/Agriculture");
+		Debug.Log (panelItem);
+		panelItem.GetComponent<Image> ().color = new Color32 (255, 133, 133, 255);
 	}
 
 	/**
@@ -33,7 +37,7 @@ public class Agriculture : APopulationCategory
 
 		float newAgr = production ();
 
-		population.country.resources ["Agriculture"].addRessource (Mathf.FloorToInt(newAgr));
+		population.country.resources ["Nourriture"].addRessource (Mathf.FloorToInt(newAgr));
 	}
 
 	/**
@@ -51,9 +55,12 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * 10 * [nombre d'agriculteurs] * [indice Climat] * ([indice Transport])
 		 */
-		float newAgr = 10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransports();
+		float newAgr = 0f;//10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransports();
 
-		if (population.country.name == "Afrique") {
+		Debug.Log (population);
+
+		if (population.country.nomPays == "Afrique") {
+			Debug.Log ("Agriculture");
 			Debug.Log ("ap " + assignedPopulation);
 			Debug.Log ("clim " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
 			Debug.Log ("sup " + population.country.indiceTransports());

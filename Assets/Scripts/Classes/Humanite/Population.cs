@@ -38,33 +38,11 @@ public class Population {
 	 */
 	public Population(Pays p) {
 		country = p;
-		//uint nb = (uint) Random.Range (100000, 20000000);
-		uint nb = 66030000;
+		uint nb = DonneePays.getPopulation(country.nomPays);
 		initialNumberPopulation = nb;
 		totalPopulation = nb;
 
-		SetupCategories ();
-	}
-
-	/**
-	 * Répartit la population entre les différentes catégories, lors du premier lancement du jeu
-	 */
-	private void SetupCategories () {
-		if (totalPopulation < 0) {
-			Debug.LogError (country.nomPays + ", Repartition : Le nombre de personnes doit être positif");
-			totalPopulation = 0;
-		}
-
-		// Repartition uniforme, parmis les 6 catégories. (TODO : A revoir...)
-		uint nbReparti = (uint) totalPopulation / 6;
-
-		categories = new Dictionary<string, APopulationCategory> ();
-		categories.Add ("Agriculture", new Agriculture (this, nbReparti));
-		categories.Add ("Inactifs", new Inactifs (this, nbReparti));
-		categories.Add ("Loisirs", new Loisirs (this, nbReparti));
-		categories.Add ("Medecine", new Medecine (this, nbReparti));
-		categories.Add ("Recherche", new Recherche (this, nbReparti));
-		categories.Add ("Transports", new Transports (this, totalPopulation - 5 * nbReparti)); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
+		categoriesPop = new PopulationCategories (this, totalPopulation);
 	}
 
 	/**

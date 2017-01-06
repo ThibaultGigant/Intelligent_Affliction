@@ -20,6 +20,11 @@ public abstract class APopulationCategory
 	public float wantedPercentage = -1f;
 
 	/**
+	 * 
+	 */
+	protected GameObject panelItem; 
+
+	/**
 	 * Valeur maximale que l'offre peut atteindre
 	 * (cf. la méthode offre)
 	 */
@@ -36,8 +41,8 @@ public abstract class APopulationCategory
 	 * @param population La population à laquelle est ratachée
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
-	public APopulationCategory(Population population, uint nb) {
-		this.population = population;
+	public APopulationCategory(Population pop, uint nb) {
+		population = pop;
 		assignedPopulation = nb;
 	}
 

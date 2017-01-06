@@ -32,7 +32,7 @@ public class Pays : MonoBehaviour
 	/**
 	 * La population associée à ce pays
 	 */
-	private Population population;
+	public Population population;
 	/**
 	 * Liens que ce pays entretient avec d'autres
 	 */
@@ -60,8 +60,8 @@ public class Pays : MonoBehaviour
 		nomPays = gameObject.name;
 		population = new Population(this);
 		links = new Links ();
-		climat = new Climat (68, 35);
-		superficie = 643801;
+		climat = new Climat (DonneePays.getChaleur(nomPays), DonneePays.getHumidite(nomPays));
+		superficie = DonneePays.getSuperficie(nomPays);
 
 		SetupRessources ();
 	}
@@ -94,8 +94,11 @@ public class Pays : MonoBehaviour
 		SelectionPays ();
 		checkSelection ();
 
-		if (ClockManager.newDay)
-			population.categories ["Transports"].produce ();
+		if (ClockManager.newDay) {
+			population.categoriesPop.produce ();
+			//population.categories ["Transports"].produce ();
+			//population.categories ["Agriculture"].produce ();
+		}
 
 		/*
 		exchangeResources ();
@@ -295,7 +298,7 @@ public class Pays : MonoBehaviour
 		 * Le résultat est bornée supérieurement par 1.
 		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
 		 */
-		int quantityTransport = population.country.resources ["Transport"].quantity;
+		int quantityTransport = population.country.resources ["Transports"].quantity;
 		float ind =  (100f * (float) quantityTransport) / (12f * 160f * Mathf.Sqrt(population.country.superficie));
 
 		return (Mathf.Min (1f, ind) / 4f) + 0.75f;
