@@ -28,6 +28,11 @@ public class ZoomPays : MonoBehaviour {
 	void Start () {
 		trEarth = Parametres.earth.transform;
 	}
+
+
+	IEnumerator WaitCoroutine() {
+		yield return new WaitForSeconds(1);
+	}
 	
 	// Update is called once per frame
 	void Update () {
