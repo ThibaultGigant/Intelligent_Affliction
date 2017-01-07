@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 
@@ -24,19 +23,11 @@ public class Souche {
 	private float evolutionSpeed = 0;
 
 	/**
-	 * Date de la dernière évolution
+	 * Historique des évolutions de la souche, pour le calcul des motivations
 	 */
-	private DateTime lastEvolutionDate;
+	private HistoriqueSouche historique;
 
-	/**
-	 * Date de la dernière fois où on a produit des points d'évolution
-	 */
-	private DateTime lastProductionDate;
 
-	/**
-	 * A changer en limitedqueue
-	 */
-	private int infectionGradient;
 
 	/*
 		Les attributs suivants représentent en réalité des pourcentages :
@@ -45,7 +36,7 @@ public class Souche {
 	/**
 	* Ensemble des symptomes de la souche
 	*/
-	public IDictionary<string, ISymptom> symptoms;
+	public IDictionary<string, AbstactSymptom> symptoms;
 	/**
 	 * Ensemble des skills de la souche
 	 */
@@ -56,7 +47,7 @@ public class Souche {
 	 */
 	public Souche(Pays pays) {
 		country = pays;
-		symptoms = new Dictionary<string, ISymptom> ();
+		symptoms = new Dictionary<string, AbstactSymptom> ();
 		symptoms.Add ("Toux",new Toux(Parametres.coutToux));
 		symptoms.Add ("Eternuements",new Eternuements(Parametres.coutEternuements));
 		symptoms.Add ("Diarrhee",new Diarrhee(Parametres.coutDiarrhee));

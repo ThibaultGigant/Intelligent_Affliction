@@ -1,15 +1,7 @@
 ﻿using System;
 
-public class Fievre : ISymptom
+public class Fievre : AbstactSymptom
 {
-	/**
-	 * Coût de l'évolution du symptom
-	 */
-	public int coutEvolution {
-		get { return coutEvolution; }
-		set { coutEvolution = value; }
-	}
-
 	/**
 	 * Constructeur
 	 * @param cout Coût de l'évolution du symptom
@@ -17,12 +9,13 @@ public class Fievre : ISymptom
 	public Fievre (int cout)
 	{
 		coutEvolution = cout;
+		this.name = "Fievre";
 	}
 
 	/**
 	 * Altère les skills de la souche
 	 */
-	public void affectSkills() {
+	public override void affectSkills() {
 
 	}
 }

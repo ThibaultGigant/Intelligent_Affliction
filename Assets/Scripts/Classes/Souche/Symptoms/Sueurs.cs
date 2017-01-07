@@ -1,15 +1,7 @@
 ﻿using System;
 
-public class Sueurs : ISymptom
+public class Sueurs : AbstactSymptom
 {
-	/**
-	 * Coût de l'évolution du symptom
-	 */
-	public int coutEvolution {
-		get { return coutEvolution; }
-		set { coutEvolution = value; }
-	}
-
 	/**
 	 * Constructeur
 	 * @param cout Coût de l'évolution du symptom
@@ -17,12 +9,13 @@ public class Sueurs : ISymptom
 	public Sueurs (int cout)
 	{
 		coutEvolution = cout;
+		this.name = "Sueurs";
 	}
 
 	/**
 	 * Altère les skills de la souche
 	 */
-	public void affectSkills() {
+	public override void affectSkills() {
 
 	}
 }
