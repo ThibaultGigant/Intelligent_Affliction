@@ -19,9 +19,8 @@ public class Agriculture : APopulationCategory
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
 	public Agriculture(Population pop, uint nb) : base(pop, nb) {
-		panelItem = GameObject.Find("Menu Gauche/Catégories/Agriculture");
-		Debug.Log (panelItem);
-		panelItem.GetComponent<Image> ().color = new Color32 (255, 133, 133, 255);
+		//panelItem = GameObject.Find("Menu Gauche/Catégories/Agriculture");
+		//panelItem.GetComponent<Image> ().color = new Color32 (255, 133, 133, 255);
 	}
 
 	/**
@@ -55,15 +54,15 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * 10 * [nombre d'agriculteurs] * [indice Climat] * ([indice Transport])
 		 */
-		float newAgr = 0f;//10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransports();
+		float newAgr = 10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransports();
 
-		Debug.Log (population);
+		//Debug.Log (population);
 
 		if (population.country.nomPays == "Afrique") {
-			Debug.Log ("Agriculture");
+			/*Debug.Log ("Agriculture");
 			Debug.Log ("ap " + assignedPopulation);
 			Debug.Log ("clim " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
-			Debug.Log ("sup " + population.country.indiceTransports());
+			Debug.Log ("sup " + population.country.indiceTransports());*/
 			Debug.Log (newAgr);
 		}
 
@@ -71,7 +70,7 @@ public class Agriculture : APopulationCategory
 	}
 
 	/**
-	 * offre
+	 * besoins
 	 * Indique les besoins de la catégorie
 	 * La valeur est d'autant plus élevée que la catégorie
 	 * à besoin d'effectif supplémentaire, et inversement
@@ -87,7 +86,7 @@ public class Agriculture : APopulationCategory
 		// Transport
 		Pays country = population.country;
 		int HI = population.getHappinessIndex();
-		int quantityTransport = country.resources ["Transport"].quantity;
+		int quantityTransport = country.resources ["Transports"].quantity;
 		int quantityNourriture = country.resources ["Nourriture"].quantity;
 		float superficie = country.superficie;
 		Climat clim = country.climat;
@@ -107,9 +106,9 @@ public class Agriculture : APopulationCategory
 		 */
 		float indiceNourriture = (float) population.totalPopulation / (float) quantityNourriture;
 		if (indiceNourriture >= 1f)
-			indiceNourriture = Mathf.Atan (indiceNourriture - 1);
+			indiceNourriture = Mathf.Atan (indiceNourriture - 1) / (2f * Mathf.PI);
 		else
-			indiceNourriture = Mathf.Atan ((indiceNourriture - 1) * 10);
+			indiceNourriture = Mathf.Atan ((indiceNourriture - 1) * 10) / (2f * Mathf.PI);
 
 
 

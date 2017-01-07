@@ -1,0 +1,4 @@
+	Liaison entre les besoins des catégories et
+l'interface.
+	TODO :  rééquilibrer la fonction besoins de
+la classe Agriculture.

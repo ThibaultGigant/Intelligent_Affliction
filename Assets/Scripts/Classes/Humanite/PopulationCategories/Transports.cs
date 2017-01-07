@@ -69,12 +69,12 @@ public class Transports : APopulationCategory
 		 * Une dernière division par 30 est possible, pour pouvoir faire l'opération jour par jour
 		 */
 		float newTrs = (float) (assignedPopulation / 30f) * population.country.superficie / 281250000f;
-
+		/*
 		if (population.country.name == "Afrique") {
 			Debug.Log (assignedPopulation / 4f);
 			Debug.Log ("taille équipe " + 281250000f/(8f*population.country.superficie));
 			Debug.Log (newTrs);
-		}
+		}*/
 
 		return (int) newTrs;
 		
