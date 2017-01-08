@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Pays : MonoBehaviour
 {
@@ -113,12 +114,14 @@ public class Pays : MonoBehaviour
 		// Sélection du pays
 		if (!isSelected && MouseManager.doubleLeftClick && MouseManager.doesHit(gameObject)) {
 			Parametres.SetPaysSelected(gameObject);
+			GameObject.Find ("GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = gameObject.name;
 			Debug.Log (name);
 			isSelected = true;
 		}
 		// Déselection du pays, par un simple clique en dehors de la zone
 		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject)) {
 			Parametres.SetPaysSelected(null);
+			GameObject.Find ("GameManager/Menus/MenuGauche/Principale/Nom Pays").GetComponent<Text> ().text = "Monde";
 			isSelected = false;
 		}
 		// Déselection du pays, si un autre à été sélectionné

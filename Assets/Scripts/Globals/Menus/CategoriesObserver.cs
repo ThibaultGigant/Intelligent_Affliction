@@ -8,7 +8,7 @@ public class CategoriesObserver : MonoBehaviour {
 	/**
 	 * Indique si le panel des catégories est affiché ou non
 	 */
-	private bool isVisible = true;
+	private bool isVisible = false;
 
 	/**
 	 * Ensemble des catégories
@@ -66,6 +66,9 @@ public class CategoriesObserver : MonoBehaviour {
 	 * Met à jour les couleurs des menus de chaque catégorie
 	 */
 	private void setValues() {
+		if (Parametres.paysSelected == null)
+			return;
+		
 		foreach (string cate in nomCate)
 		{
 			float besoin = categories.categories [cate].besoins ();
@@ -88,6 +91,7 @@ public class CategoriesObserver : MonoBehaviour {
 	 */
 	public void toggleVisible() {
 		isVisible = !isVisible;
+		Debug.Log ("Timon");
 		if (isVisible) {
 			setValues ();
 			categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
