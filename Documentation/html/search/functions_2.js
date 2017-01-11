@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['deces',['deces',['../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f',1,'Population']]],
-  ['diarrhee',['Diarrhee',['../d7/d32/class_diarrhee.html#afe4a1978f2a39062eac7d61d1a67af1b',1,'Diarrhee']]],
-  ['displaydate',['displayDate',['../de/d73/class_clock_manager.html#a4b76dc1a6f0caaf274aae24cc9e0f707',1,'ClockManager']]],
-  ['doeshit',['doesHit',['../dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7',1,'MouseManager']]]
+  ['checkmouseactions',['checkMouseActions',['../dd/dc5/class_mouse_manager.html#af39be7f3b21e4ab130fea0ea24c7a0ef',1,'MouseManager']]],
+  ['checkscreenresized',['checkScreenResized',['../d7/db3/class_rotate_earth.html#a9fda986660c8d513ff97beaae285bccc',1,'RotateEarth']]],
+  ['checkselection',['checkSelection',['../dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82',1,'Pays']]],
+  ['climat',['Climat',['../d9/d71/class_climat.html#a0b80a2a9e885fb56e89addc1a9dbace6',1,'Climat']]],
+  ['contamination',['contamination',['../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf',1,'Souche']]]
 ];

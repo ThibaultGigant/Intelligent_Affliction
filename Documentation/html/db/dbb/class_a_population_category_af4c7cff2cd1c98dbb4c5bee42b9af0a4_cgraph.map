@@ -1,3 +1,5 @@
 <map id="APopulationCategory.removeAssigned" name="APopulationCategory.removeAssigned">
-<area shape="rect" id="node2" href="$db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="249,13,449,39"/>
+<area shape="rect" id="node2" href="$db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="249,5,444,32"/>
+<area shape="rect" id="node3" href="$db/dbb/class_a_population_category.html#af0a02e25080a6245110d71bbca5509db" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="243,56,451,83"/>
+<area shape="rect" id="node4" href="$db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="250,107,443,133"/>
 </map>

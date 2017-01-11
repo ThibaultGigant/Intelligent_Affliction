@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['knowledge',['Knowledge',['../d9/db1/class_knowledge.html',1,'']]]
+  ['inactifs',['Inactifs',['../df/dee/class_inactifs.html',1,'']]]
 ];

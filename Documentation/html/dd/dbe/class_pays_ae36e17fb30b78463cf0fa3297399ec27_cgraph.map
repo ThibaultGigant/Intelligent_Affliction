@@ -1,3 +1,6 @@
 <map id="Pays.Start" name="Pays.Start">
-<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#aa78f9c86b4273e6796a780fb9d3a088b" title="Initialisation des ressources du pays. " alt="" coords="137,5,297,32"/>
+<area shape="rect" id="node2" href="$d6/d20/class_donnee_pays.html#a79f1844a9dddd8ff28eab74103b2a701" title="Renvoie la chaleur du pays souhaité " alt="" coords="143,5,306,32"/>
+<area shape="rect" id="node3" href="$d6/d20/class_donnee_pays.html#a5ebfe0da1ec4ae8c08a9ffcd31a6345e" title="Renvoie l&#39;humidité du pays souhaité " alt="" coords="140,56,309,83"/>
+<area shape="rect" id="node4" href="$d6/d20/class_donnee_pays.html#a9e4da6b83ef40a79160a31f1358bdcfa" title="Renvoie la superficie du pays souhaité " alt="" coords="137,107,312,133"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#aa78f9c86b4273e6796a780fb9d3a088b" title="Initialisation des ressources du pays. " alt="" coords="145,157,304,184"/>
 </map>

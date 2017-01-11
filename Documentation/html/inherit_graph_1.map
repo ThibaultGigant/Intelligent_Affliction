@@ -1,3 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="5,5,65,32"/>
+<area shape="rect" id="node1" href="$db/dbb/class_a_population_category.html" title="APopulationCategory" alt="" coords="5,132,149,159"/>
+<area shape="rect" id="node2" href="$d4/d42/class_agriculture.html" title="Agriculture" alt="" coords="197,5,281,32"/>
+<area shape="rect" id="node3" href="$df/dee/class_inactifs.html" title="Inactifs" alt="" coords="208,56,271,83"/>
+<area shape="rect" id="node4" href="$da/d41/class_loisirs.html" title="Loisirs" alt="" coords="209,107,269,133"/>
+<area shape="rect" id="node5" href="$d2/de3/class_medecine.html" title="Medecine" alt="" coords="200,157,279,184"/>
+<area shape="rect" id="node6" href="$dd/d10/class_recherche.html" title="Recherche" alt="" coords="197,208,281,235"/>
+<area shape="rect" id="node7" href="$d6/d8e/class_transports.html" title="Transports" alt="" coords="198,259,281,285"/>
 </map>

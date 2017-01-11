@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['receive',['receive',['../d9/db1/class_knowledge.html#a17111574833022222d3553fc5384d26b',1,'Knowledge.receive()'],['../d4/dbc/class_nourriture.html#a634880e79ce8455bff69a15f646c54ca',1,'Nourriture.receive()'],['../d4/d33/class_ressource.html#ab1b56a9360f7d654a5d88cb31cc32ad1',1,'Ressource.receive()'],['../d8/df6/class_ressource_loisirs.html#ad4447d116bd03853d01e1e6840a8cd8b',1,'RessourceLoisirs.receive()'],['../d1/d7b/class_ressource_transports.html#a482a0809022cdbca4150ff04bc835bb0',1,'RessourceTransports.receive()']]],
-  ['recherche',['Recherche',['../dd/d10/class_recherche.html#ad050360c3c82a59489d21398911163d9',1,'Recherche']]],
-  ['removeaerien',['removeAerien',['../de/d73/class_links.html#a5892bdbf9e5fb38b78525fcd95b46f0a',1,'Links']]],
-  ['removeairlink',['removeAirLink',['../dd/dbe/class_pays.html#a94ca103b5c1abbf97670999c1f1a2a17',1,'Pays']]],
-  ['removeassigned',['removeAssigned',['../db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4',1,'APopulationCategory']]],
-  ['removeinfectedpeople',['removeInfectedPeople',['../d9/db4/class_souche.html#a4528db49a284375f869eeec40575675a',1,'Souche']]],
-  ['removemaritime',['removeMaritime',['../de/d73/class_links.html#ae9fbde312b1c33cba4d14245ffdc0ee9',1,'Links']]],
-  ['removemaritimelink',['removeMaritimeLink',['../dd/dbe/class_pays.html#a8cf729c47f0fe8aaab544a67149f7e47',1,'Pays']]],
-  ['removepeople',['removePeople',['../dd/d36/class_population.html#a5400bdca00298b18677274069975b944',1,'Population']]],
-  ['removeressource',['removeRessource',['../d4/d33/class_ressource.html#a317b48f00c6bc7b3c5bb46506e62dd33',1,'Ressource']]],
-  ['removeterrestre',['removeTerrestre',['../de/d73/class_links.html#a7c739b11207a86115ba3d5fe3b57172b',1,'Links']]],
-  ['removeterrestriallink',['removeTerrestrialLink',['../dd/dbe/class_pays.html#ab82619d1624fde396ac6295c31271d75',1,'Pays']]],
-  ['resetactionbooleans',['ResetActionBooleans',['../dd/dc5/class_mouse_manager.html#abe5a6f75ea4344b80fa0ec8dc767b7a4',1,'MouseManager']]],
-  ['resetrotation',['resetRotation',['../d7/db3/class_rotate_earth.html#aba3ec14270b1ef054704c787e57371bc',1,'RotateEarth']]],
-  ['resetrotationbutton',['resetRotationButton',['../d7/db3/class_rotate_earth.html#a9af94b521bdf3dc0a783f965d303069b',1,'RotateEarth']]],
-  ['resizemenuprincipal',['resizeMenuPrincipal',['../db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174',1,'GameManager']]],
-  ['ressource',['Ressource',['../d4/d33/class_ressource.html#a135c6fe41f95e990e9af9294fedd882d',1,'Ressource']]],
-  ['rotate',['rotate',['../d7/db3/class_rotate_earth.html#adc960e9c7d441a5ebe64df0cf10510b0',1,'RotateEarth']]]
+  ['naissances',['naissances',['../dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f',1,'Population']]]
 ];

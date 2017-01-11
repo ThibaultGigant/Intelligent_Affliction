@@ -1,0 +1,4 @@
+<map id="Pays.addInfectedPeople" name="Pays.addInfectedPeople">
+<area shape="rect" id="node2" href="$d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="216,5,392,32"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="440,5,591,32"/>
+</map>

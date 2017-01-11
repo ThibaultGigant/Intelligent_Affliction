@@ -63,6 +63,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-attribs">Attributs publics</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="../../d9/dcd/class_souche-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
@@ -74,11 +75,14 @@ Graphe de collaboration de Souche:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/da7/class_souche__coll__graph.png" border="0" usemap="#_souche_coll__map" alt="Collaboration graph"/></div>
 <map name="_souche_coll__map" id="_souche_coll__map">
-<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="217,184,269,211"/>
-<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="341,5,394,32"/>
-<area shape="rect" id="node7" href="../../dd/d36/class_population.html" title="Population" alt="" coords="201,273,286,300"/>
-<area shape="rect" id="node5" href="../../de/d73/class_links.html" title="Links" alt="" coords="146,95,199,121"/>
-<area shape="rect" id="node6" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="224,95,284,121"/>
+<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="212,273,264,300"/>
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="288,95,343,121"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="367,95,491,121"/>
+<area shape="rect" id="node4" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="359,5,499,32"/>
+<area shape="rect" id="node9" href="../../dd/d36/class_population.html" title="Population" alt="" coords="197,363,279,389"/>
+<area shape="rect" id="node7" href="../../de/d73/class_links.html" title="Links" alt="" coords="141,184,194,211"/>
+<area shape="rect" id="node8" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="218,184,277,211"/>
+<area shape="rect" id="node10" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="165,452,311,479"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -87,33 +91,71 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5ccd498345fbf837e1e4388b8a4dfb8b">Souche</a> (<a class="el" href="../../dd/dbe/class_pays.html">Pays</a> pays)</td></tr>
 <tr class="memdesc:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a5ccd498345fbf837e1e4388b8a4dfb8b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91d168071b06701006d23219e6fd9f48"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a91d168071b06701006d23219e6fd9f48">getNbInfected</a> ()</td></tr>
-<tr class="memdesc:a91d168071b06701006d23219e6fd9f48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre d'infectés du pays.  <a href="#a91d168071b06701006d23219e6fd9f48">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a91d168071b06701006d23219e6fd9f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae10e340614c58acafc84612f810cd3aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae10e340614c58acafc84612f810cd3aa">addInfectedPeople</a> (int toAdd)</td></tr>
-<tr class="memdesc:ae10e340614c58acafc84612f810cd3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout de Personnes infectées.  <a href="#ae10e340614c58acafc84612f810cd3aa">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae10e340614c58acafc84612f810cd3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4528db49a284375f869eeec40575675a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a4528db49a284375f869eeec40575675a">removeInfectedPeople</a> (int toRemove)</td></tr>
-<tr class="memdesc:a4528db49a284375f869eeec40575675a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression de Personnes infectées, probablement soignées.  <a href="#a4528db49a284375f869eeec40575675a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4528db49a284375f869eeec40575675a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368abf0a6702c50d67372c5e71b04f49"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49">getNbInfected</a> ()</td></tr>
+<tr class="memdesc:a368abf0a6702c50d67372c5e71b04f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre d'infectés du pays.  <a href="#a368abf0a6702c50d67372c5e71b04f49">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a368abf0a6702c50d67372c5e71b04f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b7202dd88f1073148107b785eb6b03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03">addInfectedPeople</a> (uint toAdd)</td></tr>
+<tr class="memdesc:a11b7202dd88f1073148107b785eb6b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout de Personnes infectées.  <a href="#a11b7202dd88f1073148107b785eb6b03">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a11b7202dd88f1073148107b785eb6b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e262ffa63efaab12f88f8102e2396b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b">removeInfectedPeople</a> (uint toRemove)</td></tr>
+<tr class="memdesc:a21e262ffa63efaab12f88f8102e2396b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression de Personnes infectées, probablement soignées.  <a href="#a21e262ffa63efaab12f88f8102e2396b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a21e262ffa63efaab12f88f8102e2396b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469">evolve</a> ()</td></tr>
+<tr class="memdesc:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue une évolution de la souche en fonction des motivations et points disponibles.  <a href="#a4888e2e7ec13dcba0e437c2d9e3c1469">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1">produce</a> ()</td></tr>
+<tr class="memdesc:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Production de points d'évolution En fonction de gradient d'infection et/ou ratio des infectés, vitesse d'évolution.  <a href="#a4d754b8e5dc8ab91011020fd32cf49c1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e4763350da857124a8bdc20113e9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc">fusion</a> (<a class="el" href="../../d9/db4/class_souche.html">Souche</a> souche, uint nbInfectedComing)</td></tr>
+<tr class="separator:a56e4763350da857124a8bdc20113e9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a84891b818cb2bb6380d5589342abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf">contamination</a> ()</td></tr>
+<tr class="separator:a93a84891b818cb2bb6380d5589342abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:a83e37b941effdc02e615a6b36d4bfc9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a83e37b941effdc02e615a6b36d4bfc9d">country</a></td></tr>
 <tr class="memdesc:a83e37b941effdc02e615a6b36d4bfc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> que la souche a infecté  <a href="#a83e37b941effdc02e615a6b36d4bfc9d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a83e37b941effdc02e615a6b36d4bfc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3cfd15dcdb4c7ae880ab53fff126b31"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../de/dd8/interface_i_symptom.html">ISymptom</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ac3cfd15dcdb4c7ae880ab53fff126b31">symptoms</a></td></tr>
-<tr class="memdesc:ac3cfd15dcdb4c7ae880ab53fff126b31"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des symptomes de la souche.  <a href="#ac3cfd15dcdb4c7ae880ab53fff126b31">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac3cfd15dcdb4c7ae880ab53fff126b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5119cbfa06d2c50a4867cd117b9e61a"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../db/df1/class_abstact_symptom.html">AbstactSymptom</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae5119cbfa06d2c50a4867cd117b9e61a">symptoms</a></td></tr>
+<tr class="memdesc:ae5119cbfa06d2c50a4867cd117b9e61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des symptomes de la souche.  <a href="#ae5119cbfa06d2c50a4867cd117b9e61a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae5119cbfa06d2c50a4867cd117b9e61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499998f4af10da48bf2feb5fdfbb319b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d3b/class_skills.html">Skills</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a499998f4af10da48bf2feb5fdfbb319b">skills</a></td></tr>
 <tr class="memdesc:a499998f4af10da48bf2feb5fdfbb319b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des skills de la souche.  <a href="#a499998f4af10da48bf2feb5fdfbb319b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a499998f4af10da48bf2feb5fdfbb319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a66e85e656d8b465ed3a087b8f03ed80b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a66e85e656d8b465ed3a087b8f03ed80b">motivationTransmission</a> ()</td></tr>
+<tr class="separator:a66e85e656d8b465ed3a087b8f03ed80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dcf9b25bd35532e5be63192ab537495"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a1dcf9b25bd35532e5be63192ab537495">motivationResistance</a> ()</td></tr>
+<tr class="separator:a1dcf9b25bd35532e5be63192ab537495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ab44edcb784b4b991e601d29e63a4a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a9ab44edcb784b4b991e601d29e63a4a5">motivationEvolutionSpeed</a> ()</td></tr>
+<tr class="separator:a9ab44edcb784b4b991e601d29e63a4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafa01c742c48bd63178f09fe9eb30d9e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#aafa01c742c48bd63178f09fe9eb30d9e">motivationLethality</a> ()</td></tr>
+<tr class="separator:aafa01c742c48bd63178f09fe9eb30d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae876b1bb090c46bf09444e76a1974856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae876b1bb090c46bf09444e76a1974856">evolveTransmission</a> ()</td></tr>
+<tr class="separator:ae876b1bb090c46bf09444e76a1974856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afecaf5015d39dcebc350c6e1722f12fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#afecaf5015d39dcebc350c6e1722f12fd">evolveResistance</a> ()</td></tr>
+<tr class="separator:afecaf5015d39dcebc350c6e1722f12fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9033bb9b9ed999dd00d42be97ca6f3a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a9033bb9b9ed999dd00d42be97ca6f3a9">evolveEvolutionSpeed</a> ()</td></tr>
+<tr class="separator:a9033bb9b9ed999dd00d42be97ca6f3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aabb4949e934ce38011da294b773ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5aabb4949e934ce38011da294b773ddf">evolveLethality</a> ()</td></tr>
+<tr class="separator:a5aabb4949e934ce38011da294b773ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:a2e5f5d1363573038c47839676f72ade7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a2e5f5d1363573038c47839676f72ade7">nbInfected</a></td></tr>
-<tr class="memdesc:a2e5f5d1363573038c47839676f72ade7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de personnes infectées par cette souche dans ce pays.  <a href="#a2e5f5d1363573038c47839676f72ade7">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a2e5f5d1363573038c47839676f72ade7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cacbd27e9e216b44af8befd612ecf6f"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5cacbd27e9e216b44af8befd612ecf6f">nbInfected</a></td></tr>
+<tr class="memdesc:a5cacbd27e9e216b44af8befd612ecf6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de personnes infectées par cette souche dans ce pays.  <a href="#a5cacbd27e9e216b44af8befd612ecf6f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5cacbd27e9e216b44af8befd612ecf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7eab675dbf9ae74d3e2c44e25960f64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ac7eab675dbf9ae74d3e2c44e25960f64">evolutionPoints</a> = 0</td></tr>
+<tr class="memdesc:ac7eab675dbf9ae74d3e2c44e25960f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points qui serviront à évoluer.  <a href="#ac7eab675dbf9ae74d3e2c44e25960f64">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac7eab675dbf9ae74d3e2c44e25960f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a308c6239e60e24003a6430e7f21a7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a02a308c6239e60e24003a6430e7f21a7">evolutionSpeed</a> = 0</td></tr>
+<tr class="memdesc:a02a308c6239e60e24003a6430e7f21a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Facteur vitesse d'évolution de la souche.  <a href="#a02a308c6239e60e24003a6430e7f21a7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a02a308c6239e60e24003a6430e7f21a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a196d6078fd018e4ba28dbba619cac86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d38/class_historique_souche.html">HistoriqueSouche</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a196d6078fd018e4ba28dbba619cac86c">historique</a></td></tr>
+<tr class="memdesc:a196d6078fd018e4ba28dbba619cac86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Historique des évolutions de la souche, pour le calcul des motivations.  <a href="#a196d6078fd018e4ba28dbba619cac86c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a196d6078fd018e4ba28dbba619cac86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a id="a5ccd498345fbf837e1e4388b8a4dfb8b"></a>
@@ -137,8 +179,8 @@ Attributs privés</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
-<a id="ae10e340614c58acafc84612f810cd3aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae10e340614c58acafc84612f810cd3aa">&sect;&nbsp;</a></span>addInfectedPeople()</h2>
+<a id="a11b7202dd88f1073148107b785eb6b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11b7202dd88f1073148107b785eb6b03">&sect;&nbsp;</a></span>addInfectedPeople()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,7 +188,7 @@ Attributs privés</h2></td></tr>
         <tr>
           <td class="memname">void Souche.addInfectedPeople </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>toAdd</em></td><td>)</td>
           <td></td>
         </tr>
@@ -163,22 +205,203 @@ Attributs privés</h2></td></tr>
 <div class="dynheader">
 Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph.png" border="0" usemap="#d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph" alt=""/></div>
-<map name="d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph" id="d9/db4/class_souche_ae10e340614c58acafc84612f810cd3aa_cgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="236,5,389,32"/>
+<div class="center"><img src="../../d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_cgraph.png" border="0" usemap="#d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_cgraph" id="d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_cgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="229,5,380,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph.png" border="0" usemap="#d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph" id="d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ac4ed0bd20ebc9aa5a80d5239b1b8fe58" title="Pays.addInfectedPeople" alt="" coords="229,5,392,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a91d168071b06701006d23219e6fd9f48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91d168071b06701006d23219e6fd9f48">&sect;&nbsp;</a></span>getNbInfected()</h2>
+<a id="a93a84891b818cb2bb6380d5589342abf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a84891b818cb2bb6380d5589342abf">&sect;&nbsp;</a></span>contamination()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Souche.getNbInfected </td>
+          <td class="memname">void Souche.contamination </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4888e2e7ec13dcba0e437c2d9e3c1469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4888e2e7ec13dcba0e437c2d9e3c1469">&sect;&nbsp;</a></span>evolve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.evolve </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Effectue une évolution de la souche en fonction des motivations et points disponibles. </p>
+<p>Inhibition des connaissances de la population </p>
+
+</div>
+</div>
+<a id="a9033bb9b9ed999dd00d42be97ca6f3a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9033bb9b9ed999dd00d42be97ca6f3a9">&sect;&nbsp;</a></span>evolveEvolutionSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.evolveEvolutionSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aabb4949e934ce38011da294b773ddf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aabb4949e934ce38011da294b773ddf">&sect;&nbsp;</a></span>evolveLethality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.evolveLethality </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afecaf5015d39dcebc350c6e1722f12fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afecaf5015d39dcebc350c6e1722f12fd">&sect;&nbsp;</a></span>evolveResistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.evolveResistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae876b1bb090c46bf09444e76a1974856"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae876b1bb090c46bf09444e76a1974856">&sect;&nbsp;</a></span>evolveTransmission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.evolveTransmission </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56e4763350da857124a8bdc20113e9dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e4763350da857124a8bdc20113e9dc">&sect;&nbsp;</a></span>fusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.fusion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/db4/class_souche.html">Souche</a>&#160;</td>
+          <td class="paramname"><em>souche</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nbInfectedComing</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_icgraph.png" border="0" usemap="#d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_icgraph" id="d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_icgraph">
+<area shape="rect" id="node2" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="157,5,300,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a368abf0a6702c50d67372c5e71b04f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368abf0a6702c50d67372c5e71b04f49">&sect;&nbsp;</a></span>getNbInfected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint Souche.getNbInfected </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -191,8 +414,127 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<a id="a4528db49a284375f869eeec40575675a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4528db49a284375f869eeec40575675a">&sect;&nbsp;</a></span>removeInfectedPeople()</h2>
+<a id="a9ab44edcb784b4b991e601d29e63a4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab44edcb784b4b991e601d29e63a4a5">&sect;&nbsp;</a></span>motivationEvolutionSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Souche.motivationEvolutionSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafa01c742c48bd63178f09fe9eb30d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa01c742c48bd63178f09fe9eb30d9e">&sect;&nbsp;</a></span>motivationLethality()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Souche.motivationLethality </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dcf9b25bd35532e5be63192ab537495"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dcf9b25bd35532e5be63192ab537495">&sect;&nbsp;</a></span>motivationResistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Souche.motivationResistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66e85e656d8b465ed3a087b8f03ed80b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e85e656d8b465ed3a087b8f03ed80b">&sect;&nbsp;</a></span>motivationTransmission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Souche.motivationTransmission </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d754b8e5dc8ab91011020fd32cf49c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d754b8e5dc8ab91011020fd32cf49c1">&sect;&nbsp;</a></span>produce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.produce </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Production de points d'évolution En fonction de gradient d'infection et/ou ratio des infectés, vitesse d'évolution. </p>
+
+</div>
+</div>
+<a id="a21e262ffa63efaab12f88f8102e2396b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e262ffa63efaab12f88f8102e2396b">&sect;&nbsp;</a></span>removeInfectedPeople()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +542,7 @@ Voici le graphe d'appel pour cette fonction :</div>
         <tr>
           <td class="memname">void Souche.removeInfectedPeople </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">uint&#160;</td>
           <td class="paramname"><em>toRemove</em></td><td>)</td>
           <td></td>
         </tr>
@@ -214,6 +556,14 @@ Voici le graphe d'appel pour cette fonction :</div>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph.png" border="0" usemap="#d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph" id="d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ad32a53b2f2f9ae4055af30441190f03a" title="Pays.removeInfectedPeople" alt="" coords="249,5,432,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -234,8 +584,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<a id="a2e5f5d1363573038c47839676f72ade7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e5f5d1363573038c47839676f72ade7">&sect;&nbsp;</a></span>nbInfected</h2>
+<a id="ac7eab675dbf9ae74d3e2c44e25960f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7eab675dbf9ae74d3e2c44e25960f64">&sect;&nbsp;</a></span>evolutionPoints</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -244,7 +594,79 @@ Voici le graphe d'appel pour cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int Souche.nbInfected</td>
+          <td class="memname">int Souche.evolutionPoints = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Points qui serviront à évoluer. </p>
+
+</div>
+</div>
+<a id="a02a308c6239e60e24003a6430e7f21a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a308c6239e60e24003a6430e7f21a7">&sect;&nbsp;</a></span>evolutionSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Souche.evolutionSpeed = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Facteur vitesse d'évolution de la souche. </p>
+
+</div>
+</div>
+<a id="a196d6078fd018e4ba28dbba619cac86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a196d6078fd018e4ba28dbba619cac86c">&sect;&nbsp;</a></span>historique</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d8/d38/class_historique_souche.html">HistoriqueSouche</a> Souche.historique</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Historique des évolutions de la souche, pour le calcul des motivations. </p>
+
+</div>
+</div>
+<a id="a5cacbd27e9e216b44af8befd612ecf6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cacbd27e9e216b44af8befd612ecf6f">&sect;&nbsp;</a></span>nbInfected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint Souche.nbInfected</td>
         </tr>
       </table>
   </td>
@@ -274,14 +696,14 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
-<a id="ac3cfd15dcdb4c7ae880ab53fff126b31"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac3cfd15dcdb4c7ae880ab53fff126b31">&sect;&nbsp;</a></span>symptoms</h2>
+<a id="ae5119cbfa06d2c50a4867cd117b9e61a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5119cbfa06d2c50a4867cd117b9e61a">&sect;&nbsp;</a></span>symptoms</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IDictionary&lt;string, <a class="el" href="../../de/dd8/interface_i_symptom.html">ISymptom</a>&gt; Souche.symptoms</td>
+          <td class="memname">IDictionary&lt;string, <a class="el" href="../../db/df1/class_abstact_symptom.html">AbstactSymptom</a>&gt; Souche.symptoms</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -291,7 +713,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Classes/Souche/<a class="el" href="../../d6/d4e/_souche_8cs.html">Souche.cs</a></li>
+<li>F:/GitHub/Intelligent_Affliction/Assets/Scripts/Classes/Souche/<a class="el" href="../../d6/d4e/_souche_8cs.html">Souche.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

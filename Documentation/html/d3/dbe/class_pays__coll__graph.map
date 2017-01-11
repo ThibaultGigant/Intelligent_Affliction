@@ -1,7 +1,10 @@
 <map id="Pays" name="Pays">
-<area shape="rect" id="node4" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="63,184,129,211"/>
-<area shape="rect" id="node7" href="$dd/d36/class_population.html" title="Population" alt="" coords="249,184,335,211"/>
-<area shape="rect" id="node3" href="$de/d73/class_links.html" title="Links" alt="" coords="187,5,240,32"/>
-<area shape="rect" id="node5" href="$d4/d3b/class_skills.html" title="Skills" alt="" coords="5,95,59,121"/>
-<area shape="rect" id="node6" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="265,5,325,32"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="158,184,225,211"/>
+<area shape="rect" id="node9" href="$dd/d36/class_population.html" title="Population" alt="" coords="391,184,474,211"/>
+<area shape="rect" id="node3" href="$de/d73/class_links.html" title="Links" alt="" coords="371,5,425,32"/>
+<area shape="rect" id="node5" href="$d4/d3b/class_skills.html" title="Skills" alt="" coords="5,95,60,121"/>
+<area shape="rect" id="node6" href="$d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="84,95,208,121"/>
+<area shape="rect" id="node7" href="$da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="72,5,212,32"/>
+<area shape="rect" id="node8" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="449,5,507,32"/>
+<area shape="rect" id="node10" href="$df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="359,273,504,300"/>
 </map>

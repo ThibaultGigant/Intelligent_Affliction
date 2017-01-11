@@ -93,9 +93,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aec648fed638e1f1221c1871bc654d103"><td class="memItemLeft" align="right" valign="top">abstract int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#aec648fed638e1f1221c1871bc654d103">send</a> (int toSend)</td></tr>
 <tr class="memdesc:aec648fed638e1f1221c1871bc654d103"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue l'envoi de la ressource à un autre pays.  <a href="#aec648fed638e1f1221c1871bc654d103">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aec648fed638e1f1221c1871bc654d103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1b56a9360f7d654a5d88cb31cc32ad1"><td class="memItemLeft" align="right" valign="top">abstract int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#ab1b56a9360f7d654a5d88cb31cc32ad1">receive</a> (int toReceive)</td></tr>
-<tr class="memdesc:ab1b56a9360f7d654a5d88cb31cc32ad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue la réception d'une ressource d'un autre pays.  <a href="#ab1b56a9360f7d654a5d88cb31cc32ad1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ab1b56a9360f7d654a5d88cb31cc32ad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd6142be9b5d722b52acfa0109221ec"><td class="memItemLeft" align="right" valign="top">abstract int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a3fd6142be9b5d722b52acfa0109221ec">receive</a> (<a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> toReceive)</td></tr>
+<tr class="memdesc:a3fd6142be9b5d722b52acfa0109221ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue la réception d'une ressource d'un autre pays.  <a href="#a3fd6142be9b5d722b52acfa0109221ec">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3fd6142be9b5d722b52acfa0109221ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
@@ -152,8 +152,8 @@ Attributs publics</h2></td></tr>
 
 </div>
 </div>
-<a id="ab1b56a9360f7d654a5d88cb31cc32ad1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab1b56a9360f7d654a5d88cb31cc32ad1">&sect;&nbsp;</a></span>receive()</h2>
+<a id="a3fd6142be9b5d722b52acfa0109221ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd6142be9b5d722b52acfa0109221ec">&sect;&nbsp;</a></span>receive()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +164,7 @@ Attributs publics</h2></td></tr>
         <tr>
           <td class="memname">abstract int Ressource.receive </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d4/d33/class_ressource.html">Ressource</a>&#160;</td>
           <td class="paramname"><em>toReceive</em></td><td>)</td>
           <td></td>
         </tr>
@@ -179,19 +179,19 @@ Attributs publics</h2></td></tr>
 <p>Effectue la réception d'une ressource d'un autre pays. </p>
 <p>Ajoute la quantité de ressource voulu à la ressource </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">toReceive</td><td>Quantité de ressource que l'on reçoit </td></tr>
+    <tr><td class="paramname">toReceive</td><td><a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> reçue </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Nombre de ressources reçu </dd></dl>
 
-<p>Implémenté dans <a class="el" href="../../d9/db1/class_knowledge.html#a17111574833022222d3553fc5384d26b">Knowledge</a>, <a class="el" href="../../d4/dbc/class_nourriture.html#a634880e79ce8455bff69a15f646c54ca">Nourriture</a>, <a class="el" href="../../d8/df6/class_ressource_loisirs.html#ad4447d116bd03853d01e1e6840a8cd8b">RessourceLoisirs</a>, et <a class="el" href="../../d1/d7b/class_ressource_transports.html#a482a0809022cdbca4150ff04bc835bb0">RessourceTransports</a>.</p>
+<p>Implémenté dans <a class="el" href="../../d9/db1/class_knowledge.html#a49cc9580fb938713201d78006c8039db">Knowledge</a>, <a class="el" href="../../d4/dbc/class_nourriture.html#aa8787cab1bd3cbf8079c1a562d38175b">Nourriture</a>, <a class="el" href="../../d8/df6/class_ressource_loisirs.html#a81b2cd90520af1ff8bfd4b6f1ae7b539">RessourceLoisirs</a>, et <a class="el" href="../../d1/d7b/class_ressource_transports.html#ae7190e29709e7f3be8e7040c09017bee">RessourceTransports</a>.</p>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d4/d33/class_ressource_ab1b56a9360f7d654a5d88cb31cc32ad1_icgraph.png" border="0" usemap="#d4/d33/class_ressource_ab1b56a9360f7d654a5d88cb31cc32ad1_icgraph" alt=""/></div>
-<map name="d4/d33/class_ressource_ab1b56a9360f7d654a5d88cb31cc32ad1_icgraph" id="d4/d33/class_ressource_ab1b56a9360f7d654a5d88cb31cc32ad1_icgraph">
-<area shape="rect" id="node2" href="../../d4/d33/class_ressource.html#a317b48f00c6bc7b3c5bb46506e62dd33" title="Retrait de ressources. " alt="" coords="185,5,383,32"/>
+<div class="center"><img src="../../d4/d33/class_ressource_a3fd6142be9b5d722b52acfa0109221ec_icgraph.png" border="0" usemap="#d4/d33/class_ressource_a3fd6142be9b5d722b52acfa0109221ec_icgraph" alt=""/></div>
+<map name="d4/d33/class_ressource_a3fd6142be9b5d722b52acfa0109221ec_icgraph" id="d4/d33/class_ressource_a3fd6142be9b5d722b52acfa0109221ec_icgraph">
+<area shape="rect" id="node2" href="../../d4/d33/class_ressource.html#a317b48f00c6bc7b3c5bb46506e62dd33" title="Retrait de ressources. " alt="" coords="181,5,372,32"/>
 </map>
 </div>
 
@@ -226,8 +226,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d33/class_ressource_a317b48f00c6bc7b3c5bb46506e62dd33_cgraph.png" border="0" usemap="#d4/d33/class_ressource_a317b48f00c6bc7b3c5bb46506e62dd33_cgraph" alt=""/></div>
 <map name="d4/d33/class_ressource_a317b48f00c6bc7b3c5bb46506e62dd33_cgraph" id="d4/d33/class_ressource_a317b48f00c6bc7b3c5bb46506e62dd33_cgraph">
-<area shape="rect" id="node2" href="../../d4/d33/class_ressource.html#aec648fed638e1f1221c1871bc654d103" title="Effectue l&#39;envoi de la ressource à un autre pays. " alt="" coords="257,5,376,32"/>
-<area shape="rect" id="node3" href="../../d4/d33/class_ressource.html#ab1b56a9360f7d654a5d88cb31cc32ad1" title="Effectue la réception d&#39;une ressource d&#39;un autre pays. " alt="" coords="251,56,383,83"/>
+<area shape="rect" id="node2" href="../../d4/d33/class_ressource.html#aec648fed638e1f1221c1871bc654d103" title="Effectue l&#39;envoi de la ressource à un autre pays. " alt="" coords="250,5,366,32"/>
+<area shape="rect" id="node3" href="../../d4/d33/class_ressource.html#a3fd6142be9b5d722b52acfa0109221ec" title="Effectue la réception d&#39;une ressource d&#39;un autre pays. " alt="" coords="244,56,372,83"/>
 </map>
 </div>
 
@@ -312,7 +312,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Classes/Humanite/Ressources/<a class="el" href="../../d9/d4d/_ressource_8cs.html">Ressource.cs</a></li>
+<li>F:/GitHub/Intelligent_Affliction/Assets/Scripts/Classes/Humanite/Ressources/<a class="el" href="../../d9/d4d/_ressource_8cs.html">Ressource.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

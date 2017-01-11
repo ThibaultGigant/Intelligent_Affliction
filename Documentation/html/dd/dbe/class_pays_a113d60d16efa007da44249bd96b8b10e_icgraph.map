@@ -1,0 +1,5 @@
+<map id="Pays.indiceClimat" name="Pays.indiceClimat">
+<area shape="rect" id="node2" href="$d4/d42/class_agriculture.html#a73423fa32014fb8d8291f19f55dc3958" title="Estimation de la production de Nourriture chaque jour. " alt="" coords="180,5,328,32"/>
+<area shape="rect" id="node4" href="$d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="187,56,321,83"/>
+<area shape="rect" id="node3" href="$d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1" title="Production de Nourriture Plus la population assignée à cette catégorie est grande, plus la production sera importante. " alt="" coords="376,5,511,32"/>
+</map>

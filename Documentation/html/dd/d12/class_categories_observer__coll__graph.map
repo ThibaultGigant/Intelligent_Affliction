@@ -1,0 +1,11 @@
+<map id="CategoriesObserver" name="CategoriesObserver">
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="153,95,205,121"/>
+<area shape="rect" id="node3" href="$df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="95,273,240,300"/>
+<area shape="rect" id="node4" href="$dd/d36/class_population.html" title="Population" alt="" coords="117,184,199,211"/>
+<area shape="rect" id="node7" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="358,184,425,211"/>
+<area shape="rect" id="node6" href="$de/d73/class_links.html" title="Links" alt="" coords="145,5,198,32"/>
+<area shape="rect" id="node8" href="$d4/d3b/class_skills.html" title="Skills" alt="" coords="403,95,457,121"/>
+<area shape="rect" id="node9" href="$d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="481,95,605,121"/>
+<area shape="rect" id="node10" href="$da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="473,5,613,32"/>
+<area shape="rect" id="node11" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="222,5,281,32"/>
+</map>

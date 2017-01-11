@@ -1,6 +1,6 @@
 <map id="Pays.TestFunctions" name="Pays.TestFunctions">
-<area shape="rect" id="node2" href="$dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="192,5,348,32"/>
-<area shape="rect" id="node4" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="208,56,332,83"/>
-<area shape="rect" id="node3" href="$dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="407,5,559,32"/>
-<area shape="rect" id="node5" href="$dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="396,56,571,83"/>
+<area shape="rect" id="node2" href="$dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="192,5,345,32"/>
+<area shape="rect" id="node4" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="207,56,330,83"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="403,5,551,32"/>
+<area shape="rect" id="node5" href="$dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="393,56,561,83"/>
 </map>

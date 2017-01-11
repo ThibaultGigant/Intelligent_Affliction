@@ -80,11 +80,14 @@ Graphe de collaboration de Pays:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d3/dbe/class_pays__coll__graph.png" border="0" usemap="#_pays_coll__map" alt="Collaboration graph"/></div>
 <map name="_pays_coll__map" id="_pays_coll__map">
-<area shape="rect" id="node4" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="63,184,129,211"/>
-<area shape="rect" id="node7" href="../../dd/d36/class_population.html" title="Population" alt="" coords="249,184,335,211"/>
-<area shape="rect" id="node3" href="../../de/d73/class_links.html" title="Links" alt="" coords="187,5,240,32"/>
-<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="5,95,59,121"/>
-<area shape="rect" id="node6" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="265,5,325,32"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="158,184,225,211"/>
+<area shape="rect" id="node9" href="../../dd/d36/class_population.html" title="Population" alt="" coords="391,184,474,211"/>
+<area shape="rect" id="node3" href="../../de/d73/class_links.html" title="Links" alt="" coords="371,5,425,32"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="5,95,60,121"/>
+<area shape="rect" id="node6" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="84,95,208,121"/>
+<area shape="rect" id="node7" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="72,5,212,32"/>
+<area shape="rect" id="node8" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="449,5,507,32"/>
+<area shape="rect" id="node10" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="359,273,504,300"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -129,6 +132,28 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a407418abc8f14a6b83bb8dbb069f57c5"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a407418abc8f14a6b83bb8dbb069f57c5">getInitialNbPopulation</a> ()</td></tr>
 <tr class="memdesc:a407418abc8f14a6b83bb8dbb069f57c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre d'habitants initial du pays.  <a href="#a407418abc8f14a6b83bb8dbb069f57c5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a407418abc8f14a6b83bb8dbb069f57c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a113d60d16efa007da44249bd96b8b10e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e">indiceClimat</a> (int CHALEUR_IDEALE, int HUMIDITE_IDEALE)</td></tr>
+<tr class="memdesc:a113d60d16efa007da44249bd96b8b10e"><td class="mdescLeft">&#160;</td><td class="mdescRight">indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l'humidité d'un pays est proche des valeurs idéale, plus la valeur retournée sera grande  <a href="#a113d60d16efa007da44249bd96b8b10e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a113d60d16efa007da44249bd96b8b10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c317c8fe2d38a8c3d3e96ae002fa61"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61">indiceTransports</a> ()</td></tr>
+<tr class="memdesc:a61c317c8fe2d38a8c3d3e96ae002fa61"><td class="mdescLeft">&#160;</td><td class="mdescRight">indiceTransportSuperficie  <a href="#a61c317c8fe2d38a8c3d3e96ae002fa61">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a61c317c8fe2d38a8c3d3e96ae002fa61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1a5819c7b0d4fc3ca233b837a9dea1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1">indiceHI</a> ()</td></tr>
+<tr class="memdesc:a8b1a5819c7b0d4fc3ca233b837a9dea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que pour indiceClimat HI² / 4 - HI + 1, où HI = HappinessIndex / 50 Ainsi, pour la valeur maximale 100, on obtient 0 pour la moitié 50, on obtient 1/4 et pour la valeur minimale 0, on obtient 1 Ainsi, pour HI = 100, la valeur vaudra moins de 0.1 pourcent On ramène le domaine de l'image de [0,1] à [0.25, 1]  <a href="#a8b1a5819c7b0d4fc3ca233b837a9dea1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8b1a5819c7b0d4fc3ca233b837a9dea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55fe0cbc20c1d9cf592076a962ff24bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a55fe0cbc20c1d9cf592076a962ff24bf">exchangeResources</a> ()</td></tr>
+<tr class="memdesc:a55fe0cbc20c1d9cf592076a962ff24bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crée un cargo (avion, camion ou bateau) avec les ressources à envoyer au pays voulu et la population migrante.  <a href="#a55fe0cbc20c1d9cf592076a962ff24bf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a55fe0cbc20c1d9cf592076a962ff24bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2ced4f6a71bc6d87f4824ae97b2102"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a0b2ced4f6a71bc6d87f4824ae97b2102">applyPlayerOrders</a> ()</td></tr>
+<tr class="separator:a0b2ced4f6a71bc6d87f4824ae97b2102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2526b34c0a21de6f6d8a3285e8363c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#ad2526b34c0a21de6f6d8a3285e8363c3">addPeople</a> (uint nbPeople)</td></tr>
+<tr class="separator:ad2526b34c0a21de6f6d8a3285e8363c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91d663c69218e31fd3eeaf848926e6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c">removePeople</a> (uint nbPeople)</td></tr>
+<tr class="separator:aa91d663c69218e31fd3eeaf848926e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4ed0bd20ebc9aa5a80d5239b1b8fe58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#ac4ed0bd20ebc9aa5a80d5239b1b8fe58">addInfectedPeople</a> (uint nbPeople)</td></tr>
+<tr class="separator:ac4ed0bd20ebc9aa5a80d5239b1b8fe58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad32a53b2f2f9ae4055af30441190f03a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#ad32a53b2f2f9ae4055af30441190f03a">removeInfectedPeople</a> (uint nbPeople)</td></tr>
+<tr class="separator:ad32a53b2f2f9ae4055af30441190f03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
@@ -144,6 +169,12 @@ Attributs publics</h2></td></tr>
 <tr class="memitem:adf555b1a6e074f9f5beaecc6e4b1d075"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#adf555b1a6e074f9f5beaecc6e4b1d075">richesse</a></td></tr>
 <tr class="memdesc:adf555b1a6e074f9f5beaecc6e4b1d075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Richesse du pays.  <a href="#adf555b1a6e074f9f5beaecc6e4b1d075">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adf555b1a6e074f9f5beaecc6e4b1d075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d823dd0287addabe3cb113c471ddcae"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a3d823dd0287addabe3cb113c471ddcae">resources</a></td></tr>
+<tr class="memdesc:a3d823dd0287addabe3cb113c471ddcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> du pays, accessibles par leur nom.  <a href="#a3d823dd0287addabe3cb113c471ddcae">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3d823dd0287addabe3cb113c471ddcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b3f5352d956262b3d560430ef37e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d36/class_population.html">Population</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29">population</a></td></tr>
+<tr class="memdesc:ad5b3f5352d956262b3d560430ef37e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">La population associée à ce pays.  <a href="#ad5b3f5352d956262b3d560430ef37e29">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad5b3f5352d956262b3d560430ef37e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49f7a814e1da33ea6bde152902160cf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d71/class_climat.html">Climat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a49f7a814e1da33ea6bde152902160cf9">climat</a></td></tr>
 <tr class="memdesc:a49f7a814e1da33ea6bde152902160cf9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/d71/class_climat.html">Climat</a> du pays.  <a href="#a49f7a814e1da33ea6bde152902160cf9">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a49f7a814e1da33ea6bde152902160cf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,12 +203,6 @@ Attributs privés</h2></td></tr>
 <tr class="memitem:a5db813e35f457335192a016eb0ffa189"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a5db813e35f457335192a016eb0ffa189">pointsRecherche</a></td></tr>
 <tr class="memdesc:a5db813e35f457335192a016eb0ffa189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de points de recherche accumulés jusqu'à présent par les chercheurs.  <a href="#a5db813e35f457335192a016eb0ffa189">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5db813e35f457335192a016eb0ffa189"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d823dd0287addabe3cb113c471ddcae"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#a3d823dd0287addabe3cb113c471ddcae">resources</a></td></tr>
-<tr class="memdesc:a3d823dd0287addabe3cb113c471ddcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> du pays, accessibles par leur nom.  <a href="#a3d823dd0287addabe3cb113c471ddcae">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3d823dd0287addabe3cb113c471ddcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5b3f5352d956262b3d560430ef37e29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d36/class_population.html">Population</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29">population</a></td></tr>
-<tr class="memdesc:ad5b3f5352d956262b3d560430ef37e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">La population associée à ce pays.  <a href="#ad5b3f5352d956262b3d560430ef37e29">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ad5b3f5352d956262b3d560430ef37e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad124467a1bd693c4d75e8c6c4b338a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d73/class_links.html">Links</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dbe/class_pays.html#aad124467a1bd693c4d75e8c6c4b338a6">links</a></td></tr>
 <tr class="memdesc:aad124467a1bd693c4d75e8c6c4b338a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liens que ce pays entretient avec d'autres.  <a href="#aad124467a1bd693c4d75e8c6c4b338a6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aad124467a1bd693c4d75e8c6c4b338a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,6 +242,33 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a id="ac4ed0bd20ebc9aa5a80d5239b1b8fe58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ed0bd20ebc9aa5a80d5239b1b8fe58">&sect;&nbsp;</a></span>addInfectedPeople()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pays.addInfectedPeople </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nbPeople</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_ac4ed0bd20ebc9aa5a80d5239b1b8fe58_cgraph.png" border="0" usemap="#dd/dbe/class_pays_ac4ed0bd20ebc9aa5a80d5239b1b8fe58_cgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_ac4ed0bd20ebc9aa5a80d5239b1b8fe58_cgraph" id="dd/dbe/class_pays_ac4ed0bd20ebc9aa5a80d5239b1b8fe58_cgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="216,5,392,32"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="440,5,591,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ab15cf0eea448c76db4555530b41f8566"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab15cf0eea448c76db4555530b41f8566">&sect;&nbsp;</a></span>addMaritimeLink()</h2>
 
@@ -245,7 +297,33 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_ab15cf0eea448c76db4555530b41f8566_cgraph.png" border="0" usemap="#dd/dbe/class_pays_ab15cf0eea448c76db4555530b41f8566_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_ab15cf0eea448c76db4555530b41f8566_cgraph" id="dd/dbe/class_pays_ab15cf0eea448c76db4555530b41f8566_cgraph">
-<area shape="rect" id="node2" href="../../de/d73/class_links.html#a865cc04515e8620c3c8904bf9a5bd4ef" title="Ajout d&#39;un lien maritime. " alt="" coords="207,5,337,32"/>
+<area shape="rect" id="node2" href="../../de/d73/class_links.html#a865cc04515e8620c3c8904bf9a5bd4ef" title="Ajout d&#39;un lien maritime. " alt="" coords="204,5,332,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad2526b34c0a21de6f6d8a3285e8363c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2526b34c0a21de6f6d8a3285e8363c3">&sect;&nbsp;</a></span>addPeople()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pays.addPeople </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nbPeople</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_ad2526b34c0a21de6f6d8a3285e8363c3_cgraph.png" border="0" usemap="#dd/dbe/class_pays_ad2526b34c0a21de6f6d8a3285e8363c3_cgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_ad2526b34c0a21de6f6d8a3285e8363c3_cgraph" id="dd/dbe/class_pays_ad2526b34c0a21de6f6d8a3285e8363c3_cgraph">
+<area shape="rect" id="node2" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="171,5,319,32"/>
 </map>
 </div>
 
@@ -279,7 +357,33 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a18ef39246d29e893c30e1415f1727e23_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a18ef39246d29e893c30e1415f1727e23_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a18ef39246d29e893c30e1415f1727e23_cgraph" id="dd/dbe/class_pays_a18ef39246d29e893c30e1415f1727e23_cgraph">
-<area shape="rect" id="node2" href="../../de/d73/class_links.html#a387cdc5a51e99b8082cb2b3081f3231b" title="Ajout d&#39;un lien terrestre. " alt="" coords="216,5,349,32"/>
+<area shape="rect" id="node2" href="../../de/d73/class_links.html#a387cdc5a51e99b8082cb2b3081f3231b" title="Ajout d&#39;un lien terrestre. " alt="" coords="212,5,341,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b2ced4f6a71bc6d87f4824ae97b2102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2ced4f6a71bc6d87f4824ae97b2102">&sect;&nbsp;</a></span>applyPlayerOrders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pays.applyPlayerOrders </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_a0b2ced4f6a71bc6d87f4824ae97b2102_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a0b2ced4f6a71bc6d87f4824ae97b2102_cgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_a0b2ced4f6a71bc6d87f4824ae97b2102_cgraph" id="dd/dbe/class_pays_a0b2ced4f6a71bc6d87f4824ae97b2102_cgraph">
+<area shape="rect" id="node2" href="../../dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736" title="Population.reorganizePopulation\lCategories" alt="" coords="216,5,424,47"/>
+<area shape="rect" id="node3" href="../../df/d6a/class_population_categories.html#a52aacf9734ef3c59c40ddfa5f65a413f" title="PopulationCategories.reorganize\lPopulationCategories" alt="" coords="472,5,681,47"/>
 </map>
 </div>
 
@@ -312,9 +416,28 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_aa6cb26f6504621eb5c82f2e791754d82_icgraph.png" border="0" usemap="#dd/dbe/class_pays_aa6cb26f6504621eb5c82f2e791754d82_icgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_aa6cb26f6504621eb5c82f2e791754d82_icgraph" id="dd/dbe/class_pays_aa6cb26f6504621eb5c82f2e791754d82_icgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="199,5,297,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="199,5,296,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a55fe0cbc20c1d9cf592076a962ff24bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55fe0cbc20c1d9cf592076a962ff24bf">&sect;&nbsp;</a></span>exchangeResources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pays.exchangeResources </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crée un cargo (avion, camion ou bateau) avec les ressources à envoyer au pays voulu et la population migrante. </p>
 
 </div>
 </div>
@@ -404,10 +527,121 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a0376ef40297c65a21a1b67566c1c86c0_icgraph.png" border="0" usemap="#dd/dbe/class_pays_a0376ef40297c65a21a1b67566c1c86c0_icgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a0376ef40297c65a21a1b67566c1c86c0_icgraph" id="dd/dbe/class_pays_a0376ef40297c65a21a1b67566c1c86c0_icgraph">
-<area shape="rect" id="node2" href="../../df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="207,5,425,32"/>
-<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#ae10e340614c58acafc84612f810cd3aa" title="Ajout de Personnes infectées. " alt="" coords="225,56,407,83"/>
-<area shape="rect" id="node3" href="../../db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295" title="GameManager.updateMenuPricipal" alt="" coords="473,5,705,32"/>
-<area shape="rect" id="node4" href="../../db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title="GameManager.Update" alt="" coords="753,5,911,32"/>
+<area shape="rect" id="node2" href="../../df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="204,5,417,32"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="223,56,399,83"/>
+<area shape="rect" id="node3" href="../../db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295" title="GameManager.updateMenuPricipal" alt="" coords="465,5,691,32"/>
+<area shape="rect" id="node4" href="../../db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title="GameManager.Update" alt="" coords="739,5,891,32"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html#ac4ed0bd20ebc9aa5a80d5239b1b8fe58" title="Pays.addInfectedPeople" alt="" coords="497,56,659,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a113d60d16efa007da44249bd96b8b10e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113d60d16efa007da44249bd96b8b10e">&sect;&nbsp;</a></span>indiceClimat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pays.indiceClimat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>CHALEUR_IDEALE</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>HUMIDITE_IDEALE</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l'humidité d'un pays est proche des valeurs idéale, plus la valeur retournée sera grande </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Une valeur entre 0.75 et 1. 0.75 si les conditions sont catastrophiques, un s'ils sont parfaits L'idéal étant un pays avec une chaleur de 65 et une humidité de 45 (valeure arbitraire, à revoir) </dd></dl>
+<p>Formule : x² / 4 - x + 1, où x = (|CHAULEUR_IDEALE - chaleur| + |HUMIDITE_IDEALE - humidite|) / 100 et x appartient à [0, 2] Ainsi, en 0, le facteur atteind son maximum, 1 en 1, le facteur atteind 1/4 en 2, le facteur atteind 0 On "inverse" le résultat x -&gt; 1 - x On ramène le domaine de l'image de [0,1] à [0.75, 1]</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_a113d60d16efa007da44249bd96b8b10e_icgraph.png" border="0" usemap="#dd/dbe/class_pays_a113d60d16efa007da44249bd96b8b10e_icgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_a113d60d16efa007da44249bd96b8b10e_icgraph" id="dd/dbe/class_pays_a113d60d16efa007da44249bd96b8b10e_icgraph">
+<area shape="rect" id="node2" href="../../d4/d42/class_agriculture.html#a73423fa32014fb8d8291f19f55dc3958" title="Estimation de la production de Nourriture chaque jour. " alt="" coords="180,5,328,32"/>
+<area shape="rect" id="node4" href="../../d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="187,56,321,83"/>
+<area shape="rect" id="node3" href="../../d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1" title="Production de Nourriture Plus la population assignée à cette catégorie est grande, plus la production sera importante. " alt="" coords="376,5,511,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8b1a5819c7b0d4fc3ca233b837a9dea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b1a5819c7b0d4fc3ca233b837a9dea1">&sect;&nbsp;</a></span>indiceHI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pays.indiceHI </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que pour indiceClimat HI² / 4 - HI + 1, où HI = HappinessIndex / 50 Ainsi, pour la valeur maximale 100, on obtient 0 pour la moitié 50, on obtient 1/4 et pour la valeur minimale 0, on obtient 1 Ainsi, pour HI = 100, la valeur vaudra moins de 0.1 pourcent On ramène le domaine de l'image de [0,1] à [0.25, 1] </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Un facteur, entre 0.75 et 1, prenant en considération le HappinessIndex du pays, utile pour certains calculs (rebellions, besoins, ...) </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_cgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_cgraph" id="dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_cgraph">
+<area shape="rect" id="node2" href="../../dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="156,5,353,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_icgraph.png" border="0" usemap="#dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_icgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_icgraph" id="dd/dbe/class_pays_a8b1a5819c7b0d4fc3ca233b837a9dea1_icgraph">
+<area shape="rect" id="node2" href="../../d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="156,5,289,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a61c317c8fe2d38a8c3d3e96ae002fa61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c317c8fe2d38a8c3d3e96ae002fa61">&sect;&nbsp;</a></span>indiceTransports()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Pays.indiceTransports </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>indiceTransportSuperficie </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Une valeur entre 0,75 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup </dd></dl>
+<p>Formule • La "quantité" de transport par rapport à la superficie totale. (100 * [quantité de Transport]) / (5 * [Superficie]) En France, la longueur du réseau férroviaire correspond à 5% de la superficie du pays (en comparant seulement les valeurs, sans se soucier de leurs unités de mesure). On monte la valeur à 8% arbitrairement pour prendre en compte les bus et taxis, etc.</p>
+<p>Le résultat est bornée supérieurement par 1. On ramène l'image de la fonction de [0,1] sur [0.75,1]</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_a61c317c8fe2d38a8c3d3e96ae002fa61_icgraph.png" border="0" usemap="#dd/dbe/class_pays_a61c317c8fe2d38a8c3d3e96ae002fa61_icgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_a61c317c8fe2d38a8c3d3e96ae002fa61_icgraph" id="dd/dbe/class_pays_a61c317c8fe2d38a8c3d3e96ae002fa61_icgraph">
+<area shape="rect" id="node2" href="../../d4/d42/class_agriculture.html#a73423fa32014fb8d8291f19f55dc3958" title="Estimation de la production de Nourriture chaque jour. " alt="" coords="204,5,352,32"/>
+<area shape="rect" id="node4" href="../../d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="211,56,345,83"/>
+<area shape="rect" id="node3" href="../../d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1" title="Production de Nourriture Plus la population assignée à cette catégorie est grande, plus la production sera importante. " alt="" coords="400,5,535,32"/>
 </map>
 </div>
 
@@ -460,7 +694,33 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a94ca103b5c1abbf97670999c1f1a2a17_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a94ca103b5c1abbf97670999c1f1a2a17_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a94ca103b5c1abbf97670999c1f1a2a17_cgraph" id="dd/dbe/class_pays_a94ca103b5c1abbf97670999c1f1a2a17_cgraph">
-<area shape="rect" id="node2" href="../../de/d73/class_links.html#a5892bdbf9e5fb38b78525fcd95b46f0a" title="Suppression d&#39;un lien aérien. " alt="" coords="193,5,333,32"/>
+<area shape="rect" id="node2" href="../../de/d73/class_links.html#a5892bdbf9e5fb38b78525fcd95b46f0a" title="Suppression d&#39;un lien aérien. " alt="" coords="191,5,325,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad32a53b2f2f9ae4055af30441190f03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad32a53b2f2f9ae4055af30441190f03a">&sect;&nbsp;</a></span>removeInfectedPeople()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pays.removeInfectedPeople </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nbPeople</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_ad32a53b2f2f9ae4055af30441190f03a_cgraph.png" border="0" usemap="#dd/dbe/class_pays_ad32a53b2f2f9ae4055af30441190f03a_cgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_ad32a53b2f2f9ae4055af30441190f03a_cgraph" id="dd/dbe/class_pays_ad32a53b2f2f9ae4055af30441190f03a_cgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b" title="Suppression de Personnes infectées, probablement soignées. " alt="" coords="236,5,432,32"/>
 </map>
 </div>
 
@@ -494,7 +754,33 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a8cf729c47f0fe8aaab544a67149f7e47_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a8cf729c47f0fe8aaab544a67149f7e47_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a8cf729c47f0fe8aaab544a67149f7e47_cgraph" id="dd/dbe/class_pays_a8cf729c47f0fe8aaab544a67149f7e47_cgraph">
-<area shape="rect" id="node2" href="../../de/d73/class_links.html#ae9fbde312b1c33cba4d14245ffdc0ee9" title="Suppression d&#39;un lien maritime. " alt="" coords="229,5,381,32"/>
+<area shape="rect" id="node2" href="../../de/d73/class_links.html#ae9fbde312b1c33cba4d14245ffdc0ee9" title="Suppression d&#39;un lien maritime. " alt="" coords="224,5,372,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa91d663c69218e31fd3eeaf848926e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91d663c69218e31fd3eeaf848926e6c">&sect;&nbsp;</a></span>removePeople()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Pays.removePeople </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nbPeople</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/dbe/class_pays_aa91d663c69218e31fd3eeaf848926e6c_cgraph.png" border="0" usemap="#dd/dbe/class_pays_aa91d663c69218e31fd3eeaf848926e6c_cgraph" alt=""/></div>
+<map name="dd/dbe/class_pays_aa91d663c69218e31fd3eeaf848926e6c_cgraph" id="dd/dbe/class_pays_aa91d663c69218e31fd3eeaf848926e6c_cgraph">
+<area shape="rect" id="node2" href="../../dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="191,5,359,32"/>
 </map>
 </div>
 
@@ -528,7 +814,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_ab82619d1624fde396ac6295c31271d75_cgraph.png" border="0" usemap="#dd/dbe/class_pays_ab82619d1624fde396ac6295c31271d75_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_ab82619d1624fde396ac6295c31271d75_cgraph" id="dd/dbe/class_pays_ab82619d1624fde396ac6295c31271d75_cgraph">
-<area shape="rect" id="node2" href="../../de/d73/class_links.html#a7c739b11207a86115ba3d5fe3b57172b" title="Suppression d&#39;un lien terrestre. " alt="" coords="237,5,393,32"/>
+<area shape="rect" id="node2" href="../../de/d73/class_links.html#a7c739b11207a86115ba3d5fe3b57172b" title="Suppression d&#39;un lien terrestre. " alt="" coords="232,5,381,32"/>
 </map>
 </div>
 
@@ -561,8 +847,8 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_cgraph" id="dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_cgraph">
-<area shape="rect" id="node2" href="../../dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="209,5,373,32"/>
-<area shape="rect" id="node3" href="../../df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="193,56,389,83"/>
+<area shape="rect" id="node2" href="../../dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="211,5,370,32"/>
+<area shape="rect" id="node3" href="../../df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="193,56,388,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -570,7 +856,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_icgraph.png" border="0" usemap="#dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_icgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_icgraph" id="dd/dbe/class_pays_a0dadfb2f559f59b3001436a608f60326_icgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="193,5,292,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="193,5,291,32"/>
 </map>
 </div>
 
@@ -605,7 +891,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_aa78f9c86b4273e6796a780fb9d3a088b_icgraph.png" border="0" usemap="#dd/dbe/class_pays_aa78f9c86b4273e6796a780fb9d3a088b_icgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_aa78f9c86b4273e6796a780fb9d3a088b_icgraph" id="dd/dbe/class_pays_aa78f9c86b4273e6796a780fb9d3a088b_icgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ae36e17fb30b78463cf0fa3297399ec27" title="Fonction appelée lorsque le pays s&#39;active pour la première fois Initialisation du pays..." alt="" coords="213,5,297,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ae36e17fb30b78463cf0fa3297399ec27" title="Fonction appelée lorsque le pays s&#39;active pour la première fois Initialisation du pays..." alt="" coords="212,5,296,32"/>
 </map>
 </div>
 
@@ -632,7 +918,10 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_ae36e17fb30b78463cf0fa3297399ec27_cgraph.png" border="0" usemap="#dd/dbe/class_pays_ae36e17fb30b78463cf0fa3297399ec27_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_ae36e17fb30b78463cf0fa3297399ec27_cgraph" id="dd/dbe/class_pays_ae36e17fb30b78463cf0fa3297399ec27_cgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#aa78f9c86b4273e6796a780fb9d3a088b" title="Initialisation des ressources du pays. " alt="" coords="137,5,297,32"/>
+<area shape="rect" id="node2" href="../../d6/d20/class_donnee_pays.html#a79f1844a9dddd8ff28eab74103b2a701" title="Renvoie la chaleur du pays souhaité " alt="" coords="143,5,306,32"/>
+<area shape="rect" id="node3" href="../../d6/d20/class_donnee_pays.html#a5ebfe0da1ec4ae8c08a9ffcd31a6345e" title="Renvoie l&#39;humidité du pays souhaité " alt="" coords="140,56,309,83"/>
+<area shape="rect" id="node4" href="../../d6/d20/class_donnee_pays.html#a9e4da6b83ef40a79160a31f1358bdcfa" title="Renvoie la superficie du pays souhaité " alt="" coords="137,107,312,133"/>
+<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html#aa78f9c86b4273e6796a780fb9d3a088b" title="Initialisation des ressources du pays. " alt="" coords="145,157,304,184"/>
 </map>
 </div>
 
@@ -667,18 +956,10 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_cgraph.png" border="0" usemap="#dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_cgraph" id="dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_cgraph">
-<area shape="rect" id="node2" href="../../dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="192,5,348,32"/>
-<area shape="rect" id="node4" href="../../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="208,56,332,83"/>
-<area shape="rect" id="node3" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="407,5,559,32"/>
-<area shape="rect" id="node5" href="../../dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="396,56,571,83"/>
-</map>
-</div>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_icgraph.png" border="0" usemap="#dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_icgraph" alt=""/></div>
-<map name="dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_icgraph" id="dd/dbe/class_pays_a6a5dc62d3240e1a50469295121899755_icgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="192,5,291,32"/>
+<area shape="rect" id="node2" href="../../dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="192,5,345,32"/>
+<area shape="rect" id="node4" href="../../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="207,56,330,83"/>
+<area shape="rect" id="node3" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="403,5,551,32"/>
+<area shape="rect" id="node5" href="../../dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="393,56,561,83"/>
 </map>
 </div>
 
@@ -705,15 +986,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dbe/class_pays_adacd96cffd32266281659d95786c49af_cgraph.png" border="0" usemap="#dd/dbe/class_pays_adacd96cffd32266281659d95786c49af_cgraph" alt=""/></div>
 <map name="dd/dbe/class_pays_adacd96cffd32266281659d95786c49af_cgraph" id="dd/dbe/class_pays_adacd96cffd32266281659d95786c49af_cgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="155,56,294,83"/>
-<area shape="rect" id="node7" href="../../dd/dbe/class_pays.html#a0dadfb2f559f59b3001436a608f60326" title="Pays.SelectionPays" alt="" coords="155,107,295,133"/>
-<area shape="rect" id="node10" href="../../dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82" title="Pays.checkSelection" alt="" coords="152,157,297,184"/>
-<area shape="rect" id="node3" href="../../dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="365,5,521,32"/>
-<area shape="rect" id="node5" href="../../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="381,56,505,83"/>
-<area shape="rect" id="node4" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="601,5,753,32"/>
-<area shape="rect" id="node6" href="../../dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="589,56,764,83"/>
-<area shape="rect" id="node8" href="../../dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="361,107,525,133"/>
-<area shape="rect" id="node9" href="../../df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="345,157,541,184"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a0dadfb2f559f59b3001436a608f60326" title="Pays.SelectionPays" alt="" coords="178,31,318,57"/>
+<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82" title="Pays.checkSelection" alt="" coords="175,81,321,108"/>
+<area shape="rect" id="node6" href="../../df/d6a/class_population_categories.html#a0a65e564ee05ff80bc2f8562cd11abc1" title="PopulationCategories.produce" alt="" coords="151,132,345,159"/>
+<area shape="rect" id="node3" href="../../dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="411,5,570,32"/>
+<area shape="rect" id="node4" href="../../df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="393,56,588,83"/>
 </map>
 </div>
 
@@ -857,19 +1134,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../dd/d36/class_population.html">Population</a> Pays.population</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>La population associée à ce pays. </p>
@@ -881,19 +1150,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">IDictionary&lt;string, <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a>&gt; Pays.resources</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Ensemble des <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> du pays, accessibles par leur nom. </p>
@@ -949,7 +1210,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Classes/Humanite/<a class="el" href="../../df/dc6/_pays_8cs.html">Pays.cs</a></li>
+<li>F:/GitHub/Intelligent_Affliction/Assets/Scripts/Classes/Humanite/<a class="el" href="../../df/dc6/_pays_8cs.html">Pays.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

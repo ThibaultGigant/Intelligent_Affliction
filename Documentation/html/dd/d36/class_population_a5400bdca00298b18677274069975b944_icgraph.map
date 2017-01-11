@@ -1,5 +1,5 @@
 <map id="Population.removePeople" name="Population.removePeople">
-<area shape="rect" id="node2" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="228,5,352,32"/>
-<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="400,5,539,32"/>
-<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="587,5,685,32"/>
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c" title="Pays.removePeople" alt="" coords="221,5,359,32"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="229,56,351,83"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="407,56,545,83"/>
 </map>

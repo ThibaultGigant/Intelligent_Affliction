@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['skills',['Skills',['../d4/d3b/class_skills.html',1,'']]],
-  ['souche',['Souche',['../d9/db4/class_souche.html',1,'']]],
-  ['sueurs',['Sueurs',['../d0/dc6/class_sueurs.html',1,'']]],
-  ['sunrotation',['SunRotation',['../d4/db8/class_sun_rotation.html',1,'']]]
+  ['recherche',['Recherche',['../dd/d10/class_recherche.html',1,'']]],
+  ['ressource',['Ressource',['../d4/d33/class_ressource.html',1,'']]],
+  ['ressourceloisirs',['RessourceLoisirs',['../d8/df6/class_ressource_loisirs.html',1,'']]],
+  ['ressourcetransports',['RessourceTransports',['../d1/d7b/class_ressource_transports.html',1,'']]],
+  ['rotateearth',['RotateEarth',['../d7/db3/class_rotate_earth.html',1,'']]]
 ];

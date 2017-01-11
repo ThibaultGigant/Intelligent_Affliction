@@ -1,11 +1,7 @@
 <map id="Pays.Update" name="Pays.Update">
-<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="155,56,294,83"/>
-<area shape="rect" id="node7" href="$dd/dbe/class_pays.html#a0dadfb2f559f59b3001436a608f60326" title="Pays.SelectionPays" alt="" coords="155,107,295,133"/>
-<area shape="rect" id="node10" href="$dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82" title="Pays.checkSelection" alt="" coords="152,157,297,184"/>
-<area shape="rect" id="node3" href="$dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="365,5,521,32"/>
-<area shape="rect" id="node5" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="381,56,505,83"/>
-<area shape="rect" id="node4" href="$dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="601,5,753,32"/>
-<area shape="rect" id="node6" href="$dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="589,56,764,83"/>
-<area shape="rect" id="node8" href="$dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="361,107,525,133"/>
-<area shape="rect" id="node9" href="$df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="345,157,541,184"/>
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a0dadfb2f559f59b3001436a608f60326" title="Pays.SelectionPays" alt="" coords="178,31,318,57"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82" title="Pays.checkSelection" alt="" coords="175,81,321,108"/>
+<area shape="rect" id="node6" href="$df/d6a/class_population_categories.html#a0a65e564ee05ff80bc2f8562cd11abc1" title="PopulationCategories.produce" alt="" coords="151,132,345,159"/>
+<area shape="rect" id="node3" href="$dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="411,5,570,32"/>
+<area shape="rect" id="node4" href="$df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="393,56,588,83"/>
 </map>

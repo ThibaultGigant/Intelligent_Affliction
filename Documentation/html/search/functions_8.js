@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['links',['Links',['../de/d73/class_links.html#aca478e5e071869ab06d19e9957b3ac78',1,'Links']]],
-  ['loisirs',['Loisirs',['../da/d41/class_loisirs.html#a2e0c9f79a4aca6d9062cf5cbc678e49c',1,'Loisirs']]]
+  ['inactifs',['Inactifs',['../df/dee/class_inactifs.html#a88444437bae9f0d7dc83bbd8d7058783',1,'Inactifs']]],
+  ['indiceclimat',['indiceClimat',['../dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e',1,'Pays']]],
+  ['indicehi',['indiceHI',['../dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1',1,'Pays']]],
+  ['indicetransports',['indiceTransports',['../dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61',1,'Pays']]]
 ];

@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['recherche',['Recherche',['../dd/d10/class_recherche.html',1,'']]],
-  ['ressource',['Ressource',['../d4/d33/class_ressource.html',1,'']]],
-  ['ressourceloisirs',['RessourceLoisirs',['../d8/df6/class_ressource_loisirs.html',1,'']]],
-  ['ressourcetransports',['RessourceTransports',['../d1/d7b/class_ressource_transports.html',1,'']]],
-  ['rotateearth',['RotateEarth',['../d7/db3/class_rotate_earth.html',1,'']]]
+  ['parametres',['Parametres',['../df/dfc/class_parametres.html',1,'']]],
+  ['pays',['Pays',['../dd/dbe/class_pays.html',1,'']]],
+  ['paysmanager',['PaysManager',['../df/da2/class_pays_manager.html',1,'']]],
+  ['population',['Population',['../dd/d36/class_population.html',1,'']]],
+  ['populationcategories',['PopulationCategories',['../df/d6a/class_population_categories.html',1,'']]]
 ];

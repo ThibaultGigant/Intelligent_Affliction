@@ -1,10 +1,13 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node2" href="$de/d73/class_clock_manager.html" title="ClockManager" alt="" coords="173,5,281,32"/>
-<area shape="rect" id="node3" href="$db/d10/class_game_manager.html" title="GameManager" alt="" coords="171,56,282,83"/>
-<area shape="rect" id="node4" href="$dd/dc5/class_mouse_manager.html" title="MouseManager" alt="" coords="169,107,284,133"/>
-<area shape="rect" id="node5" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="201,157,253,184"/>
-<area shape="rect" id="node6" href="$df/da2/class_pays_manager.html" title="PaysManager" alt="" coords="175,208,279,235"/>
-<area shape="rect" id="node7" href="$d7/db3/class_rotate_earth.html" title="RotateEarth" alt="" coords="180,259,273,285"/>
-<area shape="rect" id="node8" href="$d4/db8/class_sun_rotation.html" title="Simule l&#39;alternance jour/nuit par rotation du Soleil autour de la Terre et non l&#39;inverse. " alt="" coords="179,309,275,336"/>
-<area shape="rect" id="node9" href="$d6/da4/class_zoom_pays.html" title="ZoomPays" alt="" coords="184,360,269,387"/>
+<area shape="rect" id="node2" href="$d0/d6b/class_cargo.html" title="Cargo" alt="" coords="203,5,259,32"/>
+<area shape="rect" id="node3" href="$d2/d39/class_categories_observer.html" title="CategoriesObserver" alt="" coords="164,56,299,83"/>
+<area shape="rect" id="node4" href="$de/d73/class_clock_manager.html" title="ClockManager" alt="" coords="179,107,284,133"/>
+<area shape="rect" id="node5" href="$db/d10/class_game_manager.html" title="GameManager" alt="" coords="178,157,285,184"/>
+<area shape="rect" id="node6" href="$d5/df3/class_menu_panels.html" title="MenuPanels" alt="" coords="184,208,279,235"/>
+<area shape="rect" id="node7" href="$dd/dc5/class_mouse_manager.html" title="MouseManager" alt="" coords="176,259,287,285"/>
+<area shape="rect" id="node8" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="205,309,257,336"/>
+<area shape="rect" id="node9" href="$df/da2/class_pays_manager.html" title="PaysManager" alt="" coords="180,360,283,387"/>
+<area shape="rect" id="node10" href="$d7/db3/class_rotate_earth.html" title="RotateEarth" alt="" coords="186,411,277,437"/>
+<area shape="rect" id="node11" href="$d4/db8/class_sun_rotation.html" title="Simule l&#39;alternance jour/nuit par rotation du Soleil autour de la Terre et non l&#39;inverse. " alt="" coords="185,461,278,488"/>
+<area shape="rect" id="node12" href="$d6/da4/class_zoom_pays.html" title="ZoomPays" alt="" coords="189,512,273,539"/>
 </map>

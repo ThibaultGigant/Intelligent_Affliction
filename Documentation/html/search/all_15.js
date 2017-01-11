@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['zoom',['zoom',['../d7/db3/class_rotate_earth.html#af71e5d7956d6205440d834658466b0ad',1,'RotateEarth']]],
-  ['zoomin',['zoomIn',['../d7/db3/class_rotate_earth.html#a5110d858eef5d36367cbe526604130f5',1,'RotateEarth']]],
-  ['zoomout',['zoomOut',['../d7/db3/class_rotate_earth.html#a61ea67949e81ce40497accc0cb188812',1,'RotateEarth']]],
-  ['zoompays',['ZoomPays',['../d6/da4/class_zoom_pays.html',1,'']]],
-  ['zoompays_2ecs',['ZoomPays.cs',['../d8/d0c/_zoom_pays_8cs.html',1,'']]]
+  ['waitcoroutine',['WaitCoroutine',['../d6/da4/class_zoom_pays.html#ab7d6d8135a85c6b1797e7404ea0e1383',1,'ZoomPays']]],
+  ['wantedpercentage',['wantedPercentage',['../db/dbb/class_a_population_category.html#a7a42419925a0f8a336408094f7727013',1,'APopulationCategory']]],
+  ['waterspreading',['waterSpreading',['../d4/d3b/class_skills.html#a1e4880ccc7e98bd72ba3f6c35f6edc99',1,'Skills']]]
 ];

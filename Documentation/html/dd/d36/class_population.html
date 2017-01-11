@@ -63,7 +63,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-attribs">Attributs publics</a> &#124;
-<a href="#pri-methods">Fonctions membres privées</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="../../dd/da0/class_population-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
@@ -75,11 +74,14 @@ Graphe de collaboration de Population:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/d80/class_population__coll__graph.png" border="0" usemap="#_population_coll__map" alt="Collaboration graph"/></div>
 <map name="_population_coll__map" id="_population_coll__map">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="167,95,219,121"/>
-<area shape="rect" id="node5" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="200,184,267,211"/>
-<area shape="rect" id="node4" href="../../de/d73/class_links.html" title="Links" alt="" coords="265,5,319,32"/>
-<area shape="rect" id="node6" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="285,95,339,121"/>
-<area shape="rect" id="node7" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="343,5,403,32"/>
+<area shape="rect" id="node2" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="200,95,345,121"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="517,95,569,121"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="398,184,465,211"/>
+<area shape="rect" id="node5" href="../../de/d73/class_links.html" title="Links" alt="" coords="558,5,611,32"/>
+<area shape="rect" id="node7" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="372,95,427,121"/>
+<area shape="rect" id="node8" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="45,95,169,121"/>
+<area shape="rect" id="node9" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node10" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="635,5,694,32"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -91,6 +93,9 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2be85dd6d4c66c5b653faced198be1cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#a2be85dd6d4c66c5b653faced198be1cc">setHappinessIndex</a> (int happy)</td></tr>
 <tr class="memdesc:a2be85dd6d4c66c5b653faced198be1cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Définit la valeur du happinessIndex.  <a href="#a2be85dd6d4c66c5b653faced198be1cc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2be85dd6d4c66c5b653faced198be1cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ec72ed10b059d1732137eed0ac5f8a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5">getHappinessIndex</a> ()</td></tr>
+<tr class="memdesc:a9ec72ed10b059d1732137eed0ac5f8a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revoi la valeur du happinessIndex.  <a href="#a9ec72ed10b059d1732137eed0ac5f8a5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9ec72ed10b059d1732137eed0ac5f8a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8ddb4219b0dca72286ad2af13babb61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61">addPeople</a> (uint nb)</td></tr>
 <tr class="memdesc:aa8ddb4219b0dca72286ad2af13babb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute des habitants à la population TODO : Comment définir la catégorie d'affection ?  <a href="#aa8ddb4219b0dca72286ad2af13babb61">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa8ddb4219b0dca72286ad2af13babb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,6 +114,8 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a3ede0931a77c9adbb789245ed9c2553f"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f">deces</a> ()</td></tr>
 <tr class="memdesc:a3ede0931a77c9adbb789245ed9c2553f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de décès "fixe" en fonction de la taille de la population.  <a href="#a3ede0931a77c9adbb789245ed9c2553f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3ede0931a77c9adbb789245ed9c2553f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2198f88d0fc26c250dd4eaa6f2816736"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736">reorganizePopulationCategories</a> ()</td></tr>
+<tr class="separator:a2198f88d0fc26c250dd4eaa6f2816736"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
@@ -127,12 +134,8 @@ Attributs publics</h2></td></tr>
 <tr class="memitem:af90225c5e0b06fa2379dc6dc69fc6b02"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../db/dbb/class_a_population_category.html">APopulationCategory</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#af90225c5e0b06fa2379dc6dc69fc6b02">categories</a></td></tr>
 <tr class="memdesc:af90225c5e0b06fa2379dc6dc69fc6b02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des Catégories de population, accessibles par leur nom.  <a href="#af90225c5e0b06fa2379dc6dc69fc6b02">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af90225c5e0b06fa2379dc6dc69fc6b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Fonctions membres privées</h2></td></tr>
-<tr class="memitem:a44c2d84712586f0134cf10a2b5c5da44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#a44c2d84712586f0134cf10a2b5c5da44">SetupCategories</a> ()</td></tr>
-<tr class="memdesc:a44c2d84712586f0134cf10a2b5c5da44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Répartit la population entre les différentes catégories, lors du premier lancement du jeu.  <a href="#a44c2d84712586f0134cf10a2b5c5da44">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a44c2d84712586f0134cf10a2b5c5da44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac649488d58d6f1355e0fd1b1c83f7d8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/d6a/class_population_categories.html">PopulationCategories</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d36/class_population.html#ac649488d58d6f1355e0fd1b1c83f7d8d">categoriesPop</a></td></tr>
+<tr class="separator:ac649488d58d6f1355e0fd1b1c83f7d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
@@ -170,7 +173,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d36/class_population_a9075207ad38bbd13534b2d55d922a5ac_cgraph.png" border="0" usemap="#dd/d36/class_population_a9075207ad38bbd13534b2d55d922a5ac_cgraph" alt=""/></div>
 <map name="dd/d36/class_population_a9075207ad38bbd13534b2d55d922a5ac_cgraph" id="dd/d36/class_population_a9075207ad38bbd13534b2d55d922a5ac_cgraph">
-<area shape="rect" id="node2" href="../../dd/d36/class_population.html#a44c2d84712586f0134cf10a2b5c5da44" title="Répartit la population entre les différentes catégories, lors du premier lancement du jeu..." alt="" coords="205,5,393,32"/>
+<area shape="rect" id="node2" href="../../d6/d20/class_donnee_pays.html#a59f0e16a94226028389f144e5a74fe52" title="Renvoie la taille de la population du pays souhaité " alt="" coords="201,5,380,32"/>
 </map>
 </div>
 
@@ -205,9 +208,9 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d36/class_population_aa8ddb4219b0dca72286ad2af13babb61_icgraph.png" border="0" usemap="#dd/d36/class_population_aa8ddb4219b0dca72286ad2af13babb61_icgraph" alt=""/></div>
 <map name="dd/d36/class_population_aa8ddb4219b0dca72286ad2af13babb61_icgraph" id="dd/d36/class_population_aa8ddb4219b0dca72286ad2af13babb61_icgraph">
-<area shape="rect" id="node2" href="../../dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="205,5,361,32"/>
-<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="409,5,548,32"/>
-<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="596,5,695,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ad2526b34c0a21de6f6d8a3285e8363c3" title="Pays.addPeople" alt="" coords="219,5,337,32"/>
+<area shape="rect" id="node3" href="../../dd/d36/class_population.html#ab982fbe409a310d91594f9cbe1241d3f" title="Nombre de naissances &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="201,56,355,83"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="403,56,541,83"/>
 </map>
 </div>
 
@@ -243,8 +246,36 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d36/class_population_a3ede0931a77c9adbb789245ed9c2553f_icgraph.png" border="0" usemap="#dd/d36/class_population_a3ede0931a77c9adbb789245ed9c2553f_icgraph" alt=""/></div>
 <map name="dd/d36/class_population_a3ede0931a77c9adbb789245ed9c2553f_icgraph" id="dd/d36/class_population_a3ede0931a77c9adbb789245ed9c2553f_icgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="177,5,316,32"/>
-<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="364,5,463,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="176,5,315,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ec72ed10b059d1732137eed0ac5f8a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec72ed10b059d1732137eed0ac5f8a5">&sect;&nbsp;</a></span>getHappinessIndex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Population.getHappinessIndex </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Revoi la valeur du happinessIndex. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>La valeur de happiness de la population du pays </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d36/class_population_a9ec72ed10b059d1732137eed0ac5f8a5_icgraph.png" border="0" usemap="#dd/d36/class_population_a9ec72ed10b059d1732137eed0ac5f8a5_icgraph" alt=""/></div>
+<map name="dd/d36/class_population_a9ec72ed10b059d1732137eed0ac5f8a5_icgraph" id="dd/d36/class_population_a9ec72ed10b059d1732137eed0ac5f8a5_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="251,5,353,32"/>
+<area shape="rect" id="node3" href="../../d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="401,31,535,57"/>
 </map>
 </div>
 
@@ -291,7 +322,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_cgraph.png" border="0" usemap="#dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_cgraph" alt=""/></div>
 <map name="dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_cgraph" id="dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_cgraph">
-<area shape="rect" id="node2" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="209,5,361,32"/>
+<area shape="rect" id="node2" href="../../dd/d36/class_population.html#aa8ddb4219b0dca72286ad2af13babb61" title="Ajoute des habitants à la population TODO : Comment définir la catégorie d&#39;affection ..." alt="" coords="207,5,355,32"/>
 </map>
 </div>
 <div class="dynheader">
@@ -299,8 +330,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_icgraph.png" border="0" usemap="#dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_icgraph" alt=""/></div>
 <map name="dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_icgraph" id="dd/d36/class_population_ab982fbe409a310d91594f9cbe1241d3f_icgraph">
-<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="209,5,348,32"/>
-<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="396,5,495,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="207,5,345,32"/>
 </map>
 </div>
 
@@ -334,9 +364,42 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/d36/class_population_a5400bdca00298b18677274069975b944_icgraph.png" border="0" usemap="#dd/d36/class_population_a5400bdca00298b18677274069975b944_icgraph" alt=""/></div>
 <map name="dd/d36/class_population_a5400bdca00298b18677274069975b944_icgraph" id="dd/d36/class_population_a5400bdca00298b18677274069975b944_icgraph">
-<area shape="rect" id="node2" href="../../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="228,5,352,32"/>
-<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="400,5,539,32"/>
-<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="587,5,685,32"/>
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c" title="Pays.removePeople" alt="" coords="221,5,359,32"/>
+<area shape="rect" id="node3" href="../../dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="229,56,351,83"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="407,56,545,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2198f88d0fc26c250dd4eaa6f2816736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2198f88d0fc26c250dd4eaa6f2816736">&sect;&nbsp;</a></span>reorganizePopulationCategories()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Population.reorganizePopulationCategories </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_cgraph.png" border="0" usemap="#dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_cgraph" alt=""/></div>
+<map name="dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_cgraph" id="dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_cgraph">
+<area shape="rect" id="node2" href="../../df/d6a/class_population_categories.html#a52aacf9734ef3c59c40ddfa5f65a413f" title="PopulationCategories.reorganize\lPopulationCategories" alt="" coords="261,5,471,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_icgraph.png" border="0" usemap="#dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_icgraph" alt=""/></div>
+<map name="dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_icgraph" id="dd/d36/class_population_a2198f88d0fc26c250dd4eaa6f2816736_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a0b2ced4f6a71bc6d87f4824ae97b2102" title="Pays.applyPlayerOrders" alt="" coords="261,13,424,39"/>
 </map>
 </div>
 
@@ -365,41 +428,6 @@ Voici le graphe des appelants de cette fonction :</div>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a44c2d84712586f0134cf10a2b5c5da44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44c2d84712586f0134cf10a2b5c5da44">&sect;&nbsp;</a></span>SetupCategories()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Population.SetupCategories </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Répartit la population entre les différentes catégories, lors du premier lancement du jeu. </p>
-<div class="dynheader">
-Voici le graphe des appelants de cette fonction :</div>
-<div class="dyncontent">
-<div class="center"><img src="../../dd/d36/class_population_a44c2d84712586f0134cf10a2b5c5da44_icgraph.png" border="0" usemap="#dd/d36/class_population_a44c2d84712586f0134cf10a2b5c5da44_icgraph" alt=""/></div>
-<map name="dd/d36/class_population_a44c2d84712586f0134cf10a2b5c5da44_icgraph" id="dd/d36/class_population_a44c2d84712586f0134cf10a2b5c5da44_icgraph">
-<area shape="rect" id="node2" href="../../dd/d36/class_population.html#a9075207ad38bbd13534b2d55d922a5ac" title="Constructeur. " alt="" coords="241,5,393,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -461,6 +489,20 @@ Voici le graphe des appelants de cette fonction :</div>
 </div><div class="memdoc">
 
 <p>Ensemble des Catégories de population, accessibles par leur nom. </p>
+
+</div>
+</div>
+<a id="ac649488d58d6f1355e0fd1b1c83f7d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac649488d58d6f1355e0fd1b1c83f7d8d">&sect;&nbsp;</a></span>categoriesPop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../df/d6a/class_population_categories.html">PopulationCategories</a> Population.categoriesPop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -553,7 +595,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </div>
 </div>
 <hr/>La documentation de cette classe a été générée à partir du fichier suivant :<ul>
-<li>/Users/Tigig/Documents/Travail/M2/Intelligent_Affliction/Assets/Scripts/Classes/Humanite/<a class="el" href="../../de/dc0/_population_8cs.html">Population.cs</a></li>
+<li>F:/GitHub/Intelligent_Affliction/Assets/Scripts/Classes/Humanite/<a class="el" href="../../de/dc0/_population_8cs.html">Population.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

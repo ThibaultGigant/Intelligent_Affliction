@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['checkmouseactions',['checkMouseActions',['../dd/dc5/class_mouse_manager.html#af39be7f3b21e4ab130fea0ea24c7a0ef',1,'MouseManager']]],
-  ['checkscreenresized',['checkScreenResized',['../d7/db3/class_rotate_earth.html#a9fda986660c8d513ff97beaae285bccc',1,'RotateEarth']]],
-  ['checkselection',['checkSelection',['../dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82',1,'Pays']]],
-  ['climat',['Climat',['../d9/d71/class_climat.html#a0b80a2a9e885fb56e89addc1a9dbace6',1,'Climat']]]
+  ['besoins',['besoins',['../d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2',1,'Agriculture.besoins()'],['../db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f',1,'APopulationCategory.besoins()'],['../df/dee/class_inactifs.html#a1d134880ff952146d8f852b4a06e5c45',1,'Inactifs.besoins()'],['../da/d41/class_loisirs.html#abf53fe77683e4c39dec4382cc19d15d9',1,'Loisirs.besoins()'],['../d2/de3/class_medecine.html#ae5c0487341c4cb588683aaf9497cce4a',1,'Medecine.besoins()'],['../dd/d10/class_recherche.html#a06fca65a6cc6de4685bd189939db0072',1,'Recherche.besoins()'],['../d6/d8e/class_transports.html#a7524c2bbb0dc684401aea07a2d9d6ce4',1,'Transports.besoins()']]]
 ];

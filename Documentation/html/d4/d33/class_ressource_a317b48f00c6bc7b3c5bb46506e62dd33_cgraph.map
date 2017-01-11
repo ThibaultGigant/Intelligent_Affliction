@@ -1,4 +1,4 @@
 <map id="Ressource.removeRessource" name="Ressource.removeRessource">
-<area shape="rect" id="node2" href="$d4/d33/class_ressource.html#aec648fed638e1f1221c1871bc654d103" title="Effectue l&#39;envoi de la ressource à un autre pays. " alt="" coords="257,5,376,32"/>
-<area shape="rect" id="node3" href="$d4/d33/class_ressource.html#ab1b56a9360f7d654a5d88cb31cc32ad1" title="Effectue la réception d&#39;une ressource d&#39;un autre pays. " alt="" coords="251,56,383,83"/>
+<area shape="rect" id="node2" href="$d4/d33/class_ressource.html#aec648fed638e1f1221c1871bc654d103" title="Effectue l&#39;envoi de la ressource à un autre pays. " alt="" coords="250,5,366,32"/>
+<area shape="rect" id="node3" href="$d4/d33/class_ressource.html#a3fd6142be9b5d722b52acfa0109221ec" title="Effectue la réception d&#39;une ressource d&#39;un autre pays. " alt="" coords="244,56,372,83"/>
 </map>
