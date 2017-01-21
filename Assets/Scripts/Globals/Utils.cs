@@ -75,12 +75,12 @@ public static class Utils
 	}
 
 	public static string toStringFormat(int nb) {
-		if (nb / 1000 < 1)
-			return nb.ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE"));
+		if (nb / 1/*000*/ < 1)
+			return nb.ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " K";
 		if (nb / 1000000 < 1)
-			return ((int)(nb / 1000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " K";
+			return ((int)(nb / 1000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " M";
 		else
-			return (((float) nb / 1000000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " M";
+			return (((float) nb / 1000000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " Mrd";
 	}
 }
 

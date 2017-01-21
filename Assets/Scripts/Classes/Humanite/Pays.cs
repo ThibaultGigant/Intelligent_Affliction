@@ -98,12 +98,10 @@ public class Pays : MonoBehaviour
 		//TestFunctions ();
 
 		SelectionPays ();
-		checkSelection ();
+		//checkSelection ();
 
 		if (ClockManager.newDay) {
 			population.categoriesPop.produce ();
-			//population.categories ["Transports"].produce ();
-			//population.categories ["Agriculture"].produce ();
 		}
 
 		/*
@@ -122,16 +120,19 @@ public class Pays : MonoBehaviour
 			GameObject.Find ("/GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = gameObject.name;
 			Debug.Log (name);
 			isSelected = true;
+			checkSelection ();
 		}
 		// Déselection du pays, par un simple clique en dehors de la zone
 		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject) && MouseManager.doesHit(Parametres.earth)) {
 			Parametres.SetPaysSelected(null);
 			GameObject.Find ("/GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = "Monde";
 			isSelected = false;
+			checkSelection();
 		}
 		// Déselection du pays, si un autre à été sélectionné
 		else if (Parametres.paysSelected != null && Parametres.paysSelected.name != name) {
 			isSelected = false;
+			checkSelection();
 		}
 	}
 
@@ -306,7 +307,7 @@ public class Pays : MonoBehaviour
 		 * Le résultat est bornée supérieurement par 1.
 		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
 		 */
-		int quantityTransport = population.country.resources ["Transports"].quantity;
+		uint quantityTransport = population.country.resources ["Transports"].quantity;
 		float ind =  (100f * (float) quantityTransport) / (12f * 160f * Mathf.Sqrt(population.country.superficie));
 
 		return (Mathf.Min (1f, ind) / 4f) + 0.75f;

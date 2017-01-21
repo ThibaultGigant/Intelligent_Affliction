@@ -38,6 +38,9 @@ public class Agriculture : APopulationCategory
 
 		productions.Enqueue((int)newAgr);
 
+		if (population.country.name == "Afrique")
+			Debug.Log (population.country.resources ["Nourriture"].quantity);
+
 		population.country.resources ["Nourriture"].addRessource (Mathf.FloorToInt(newAgr));
 	}
 
@@ -88,8 +91,8 @@ public class Agriculture : APopulationCategory
 		// Transport
 		Pays country = population.country;
 		int HI = population.getHappinessIndex();
-		int quantityTransport = country.resources ["Transports"].quantity;
-		int quantityNourriture = country.resources ["Nourriture"].quantity;
+		uint quantityTransport = country.resources ["Transports"].quantity;
+		uint quantityNourriture = country.resources ["Nourriture"].quantity;
 		float superficie = country.superficie;
 		Climat clim = country.climat;
 

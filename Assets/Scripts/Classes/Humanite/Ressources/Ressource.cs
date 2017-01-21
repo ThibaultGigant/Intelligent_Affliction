@@ -7,7 +7,7 @@ public abstract class Ressource
 	/**
 	 * Quantité possédée de cette ressource
 	 */
-	public int quantity = 0;
+	public uint quantity = 0;
 	/**
 	 * La ressource est-elle échangeable ?
 	 */
@@ -39,7 +39,7 @@ public abstract class Ressource
 	public int addRessource(int nb) {
 		if (nb < 0)
 			return 0;
-		quantity += nb;
+		quantity += (uint) nb;
 		return nb;
 	}
 
@@ -51,13 +51,14 @@ public abstract class Ressource
 	public int removeRessource(int nb) {
 		if (nb < 0)
 			return 0;
+
 		
 		if (nb > quantity) {
-			int temp = quantity;
+			uint temp = quantity;
 			quantity = 0;
-			return temp;
+			return (int) temp;
 		}
-		quantity -= nb;
+		quantity -= (uint) nb;
 		return nb;
 	}
 
@@ -81,7 +82,8 @@ public abstract class Ressource
 	 * Consommation journalière de ressources
 	 * @param flag Indique si l'on souhaite une consommation effective,
 	 * ou seulement une estimation de la consommation
-	 * @return le montant à consommer
+	 * @return Si flag est vrai, retourne le nombre d'insatisfaits,
+	 * sinon, retourne le montant à consommer
 	 */
 	public abstract int consome (bool flag);
 }

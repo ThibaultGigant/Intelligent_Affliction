@@ -11,11 +11,6 @@ public class PaysManager : MonoBehaviour {
 		foreach ( Transform t in transform )
 			t.gameObject.AddComponent <Pays>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	/**
 	 * Retourne la population mondiale actuelle

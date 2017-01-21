@@ -36,7 +36,27 @@ public class Nourriture : Ressource
 		return 0;
 	}
 
+	/**
+	 * Consommation journalière de nourriture par la population
+	 * @param frag Indique si l'on veut une consomation effective,
+	 * ou seulement une estimation de la consommation
+	 * @return Si flag est vrai, retourne le nombre d'insatisfaits,
+	 * sinon, retourne le montant à consommer
+	 */
 	public override int consome (bool flag) {
-		return 0;
+		/**
+		 * Chaque personne mange environ une "ressource"
+		 * [taille de la population] * x
+		 * où x est choisi aléatoirement dans [0.95,1.05]
+		 */
+		int nb = (int) pays.population.totalPopulation * (int) ( 1.05f - Random.value / 10f );
+
+		if (!flag)
+			return nb;
+
+		int insatisfaits = nb - pays.population.country.resources ["Nourriture"].removeRessource (nb);
+
+		return insatisfaits;
+
 	}
 }
