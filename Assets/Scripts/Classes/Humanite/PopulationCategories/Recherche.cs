@@ -9,6 +9,7 @@ public class Recherche : APopulationCategory
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
 	public Recherche(Population population, uint nb) : base(population, nb) {
+		nom = "Recherche";
 	}
 
 	/**

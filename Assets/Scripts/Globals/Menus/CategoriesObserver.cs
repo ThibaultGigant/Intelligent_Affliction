@@ -73,7 +73,7 @@ public class CategoriesObserver : MonoBehaviour {
 		foreach (string cate in nomCate)
 		{
 			float besoin = categories.categories [cate].besoins ();
-			valueCate [cate].text = besoin.ToString("R");
+			valueCate [cate].text = besoin.ToString("N4");
 			byte besoinColor = (byte) ((besoin + 1) * 127);
 			byte red;
 			if (besoinColor <= 127)

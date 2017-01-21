@@ -104,6 +104,12 @@ public class Parametres {
 	 */
 	public static int coutFievre = 1;
 
+	/**
+	 * Taille des listes de mémoire, nécessaires notamment pour
+	 * les graphiques
+	 */
+	public static int tailleMemoire = 100;
+
 	public static void SetPaysSelected(GameObject pays) {
 		paysSelected = pays;
 	}

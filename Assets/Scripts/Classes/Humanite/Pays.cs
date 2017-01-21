@@ -29,7 +29,8 @@ public class Pays : MonoBehaviour
 	/**
 	 * Ensemble des Ressource du pays, accessibles par leur nom
 	 */
-	public IDictionary<string, Ressource> resources;
+	//public IDictionary<string, Ressource> resources;
+	public PaysRessources resources;
 	/**
 	 * La population associée à ce pays
 	 */
@@ -68,26 +69,7 @@ public class Pays : MonoBehaviour
 		links = new Links ();
 		climat = new Climat (DonneePays.getChaleur(nomPays), DonneePays.getHumidite(nomPays));
 		superficie = DonneePays.getSuperficie(nomPays);
-
-		SetupRessources ();
-	}
-
-	/**
-	 * Initialisation des ressources du pays
-	 */
-	private void SetupRessources() {
-		resources = new Dictionary<string, Ressource> ();
-		resources.Add ("Nourriture", new Nourriture (this));
-		resources.Add ("KnowledgeToux", new Knowledge (this, "Toux", 1));
-		resources.Add ("KnowledgeEternuements", new Knowledge (this, "Eternuements", 1));
-		resources.Add ("KnowledgeFievre", new Knowledge (this, "Fievre", 1));
-		resources.Add ("KnowledgeDiarrhees", new Knowledge (this, "Diarrhees", 1));
-		resources.Add ("KnowledgeSueurs", new Knowledge (this, "Sueurs", 1));
-		resources.Add ("KnowledgeArretOrganes", new Knowledge (this, "ArretOrganes", 1));
-		resources.Add ("KnowledgeResistance", new Knowledge (this, "Resistance", 1));
-		resources.Add ("KnowledgeSpreading", new Knowledge (this, "Spreading", 1));
-		resources.Add ("Transports", new RessourceTransports (this));
-		resources.Add ("Loisirs", new RessourceLoisirs (this));
+		resources = new PaysRessources (this);
 	}
 
 	/**
@@ -95,13 +77,16 @@ public class Pays : MonoBehaviour
 	 * Fait vivre la population
 	 */
 	public void Update() {
-		//TestFunctions ();
-
 		SelectionPays ();
-		//checkSelection ();
 
+		/**
+		 * Chaque jour
+		 * • Production des ressources
+		 * • Consomation des ressources
+		 */
 		if (ClockManager.newDay) {
 			population.categoriesPop.produce ();
+			resources.consome ();
 		}
 
 		/*
@@ -264,10 +249,8 @@ public class Pays : MonoBehaviour
 	 * Donne une indication quant à la condition climatique du pays
 	 * Plus la chaleur et l'humidité d'un pays est proche des valeurs
 	 * idéale, plus la valeur retournée sera grande
-	 * @return Une valeur entre 0.75 et 1. 0.75 si les conditions sont catastrophiques,
-	 * un s'ils sont parfaits
-	 // L'idéal étant un pays avec une chaleur de 65
-	 // et une humidité de 45 (valeure arbitraire, à revoir)
+	 * @return Une valeur entre 0 et 1. 0 si les conditions sont catastrophiques,
+	 * 1 s'ils sont parfaits
 	 */
 	public float indiceClimat(int CHALEUR_IDEALE, int HUMIDITE_IDEALE)
 	{
@@ -280,18 +263,17 @@ public class Pays : MonoBehaviour
 		 * en 1, le facteur atteind 1/4
 		 * en 2, le facteur atteind 0
 		 * On "inverse" le résultat x -> 1 - x
-		 * On ramène le domaine de l'image de [0,1] à [0.75, 1]
 		 */
 		Climat clim = population.country.climat;
 		float ind = (float)(Mathf.Abs (CHALEUR_IDEALE - clim.chaleur) +
 			Mathf.Abs (HUMIDITE_IDEALE - clim.humidite)) / 100f;
 		ind = Mathf.Pow (ind, 2f) / 4f - ind + 1;
-		return (1f - ind) / 4f + 0.75f;
+		return (1f - ind);
 	}
 
 	/**
 	 * indiceTransportSuperficie
-	 * @return Une valeur entre 0,75 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
+	 * @return Une valeur entre 0 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
 	 */
 	public float indiceTransports()
 	{
@@ -307,10 +289,10 @@ public class Pays : MonoBehaviour
 		 * Le résultat est bornée supérieurement par 1.
 		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
 		 */
-		uint quantityTransport = population.country.resources ["Transports"].quantity;
+		uint quantityTransport = resources ["Transports"].quantity;
 		float ind =  (100f * (float) quantityTransport) / (12f * 160f * Mathf.Sqrt(population.country.superficie));
 
-		return (Mathf.Min (1f, ind) / 4f) + 0.75f;
+		return (Mathf.Min (1f, ind));
 	}
 
 	/**
@@ -321,14 +303,13 @@ public class Pays : MonoBehaviour
 	 * Ainsi, pour la valeur maximale 100, on obtient 0
 	 * pour la moitié 50, on obtient 1/4
 	 * et pour la valeur minimale 0, on obtient 1
-	 * Ainsi, pour HI = 100, la valeur vaudra moins de 0.1 pourcent
-	 * On ramène le domaine de l'image de [0,1] à [0.25, 1]
-	 * @return Un facteur, entre 0.75 et 1, prenant en considération le HappinessIndex du pays, utile pour certains calculs (rebellions, besoins, ...)
+	 * On inverse le resultat, de façon à obtenir 1 quand HI est a 100
+	 * @return Un facteur, entre 0 et 1, prenant en considération le HappinessIndex du pays, utile pour certains calculs (rebellions, besoins, ...)
 	 */
 	public float indiceHI() {
 		float HI_normalize = (float)population.getHappinessIndex () / 50f;
 		float ind = Mathf.Pow (HI_normalize, 2f) / 4f - HI_normalize + 1;
-		return (3f * ind / 4f) + 0.25f;
+		return (1f - ind);
  	}
 
 	/**

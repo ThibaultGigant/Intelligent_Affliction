@@ -6,7 +6,7 @@ public class PopulationCategories
 {
 
 	/**
-	 * 
+	 * Population répartie dans ces catégories
 	 */
 	Population population;
 
@@ -61,7 +61,70 @@ public class PopulationCategories
 
 	public void reorganizePopulationCategories()
 	{
-		
+		Dictionary<APopulationCategory, int> echangesToleresPositif = new Dictionary<APopulationCategory, int> ();
+		Dictionary<APopulationCategory, int> echangesToleresNegatif = new Dictionary<APopulationCategory, int> ();
+		float change;
+		int tolerance;
+		int positif = 0;
+		int negatif = 0;
+		APopulationCategory cate;
+		foreach (string nom in categories.Keys) {
+			cate = categories [nom];
+			change = cate.wantedPercentage * population.totalPopulation - cate.assignedPopulation;
+			change *= population.country.indiceHI ();
+			// Si l'on approche du pourcentage voulu, ou que la populatino n'est pas assez satisfaite, on s'arrête
+			if (change < 0.01f * population.totalPopulation) {
+				cate.wantedPercentage = -1f;
+				continue;
+			}
+
+			// On ne fait migrer que 1% de la population totale du pays par catégorie et par jour
+			if (change > 0) {
+				tolerance = (int) Mathf.Min (change, 0.01f * population.totalPopulation);
+				positif += tolerance;
+				echangesToleresPositif.Add (cate, tolerance);
+			}
+			else {
+				tolerance = (int) Mathf.Max (change, -0.01f * population.totalPopulation);
+				negatif -= tolerance;
+				echangesToleresNegatif.Add (cate, -tolerance);
+			}
+
+		}
+		int echangeEffectif;
+		if (positif > negatif) {
+			foreach (APopulationCategory donnant in echangesToleresNegatif.Keys) {
+				foreach (APopulationCategory prenant in echangesToleresPositif.Keys) {
+					if (echangesToleresPositif [prenant] > 0) {
+						echangeEffectif = Mathf.Min (echangesToleresPositif [prenant], echangesToleresNegatif [donnant]);
+						prenant.addAssigned (echangeEffectif);
+						donnant.removeAssigned (echangeEffectif);
+						echangesToleresPositif [prenant] -= echangeEffectif;
+						echangesToleresNegatif [donnant] -= echangeEffectif;
+					}
+
+					if (echangesToleresNegatif [donnant] <= 0)
+						break;
+				}
+			}
+		}
+		else {
+			foreach (APopulationCategory prenant in echangesToleresPositif.Keys ) {
+				foreach ( APopulationCategory donnant in echangesToleresNegatif.Keys ) {
+					if (echangesToleresNegatif [donnant] > 0) {
+						echangeEffectif = Mathf.Min (echangesToleresNegatif [prenant], echangesToleresPositif [donnant]);
+						prenant.addAssigned (echangeEffectif);
+						donnant.removeAssigned (echangeEffectif);
+						echangesToleresNegatif [prenant] -= echangeEffectif;
+						echangesToleresPositif [donnant] -= echangeEffectif;
+					}
+
+					if (echangesToleresPositif [prenant] <= 0)
+						break;
+				}
+			}
+		}
+
 	}
 }
 

@@ -23,12 +23,18 @@ public abstract class Ressource
 	public Pays pays;
 
 	/**
+	 * Liste du nombre de ressources consommées par jour
+	 */
+	public LimitedQueue<int> consommation;
+
+	/**
 	 * Les class qui héritières doivent
 	 * se nommer en initialisant "nom"
 	 */
 	public Ressource (Pays pays)
 	{
 		this.pays = pays;
+		consommation = new LimitedQueue<int> (Parametres.tailleMemoire);
 	}
 
 	/**
@@ -60,6 +66,25 @@ public abstract class Ressource
 		}
 		quantity -= (uint) nb;
 		return nb;
+	}
+
+	/**
+	 * Retrait de ressources
+	 * @param nb pourcentage de ressources à enlever. Doit être positif et inférieur à la quantité
+	 * @return Le nombre de ressource réellement retiré
+	 */
+	public int removeRessource(float nb) {
+		if (nb < 0)
+			return 0;
+
+
+		if (nb > 1) {
+			uint temp = quantity;
+			quantity = 0;
+			return (int) temp;
+		}
+		quantity -= (uint) (nb * quantity);
+		return (int)(nb * quantity);
 	}
 
 	/**

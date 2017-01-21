@@ -4,6 +4,11 @@ using System.Collections;
 public abstract class APopulationCategory
 {
 	/**
+	 * Nom de la catégorie
+	 */
+	public string nom;
+
+	/**
 	 * La population à laquelle est ratachée
 	 * cette catégorie
 	 */
@@ -65,11 +70,41 @@ public abstract class APopulationCategory
 	}
 
 	/**
+	 * Ajoute des personnes à cette catégorie
+	 * @param nb Nombre de personnes à ajouter à cette cotégorie. Doit être positif, sinon rien n'est fait
+	 * @return Le nombre de personnes réellement ajoutées à la catégorie
+	 */
+	public uint addAssigned(int nb) {
+		if (nb < 0)
+			return (uint) 0;
+		assignedPopulation += (uint) nb;
+		return (uint) nb;
+	}
+
+	/**
 	 * Enlève des personnes de cette catégorie
 	 * @param nb Nombre de personnes à retirer de cette catégorie. Doit être positif, sinon rien n'est fait
 	 * @return Le nombre de personnes réellement retirées de la catégorie
 	 */
 	public uint removeAssigned(uint nb) {
+		if (nb < 0)
+			return 0;
+		if (nb > assignedPopulation) {
+			uint temp = assignedPopulation;
+			assignedPopulation = 0;
+			return temp;
+		}
+		assignedPopulation -= nb;
+		return nb;
+	}
+
+	/**
+	 * Enlève des personnes de cette catégorie
+	 * @param nb Nombre de personnes à retirer de cette catégorie. Doit être positif, sinon rien n'est fait
+	 * @return Le nombre de personnes réellement retirées de la catégorie
+	 */
+	public uint removeAssigned(int nb_int) {
+		uint nb = (uint)nb_int;
 		if (nb < 0)
 			return 0;
 		if (nb > assignedPopulation) {

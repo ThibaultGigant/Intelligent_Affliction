@@ -42,6 +42,8 @@ public class Population {
 		initialNumberPopulation = nb;
 		totalPopulation = nb;
 
+		happinessIndex = 50;
+
 		categoriesPop = new PopulationCategories (this, totalPopulation);
 	}
 

@@ -54,7 +54,11 @@ public class Nourriture : Ressource
 		if (!flag)
 			return nb;
 
-		int insatisfaits = nb - pays.population.country.resources ["Nourriture"].removeRessource (nb);
+		int consommer = pays.population.country.resources ["Nourriture"].removeRessource (nb);
+
+		consommation.Enqueue (consommer);
+
+		int insatisfaits = nb - consommer;
 
 		return insatisfaits;
 

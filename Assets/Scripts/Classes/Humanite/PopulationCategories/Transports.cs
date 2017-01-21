@@ -18,6 +18,7 @@ public class Transports : APopulationCategory
 	 * @param nb Taille de la population initialement assignée à cette catégorie, en nombre d'habitants
 	 */
 	public Transports(Population population, uint nb) : base(population, nb) {
+		nom = "Transports";
 	}
 
 	/**
@@ -33,7 +34,7 @@ public class Transports : APopulationCategory
 
 		productions.Enqueue((int)newTrs);
 
-		population.country.resources ["Transports"].addRessource (Mathf.FloorToInt(newTrs));
+		population.country.resources ["Transports"].addRessource ((int)newTrs);
 	}
 
 	/**
@@ -71,15 +72,19 @@ public class Transports : APopulationCategory
 		 * Une dernière division par 30 est possible, pour pouvoir faire l'opération jour par jour
 		 */
 		float newTrs = (float) (assignedPopulation / 30f) * population.country.superficie / 281250000f;
-		/*
+
 		if (population.country.name == "Afrique") {
+			Debug.Log ("Timon Transport production");
 			Debug.Log (assignedPopulation / 4f);
 			Debug.Log ("taille équipe " + 281250000f/(8f*population.country.superficie));
 			Debug.Log (newTrs);
-		}*/
+		}
 
-		return (int) newTrs;
-		
+		float resultat = Utils.indicesNormalises(new float[,] {	{ population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE ), 0f,1f,0.6f,1f, 0f },
+																	{ population.country.indiceHI (), 0f,1f,0.75f,1f, 1f }
+																});
+
+		return (int) (newTrs * resultat);
 	}
 
 	/**
@@ -90,10 +95,47 @@ public class Transports : APopulationCategory
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
 	public override float besoins () {
-		return 0f;
+		Pays country = population.country;
+		float superficie = country.superficie;
+		Climat clim = country.climat;
+
+		/**
+		 * On compare la production journalière moyenne à la production idéale
+		 * 
+		 * Facteur discriminant pour le signe de la valeur finale
+		 */
+
+		int sum = 0;
+		foreach (int i in productions)
+			sum += i;
+		float moyenne = 1f * sum / productions.Count;
+
+		// 12% de la superficie * 160km/h
+		// En 30 ans
+		float ideal = 12f * 160f * Mathf.Sqrt(population.country.superficie) / 100f / (30f * 365f);
+
+		float ecart = ideal / moyenne;
+		if (ecart >= 1f)
+			ecart = Mathf.Atan (ecart - 1) / (2f * Mathf.PI);
+		else
+			ecart = Mathf.Atan ((ecart - 1) * 10) / (2f * Mathf.PI);
+
+		float resultat = Utils.indicesNormalises(new float[,] {	{ population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE ), 0f,1f,0.6f,1f, 0f },
+																	{ population.country.indiceHI (), 0f,1f,0.75f,1f, 1f }
+																});
+
+		return ecart * resultat;
 	}
 
+	/**
+	 * Evalue l'offre que le pays proposerait à un autre, en fonction du montant demandé
+	 * et du pourcentage donné, calculé auparavant  en fonction de l'apport que pourrait
+	 * rapporter l'échange avec lui
+	 * @param montant Montant de connaissances dans le domaine du transport demandé par mois
+	 * @param pourcentage Pourcentage de connaissances que l'on est prêt à offrir
+	 * @return Montant de connaissance proposé par mois
+	 */
 	public override int offre(int montant, float pourcentage) {
-		return 0;
+		return Mathf.Min( montant, (int) (pourcentage * population.country.resources["Transports"].quantity ));
 	}
 }

@@ -21,6 +21,7 @@ public class Agriculture : APopulationCategory
 	public Agriculture(Population pop, uint nb) : base(pop, nb) {
 		//panelItem = GameObject.Find("Menu Gauche/Catégories/Agriculture");
 		//panelItem.GetComponent<Image> ().color = new Color32 (255, 133, 133, 255);
+		nom = "Agriculture";
 	}
 
 	/**
@@ -38,10 +39,7 @@ public class Agriculture : APopulationCategory
 
 		productions.Enqueue((int)newAgr);
 
-		if (population.country.name == "Afrique")
-			Debug.Log (population.country.resources ["Nourriture"].quantity);
-
-		population.country.resources ["Nourriture"].addRessource (Mathf.FloorToInt(newAgr));
+		population.country.resources ["Nourriture"].addRessource ((int)newAgr);
 	}
 
 	/**
@@ -59,9 +57,11 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * 10 * [nombre d'agriculteurs] * [indice Climat] * ([indice Transport])
 		 */
-		float newAgr = 10f * assignedPopulation * population.country.indiceClimat (CHALEUR_IDEALE, HUMIDITE_IDEALE) * population.country.indiceTransports();
-
-		//Debug.Log (population);
+		float resultat = Utils.indicesNormalises(new float[,] {	{ population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE ), 0f,1f,0.6f,1f, 0f },
+																	{ population.country.indiceTransports(), 0f,1f,0.75f,1f, 0f },
+																	{ population.country.indiceHI (), 0f,1f,0.75f,1f, 1f }
+																});
+		float newAgr = 10f * assignedPopulation * resultat;
 
 		if (population.country.nomPays == "Afrique") {
 			/*Debug.Log ("Agriculture");
@@ -84,26 +84,8 @@ public class Agriculture : APopulationCategory
 	 */
 	public override float besoins()
 	{
-		// TODO prendre en compte les stocks
-
-		//assignedPopulation
-		// e^-HI
-		// Transport
 		Pays country = population.country;
-		int HI = population.getHappinessIndex();
-		uint quantityTransport = country.resources ["Transports"].quantity;
 		uint quantityNourriture = country.resources ["Nourriture"].quantity;
-		float superficie = country.superficie;
-		Climat clim = country.climat;
-
-		//Debug.Log (quantityNourriture);
-
-		/**
-		* Prend en compte le HappinessIndex
-		* Plus cette valeur est élevé, moins les besoins seront
-		* prononcés
-		*/
-		float indiceHI = Mathf.Exp ((float)-HI);
 
 		/**
 		 * Prise en compte du ratio entre la taille de la population, et la nourriture
@@ -117,12 +99,13 @@ public class Agriculture : APopulationCategory
 		else
 			indiceNourriture = Mathf.Atan ((indiceNourriture - 1) * 10) / (2f * Mathf.PI);
 
-		/*Debug.Log ("HI = " + indiceHI);
-		Debug.Log ("Climat = " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
-		Debug.Log ("Nourriture = " + indiceNourriture);
-		Debug.Log ("Transport = " + population.country.indiceTransports());*/
 
-		return population.country.indiceHI() * indiceNourriture * population.country.indiceTransports() * population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE);
+		float resultat = Utils.indicesNormalises(new float[,] {	{ population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE ), 0f,1f,0.6f,1f, 0f },
+																	{ population.country.indiceTransports(), 0f,1f,0.75f,1f, 0f },
+																	{ population.country.indiceHI (), 0f,1f,0.75f,1f, 1f }
+																});
+
+		return indiceNourriture * resultat;
 	}
 
 	/**
@@ -137,11 +120,10 @@ public class Agriculture : APopulationCategory
 
 		// Calcul de l'excedent moyen de nourriture produite par jour
 		int sum = 0;
-		int[] prod = productions.ToArray ();
-		for ( int i = 0 ; i < prod.Length ; i++ ) {
-				sum += prod[i];
-		}
-		float moyenne = sum / (1.0f * prod.Length);
+		foreach (int i in productions)
+			sum += i;
+
+		float moyenne = sum / (1.0f * productions.Count);
 
 		float excedant = moyenne - population.country.resources["Nourriture"].consome(false);
 

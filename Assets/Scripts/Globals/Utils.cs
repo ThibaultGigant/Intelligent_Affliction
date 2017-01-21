@@ -82,5 +82,22 @@ public static class Utils
 		else
 			return (((float) nb / 1000000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " Mrd";
 	}
+
+	/**
+	 * Renvoie le produit des indices, chacun normalisées comme décris dans la structure donnée en paramètre
+	 * @param indices Liste des indices à multiplier. Il s'agit d'une liste à deux dimensions, où chaque ligne correspond, pour un indice à
+	 * { valeur de l'indice, valeur minimale, valeur maximale, valeur minimal après normalisation, valeur maximale après normalisation, [0 si on veut multiplier | 1 si on veut diviser] }
+	 * @return Le résultat
+	 */
+	public static float indicesNormalises(float[,] indices) {
+		float resultat = 1;
+		for ( int i = 0 ; i < indices.GetLength(0) ; i++ ) {
+			if (indices[i,5] == 0f)
+				resultat *= ((indices [i, 0] * (indices [i, 4] - indices [i, 3]) / (indices [i, 2] - indices [i, 1])) + indices [i, 3]);
+			else
+				resultat /= ((indices [i, 0] * (indices [i, 4] - indices [i, 3]) / (indices [i, 2] - indices [i, 1])) + indices [i, 3]);
+		}
+		return resultat;
+	}
 }
 
