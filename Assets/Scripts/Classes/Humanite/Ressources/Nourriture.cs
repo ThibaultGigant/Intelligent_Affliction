@@ -3,6 +3,15 @@ using System.Collections;
 
 public class Nourriture : Ressource
 {
+
+	/**
+	 * Constructeur
+	 * Nomme la ressource
+	 */
+	public Nourriture(Pays pays) : base(pays) {
+		nom = "Nourriture";
+	}
+
 	/**
 	 * Effectue l'envoi de la ressource à un autre pays.
 	 * Retire la quantité de ressource voulu à la ressource
@@ -24,6 +33,10 @@ public class Nourriture : Ressource
 	public override int receive(Ressource toReceive)
 	{
 		// TODO
+		return 0;
+	}
+
+	public override int consome (bool flag) {
 		return 0;
 	}
 }

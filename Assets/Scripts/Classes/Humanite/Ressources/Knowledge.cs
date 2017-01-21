@@ -11,7 +11,7 @@ public class Knowledge : Ressource {
 	 */
 	public int coutDeRecherche;
 
-	public Knowledge (string sujet, int cout)
+	public Knowledge (Pays pays, string sujet, int cout) : base(pays)
 	{
 		sujetKnowledge = sujet;
 		coutDeRecherche = cout;
@@ -38,6 +38,10 @@ public class Knowledge : Ressource {
 	public override int receive(Ressource toReceive)
 	{
 		// TODO
+		return 0;
+	}
+
+	public override int consome (bool flag) {
 		return 0;
 	}
 }

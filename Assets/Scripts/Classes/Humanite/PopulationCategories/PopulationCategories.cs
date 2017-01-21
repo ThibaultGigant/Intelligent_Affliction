@@ -42,6 +42,17 @@ public class PopulationCategories
 		categories.Add ("Transports", new Transports (population, totalPopulation - 5 * nbReparti)); // Pour eviter les imprécisions dues à la discrétisation des pourcentages
 	}
 
+	/**
+	 * Transfert de personnes entre deux catégories de population
+	 * quantity personnes sont transférées de la catégorie source à la catégorie destination
+	 * @param source Catégorie où on récupère les personnes à transférer
+	 * @param destination Catégorie où on rajoute les personnes à transférer
+	 * @return Nombre de personnes réellement transférées entre les catégories
+	 */
+	public uint transfertBetweenCategories(string source, string destination, uint quantity) {
+		return categories [destination].addAssigned (categories [source].removeAssigned (quantity));
+	}
+
 	public void produce() {
 		foreach (string key in categories.Keys) {
 			categories [key].produce ();

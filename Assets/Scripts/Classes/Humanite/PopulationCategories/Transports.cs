@@ -31,6 +31,8 @@ public class Transports : APopulationCategory
 		
 		float newTrs = production ();
 
+		productions.Enqueue((int)newTrs);
+
 		population.country.resources ["Transports"].addRessource (Mathf.FloorToInt(newTrs));
 	}
 
@@ -89,5 +91,9 @@ public class Transports : APopulationCategory
 	 */
 	public override float besoins () {
 		return 0f;
+	}
+
+	public override int offre(int montant, float pourcentage) {
+		return 0;
 	}
 }

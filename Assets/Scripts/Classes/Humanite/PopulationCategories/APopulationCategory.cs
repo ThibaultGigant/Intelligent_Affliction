@@ -15,6 +15,11 @@ public abstract class APopulationCategory
 	public uint assignedPopulation;
 
 	/**
+	 *
+	 */
+	public LimitedQueue<int> productions;
+
+	/**
 	 * Pourcentage de population que le joueur souhaiterait voir affectée à cette catégorie
 	 */
 	public float wantedPercentage = -1f;
@@ -22,7 +27,7 @@ public abstract class APopulationCategory
 	/**
 	 * 
 	 */
-	protected GameObject panelItem; 
+	protected GameObject panelItem;
 
 	/**
 	 * Valeur maximale que l'offre peut atteindre
@@ -44,6 +49,7 @@ public abstract class APopulationCategory
 	public APopulationCategory(Population pop, uint nb) {
 		population = pop;
 		assignedPopulation = nb;
+		productions = new LimitedQueue<int> (100);
 	}
 
 	/**
@@ -86,12 +92,20 @@ public abstract class APopulationCategory
 	public abstract int production ();
 
 	/**
-	 * offre
+	 * besoins
 	 * Indique les besoins de la catégorie
 	 * La valeur est d'autant plus élevée que la catégorie
 	 * à besoin d'effectif supplémentaire, et inversement
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
 	public abstract float besoins();
+
+	/**
+	 * Evalue l'offre que le pays proposerait à un autre
+	 * @param montant Montant de ressources par mois demandé
+	 * @param pourcentage Pourcentage d'excédant de production que l'on est prêt à offrir
+	 * @return Indique combien l'on est prêt à fournir par mois à un autre pays
+	 */
+	public abstract int offre(int montant, float pourcentage);
 }
 

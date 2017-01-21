@@ -36,7 +36,7 @@ public class CategoriesObserver : MonoBehaviour {
 	private string[] nomCate = { "Agriculture", "Loisirs", "Medecine", "Recherche", "Transports", "Inactifs"};
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		menuCate = new Dictionary<string, Transform> ();
 		imageCate = new Dictionary<string, Image> ();
 		valueCate = new Dictionary<string, Text> ();
@@ -46,6 +46,7 @@ public class CategoriesObserver : MonoBehaviour {
 			imageCate [cate] = menuCate [cate].GetComponent<Image> ();
 			valueCate [cate] = menuCate [cate].Find ("Valeur").GetComponent<Text>();
 		}
+		//setValues ();
 	}
 	
 	// Update is called once per frame
@@ -53,7 +54,7 @@ public class CategoriesObserver : MonoBehaviour {
 		if (isVisible)
 		{
 			if (Parametres.paysSelected == null) {
-				//isVisible = false;
+				isVisible = false;
 			}
 			else if (ClockManager.newDay) {
 				categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
@@ -91,10 +92,10 @@ public class CategoriesObserver : MonoBehaviour {
 	 */
 	public void toggleVisible() {
 		isVisible = !isVisible;
-		Debug.Log ("Timon");
-		if (isVisible) {
-			setValues ();
+		if (isVisible && Parametres.paysSelected != null) {
 			categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
+			if (gameObject.activeSelf)
+				setValues ();
 		}
 	}
 }

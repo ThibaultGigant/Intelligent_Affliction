@@ -90,17 +90,6 @@ public class Population {
 	}
 
 	/**
-	 * Transfert de personnes entre deux catégories de population
-	 * quantity personnes sont transférées de la catégorie source à la catégorie destination
-	 * @param source Catégorie où on récupère les personnes à transférer
-	 * @param destination Catégorie où on rajoute les personnes à transférer
-	 * @return Nombre de personnes réellement transférées entre les catégories
-	 */
-	public uint transfertBetweenCategories(string source, string destination, uint quantity) {
-		return categories [destination].addAssigned (categories [source].removeAssigned (quantity));
-	}
-
-	/**
 	 * A l'appel de cette fonction, la population n'écoute plus le joueur et décide de se rebeller
 	 */
 	public void goRogue() {
@@ -129,5 +118,9 @@ public class Population {
 	public void reorganizePopulationCategories()
 	{
 		categoriesPop.reorganizePopulationCategories ();
+	}
+
+	public void consome() {
+
 	}
 }

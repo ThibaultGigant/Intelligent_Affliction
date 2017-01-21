@@ -5,6 +5,11 @@ using UnityEngine;
 public class Links
 {
 	/**
+	 * Pays d'origine de l'ensemble des liens
+	 */
+	public Pays country;
+
+	/**
 	 * Liens terrestres
 	 */
 	private IDictionary<string, Link> terrestres;
@@ -33,7 +38,7 @@ public class Links
 	 */
 	public void addTerrestre(Pays pays) {
 		if (!terrestres.ContainsKey(pays.nomPays))
-			terrestres.Add (pays.nomPays, new Link(pays, "Terrestre"));
+			terrestres.Add (pays.nomPays, new Link(country, pays, "Terrestre"));
 	}
 
 	/**
@@ -42,7 +47,7 @@ public class Links
 	 */
 	public void addAerien(Pays pays) {
 		if (!aeriens.ContainsKey(pays.nomPays))
-			aeriens.Add (pays.nomPays, new Link(pays, "Aerien"));
+			aeriens.Add (pays.nomPays, new Link(country, pays, "Aerien"));
 	}
 
 	/**
@@ -51,7 +56,7 @@ public class Links
 	 */
 	public void addMaritime(Pays pays) {
 		if (!maritimes.ContainsKey(pays.nomPays))
-			maritimes.Add (pays.nomPays, new Link(pays, "Maritime"));
+			maritimes.Add (pays.nomPays, new Link(country, pays, "Maritime"));
 	}
 
 	/**

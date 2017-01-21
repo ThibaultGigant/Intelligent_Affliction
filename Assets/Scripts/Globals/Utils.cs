@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
+using System.Globalization;
 
 /**
  * Utils
@@ -23,7 +25,7 @@ public static class Utils
 			return -1;
 
 		// Tirage aléatoire
-		int rnd = new Random().Next(0,100);
+		int rnd = new System.Random().Next(0,100);
 		int sommeCumule = 0;
 		// Calcul de la somme cumulée
 		for ( int i = 0 ; i < liste.Count ; i++ )
@@ -38,6 +40,47 @@ public static class Utils
 		 * par exemple, la liste ne somme pas à 100
 		 */
 		return -1;
+	}
+
+	public static Couple<float, float> moyenneVariance(uint[] liste) {
+		float moy = 0, var = 0;
+
+		for ( int i = 0 ; i < liste.Length ; i++ ) {
+			moy += liste[i];
+		}
+		moy /= liste.Length;
+
+		for ( int i = 0 ; i < liste.Length ; i++ ) {
+			var += Mathf.Pow( liste[i] - moy ,2f);
+		}
+		var /= liste.Length;
+
+		return new Couple<float, float> (moy, var);
+	}
+
+	public static Couple<float, float> moyenneVariance(List<uint> liste) {
+		float moy = 0, var = 0;
+
+		for ( int i = 0 ; i < liste.Count ; i++ ) {
+			moy += liste[i];
+		}
+		moy /= liste.Count;
+
+		for ( int i = 0 ; i < liste.Count ; i++ ) {
+			var += Mathf.Pow( liste[i] - moy ,2f);
+		}
+		var /= liste.Count;
+
+		return new Couple<float, float> (moy, var);
+	}
+
+	public static string toStringFormat(int nb) {
+		if (nb / 1000 < 1)
+			return nb.ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE"));
+		if (nb / 1000000 < 1)
+			return ((int)(nb / 1000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " K";
+		else
+			return (((float) nb / 1000000)).ToString ("N1", CultureInfo.CreateSpecificCulture ("sv-SE")) + " M";
 	}
 }
 

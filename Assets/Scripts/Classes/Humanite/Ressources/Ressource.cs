@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public abstract class Ressource
 {
@@ -11,9 +12,23 @@ public abstract class Ressource
 	 * La ressource est-elle échangeable ?
 	 */
 	public bool exchangeable;
+	/**
+	 *
+	 */
+	public String nom;
 
-	public Ressource ()
+	/**
+	 * Pays auquel est rattaché la ressource
+	 */
+	public Pays pays;
+
+	/**
+	 * Les class qui héritières doivent
+	 * se nommer en initialisant "nom"
+	 */
+	public Ressource (Pays pays)
 	{
+		this.pays = pays;
 	}
 
 	/**
@@ -61,4 +76,12 @@ public abstract class Ressource
 	 * @return Nombre de ressources reçu
 	 */
 	public abstract int receive (Ressource toReceive);
+
+	/**
+	 * Consommation journalière de ressources
+	 * @param flag Indique si l'on souhaite une consommation effective,
+	 * ou seulement une estimation de la consommation
+	 * @return le montant à consommer
+	 */
+	public abstract int consome (bool flag);
 }

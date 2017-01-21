@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class RessourceLoisirs : Ressource {
+
+	public RessourceLoisirs(Pays pays) : base(pays) {}
+
 	/**
 	 * Effectue l'envoi de la ressource à un autre pays.
 	 * Retire la quantité de ressource voulu à la ressource
@@ -23,6 +26,10 @@ public class RessourceLoisirs : Ressource {
 	public override int receive(Ressource toReceive)
 	{
 		// TODO
+		return 0;
+	}
+
+	public override int consome (bool flag) {
 		return 0;
 	}
 }

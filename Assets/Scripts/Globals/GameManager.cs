@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
 			nb = paysManager.getTotalPopulation();
 			
 
-		nombrePopulationText.text = nb.ToString();
+		nombrePopulationText.text = Utils.toStringFormat((int)nb);//nb.ToString();
 
 	}
 

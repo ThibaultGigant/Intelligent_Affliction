@@ -36,6 +36,8 @@ public class Agriculture : APopulationCategory
 
 		float newAgr = production ();
 
+		productions.Enqueue((int)newAgr);
+
 		population.country.resources ["Nourriture"].addRessource (Mathf.FloorToInt(newAgr));
 	}
 
@@ -63,7 +65,7 @@ public class Agriculture : APopulationCategory
 			Debug.Log ("ap " + assignedPopulation);
 			Debug.Log ("clim " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
 			Debug.Log ("sup " + population.country.indiceTransports());*/
-			Debug.Log (newAgr);
+			//Debug.Log (newAgr);
 		}
 
 		return Mathf.FloorToInt (newAgr);
@@ -91,6 +93,8 @@ public class Agriculture : APopulationCategory
 		float superficie = country.superficie;
 		Climat clim = country.climat;
 
+		//Debug.Log (quantityNourriture);
+
 		/**
 		* Prend en compte le HappinessIndex
 		* Plus cette valeur est élevé, moins les besoins seront
@@ -110,13 +114,50 @@ public class Agriculture : APopulationCategory
 		else
 			indiceNourriture = Mathf.Atan ((indiceNourriture - 1) * 10) / (2f * Mathf.PI);
 
-
-
-		Debug.Log ("HI = " + indiceHI);
+		/*Debug.Log ("HI = " + indiceHI);
 		Debug.Log ("Climat = " + population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE));
 		Debug.Log ("Nourriture = " + indiceNourriture);
-		Debug.Log ("Transport = " + population.country.indiceTransports());
+		Debug.Log ("Transport = " + population.country.indiceTransports());*/
 
 		return population.country.indiceHI() * indiceNourriture * population.country.indiceTransports() * population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE);
+	}
+
+	/**
+	 * Evalue l'offre que le pays proposerait à un autre, en fonction du montant demandé
+	 * et du pourcentage donné, calculé auparavant  en fonction de l'apport que pourrait
+	 * rapporter l'échange avec lui
+	 * @param montant Montant de Nourriture par mois demandé
+	 * @param pourcentage Pourcentage d'excédant de production que l'on est prêt à offrir
+	 * @return Montant de Nourriture par mois proposé
+	 */
+	public override int offre(int montant, float pourcentage) {
+
+		// Calcul de l'excedent moyen de nourriture produite par jour
+		int sum = 0;
+		int[] prod = productions.ToArray ();
+		for ( int i = 0 ; i < prod.Length ; i++ ) {
+				sum += prod[i];
+		}
+		float moyenne = sum / (1.0f * prod.Length);
+
+		float excedant = moyenne - population.country.resources["Nourriture"].consome(false);
+
+		/**
+		 * Formule
+		 * 
+		 * Si l'excédant est supérieur
+		 * à 10% de la population de ce pays
+		 * 
+		 * Propose le minimum entre le pourcentage prêt à donner de l'excédant moyen
+		 * et le montant demandé par l'autre pays
+		 * 
+		 * min ( pourcentage * [excédant moyen] , montant )
+		 */
+		if (sum >= 0.1 * population.totalPopulation) {
+			int excedantMoyen = (int) (excedant * pourcentage);
+			return excedantMoyen < montant ? excedantMoyen : montant ;
+		}
+
+		return 0;
 	}
 }

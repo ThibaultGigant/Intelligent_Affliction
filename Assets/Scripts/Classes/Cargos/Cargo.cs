@@ -75,10 +75,17 @@ public class Cargo : MonoBehaviour {
 		foreach (KeyValuePair<string, Ressource> entry in resources)
 		{
 			country.resources [entry.Key].receive (entry.Value);
+
+			// Mise à jour des contrats d'échanges
+			Echange echange = country.echangeSet.echanges[link.originCountry][entry.Key];
+			echange.historiqueReception.Enqueue((uint)entry.Value.quantity);
+
+			echange.checkEchangeReception((uint)entry.Value.quantity);
 		}
 
 		// Ajout des migrants
 		country.addPeople(this.nbPersonnes);
 		country.addInfectedPeople (this.nbInfected);
+
 	}
 }

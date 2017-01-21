@@ -53,6 +53,11 @@ public class Pays : MonoBehaviour
 	public bool isSelected = false;
 
 	/**
+	 * Ensemble des échanges qu'entretient ce pays
+	 */
+	public EchangeSet echangeSet;
+
+	/**
 	 * Fonction appelée lorsque le pays s'active pour la première fois
 	 * Initialisation du pays
 	 */
@@ -72,17 +77,17 @@ public class Pays : MonoBehaviour
 	 */
 	private void SetupRessources() {
 		resources = new Dictionary<string, Ressource> ();
-		resources.Add ("Nourriture", new Nourriture ());
-		resources.Add ("KnowledgeToux", new Knowledge ("Toux", 1));
-		resources.Add ("KnowledgeEternuements", new Knowledge ("Eternuements", 1));
-		resources.Add ("KnowledgeFievre", new Knowledge ("Fievre", 1));
-		resources.Add ("KnowledgeDiarrhees", new Knowledge ("Diarrhees", 1));
-		resources.Add ("KnowledgeSueurs", new Knowledge ("Sueurs", 1));
-		resources.Add ("KnowledgeArretOrganes", new Knowledge ("ArretOrganes", 1));
-		resources.Add ("KnowledgeResistance", new Knowledge ("Resistance", 1));
-		resources.Add ("KnowledgeSpreading", new Knowledge ("Spreading", 1));
-		resources.Add ("Transports", new RessourceTransports ());
-		resources.Add ("Loisirs", new RessourceLoisirs ());
+		resources.Add ("Nourriture", new Nourriture (this));
+		resources.Add ("KnowledgeToux", new Knowledge (this, "Toux", 1));
+		resources.Add ("KnowledgeEternuements", new Knowledge (this, "Eternuements", 1));
+		resources.Add ("KnowledgeFievre", new Knowledge (this, "Fievre", 1));
+		resources.Add ("KnowledgeDiarrhees", new Knowledge (this, "Diarrhees", 1));
+		resources.Add ("KnowledgeSueurs", new Knowledge (this, "Sueurs", 1));
+		resources.Add ("KnowledgeArretOrganes", new Knowledge (this, "ArretOrganes", 1));
+		resources.Add ("KnowledgeResistance", new Knowledge (this, "Resistance", 1));
+		resources.Add ("KnowledgeSpreading", new Knowledge (this, "Spreading", 1));
+		resources.Add ("Transports", new RessourceTransports (this));
+		resources.Add ("Loisirs", new RessourceLoisirs (this));
 	}
 
 	/**
@@ -114,14 +119,14 @@ public class Pays : MonoBehaviour
 		// Sélection du pays
 		if (!isSelected && MouseManager.doubleLeftClick && MouseManager.doesHit(gameObject)) {
 			Parametres.SetPaysSelected(gameObject);
-			GameObject.Find ("GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = gameObject.name;
+			GameObject.Find ("/GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = gameObject.name;
 			Debug.Log (name);
 			isSelected = true;
 		}
 		// Déselection du pays, par un simple clique en dehors de la zone
-		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject)) {
+		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject) && MouseManager.doesHit(Parametres.earth)) {
 			Parametres.SetPaysSelected(null);
-			GameObject.Find ("GameManager/Menus/MenuGauche/Principale/Nom Pays").GetComponent<Text> ().text = "Monde";
+			GameObject.Find ("/GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = "Monde";
 			isSelected = false;
 		}
 		// Déselection du pays, si un autre à été sélectionné

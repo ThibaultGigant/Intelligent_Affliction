@@ -31,6 +31,15 @@ public class MenuPanels : MonoBehaviour
 	public void HappinessOnClick() {
 		Image image = HappinessButton.GetComponent<Image> ();
 
+		if (Parametres.paysSelected == null) {
+			if (CategoriesPanel.activeSelf)
+				CategoriesPanel.GetComponent<CategoriesObserver> ().toggleVisible();
+			
+			CategoriesPanel.SetActive (false);
+			image.sprite = plusButton;
+			return;
+		}
+
 		if (image.sprite == plusButton) {
 			CategoriesPanel.SetActive (true);
 			image.sprite = moinsButton;
