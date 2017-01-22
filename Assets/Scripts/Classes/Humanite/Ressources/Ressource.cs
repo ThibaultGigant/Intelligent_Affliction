@@ -38,6 +38,15 @@ public abstract class Ressource
 	}
 
 	/**
+	 * Renvoie la quantité de la ressource qui est possédée par le pays
+	 * @return Quantité de ressource possédée par le pays
+	 */
+	public uint getQuantity()
+	{
+		return this.quantity;
+	}
+
+	/**
 	 * Ajout de ressources
 	 * @param nb nombre de ressources à rajouter. Doit être positif
 	 * @return Le nombre de ressource réellement ajouté
