@@ -39,7 +39,7 @@ public static class DonneeSouche
 		{"Toux", 40}
 	};
 
-	public static IDictionary<string, float> lethalitySymptomes = new Dictionary<string,int> ()
+	public static IDictionary<string, float> lethalitySymptomes = new Dictionary<string,float> ()
 	{
 		{"ArretDesOrganes", 15f},
 		{"Diarrhee", 5f},
@@ -49,7 +49,7 @@ public static class DonneeSouche
 		{"Toux", 2f}
 	};
 
-	public static IDictionary<string, float> detectabilitySymptomes = new Dictionary<string,int> ()
+	public static IDictionary<string, float> detectabilitySymptomes = new Dictionary<string,float> ()
 	{
 		{"ArretDesOrganes", 3f},
 		{"Diarrhee", 2.2f},
