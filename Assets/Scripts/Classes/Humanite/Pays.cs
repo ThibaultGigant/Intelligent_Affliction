@@ -365,7 +365,27 @@ public class Pays : MonoBehaviour
 		float HI_normalize = (float)population.getHappinessIndex () / 50f;
 		float ind = Mathf.Pow (HI_normalize, 2f) / 4f - HI_normalize + 1;
 		return (1f - ind);
- 	}
+	}
+
+	/**
+	 * Indice de la médecine
+	 * Renvoie une valeur entre 0 (mauvais) et 1 (bien)
+	 */
+	public float indiceMedecine() {
+		Medecine medecine = (Medecine) (population.categoriesPop.categories ["Medecine"]);
+		return medecine.moyenneSoignes() / medecine.ideal ();
+	}
+
+	/**
+	 * Indice de la recherche
+	 * Renvoie une valeur entre 0 (mauvais) et 1 (bien)
+	 */
+	public float indiceRecherche() {
+		Recherche recherche = (Recherche) (population.categoriesPop.categories ["Recherche"]);
+		return recherche.moyennePoints() / recherche.ideal();
+	}
+
+
 
 	/**
 	 * Crée un cargo (avion, camion ou bateau) avec les ressources à envoyer au pays voulu et la population migrante

@@ -39,9 +39,11 @@ public class Medecine : APopulationCategory
 		 * 
 		 * • Dans l'idéal, avec la connaissance absolue, il faudrait qu'avec 1/6 de la population consacré à la médecine, on puisse
 		 * garder en forme l'ensemble de la population si celle-ci se faisait infectée à 5% chaque jour
-		 * D'où la formule
-		 * [nombre de soignés] = 1/6 * [population totale] * [patient par médecin]
-		 * d'où [patient par médecin] = 5% / [nombre de médecin]
+		 * 
+		 * • Facteur de connaissances.
+		 * Plus le développement des recherches est poussée, plus le facteur sera grand
+		 * Plus le coût d'un symptome est élevé, plus le facteur sera grand (efficacité ?)
+		 * Prise en compte de la détectabilité des symptomes.
 		 * 
 		 * • Pour la détection, on calcul le nombre d'infectés non détectés, puis on fait le ratio par rapport
 		 * à la population totale (pour obtenir la densité de ces personnes dans le pays).
@@ -52,7 +54,8 @@ public class Medecine : APopulationCategory
 
 		float ratioInfectedPopulation = population.nbInfectedDetected / population.totalPopulation;
 
-		float knowledgesFacteur = 0f;
+		float knowledgesFacteurDetection = 0f;
+		float knowledgesFacteurSoin = 0f;
 
 		Knowledge knowledge;
 
@@ -61,12 +64,13 @@ public class Medecine : APopulationCategory
 				return;
 			knowledge = (Knowledge) resource;
 
-			knowledgesFacteur += knowledge.coutDeRecherche * knowledge.developpement;
+			knowledgesFacteurDetection 	+= knowledge.developpement * DonneeSouche.detectabilitySymptomes[resource.nom.Substring(9)];
+			knowledgesFacteurSoin		+= knowledge.developpement / DonneeSouche.lethalitySymptomes[resource.nom.Substring(9)];
 		}
 
-		int soigne = (int) (assignedPopulation * ratioInfectedPopulation * knowledgesFacteur / 20f);
+		int soigne = (int) (assignedPopulation * ratioInfectedPopulation * knowledgesFacteurDetection / 20f);
 
-		int detectes = (int)(((float) (population.country.souche.getNbInfected() - population.nbInfectedDetected) * knowledgesFacteur) /
+		int detectes = (int)(((float) (population.country.souche.getNbInfected() - population.nbInfectedDetected) * knowledgesFacteurDetection) /
 			(float) population.totalPopulation * (float) assignedPopulation);
 
 		population.nbInfectedDetected += (uint) detectes;
@@ -85,7 +89,18 @@ public class Medecine : APopulationCategory
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
 	public override float besoins () {
-		return 0f;
+		/**
+		 * Si la recherche n'avance pas assez (est loin de sa production idéale), et qu'il n'y a assez de soignés
+		 * on peut se permettre de relacher des médecins
+		 * 
+		 * S'il n'y a pas assez de soignés, ce n'est pas bien
+		 */
+
+		float indiceRecherche = population.country.indiceRecherche ();
+
+		float indiceSoin = population.country.indiceMedecine();
+
+		return indiceRecherche / (1f + indiceSoin);
 	}
 
 	public override int production()
