@@ -11,6 +11,7 @@ public class Diarrhee : AbstactSymptom
 		coutEvolution = cout;
 		this.name = "Diarrhee";
 		this.lethalityIndex = 5f;
+		this.detectableIndex = 2.2f;
 	}
 
 	/**

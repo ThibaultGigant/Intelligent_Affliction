@@ -56,6 +56,8 @@ public class Skills {
 	{
 		float res = this.resistanceToCold;
 		res -= computeHumanEffectOnSkill("KnowledgeResistance");
+		if (res <= 0)
+			return 0;
 
 		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillResistanceCold();
@@ -71,6 +73,9 @@ public class Skills {
 	{
 		float res = this.resistanceToHeat;
 		res -= computeHumanEffectOnSkill("KnowledgeResistance");
+		if (res <= 0)
+			return 0;
+		
 		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillResistanceHeat();
 		}
@@ -86,6 +91,8 @@ public class Skills {
 		float res = this.waterSpreading;
 		res -= computeHumanEffectOnSkill("KnowledgeSpreading");
 		res += (this.souche.country.climat.humidite - 50) / 2;
+		if (res <= 0)
+			return 0;
 
 		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillWaterSpreading();
@@ -103,6 +110,8 @@ public class Skills {
 		float res = this.airSpreading;
 		res -= computeHumanEffectOnSkill("KnowledgeSpreading");
 		res += (this.souche.country.climat.chaleur - 50) / 2;
+		if (res <= 0)
+			return 0;
 
 		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillAirSpreading();
@@ -119,10 +128,35 @@ public class Skills {
 		float res = this.contactSpreading;
 		res -= computeHumanEffectOnSkill("KnowledgeSpreading");
 		res += this.souche.country.getNbPopulation () / this.souche.country.superficie * 100;
+		if (res <= 0)
+			return 0;
 
 		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillContactSpreading();
 		}
 		return Mathf.Clamp (Mathf.FloorToInt (res), 0, 100);
+	}
+
+	/**
+	 * Retourne la valeur actuelle de la compétence dont le nom est passé en argument
+	 * @param skillName Nom de la compétence
+	 * @return Valeur de la compétence
+	 */
+	public int getSkillValue(string skillName)
+	{
+		switch (skillName) {
+		case "Cold":
+			return this.getResistanceCold ();
+		case "Heat":
+			return this.getResistanceHeat ();
+		case "Water":
+			return this.getWaterSpreading ();
+		case "Air":
+			return this.getAirSpreading ();
+		case "Contact":
+			return this.getContactSpreading ();
+		default:
+			return 0;
+		}
 	}
 }

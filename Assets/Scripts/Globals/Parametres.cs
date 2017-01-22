@@ -85,31 +85,6 @@ public class Parametres {
 		*/
 
 	/**
-	 * Coût de l'évolution du symptom Toux
-	 */
-	public static int coutToux = 1;
-	/**
-	 * Coût de l'évolution du symptom Diarrhee
-	 */
-	public static int coutDiarrhee = 1;
-	/**
-	 * Coût de l'évolution du symptom Eternuements
-	 */
-	public static int coutEternuements = 1;
-	/**
-	 * Coût de l'évolution du symptom Sueurs
-	 */
-	public static int coutSueurs = 1;
-	/**
-	 * Coût de l'évolution du symptom ArretDesOrganes
-	 */
-	public static int coutArretDesOrganes = 1;
-	/**
-	 * Coût de l'évolution du symptom Fievre
-	 */
-	public static int coutFievre = 1;
-
-	/**
 	 * Taille des listes de mémoire, nécessaires notamment pour
 	 * les graphiques
 	 */
