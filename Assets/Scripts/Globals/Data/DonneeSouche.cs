@@ -38,5 +38,25 @@ public static class DonneeSouche
 		{"Sueurs",60},
 		{"Toux", 40}
 	};
+
+	public static IDictionary<string, float> lethalitySymptomes = new Dictionary<string,int> ()
+	{
+		{"ArretDesOrganes", 15f},
+		{"Diarrhee", 5f},
+		{"Eternuements",1.1f},
+		{"Fievre", 3f},
+		{"Sueurs",2.5f},
+		{"Toux", 2f}
+	};
+
+	public static IDictionary<string, float> detectabilitySymptomes = new Dictionary<string,int> ()
+	{
+		{"ArretDesOrganes", 3f},
+		{"Diarrhee", 2.2f},
+		{"Eternuements",1.3f},
+		{"Fievre", 1.8f},
+		{"Sueurs",2f},
+		{"Toux", 1.5f}
+	};
 }
 

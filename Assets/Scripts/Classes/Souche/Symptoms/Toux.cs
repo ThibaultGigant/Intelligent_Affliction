@@ -10,8 +10,8 @@ public class Toux : AbstactSymptom
 	{
 		coutEvolution = cout;
 		this.name = "Toux";
-		this.lethalityIndex = 2f;
-		this.detectableIndex = 1.5f;
+		this.lethalityIndex = DonneeSouche.lethalitySymptomes[this.name];
+		this.detectableIndex = DonneeSouche.detectabilitySymptomes[this.name];
 	}
 
 	/**

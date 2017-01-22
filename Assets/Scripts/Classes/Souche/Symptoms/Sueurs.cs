@@ -10,8 +10,8 @@ public class Sueurs : AbstactSymptom
 	{
 		coutEvolution = cout;
 		this.name = "Sueurs";
-		this.lethalityIndex = 2.5f;
-		this.detectableIndex = 2f;
+		this.lethalityIndex = DonneeSouche.lethalitySymptomes[this.name];
+		this.detectableIndex = DonneeSouche.detectabilitySymptomes[this.name];
 	}
 
 	/**

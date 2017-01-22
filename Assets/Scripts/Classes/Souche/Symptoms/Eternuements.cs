@@ -10,8 +10,8 @@ public class Eternuements : AbstactSymptom
 	{
 		coutEvolution = cout;
 		this.name = "Eternuements";
-		this.lethalityIndex = 1.1f;
-		this.detectableIndex = 1.3f;
+		this.lethalityIndex = DonneeSouche.lethalitySymptomes[this.name];
+		this.detectableIndex = DonneeSouche.detectabilitySymptomes[this.name];
 	}
 
 	/**
