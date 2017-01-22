@@ -60,7 +60,7 @@ public class Nourriture : Ressource
 
 		int insatisfaits = nb - consommer;
 
-		Debug.Log ("Nourriture " + nb);
+		//Debug.Log ("Nourriture " + nb);
 
 		return insatisfaits;
 

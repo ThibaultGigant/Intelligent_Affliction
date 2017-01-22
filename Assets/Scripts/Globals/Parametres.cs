@@ -46,6 +46,11 @@ public class Parametres {
 	public static GameObject earth;
 
 	/**
+	 * miniEarth : La mini Terre
+	 */
+	public static GameObject miniEarth;
+
+	/**
 	 * Référence sur le pays sélectionné
 	 */
 	public static GameObject paysSelected = null;
