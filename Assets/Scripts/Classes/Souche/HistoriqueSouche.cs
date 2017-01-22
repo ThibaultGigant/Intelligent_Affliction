@@ -8,38 +8,27 @@ using System.Collections.Generic;
 public class HistoriqueSouche
 {
 	/**
-	 * Souche à laquelle correspond cet historique
+	 * Dictionnaire contenant les dates d'évolution des compétences de transmission
+	 * Clé = mode de transmission
+	 * Valeur = liste des dates d'évolution
 	 */
-	private Souche souche;
+	private IDictionary<string, List<DateTime>> datesEvolutionTransmission;
 	/**
-	 * Liste des dates d'évolution de la transmission
+	 * Dictionnaire contenant les dates d'évolution des compétences de résistance
+	 * Clé = mode de résistance
+	 * Valeur = liste des dates d'évolution
 	 */
-	private List<DateTime> datesEvolutionTransmission;
-	/**
-	 * Liste des dates d'évolution de la Resistance
-	 */
-	private List<DateTime> datesEvolutionResistance;
+	private IDictionary<string, List<DateTime>> datesEvolutionResistance;
 	/**
 	 * Liste des dates d'évolution de la vitesse d'évolution
 	 */
 	private List<DateTime> datesEvolutionEvolutionSpeed;
 	/**
-	 * Liste des dates d'évolution de la transmission
+	 * Dictionnaire contenant les dates d'évolution des symptômes
+	 * Clé = symptôme
+	 * Valeur = liste des dates d'évolution
 	 */
-	private List<DateTime> datesEvolutionSymptomes;
-
-	/**
-	 * Liste des types de transmission améliorée dans l'ordre
-	 */
-	private List<String> transmissionEvolutionList;
-	/**
-	 * Liste des types de résistance améliorée dans l'ordre
-	 */
-	private List<String> resistanceEvolutionList;
-	/**
-	 * Liste des types de symptômes amélioré dans l'ordre
-	 */
-	private List<String> symptomsEvolutionList;
+	private IDictionary<string, List<DateTime>> datesEvolutionSymptoms;
 	/**
 	 * Gradient d'infection des dernières itérations
 	 */
@@ -49,40 +38,65 @@ public class HistoriqueSouche
 	/**
 	 * Constructeur
 	 */
-	public HistoriqueSouche (Souche souche)
+	public HistoriqueSouche ()
 	{
-		this.souche = souche;
 
-		this.datesEvolutionTransmission = new List<DateTime> ();
-		this.datesEvolutionResistance = new List<DateTime> ();
+		this.datesEvolutionTransmission = new Dictionary<string, List<DateTime>> ();
+		foreach (string s in DonneeSouche.listTransmissionSkills) {
+			this.datesEvolutionTransmission.Add (s, new List<DateTime> ());
+		}
+
+		this.datesEvolutionResistance = new Dictionary<string, List<DateTime>> ();
+		foreach (string s in DonneeSouche.listResistanceSkills) {
+			this.datesEvolutionResistance.Add (s, new List<DateTime> ());
+		}
+
+		this.datesEvolutionSymptoms = new Dictionary<string, List<DateTime>> ();
+		foreach (string s in DonneeSouche.listSymptoms) {
+			this.datesEvolutionSymptoms.Add (s, new List<DateTime> ());
+		}
+
 		this.datesEvolutionEvolutionSpeed = new List<DateTime> ();
-		this.datesEvolutionSymptomes = new List<DateTime> ();
-
-		this.transmissionEvolutionList = new List<String> ();
-		this.resistanceEvolutionList = new List<String> ();
-		this.symptomsEvolutionList = new List<String> ();
 
 		this.infectionGradient = new LimitedList< KeyValuePair<DateTime, uint> > (1000);
 	}
 
 	/**
-	 * Date de la dernière évolution de la transmission
+	 * Date de la dernière évolution d'une transmission
+	 * Renvoie DateTime.MinValue si on n'a pas encore fait évoluer la transmission
 	 */
 	public DateTime lastEvolutionTransmission()
 	{
-		if (datesEvolutionTransmission.Count == 0)
-			return DateTime.Now;
-		return datesEvolutionTransmission [datesEvolutionTransmission.Count - 1];
+		DateTime res = DateTime.MinValue;
+		foreach (string s in DonneeSouche.listTransmissionSkills) {
+			List<DateTime> liste = this.datesEvolutionTransmission [s];
+			if (liste.Count > 0) {
+				if (res.Equals(DateTime.MinValue))
+					res = liste [liste.Count - 1];
+				else if (res.CompareTo(liste[liste.Count - 1]) < 0)
+					res = liste[liste.Count - 1];
+			}
+		}
+		return res;
 	}
 
 	/**
 	 * Date de la dernière évolution de la résistance
+	 * Renvoie DateTime.MinValue si on n'a pas encore fait évoluer la résistance
 	 */
 	public DateTime lastEvolutionResistance()
 	{
-		if (datesEvolutionResistance.Count == 0)
-			return DateTime.Now;
-		return datesEvolutionResistance [datesEvolutionResistance.Count - 1];
+		DateTime res = DateTime.MinValue;
+		foreach (string s in DonneeSouche.listResistanceSkills) {
+			List<DateTime> liste = this.datesEvolutionResistance [s];
+			if (liste.Count > 0) {
+				if (res.Equals(DateTime.MinValue))
+					res = liste [liste.Count - 1];
+				else if (res.CompareTo(liste[liste.Count - 1]) < 0)
+					res = liste[liste.Count - 1];
+			}
+		}
+		return res;
 	}
 
 	/**
@@ -91,27 +105,37 @@ public class HistoriqueSouche
 	public DateTime lastEvolutionEvolutionSpeed()
 	{
 		if (datesEvolutionEvolutionSpeed.Count == 0)
-			return DateTime.Now;
+			return DateTime.MinValue;
 		return datesEvolutionEvolutionSpeed [datesEvolutionEvolutionSpeed.Count - 1];
 	}
 
 	/**
 	 * Date de la dernière évolution des symptômes
+	 * Renvoie DateTime.MinValue si on n'a pas encore fait évoluer les symptômes
 	 */
 	public DateTime lastEvolutionSymptomes()
 	{
-		if (datesEvolutionSymptomes.Count == 0)
-			return DateTime.Now;
-		return datesEvolutionSymptomes [datesEvolutionSymptomes.Count - 1];
+		DateTime res = DateTime.MinValue;
+		foreach (string s in DonneeSouche.listSymptoms) {
+			List<DateTime> liste = this.datesEvolutionSymptoms [s];
+			if (liste.Count > 0) {
+				if (res.Equals(DateTime.MinValue))
+					res = liste [liste.Count - 1];
+				else if (res.CompareTo(liste[liste.Count - 1]) < 0)
+					res = liste[liste.Count - 1];
+			}
+		}
+		return res;
 	}
 
 	/**
 	 * Date et Gradient d'infection du dernier recueil gradient d'infection
+	 * @return Dernier gradient d'infection
 	 */
 	public KeyValuePair<DateTime, uint> lastInfectionGradient()
 	{
 		if (infectionGradient.Count == 0)
-			return new KeyValuePair<DateTime, uint> (DateTime.Now, 0);
+			return new KeyValuePair<DateTime, uint> (DateTime.MinValue, 0);
 		return infectionGradient [infectionGradient.Count - 1];
 	}
 
@@ -120,7 +144,7 @@ public class HistoriqueSouche
 	 * @param date Date après laquelle on calcule l'augmentation
 	 * @return Pourcentage d'augmentation du gradient d'infection suivant cette date
 	 */
-	public float followingInfectionGradientImprovement(DateTime date)
+	public float followingInfectionGradient(DateTime date)
 	{
 		if (infectionGradient.Count == 0)
 			return 0f;
@@ -138,6 +162,97 @@ public class HistoriqueSouche
 		uint depart = infectionGradient [index].Value;
 		int lastIndex = Mathf.Min (index + 10, infectionGradient.Count);
 		return infectionGradient [lastIndex].Value / (float) depart;
+	}
+
+	/**
+	 * Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d'infection
+	 * @return Date voulue
+	 */
+	public DateTime lastBestEvolutionTransmissionDate()
+	{
+		DateTime res = DateTime.MinValue;
+		float bestImprovement = 0;
+		float temp;
+		List<DateTime> liste;
+		foreach (string s in DonneeSouche.listTransmissionSkills) {
+			liste = datesEvolutionTransmission [s];
+			temp = followingInfectionGradient (liste [liste.Count - 1]);
+			if (bestImprovement <= temp) {
+				res = liste [liste.Count - 1];
+				bestImprovement = temp;
+			}
+		}
+		return res;
+	}
+
+	/**
+	 * Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d'infection
+	 * @return Date voulue
+	 */
+	public DateTime lastBestEvolutionResistanceDate()
+	{
+		DateTime res = DateTime.MinValue;
+		float bestImprovement = 0;
+		float temp;
+		List<DateTime> liste;
+		foreach (string s in DonneeSouche.listResistanceSkills) {
+			liste = datesEvolutionResistance [s];
+			temp = followingInfectionGradient (liste [liste.Count - 1]);
+			if (bestImprovement <= temp) {
+				res = liste [liste.Count - 1];
+				bestImprovement = temp;
+			}
+		}
+		return res;
+	}
+
+	/**
+	 * Renvoie la date de la fois où on a augmenté les symptomes et ça a grandement augmenté le gradient d'infection
+	 * @return Date voulue
+	 */
+	public DateTime lastBestEvolutionSymptomsDate()
+	{
+		DateTime res = DateTime.MinValue;
+		float bestImprovement = 0;
+		float temp;
+		List<DateTime> liste;
+		foreach (string s in DonneeSouche.listSymptoms) {
+			liste = datesEvolutionSymptoms [s];
+			temp = followingInfectionGradient (liste [liste.Count - 1]);
+			if (bestImprovement <= temp) {
+				res = liste [liste.Count - 1];
+				bestImprovement = temp;
+			}
+		}
+		return res;
+	}
+
+	/**
+	 * Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la date passée en argument
+	 * @param date Date où s'est déroulée l'évolution
+	 * @return Propriété améliorée à la date passée en paramètres
+	 */
+	public string getCorrespondingProperty(DateTime date)
+	{
+		foreach (string s in DonneeSouche.listTransmissionSkills) {
+			if (datesEvolutionTransmission [s].Contains (date))
+				return s;
+		}
+
+		foreach (string s in DonneeSouche.listResistanceSkills) {
+			if (datesEvolutionResistance [s].Contains (date))
+				return s;
+		}
+
+		foreach (string s in DonneeSouche.listSymptoms) {
+			if (datesEvolutionSymptoms [s].Contains (date))
+				return s;
+		}
+
+		if (datesEvolutionEvolutionSpeed.Contains (date))
+			return "EvolutionSpeed";
+
+		return null;
 	}
 
 }

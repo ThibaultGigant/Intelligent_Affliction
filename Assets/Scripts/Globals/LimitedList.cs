@@ -34,7 +34,7 @@ public class LimitedList<T> : List<T>
 	/**
 	 * Affichage de la file avec le type stocké et la taille de cette fille
 	 */
-	public string ToString ()
+	public override string ToString ()
 	{
 		string str = "Limited List of type <" + typeof(T).Name + "> size : " + Count + "\n";
 		int i = 0;

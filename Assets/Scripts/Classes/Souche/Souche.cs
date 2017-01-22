@@ -11,7 +11,7 @@ public class Souche {
 	/**
 	 * Nombre de personnes infectées par cette souche dans ce pays
 	 */
-	private uint nbInfected;
+	private uint nbInfected = 0;
 
 	/**
 	 * Points qui serviront à évoluer
@@ -22,7 +22,7 @@ public class Souche {
 	 * Facteur vitesse d'évolution de la souche
 	 * Influe sur le nombre de points gagnés lors de la production
 	 */
-	private float evolutionSpeed = 0;
+	private float evolutionSpeed = 1;
 
 	/**
 	 * Historique des évolutions de la souche, pour le calcul des motivations
@@ -49,13 +49,10 @@ public class Souche {
 	 */
 	public Souche(Pays pays) {
 		country = pays;
+
 		symptoms = new Dictionary<string, AbstactSymptom> ();
-		symptoms.Add ("Toux",new Toux(Parametres.coutToux));
-		symptoms.Add ("Eternuements",new Eternuements(Parametres.coutEternuements));
-		symptoms.Add ("Diarrhee",new Diarrhee(Parametres.coutDiarrhee));
-		symptoms.Add ("Sueurs",new Sueurs(Parametres.coutSueurs));
-		symptoms.Add ("Fievre",new Fievre(Parametres.coutFievre));
-		symptoms.Add ("ArretDesOrganes",new ArretDesOrganes(Parametres.coutArretDesOrganes));
+
+		historique = new HistoriqueSouche ();
 	}
 
 	/**
@@ -116,45 +113,93 @@ public class Souche {
 	 * Indicateur de la volonté de la souche d'augmenter sa faculté de transmission
 	 * Calculé en prenant en compte plusieurs facteurs :
 	 * 	- duree : Temps écoulé (en secondes) depuis la dernière évolution de ce caractère
-	 * 	- pourc : Pourcentage d'infectés
+	 * 	- pourc : Pourcentage d'infectés dans la population
 	 * 	- grad : Augmentation du gradient d'infection après la dernière évolution de ce caratère
 	 * 	- val : La valeur actuelle de la compétence de la souche, 
 	 * 		Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains
-	 * On obtient la formule : duree/100 * (1 - pourc)^2 * grad^3 * (100 - val)
+	 * On suit la formule : duree/100 * ((1 - pourc)*5 + (1 / grad)*2) * (100 - val)
 	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
 	 */
 	private float motivationTransmission(DateTime date)
 	{
-		
-		return 0;
+		DateTime last = historique.lastBestEvolutionTransmissionDate();
+		double duree = date.Subtract(last).TotalSeconds;
+		float grad = (float) historique.lastInfectionGradient ().Value;
+		// Si le gradient est négatif, on perd des amis, il faut augmenter la volonté de transmission
+		if (grad < 0)
+			grad = - grad / 100;
+
+		float pourc = this.getNbInfected () / this.country.getNbPopulation();
+		float val = this.skills.getSkillValue (this.historique.getCorrespondingProperty (last));
+		return (float) (duree / 100) * (5 * (1 - pourc) + 3 * (1 / grad)) * (100 - val);
 	}
 		
 	/**
 	 * Indicateur de la volonté de la souche d'augmenter sa faculté de résistance
+	 * Calculé en prenant en compte plusieurs facteurs :
+	 * 	- duree : Temps écoulé (en secondes) depuis la dernière évolution de ce caractère
+	 * 	- pourc : Pourcentage d'infectés dans la population
+	 * 	- grad : Augmentation du gradient d'infection après la dernière évolution de ce caratère
+	 * 	- val : La valeur actuelle de la compétence de la souche, 
+	 * 		Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains
+	 * On suit la formule : duree/100 * ((1 - pourc) + 5*(1/grad)) * (100 - val)
+	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
 	 */
 	private float motivationResistance(DateTime date)
 	{
-		return 0;
+		DateTime last = historique.lastBestEvolutionResistanceDate();
+		double duree = date.Subtract(last).TotalSeconds;
+		float grad = (float) historique.lastInfectionGradient ().Value;
+		// Si le gradient est négatif, on perd des amis, il faut augmenter la volonté de résistance
+		if (grad < 0)
+			grad = - grad / 5;
+
+		float pourc = this.getNbInfected () / this.country.getNbPopulation();
+		float val = this.skills.getSkillValue (this.historique.getCorrespondingProperty (last));
+		return (float) (duree / 100) * ((1 - pourc) + 5 * (1 / grad)) * (100 - val);
 	}
 		
 	/**
 	 * Indicateur de la volonté de la souche d'augmenter sa vitesse d'évolution
+	 * Calculé en prenant en compte plusieurs facteurs :
+	 * 	- duree : Temps écoulé (en secondes) depuis la dernière évolution de ce caractère
+	 * 	- pourc : Pourcentage d'infectés dans la population
+	 * 	- speed : la vitesse actuelle
+	 * 	- val : le nombre de points d'évolution que l'on a actuellement
+	 * On suit la formule : duree/100 * (1-pourc)^3 * (val / speed)
+	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
 	 */
 	private float motivationEvolutionSpeed(DateTime date)
 	{
-		return 0;
+		DateTime last = historique.lastEvolutionEvolutionSpeed();
+		double duree = date.Subtract(last).TotalSeconds;
+
+		float pourc = this.getNbInfected () / this.country.getNbPopulation();
+
+		return (float) (duree / 100) * Mathf.Pow((1 - pourc), 3) * (this.evolutionPoints / this.evolutionSpeed);
 	}
 
 	/**
 	 * Indicateur de la volonté de la souche d'augmenter la "puissance" de l'un de ses symptômes, et donc sa létalité
+	 * Calculé en prenant en compte plusieurs facteurs :
+	 * 	- duree : Temps écoulé (en secondes) depuis la dernière évolution d'un symptôme
+	 * 	- pourc : Pourcentage d'infectés dans la population
+	 * 	- val : Nombre de symptômes restant à déveloper
+	 * On suit la formule : duree/100 * (5 * pourc) * val
+	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
 	 */
 	private float motivationLethality(DateTime date)
 	{
-		return 0;
+		DateTime last = historique.lastEvolutionEvolutionSpeed();
+		double duree = date.Subtract(last).TotalSeconds;
+
+		float pourc = this.getNbInfected () / this.country.getNbPopulation();
+
+		return (float) (duree / 100) * 5 * pourc * (DonneeSouche.listSymptoms.Count - this.symptoms.Count);
 	}
 
 	/**
