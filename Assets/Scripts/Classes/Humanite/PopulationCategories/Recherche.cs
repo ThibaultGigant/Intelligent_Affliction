@@ -15,7 +15,22 @@ public class Recherche : APopulationCategory
 	/**
 	 * Production de "ressources", en fonction de ce qu'apporte la catégorie
 	 */
-	public override void produce () {}
+	public override void produce () {
+		/**
+		 * Formule
+		 * 
+		 * Nombre de points de recherche produit
+		 * Un par groupe de 10 chercheurs, chaque semaine
+		 * Plus il y a d'infectes, plus il est simple de faire des recherches sur la maladie
+		 * Plus on a déjà de points, moins il est simple de avoir de nouveaux
+		 */
+
+		float ratioInfectes = population.nbInfectedDetected = population.totalPopulation;
+		int points = (int)(assignedPopulation / 70f * population.country.indiceHI () * ratioInfectes);
+
+		population.country.pointsRecherche += points;
+
+	}
 
 	/**
 	 * offre

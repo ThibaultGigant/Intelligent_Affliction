@@ -11,10 +11,17 @@ public class Knowledge : Ressource {
 	 */
 	public int coutDeRecherche;
 
+	/**
+	 * Valeur de développement des connaissances
+	 * Entre 0 (aucune connaissance) et 1 (fortes connaissances)
+	 */
+	public float developpement;
+
 	public Knowledge (Pays pays, string sujet, int cout) : base(pays)
 	{
 		sujetKnowledge = sujet;
 		coutDeRecherche = cout;
+		developpement = 0;
 	}
 
 	/**
