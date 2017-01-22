@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
 	public RawImage menuPrincipal;
 	public GameObject earth;
+	public GameObject miniEarth;
 	public Text nombrePopulationText;
 	private PaysManager paysManager;
 
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		resizeMenuPrincipal ();
 		Parametres.earth = earth;
+		Parametres.miniEarth = miniEarth;
 		earth.SetActive (true);
 		paysManager = Parametres.earth.GetComponentInChildren<PaysManager> ();
 	}

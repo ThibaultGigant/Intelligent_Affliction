@@ -105,12 +105,11 @@ public class Pays : MonoBehaviour
 		if (!isSelected && MouseManager.doubleLeftClick && MouseManager.doesHit(gameObject)) {
 			Parametres.SetPaysSelected(gameObject);
 			GameObject.Find ("/GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = gameObject.name;
-			Debug.Log (name);
 			isSelected = true;
 			checkSelection ();
 		}
-		// Déselection du pays, par un simple clique en dehors de la zone
-		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject) && MouseManager.doesHit(Parametres.earth)) {
+		// Déselection du pays, par un simple clique sur le mini world
+		else if (isSelected && MouseManager.simpleLeftClick && !MouseManager.doesHit (gameObject) && MouseManager.doesHit(Parametres.miniEarth)) {
 			Parametres.SetPaysSelected(null);
 			GameObject.Find ("/GameManager/Menus/Menu Gauche/Principale/Nom Pays").GetComponent<Text> ().text = "Monde";
 			isSelected = false;
