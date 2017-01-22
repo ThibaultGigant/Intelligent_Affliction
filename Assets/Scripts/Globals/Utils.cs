@@ -99,5 +99,37 @@ public static class Utils
 		}
 		return resultat;
 	}
+
+	public static void createGraphique(Texture2D texture, LimitedQueue<int> liste) {
+		UnityEngine.Color backgroundColor = new UnityEngine.Color (30f/255f,30f/255f,30f/255f,200f/255f);
+		int i = 0;
+		int max = liste.Peek();
+		foreach (int nb in liste)
+			if (max < nb)
+				max = nb;
+			
+		foreach (int nb in liste) {
+			for (int j = 0; j < texture.height; j++) {
+				texture.SetPixel (i, j, backgroundColor);
+			}
+
+			float nb_norma = (float) nb;
+			nb_norma /= max;
+			nb_norma *= texture.height;
+
+
+			//texture.SetPixel (i, Mathf.Max((int)nb_norma - 1, 0), Color.white);
+			texture.SetPixel (i, (int)nb_norma, Color.white);
+
+			i++;
+		}
+		for ( i = liste.Count ; i < texture.width ; i++ ) {
+			for ( int j = 0 ; j < texture.height ; j ++) {
+				texture.SetPixel (i, j, backgroundColor);
+			}
+		}
+
+		texture.Apply ();
+	}
 }
 

@@ -145,4 +145,12 @@ public class Agriculture : APopulationCategory
 
 		return 0;
 	}
+
+	/**
+	 * Dans l'idéal, on doit fournir autant de nourriture que d'habitant
+	 * @return la production de nourriture idéale
+	 */
+	public override int ideal() {
+		return (int) population.totalPopulation;
+	}
 }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public abstract class APopulationCategory
 {
@@ -28,6 +27,11 @@ public abstract class APopulationCategory
 	 * Pourcentage de population que le joueur souhaiterait voir affectée à cette catégorie
 	 */
 	public float wantedPercentage = -1f;
+
+	/**
+	 * Nombre de tour que l'on réajuste les catégories depuis que le joueur l'a demandé
+	 */
+	public int stepReajusteForPlayer = 0;
 
 	/**
 	 * 
@@ -127,6 +131,11 @@ public abstract class APopulationCategory
 	public abstract int production ();
 
 	/**
+	 * Production idéale
+	 */
+	public abstract int ideal ();
+
+	/**
 	 * besoins
 	 * Indique les besoins de la catégorie
 	 * La valeur est d'autant plus élevée que la catégorie
@@ -142,5 +151,82 @@ public abstract class APopulationCategory
 	 * @return Indique combien l'on est prêt à fournir par mois à un autre pays
 	 */
 	public abstract int offre(int montant, float pourcentage);
+
+	public bool modeAuto() {
+		if (wantedPercentage == -1f ||
+		 	population.country.indiceHI () < 0.3 ||
+		   	(stepReajusteForPlayer > 10 && besoins () > 0.6))
+		{
+			stepReajusteForPlayer = -1;
+			wantedPercentage = -1f;
+			return true;
+		}
+		return false;
+	}
+
+	public void createGraphiqueProduction (Texture2D texture) {
+		Utils.createGraphique (texture, productions);
+		/*UnityEngine.Color backgroundColor = new UnityEngine.Color (30f/255f,30f/255f,30f/255f,200f/255f);
+		int i = 0;
+		int max = getMaxProduction ();
+		foreach (int nb in productions) {
+			for (int j = 0; j < texture.height; j++) {
+				texture.SetPixel (i, j, backgroundColor);
+			}
+
+			float nb_norma = (float) nb;
+			nb_norma /= max;
+			nb_norma *= texture.height;
+
+			Debug.Log (nb_norma + " " + nb);
+
+				
+			//texture.SetPixel (i, Mathf.Max((int)nb_norma - 1, 0), Color.white);
+			texture.SetPixel (i, (int)nb_norma, Color.white);
+
+			i++;
+		}
+		for ( i = productions.Count ; i < texture.width ; i++ ) {
+			for ( int j = 0 ; j < texture.height ; j ++) {
+				texture.SetPixel (i, j, backgroundColor);
+			}
+		}
+
+		texture.Apply ();*/
+	}
+
+	public void createGraphiqueConsommation(Texture2D texture) {
+		if (nom == "Agriculture")
+			Utils.createGraphique (texture, population.country.resources ["Nourriture"].consommation);
+		else if (nom == "Loisirs")
+			Utils.createGraphique (texture, population.country.resources ["RessourceLoisirs"].consommation);
+		else if (nom == "Transports")
+			Utils.createGraphique (texture, population.country.resources ["Transports"].consommation);
+	}
+		
+	/**
+	 * @return La production journalière maximale
+	 */
+	public int getMaxProduction() {
+		int max = productions.Peek();
+		foreach (int t in productions) {
+			if (t > max)
+				max = t;
+		}
+		return max;
+	}
+		
+	/**
+	 * @return La production journalière minimale
+	 */
+	public int getMinProduction() {
+		int min = productions.Peek();
+		foreach (int t in productions) {
+			if (t < min)
+				min = t;
+		}
+		return min;
+	}
+
 }
 

@@ -87,6 +87,8 @@ public class Pays : MonoBehaviour
 		if (ClockManager.newDay) {
 			population.categoriesPop.produce ();
 			resources.consome ();
+			population.reorganizePopulationCategories ();
+			population.updateHappiness ();
 		}
 
 		/*
@@ -277,22 +279,76 @@ public class Pays : MonoBehaviour
 	 */
 	public float indiceTransports()
 	{
+		return indiceProduction ("Transports");
+	}
+
+	/**
+	 * indiceTransportSuperficie
+	 * @return Une valeur entre 0 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
+	 */
+	public float indiceLoisirs()
+	{
 		/**
 		 * Formule
-		 * • La "quantité" de transport par rapport à la superficie totale.
-		 * (100 * [quantité de Transport]) / (5 * [Superficie])
-		 * En France, la longueur du réseau férroviaire correspond à 5% de la
-		 * superficie du pays (en comparant seulement les valeurs, sans se soucier
-		 * de leurs unités de mesure). On monte la valeur à 8% arbitrairement
-		 * pour prendre en compte les bus et taxis, etc.
-		 * 
-		 * Le résultat est bornée supérieurement par 1.
-		 * On ramène l'image de la fonction de [0,1] sur [0.75,1]
+		 * • La "quantité" de loisir
 		 */
 		uint quantityTransport = resources ["Transports"].quantity;
 		float ind =  (100f * (float) quantityTransport) / (12f * 160f * Mathf.Sqrt(population.country.superficie));
 
 		return (Mathf.Min (1f, ind));
+	}
+
+	/**
+	 * indiceTransportSuperficie
+	 * @return Une valeur entre 0 et 1. Zéro s'il y a aucun transport, un s'il y en a beaucoup
+	 */
+	public float indiceNourriture()
+	{
+		return indiceProduction ("Agriculture");
+	}
+
+	public float indiceInfection () {
+		/**
+		 * Formule
+		 * • Ratio non infecté, sain
+		 * • Ratio entre la moyenne de soignés, et le nombre de nouveaux infectés par jour
+		 * • On borne le produit des deux ratio à 1
+		 */
+		float ratioInfecteSain = 1f - population.nbInfectedDetected / population.totalPopulation;
+		Medecine medecineCategorie = ((Medecine)population.categoriesPop.categories ["Medecine"]);
+
+		float moy1 = medecineCategorie.moyenneSoignes ();
+		float moy2 = medecineCategorie.moyenneNouveauxInfectes ();
+
+		float ratioNouveauxSoignes;
+		if (moy2 != 0)
+			ratioNouveauxSoignes = moy1 / moy2;
+		else
+			ratioNouveauxSoignes = 1f;
+
+		return Mathf.Min(ratioNouveauxSoignes * ratioInfecteSain, 1f);
+	}
+
+	public float indiceProduction(string nomCate) {
+		/**
+		 * Formule
+		 * • On calcul la moyenne de production de [nom], que l'on compare à
+		 * la consommation journalière de la population
+		 * • On borne le ratio par 2
+		 * • On ramène le domaine de définition à [0,1]
+		 */
+		float somme = 0;
+		//for ( int i = 0 ; i < population.categoriesPop.categories[nomCate].productions.Count ; i++ ) {
+		foreach ( int i in population.categoriesPop.categories[nomCate].productions ) {
+			somme += i;
+		}
+		float moyenne = somme / population.categoriesPop.categories[nomCate].productions.Count;
+		float ideal = (float) population.categoriesPop.categories [nomCate].ideal ();
+		float indice = moyenne / ( ideal != 0 ? ideal : 1f);
+
+		indice = Mathf.Min (indice, 2f);
+
+		return indice / 2f;
 	}
 
 	/**
@@ -322,7 +378,6 @@ public class Pays : MonoBehaviour
 
 	public void applyPlayerOrders()
 	{
-		this.population.reorganizePopulationCategories ();
 		// TODO : modification des liens
 	}
 

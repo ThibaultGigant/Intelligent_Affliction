@@ -73,12 +73,12 @@ public class Transports : APopulationCategory
 		 */
 		float newTrs = (float) (assignedPopulation / 30f) * population.country.superficie / 281250000f;
 
-		if (population.country.name == "Afrique") {
+		/*if (population.country.name == "Afrique") {
 			Debug.Log ("Timon Transport production");
 			Debug.Log (assignedPopulation / 4f);
 			Debug.Log ("taille équipe " + 281250000f/(8f*population.country.superficie));
 			Debug.Log (newTrs);
-		}
+		}*/
 
 		float resultat = Utils.indicesNormalises(new float[,] {	{ population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE ), 0f,1f,0.6f,1f, 0f },
 																	{ population.country.indiceHI (), 0f,1f,0.75f,1f, 1f }
@@ -137,5 +137,16 @@ public class Transports : APopulationCategory
 	 */
 	public override int offre(int montant, float pourcentage) {
 		return Mathf.Min( montant, (int) (pourcentage * population.country.resources["Transports"].quantity ));
+	}
+
+	/**
+	 * @return la production de nourriture idéale
+	 */
+	public override int ideal () {
+		/**
+		 * Avec une telle valeur, on obtiendrait en 30 ans
+		 * le taux de visiteur journalière visé
+		 */
+		return (int) ((population.totalPopulation / 6f / 30f) * population.country.superficie / 281250000f);
 	}
 }

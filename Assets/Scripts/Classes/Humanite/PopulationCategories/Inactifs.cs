@@ -94,4 +94,8 @@ public class Inactifs : APopulationCategory
 	public override int offre(int montant, float pourcentage) {
 		return 0;
 	}
+
+	public override int ideal () {
+		return 0;
+	}
 }

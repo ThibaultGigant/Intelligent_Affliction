@@ -31,6 +31,11 @@ public class CategoriesObserver : MonoBehaviour {
 	private IDictionary<string, Text> valueCate;
 
 	/**
+	 * Dictionnaire des champs Exclamatino du menu de correspondant à la valeur de chaque catégorie
+	 */
+	private IDictionary<string, Exclamation> exclamationCate;
+
+	/**
 	 * Liste des noms des catégories
 	 */
 	private string[] nomCate = { "Agriculture", "Loisirs", "Medecine", "Recherche", "Transports", "Inactifs"};
@@ -40,11 +45,13 @@ public class CategoriesObserver : MonoBehaviour {
 		menuCate = new Dictionary<string, Transform> ();
 		imageCate = new Dictionary<string, Image> ();
 		valueCate = new Dictionary<string, Text> ();
+		exclamationCate = new Dictionary<string, Exclamation> ();
 		foreach (string cate in nomCate)
 		{
 			menuCate [cate] = transform.Find (cate);
 			imageCate [cate] = menuCate [cate].GetComponent<Image> ();
-			valueCate [cate] = menuCate [cate].Find ("Valeur").GetComponent<Text>();
+			valueCate [cate] = menuCate [cate].FindChild ("Valeur").GetComponent<Text>();
+			exclamationCate [cate] = menuCate [cate].FindChild ("Exclamation").GetComponent<Exclamation>();
 		}
 		//setValues ();
 	}
@@ -74,6 +81,9 @@ public class CategoriesObserver : MonoBehaviour {
 		{
 			float besoin = categories.categories [cate].besoins ();
 			valueCate [cate].text = besoin.ToString("N4");
+
+			exclamationCate [cate].setExclamation( besoin );
+
 			byte besoinColor = (byte) ((besoin + 1) * 127);
 			byte red;
 			if (besoinColor <= 127)

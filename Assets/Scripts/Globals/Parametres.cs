@@ -10,7 +10,7 @@ public class Parametres {
 	 * • 2			: Deuxième vitesse		| 2 secondes pour trois jours
 	 * • 3			: Troisième vitesse	| 2 secondes pour 6 jours (10 secondes par mois) 
 	 */
-	public static int simuSpeed = 1;
+	public static int simuSpeed = 2;
 
 	public static bool isReady = false;
 

@@ -22,7 +22,7 @@ public class ClockManager : MonoBehaviour
 	 * Dès quelle dépasse Parametres.timeOfADay,
 	 * une nouvelle journée démarre et on soustrait cette valeur à countTime
 	 */
-	private int countTime = 0;
+	private int countTime = Parametres.timeOfADay - 1;
 
 	// Use this for initialization
 	void Start ()

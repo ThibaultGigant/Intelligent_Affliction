@@ -121,4 +121,15 @@ public class Loisirs : APopulationCategory
 	public override int offre(int montant, float pourcentage) {
 		return Mathf.Min( montant, (int) (pourcentage * population.country.resources["Loisirs"].quantity ));
 	}
+
+	/**
+	 * @return la production de nourriture idéale
+	 */
+	public override int ideal () {
+		/**
+		 * Avec une telle valeur, on obtiendrait en 50 ans
+		 * le taux de visiteur journalière visé
+		 */
+		return (int) (population.totalPopulation / 10f * 2.4657f / 10000f);
+	}
 }

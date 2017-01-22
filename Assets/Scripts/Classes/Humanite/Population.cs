@@ -119,10 +119,21 @@ public class Population {
 
 	public void reorganizePopulationCategories()
 	{
-		categoriesPop.reorganizePopulationCategories ();
+		categoriesPop.reorganizePopulationCategoriesForPlayer ();
+		int transfert = categoriesPop.reorganizePopulationCategoriesAuto ();
 	}
 
 	public void consome() {
 
+	}
+
+	public void updateHappiness () {
+		float resultat = Utils.indicesNormalises(new float[,] {
+			{ country.indiceTransports(), 0f,1f,0.75f,1f, 0f },
+			{ country.indiceLoisirs(), 0f,1f,0.75f,1f, 0f },
+			{ country.indiceInfection(), 0f, 1f, 0f, 1f, 0f},
+			{ country.indiceNourriture (), 0f,1f,0f,1f, 0f }
+		});
+			happinessIndex = (int) (resultat * 100f);
 	}
 }
