@@ -400,5 +400,15 @@ public class Pays : MonoBehaviour
 	{
 		this.souche.removeInfectedPeople (nbPeople);
 	}
+
+	/**
+	 * Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre
+	 * @param category Catégorie dont on veut le pourcentage d'assignés
+	 * @return Pourcentage voulu
+	 */
+	public float getPourcentageCategory(string category)
+	{
+		return this.population.categoriesPop.categories [category].assignedPopulation / (float)this.population.totalPopulation;
+	}
 }
 
