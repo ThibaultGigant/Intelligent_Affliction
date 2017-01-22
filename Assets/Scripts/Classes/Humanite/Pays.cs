@@ -25,7 +25,7 @@ public class Pays : MonoBehaviour
 	/**
 	 * Nombre de points de recherche accumulés jusqu'à présent par les chercheurs
 	 */
-	private int pointsRecherche;
+	public int pointsRecherche;
 	/**
 	 * Ensemble des Ressource du pays, accessibles par leur nom
 	 */

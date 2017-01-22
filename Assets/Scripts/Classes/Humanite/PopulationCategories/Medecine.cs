@@ -29,8 +29,52 @@ public class Medecine : APopulationCategory
 	 * Production de "ressources", en fonction de ce qu'apporte la catégorie
 	 */
 	public override void produce () {
-		infectesDecouverts.Enqueue (0);
-		soignes.Enqueue (0);
+		/**
+		 * Formule
+		 * 
+		 * • Plus le ratio entre le nombre d'infectés détectés et la population totale
+		 * est grand, plus il est probable d'en détecter
+		 * • Plus les connaissances à propos des symptomes est grand, plus il y a de chance d'en
+		 * détecter de nouveaux, et d'en soigner
+		 * 
+		 * • Dans l'idéal, avec la connaissance absolue, il faudrait qu'avec 1/6 de la population consacré à la médecine, on puisse
+		 * garder en forme l'ensemble de la population si celle-ci se faisait infectée à 5% chaque jour
+		 * D'où la formule
+		 * [nombre de soignés] = 1/6 * [population totale] * [patient par médecin]
+		 * d'où [patient par médecin] = 5% / [nombre de médecin]
+		 * 
+		 * • Pour la détection, on calcul le nombre d'infectés non détectés, puis on fait le ratio par rapport
+		 * à la population totale (pour obtenir la densité de ces personnes dans le pays).
+		 * On prend en compte le facteur lié aux connaissances, pet le nombre de médecin
+		 * [nouveaux détectés] = ( ([infectés non détectés] - [infectés détectés]) / [population totale] )
+		 * 							* [Facteur de connaissances] * [nombre de médecins]
+		 */
+
+		float ratioInfectedPopulation = population.nbInfectedDetected / population.totalPopulation;
+
+		float knowledgesFacteur = 0f;
+
+		Knowledge knowledge;
+
+		foreach ( Ressource resource in population.country.resources.resources.Values ) {
+			if (resource.GetType () != typeof(Knowledge))
+				return;
+			knowledge = (Knowledge) resource;
+
+			knowledgesFacteur += knowledge.coutDeRecherche * knowledge.developpement;
+		}
+
+		int soigne = (int) (assignedPopulation * ratioInfectedPopulation * knowledgesFacteur / 20f);
+
+		int detectes = (int)(((float) (population.country.souche.getNbInfected() - population.nbInfectedDetected) * knowledgesFacteur) /
+			(float) population.totalPopulation * (float) assignedPopulation);
+
+		population.nbInfectedDetected += (uint) detectes;
+		population.nbInfectedDetected -= (uint) soigne;
+		population.country.souche.removeInfectedPeople( (uint) soigne );
+
+		infectesDecouverts.Enqueue (detectes);
+		soignes.Enqueue (soigne);
 	}
 
 	/**
