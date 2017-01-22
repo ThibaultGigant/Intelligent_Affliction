@@ -19,6 +19,11 @@ public abstract class AbstactSymptom
 	protected float lethalityIndex;
 
 	/**
+	 * Facteur influençant la détection de la souche à cause du symptôme
+	 */
+	protected float detectableIndex;
+
+	/**
 	 * Coût de l'évolution du symptome
 	 */
 	public int coutEvolution {
@@ -27,7 +32,8 @@ public abstract class AbstactSymptom
 	}
 
 	/**
-	 * Retourne le nom du symptome
+	 * Retourne le nom du symptôme
+	 * @return Nom du symptôme
 	 */
 	public String getName()
 	{
@@ -36,9 +42,20 @@ public abstract class AbstactSymptom
 
 	/**
 	 * Retourne l'indice de létalité
+	 * @return Indice voulu
 	 */
-	public float getLethalityIndex() {
+	public float getLethalityIndex()
+	{
 		return this.lethalityIndex;
+	}
+
+	/**
+	 * Renvoie un indice signifiant l'augmentation de la détection de la souche par les médecins
+	 * @return Indice voulu
+	 */
+	public float getDetectableIndex()
+	{
+		return this.detectableIndex;
 	}
 
 	/**

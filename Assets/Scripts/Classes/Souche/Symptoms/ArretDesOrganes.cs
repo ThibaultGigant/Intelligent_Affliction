@@ -11,6 +11,7 @@ public class ArretDesOrganes : AbstactSymptom
 		coutEvolution = cout;
 		this.name = "ArretDesOrganes";
 		this.lethalityIndex = 15f;
+		this.detectableIndex = 3f;
 	}
 
 	/**
