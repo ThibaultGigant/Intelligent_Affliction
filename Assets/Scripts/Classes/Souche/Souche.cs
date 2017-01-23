@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
-using System.Linq;
 
 public class Souche {
 	/**
@@ -39,7 +38,7 @@ public class Souche {
 	/**
 	* Ensemble des symptomes de la souche
 	*/
-	public IDictionary<string, AbstactSymptom> symptoms;
+	public IDictionary<string, AbstractSymptom> symptoms;
 	/**
 	 * Ensemble des skills de la souche
 	 */
@@ -50,9 +49,8 @@ public class Souche {
 	 */
 	public Souche(Pays pays) {
 		country = pays;
-
-		symptoms = new Dictionary<string, AbstactSymptom> ();
-
+		symptoms = new Dictionary<string, AbstractSymptom> ();
+		skills = new Skills (this);
 		historique = new HistoriqueSouche ();
 	}
 
@@ -63,6 +61,24 @@ public class Souche {
 	public uint getNbInfected() 
 	{
 		return nbInfected;
+	}
+
+	/**
+	 * Modifie le nombre d'infectés
+	 * @param nb Nouveau nombre d'infectés
+	 */
+	public void setNbInfected(uint nb)
+	{
+		this.nbInfected = nb;
+	}
+
+	/**
+	 * Modifie la vitesse d'évolution
+	 * @param speed Nouvelle vitesse d'évolution
+	 */
+	public void setEvolutionSpeed(float speed)
+	{
+		this.evolutionSpeed = speed;
 	}
 
 	/**
@@ -447,15 +463,81 @@ public class Souche {
 	 */
 	public void fusion(Souche souche, uint nbInfectedComing)
 	{
-		
+		// Fusion des capacités
+		if (souche.skills.getWaterSpreading () > this.skills.getWaterSpreading ()) {
+			this.skills.setWaterSpreading (Mathf.FloorToInt (this.skills.getWaterSpreading () + ((souche.skills.getWaterSpreading () - this.skills.getWaterSpreading ()) * nbInfectedComing / 10)));
+		}
+		if (souche.skills.getAirSpreading () > this.skills.getAirSpreading ()) {
+			this.skills.setAirSpreading (Mathf.FloorToInt (this.skills.getAirSpreading () + ((souche.skills.getAirSpreading () - this.skills.getAirSpreading ()) * nbInfectedComing / 10)));
+		}
+		if (souche.skills.getContactSpreading () > this.skills.getContactSpreading ()) {
+			this.skills.setContactSpreading (Mathf.FloorToInt (this.skills.getContactSpreading () + ((souche.skills.getContactSpreading () - this.skills.getContactSpreading ()) * nbInfectedComing / 10)));
+		}
+		if (souche.skills.getResistanceCold () > this.skills.getResistanceCold ()) {
+			this.skills.setResistanceCold (Mathf.FloorToInt (this.skills.getResistanceCold () + ((souche.skills.getResistanceCold () - this.skills.getResistanceCold ()) * nbInfectedComing / 10)));
+		}
+		if (souche.skills.getResistanceHeat () > this.skills.getResistanceHeat ()) {
+			this.skills.setResistanceHeat (Mathf.FloorToInt (this.skills.getResistanceHeat () + ((souche.skills.getResistanceHeat () - this.skills.getResistanceHeat ()) * nbInfectedComing / 10)));
+		}
+
+		// Fusion des symptomes
+		foreach (string temp in DonneeSouche.listSymptoms) {
+			if (!this.symptoms.ContainsKey (temp) && souche.symptoms.ContainsKey (temp)) {
+				if (UnityEngine.Random.value * nbInfectedComing < 1 / DonneeSouche.coutsSymptomes [temp]) {
+					this.symptoms.Add (temp, souche.symptoms [temp]);
+				}
+			}
+		}
+
+		// Rajout des infectés à la population d'infectés
+		this.nbInfected += nbInfectedComing;
+		// Ajout de points d'évolution car fusion :
+		this.evolutionPoints ++;
 	}
 
 	/**
 	 * Application de la contamination de nouveaux habitants et de la mort de certains d'entre eux si c'est nécessaire
+	 * La Contamination suit la formule suivante : nbInfected * somme des skills * (1 - pourcentage d'infectés)
 	 */
 	public void contamination()
 	{
-		// Contamination et meurtre
+		/* Contamination */
+		///////////////////
+		float pourc = this.getNbInfected () / this.country.getNbPopulation ();
+		float skillsSum = 0f;
+		foreach (string s in DonneeSouche.listTransmissionSkills) {
+			skillsSum += this.skills.getSkillValue (s);
+		}
+		foreach (string s in DonneeSouche.listResistanceSkills) {
+			skillsSum += this.skills.getSkillValue (s);
+		}
+		skillsSum /= 10;
+
+		uint toAdd;
+		if (UnityEngine.Random.value > DonneeSouche.epsilonGreedyFactor)
+			toAdd = (uint) Mathf.FloorToInt (this.nbInfected * skillsSum * (1 - pourc));
+		else
+			toAdd = (uint) Mathf.CeilToInt (this.nbInfected * skillsSum * (1 - pourc));
+
+		this.addInfectedPeople (toAdd);
+
+
+		/* Assassinat */
+		////////////////
+		float killSum = 0f;
+		foreach (KeyValuePair<string, AbstractSymptom> pair in this.symptoms) {
+			killSum += Mathf.Max(pair.Value.getLethalityIndex (), 0);
+		}
+		killSum /= 100;
+
+		uint toKill;
+		if (UnityEngine.Random.value > DonneeSouche.epsilonGreedyFactor)
+			toKill = (uint) Mathf.FloorToInt (this.nbInfected * skillsSum);
+		else
+			toKill = (uint) Mathf.CeilToInt (this.nbInfected * skillsSum);
+		this.removeInfectedPeople (toKill);
+		this.country.removePeople (toKill);
+
 	}
 
 

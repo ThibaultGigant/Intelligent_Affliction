@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Toux : AbstactSymptom
+public class Toux : AbstractSymptom
 {
 	/**
 	 * Constructeur

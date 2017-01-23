@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Eternuements : AbstactSymptom
+public class Eternuements : AbstractSymptom
 {
 	/**
 	 * Constructeur

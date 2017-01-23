@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Diarrhee : AbstactSymptom
+public class Diarrhee : AbstractSymptom
 {
 	/**
 	 * Constructeur
