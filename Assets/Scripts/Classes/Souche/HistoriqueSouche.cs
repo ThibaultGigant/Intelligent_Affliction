@@ -8,6 +8,10 @@ using System.Collections.Generic;
 public class HistoriqueSouche
 {
 	/**
+	 * Nombre de personnes infectées par cette souche dans ce pays à l'itération précédente
+	 */
+	private uint previousNbInfected = 0;
+	/**
 	 * Dictionnaire contenant les dates d'évolution des compétences de transmission
 	 * Clé = mode de transmission
 	 * Valeur = liste des dates d'évolution
@@ -59,6 +63,23 @@ public class HistoriqueSouche
 		this.datesEvolutionEvolutionSpeed = new List<DateTime> ();
 
 		this.infectionGradient = new LimitedList< KeyValuePair<DateTime, uint> > (1000);
+	}
+
+	/**
+	 * Retourne le nombre d'infectés qu'il y avait à l'itération précédente
+	 * @return Nombre d'infectés à l'itération précédente
+	 */
+	public uint getPreviousNbInfected()
+	{
+		return this.previousNbInfected;
+	}
+
+	/**
+	 * Règle le nombre d'infectés à l'itération précédente à la valeur voulue
+	 */
+	public void setPreviousNbInfected(uint previous)
+	{
+		this.previousNbInfected = previous;
 	}
 
 	/**
@@ -160,7 +181,7 @@ public class HistoriqueSouche
 			return 0f;
 		
 		uint depart = infectionGradient [index].Value;
-		int lastIndex = Mathf.Min (index + 10, infectionGradient.Count);
+		int lastIndex = Mathf.Min (index + 10, infectionGradient.Count - 1);
 		return infectionGradient [lastIndex].Value / (float) depart;
 	}
 
@@ -255,5 +276,53 @@ public class HistoriqueSouche
 		return null;
 	}
 
+	/**
+	 * Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre
+	 * @param s Chaine de caractères donnant le sens de l'évolution
+	 * @param date Date de l'évolution
+	 */
+	public void addTransmissionEvolution(string s, DateTime date)
+	{
+		this.datesEvolutionTransmission [s].Add (date);
+	}
+
+	/**
+	 * Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre
+	 * @param s Chaine de caractères donnant le sens de l'évolution
+	 * @param date Date de l'évolution
+	 */
+	public void addResistanceEvolution(string s, DateTime date)
+	{
+		this.datesEvolutionResistance [s].Add (date);
+	}
+
+	/**
+	 * Ajoute une évolution d'un symptôme dans le sens signifié par la string passée en paramètre
+	 * @param s Chaine de caractères donnant le sens de l'évolution
+	 * @param date Date de l'évolution
+	 */
+	public void addSymptomEvolution(string s, DateTime date)
+	{
+		this.datesEvolutionSymptoms [s].Add (date);
+	}
+
+	/**
+	 * Ajoute une évolution de la vitesse d'évolution
+	 * @param date Date de l'évolution
+	 */
+	public void addEvolutionSpeedEvolution(DateTime date)
+	{
+		this.datesEvolutionEvolutionSpeed.Add (date);
+	}
+
+	/**
+	 * Ajoute un gradient d'infection à la date indiquée
+	 * @param date Date d'ajout
+	 * @param gradient Gradient d'infection à ajouter
+	 */
+	public void addInfectionGradient (DateTime date, uint gradient)
+	{
+		this.infectionGradient.Add (new KeyValuePair<DateTime, uint>(date, gradient));
+	}
 }
 

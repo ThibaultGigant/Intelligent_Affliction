@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class Souche {
 	/**
@@ -93,20 +94,55 @@ public class Souche {
 	}
 
 	/**
-	 * Effectue une évolution de la souche en fonction des motivations et points disponibles.
-	 * Inhibition des connaissances de la population
+	 * Effectue une évolution de la souche en fonction des motivations.
 	 */
 	public void evolve()
 	{
+		DateTime date = DateTime.Now;
+		List<float> motivations = new List<float> ();
+		motivations.Add (motivationTransmission (date));
+		motivations.Add (motivationResistance (date));
+		motivations.Add (motivationEvolutionSpeed (date));
+		motivations.Add (motivationLethality (date));
+
+		int index = 0;
+		float maxi = motivations [0];
+
+		for (int i = 1; i < motivations.Count; i++) {
+			if (motivations [i] > maxi) {
+				index = i;
+				maxi = motivations [i];
+			}
+		}
+
+		if (index == 0)
+			evolveTransmission (date);
+		else if (index == 1)
+			evolveResistance (date);
+		else if (index == 2)
+			evolveEvolutionSpeed (date);
+		else if (index == 3)
+			evolveLethality(date);
+
+		// Ajout du gradient d'infection
+		this.historique.addInfectionGradient (date, this.getNbInfected () - this.historique.getPreviousNbInfected ());
+
 	}
 
 	/**
 	 * Production de points d'évolution
-	 * En fonction de gradient d'infection et du ratio des infectés, vitesse d'évolution
+	 * En fonction des facteurs suivants :
+	 * 	- grad :gradient d'infection
+	 * 	- nbInfectes : nombre d'infectés actuels
+	 * 	- pourc : ratio des infectés
+	 * 	- evolutionSpeed : la vitesse d'évolution
+	 * On suit la formule : evolutionSpeed * pourc * 10 *(1 + grad) / nbInfectes
 	 */
 	public void produce()
 	{
-		this.evolutionPoints += Mathf.FloorToInt (1 * evolutionSpeed);
+		float grad = this.historique.lastInfectionGradient ().Value;
+		float pourc = this.getNbInfected () / this.country.getNbPopulation ();
+		this.evolutionPoints += Mathf.FloorToInt (evolutionSpeed * pourc * 10 * (1 + grad) / nbInfected);
 	}
 
 	/**
@@ -204,30 +240,204 @@ public class Souche {
 
 	/**
 	 * Choix du type de transmission à améliorer et application de l'évolution de cette transmission
+	 * @param date Date de l'évolution
 	 */
-	private void evolveTransmission()
+	private void evolveTransmission(DateTime date)
 	{
+		DateTime d = historique.lastBestEvolutionTransmissionDate();
+		string s = this.historique.getCorrespondingProperty (d);
+
+		// Ajout de random, pour ne pas toujours faire la même chose
+		float r = UnityEngine.Random.value;
+		int index;
+		if (r <= DonneeSouche.epsilonGreedyFactor) {
+			index = UnityEngine.Random.Range (0, DonneeSouche.listTransmissionSkills.Count - 1);
+			s = DonneeSouche.listTransmissionSkills [index];
+		}
+
+		// On veut faire évoluer la transmission de type s
+		if (evolutionPoints >= DonneeSouche.coutsSkills [s]) {
+			this.skills.addSkillValue (s, 1);
+			this.historique.addTransmissionEvolution (s, date);
+			this.evolutionPoints -= DonneeSouche.coutsSkills [s];
+		}
 	}
 
 	/**
 	 * Choix du type de résistance à améliorer et application de l'évolution de cette résistance
+	 * @param date Date de l'évolution
 	 */
-	private void evolveResistance()
+	private void evolveResistance(DateTime date)
 	{
+		DateTime d = historique.lastBestEvolutionResistanceDate();
+		string s = this.historique.getCorrespondingProperty (d);
+
+		// Ajout de random, pour ne pas toujours faire la même chose
+		float r = UnityEngine.Random.value;
+		int index;
+		if (r <= DonneeSouche.epsilonGreedyFactor) {
+			index = UnityEngine.Random.Range (0, DonneeSouche.listResistanceSkills.Count - 1);
+			s = DonneeSouche.listResistanceSkills [index];
+		}
+
+		// On veut faire évoluer la transmission de type s
+		if (evolutionPoints >= DonneeSouche.coutsSkills [s]) {
+			this.skills.addSkillValue (s, 1);
+			this.historique.addResistanceEvolution (s, date);
+			this.evolutionPoints -= DonneeSouche.coutsSkills [s];
+		}
 	}
 
 	/**
 	 * Application de l'augmentation de la vitesse d'évolution
+	 * @param date Date de l'évolution
 	 */
-	private void evolveEvolutionSpeed()
+	private void evolveEvolutionSpeed(DateTime date)
 	{
+		if (evolutionPoints >= DonneeSouche.coutEvolutionSpeedUp) {
+			this.evolutionSpeed += 1;
+			this.historique.addEvolutionSpeedEvolution (date);
+			this.evolutionPoints -= DonneeSouche.coutEvolutionSpeedUp;
+		}
 	}
 
 	/**
 	 * Choix du type de transmission à améliorer et application de l'évolution vers la transmission
+	 * @param date Date de l'évolution
 	 */
-	private void evolveLethality()
+	private void evolveLethality(DateTime date)
 	{
+		float pourc = this.getNbInfected () / this.country.getNbPopulation();
+
+		// Dans le cas où une grande majorité de la population est infectée et qu'on a assez de points, on achève la population
+		if (pourc >= 90
+			&& !(this.symptoms.ContainsKey ("ArretDesOrganes"))
+			&& this.evolutionPoints >= DonneeSouche.coutsSymptomes ["ArretDesOrganes"]) {
+			this.symptoms.Add("ArretDesOrganes", new ArretDesOrganes());
+			return;
+		}
+
+		// Si le pourcentage est bas, au contraire on peut regarder si on peut ajouter un symptôme qui aiderait à la transmission
+		if (pourc < 30) {
+			int water = this.skills.getWaterSpreading ();
+			int air = this.skills.getAirSpreading ();
+			int contact = this.skills.getContactSpreading ();
+
+			// S'il faut augmenter la transmission par l'eau
+			if (water <= air && water <= contact) {
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Eternuements"] && !this.symptoms.ContainsKey ("Eternuements")) {
+					this.symptoms.Add ("Eternuements", new Eternuements ());
+					return;
+				}
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Sueurs"] && !this.symptoms.ContainsKey ("Sueurs")) {
+					this.symptoms.Add ("Sueurs", new Sueurs ());
+					return;
+				}
+			}
+
+			// S'il faut augmenter la transmission par l'air
+			if (air <= water && air <= contact) {
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Eternuements"] && !this.symptoms.ContainsKey ("Eternuements")) {
+					this.symptoms.Add ("Eternuements", new Eternuements ());
+					return;
+				}
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Toux"] && !this.symptoms.ContainsKey ("Toux")) {
+					this.symptoms.Add ("Toux", new Toux ());
+					return;
+				}
+			}
+
+			// S'il faut augmenter la transmission par le contact
+			if (contact <= water && contact <= air) {
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Sueurs"] && !this.symptoms.ContainsKey ("Sueurs")) {
+					this.symptoms.Add ("Sueurs", new Sueurs ());
+					return;
+				}
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Toux"] && !this.symptoms.ContainsKey ("Toux")) {
+					this.symptoms.Add ("Toux", new Toux ());
+					return;
+				}
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Eternuements"] && !this.symptoms.ContainsKey ("Eternuements")) {
+					this.symptoms.Add ("Eternuements", new Eternuements ());
+					return;
+				}
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Fievre"] && !this.symptoms.ContainsKey ("Fievre")) {
+					this.symptoms.Add ("Fievre", new Fievre ());
+					return;
+				}
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Diarrhee"] && !this.symptoms.ContainsKey ("Diarrhee")) {
+					this.symptoms.Add ("Diarrhee", new Diarrhee ());
+					return;
+				}
+			}
+		}
+
+		// Si on n'a rien fait jusque là, on choisit un symptôme à développer, du moins cher au plus cher
+		string s = "";
+		int minVal = DonneeSouche.coutMaxSymptom;
+		List<string> remainingSymptoms = new List<string>();
+		foreach (string temp in DonneeSouche.listSymptoms) {
+			if (!this.symptoms.ContainsKey (temp))
+				remainingSymptoms.Add (temp);
+		}
+
+		if (remainingSymptoms.Count < 1)
+			return;
+		foreach (string temp in remainingSymptoms) {
+			if (DonneeSouche.coutsSymptomes [temp] < minVal && !this.symptoms.ContainsKey (temp)) {
+				s = temp;
+				minVal = DonneeSouche.coutsSymptomes [temp];
+			}
+		}
+
+		if (UnityEngine.Random.value <= DonneeSouche.epsilonGreedyFactor) {
+			int index = UnityEngine.Random.Range (0, remainingSymptoms.Count - 1);
+			s = remainingSymptoms [index];
+		}
+
+		if (!s.Equals ("")) {
+			switch (s) {
+			case "ArretDesOrganes":
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["ArretDesOrganes"] && !this.symptoms.ContainsKey ("ArretDesOrganes")) {
+					this.symptoms.Add ("ArretDesOrganes", new ArretDesOrganes ());
+					return;
+				}
+				break;
+			case "Diarrhee":
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Diarrhee"] && !this.symptoms.ContainsKey ("Diarrhee")) {
+					this.symptoms.Add ("Diarrhee", new Diarrhee ());
+					return;
+				}
+				break;
+			case "Eternuements":
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Eternuements"] && !this.symptoms.ContainsKey ("Eternuements")) {
+					this.symptoms.Add ("Eternuements", new Eternuements ());
+					return;
+				}
+				break;
+			case "Fievre":
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Fievre"] && !this.symptoms.ContainsKey ("Fievre")) {
+					this.symptoms.Add ("Fievre", new Fievre ());
+					return;
+				}
+				break;
+			case "Sueurs":
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Sueurs"] && !this.symptoms.ContainsKey ("Sueurs")) {
+					this.symptoms.Add ("Sueurs", new Sueurs ());
+					return;
+				}
+				break;
+			case "Toux":
+				if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["Toux"] && !this.symptoms.ContainsKey ("Toux")) {
+					this.symptoms.Add ("Toux", new Toux ());
+					return;
+				}
+				break;
+			default:
+				break;
+			}
+		}
+			
 	}
 
 	/**
