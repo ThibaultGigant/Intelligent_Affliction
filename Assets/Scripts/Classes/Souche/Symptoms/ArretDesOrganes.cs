@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class ArretDesOrganes : AbstactSymptom
+public class ArretDesOrganes : AbstractSymptom
 {
 	/**
 	 * Constructeur

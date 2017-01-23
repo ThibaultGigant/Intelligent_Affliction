@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Sueurs : AbstactSymptom
+public class Sueurs : AbstractSymptom
 {
 	/**
 	 * Constructeur

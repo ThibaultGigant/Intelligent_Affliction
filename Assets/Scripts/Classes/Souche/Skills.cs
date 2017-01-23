@@ -59,7 +59,7 @@ public class Skills {
 		if (res <= 0)
 			return 0;
 
-		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
+		foreach (KeyValuePair<string, AbstractSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillResistanceCold();
 		}
 		return Mathf.Clamp (Mathf.FloorToInt (res), 0, 100);
@@ -76,7 +76,7 @@ public class Skills {
 		if (res <= 0)
 			return 0;
 		
-		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
+		foreach (KeyValuePair<string, AbstractSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillResistanceHeat();
 		}
 		return Mathf.Clamp (Mathf.FloorToInt (res), 0, 100);
@@ -94,7 +94,7 @@ public class Skills {
 		if (res <= 0)
 			return 0;
 
-		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
+		foreach (KeyValuePair<string, AbstractSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillWaterSpreading();
 		}
 
@@ -113,7 +113,7 @@ public class Skills {
 		if (res <= 0)
 			return 0;
 
-		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
+		foreach (KeyValuePair<string, AbstractSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillAirSpreading();
 		}
 		return Mathf.Clamp (Mathf.FloorToInt (res), 0, 100);
@@ -131,7 +131,7 @@ public class Skills {
 		if (res <= 0)
 			return 0;
 
-		foreach (KeyValuePair<string, AbstactSymptom> symptom in this.souche.symptoms) {
+		foreach (KeyValuePair<string, AbstractSymptom> symptom in this.souche.symptoms) {
 			res *= symptom.Value.affectSkillContactSpreading();
 		}
 		return Mathf.Clamp (Mathf.FloorToInt (res), 0, 100);
@@ -158,6 +158,51 @@ public class Skills {
 		default:
 			return 0;
 		}
+	}
+
+	/**
+	 * Modifie la valeur de la résistance au froid
+	 * @param value Nouvelle valeur de la compétence
+	 */
+	public void setResistanceCold(int value)
+	{
+		this.resistanceToCold = value;
+	}
+
+	/**
+	 * Modifie la valeur de la résistance à la chaleur
+	 * @param value Nouvelle valeur de la compétence
+	 */
+	public void setResistanceHeat(int value)
+	{
+		this.resistanceToHeat = value;
+	}
+
+	/**
+	 * Modifie la valeur de la transmission par l'eau
+	 * @param value Nouvelle valeur de la compétence
+	 */
+	public void setWaterSpreading(int value)
+	{
+		this.waterSpreading = value;
+	}
+
+	/**
+	 * Modifie la valeur de la transmission par l'air
+	 * @param value Nouvelle valeur de la compétence
+	 */
+	public void setAirSpreading(int value)
+	{
+		this.airSpreading = value;
+	}
+
+	/**
+	 * Modifie la valeur de la transmission par le contact
+	 * @param value Nouvelle valeur de la compétence
+	 */
+	public void setContactSpreading(int value)
+	{
+		this.contactSpreading = value;
 	}
 
 	/**
