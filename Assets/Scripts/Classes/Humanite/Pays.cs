@@ -82,7 +82,7 @@ public class Pays : MonoBehaviour
 	 * Fonction appelée lorsque le pays s'active pour la première fois
 	 * Initialisation du pays
 	 */
-	public void Start ()
+	public void Awake ()
 	{
 		nomPays = gameObject.name;
 		population = new Population(this);

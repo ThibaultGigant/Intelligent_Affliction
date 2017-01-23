@@ -39,8 +39,8 @@ public class PaysRessources
 		resources.Add ("KnowledgeDiarrhee", new Knowledge (pays, "Diarrhee", 1));
 		resources.Add ("KnowledgeSueurs", new Knowledge (pays, "Sueurs", 1));
 		resources.Add ("KnowledgeArretDesOrganes", new Knowledge (pays, "ArretDesOrganes", 1));
-		resources.Add ("KnowledgeResistance", new Knowledge (pays, "Resistance", 1));
-		resources.Add ("KnowledgeSpreading", new Knowledge (pays, "Spreading", 1));
+		//resources.Add ("KnowledgeResistance", new Knowledge (pays, "Resistance", 1));
+		//resources.Add ("KnowledgeSpreading", new Knowledge (pays, "Spreading", 1));
 		resources.Add ("Transports", new RessourceTransports (pays));
 		resources.Add ("Loisirs", new RessourceLoisirs (pays));
 	}
