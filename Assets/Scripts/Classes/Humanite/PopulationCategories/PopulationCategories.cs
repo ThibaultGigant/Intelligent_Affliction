@@ -14,6 +14,18 @@ public class PopulationCategories
 	 * Ensemble des Catégories de population, accessibles par leur nom
 	 */
 	public IDictionary<string, APopulationCategory> categories;
+	public ICollection<string> Keys
+	{
+		get {
+			return categories.Keys;
+		}
+	}
+	public ICollection<APopulationCategory> Values
+	{
+		get {
+			return categories.Values;
+		}
+	}
 
 	public PopulationCategories (Population pop, uint totalPopulation)
 	{
@@ -43,6 +55,19 @@ public class PopulationCategories
 	}
 
 	/**
+	 * Redéfinition des indexeurs
+	 * Rend la class transparente, et se comporte comme un dictionnaire
+	 */
+	public APopulationCategory this[string name] {
+		get {
+			return categories [name];
+		}
+		set {
+			categories [name] = value;
+		}
+	}
+
+	/**
 	 * Transfert de personnes entre deux catégories de population
 	 * quantity personnes sont transférées de la catégorie source à la catégorie destination
 	 * @param source Catégorie où on récupère les personnes à transférer
@@ -64,6 +89,8 @@ public class PopulationCategories
 	 * @return Le nombre de personne ayant changé de catégorie
 	 */
 	public int reorganizePopulationCategoriesAuto() {
+		if (population.country.indiceHI () > 0.8)
+			return 0;
 		/**
 		 * • minBesoins		: Valeur minimale parmi les besoins de chaque catégorie
 		 * • maxBesoins		: Valeur maximale parmi les besoins de chaque catégorie
@@ -100,6 +127,9 @@ public class PopulationCategories
 			
 			// Récupération des besoin de la catégorie
 			besoin = cate.besoins ();
+
+			if (Mathf.Abs (besoin) < 0.2f)
+				continue;
 
 			// Garde en mémoire les besoins et la catégorie associée,
 			// selon le signe de la valeur
@@ -157,15 +187,18 @@ public class PopulationCategories
 		 */
 		if (!doneurNegatif) {
 			for (int i = 0; i < besoinsPositif.Count; i++)
-				besoinsNegatif_int.Add ((int)((1f - besoinsPositif [i]) * 100f / minBesoins));
+				besoinsNegatif_int.Add ((int)((1f - besoinsPositif [i]) * 100f / (-minBesoins)));
 		}
 		else {
 			for (int i = 0; i < besoinsNegatif.Count; i++)
-				besoinsNegatif_int.Add ((int)((besoinsNegatif [i]) * 100f / minBesoins));
+				besoinsNegatif_int.Add ((int)((besoinsNegatif [i]) * 100f / (-minBesoins)));
 		}
 
 		int indicePositif = Utils.tirageAlatoireList (besoinsPositif_int);
-		int indiceNegatif = Utils.tirageAlatoireList (besoinsPositif_int);
+		int indiceNegatif = Utils.tirageAlatoireList (besoinsNegatif_int);
+
+		if (indiceNegatif == -1 || indicePositif == -1)
+			return 0;
 
 		/**
 		 * Si toutes les catégories veulent la même chose, il est possible les
@@ -178,7 +211,7 @@ public class PopulationCategories
 		// Maximum 10% de la population qui peux changer par jour par catégorie
 		int transfert = 0;
 		if (preneurPositif) {
-			transfert = (int)Mathf.Min (0.1f * population.totalPopulation, population.country.indiceHI () * besoinsPositif [indicePositif] * ordrePositif [indicePositif].assignedPopulation);
+			transfert = (int)Mathf.Min (0.1f * population.totalPopulation, besoinsPositif [indicePositif] * ordrePositif [indicePositif].assignedPopulation / (population.country.indiceHI () + 0.01f));
 			APopulationCategory doneur;
 			if (doneurNegatif)
 				doneur = ordreNegatif [indiceNegatif];
@@ -190,9 +223,9 @@ public class PopulationCategories
 			doneur.removeAssigned (transfert);
 		}
 		else {
-			transfert = (int)Mathf.Min (0.1f * population.totalPopulation, population.country.indiceHI () * besoinsPositif [indicePositif] * ordreNegatif [indicePositif].assignedPopulation);
+			transfert = (int)Mathf.Min (0.1f * population.totalPopulation, population.country.indiceHI () * besoinsNegatif [indicePositif] * ordreNegatif [indicePositif].assignedPopulation);
 			APopulationCategory doneur;
-			if (doneurNegatif)
+			if (!doneurNegatif)
 				doneur = ordrePositif [indiceNegatif];
 			else
 				doneur = ordreNegatif [indiceNegatif];
@@ -207,7 +240,6 @@ public class PopulationCategories
 
 	public void reorganizePopulationCategoriesForPlayer()
 	{
-		Debug.Log ("Pumba");
 		Dictionary<APopulationCategory, int> echangesToleresPositif = new Dictionary<APopulationCategory, int> ();
 		Dictionary<APopulationCategory, int> echangesToleresNegatif = new Dictionary<APopulationCategory, int> ();
 		float change;
@@ -223,7 +255,6 @@ public class PopulationCategories
 			change = cate.wantedPercentage * population.totalPopulation - cate.assignedPopulation;
 			change *= population.country.indiceHI ();
 
-			Debug.Log (nom + " " + change + " " + 0.01f * population.totalPopulation);
 			// Si l'on approche du pourcentage voulu, ou que la populatino n'est pas assez satisfaite, on s'arrête
 			if (Mathf.Abs(change) < 0.01f * population.totalPopulation) {
 				cate.wantedPercentage = -1f;

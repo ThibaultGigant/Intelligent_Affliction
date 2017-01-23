@@ -23,6 +23,8 @@ public class Parametres {
 
 	public static int timeOfADay = 300;
 
+	public static bool switchPays = false;
+
 	public static void setSimuSpeed(int speed) {
 		simuSpeed = speed;
 	}

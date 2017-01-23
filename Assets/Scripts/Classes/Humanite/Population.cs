@@ -24,12 +24,8 @@ public class Population {
 	 * Nombre de personnes détectées comme infectées (peut être différent du nombre réel d'infectés)
 	 */
 	public uint nbInfectedDetected;
-	/**
-	 * Ensemble des Catégories de population, accessibles par leur nom
-	 */
-	public IDictionary<string, APopulationCategory> categories;
 
-	public PopulationCategories categoriesPop;
+	public PopulationCategories categories;
 
 	/**
 	 * Constructeur
@@ -44,7 +40,9 @@ public class Population {
 
 		happinessIndex = 50;
 
-		categoriesPop = new PopulationCategories (this, totalPopulation);
+		nbInfectedDetected = (uint) 0;
+
+		categories = new PopulationCategories (this, totalPopulation);
 	}
 
 	/**
@@ -82,10 +80,17 @@ public class Population {
 	public void removePeople(uint nb) {
 		uint temp = nb;
 
+		float ratio;
+
 		foreach (string cat in categories.Keys) {
+			ratio = (float) (categories [cat].assignedPopulation) / (float) totalPopulation;
 			if (temp == 0)
 				return;
-			temp -= categories [cat].removeAssigned (temp);
+			temp -= categories [cat].removeAssigned ((int)(nb * ratio));
+
+			if (cat == "Recherche" && Random.value < 0.05) {
+				country.pointsRecherche -= Mathf.Min (country.pointsRecherche, (int)((float)nb * ratio * 0.001));
+			}
 		}
 
 		totalPopulation -= nb - temp;
@@ -119,8 +124,9 @@ public class Population {
 
 	public void reorganizePopulationCategories()
 	{
-		categoriesPop.reorganizePopulationCategoriesForPlayer ();
-		int transfert = categoriesPop.reorganizePopulationCategoriesAuto ();
+		categories.reorganizePopulationCategoriesForPlayer ();
+		if ( Mathf.Pow( Random.value, 2f) < country.indiceHI())
+			categories.reorganizePopulationCategoriesAuto ();
 	}
 
 	public void consome() {
@@ -129,11 +135,11 @@ public class Population {
 
 	public void updateHappiness () {
 		float resultat = Utils.indicesNormalises(new float[,] {
-			{ country.indiceTransports(), 0f,1f,0.75f,1f, 0f },
-			{ country.indiceLoisirs(), 0f,1f,0.75f,1f, 0f },
-			{ country.indiceInfection(), 0f, 1f, 0f, 1f, 0f},
-			{ country.indiceNourriture (), 0f,1f,0f,1f, 0f }
+			{ country.indiceTransports(), 0f,1f,0.8f,1f, 0f },
+			{ country.indiceLoisirs(), 0f,1f,0.8f,1f, 0f },
+			{ country.indiceInfection(), 0f, 1f, 0.5f, 1f, 0f},
+			{ country.indiceNourriture (), 0f,1f,0.2f,1f, 0f }
 		});
-			happinessIndex = (int) (resultat * 100f);
+		happinessIndex = (int) (resultat * 100f);
 	}
 }

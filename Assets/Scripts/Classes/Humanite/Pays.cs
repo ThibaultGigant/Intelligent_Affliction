@@ -70,6 +70,7 @@ public class Pays : MonoBehaviour
 		climat = new Climat (DonneePays.getChaleur(nomPays), DonneePays.getHumidite(nomPays));
 		superficie = DonneePays.getSuperficie(nomPays);
 		resources = new PaysRessources (this);
+		souche = new Souche (this);
 	}
 
 	/**
@@ -85,7 +86,7 @@ public class Pays : MonoBehaviour
 		 * • Consomation des ressources
 		 */
 		if (ClockManager.newDay) {
-			population.categoriesPop.produce ();
+			population.categories.produce ();
 			resources.consome ();
 			population.reorganizePopulationCategories ();
 			population.updateHappiness ();
@@ -287,14 +288,7 @@ public class Pays : MonoBehaviour
 	 */
 	public float indiceLoisirs()
 	{
-		/**
-		 * Formule
-		 * • La "quantité" de loisir
-		 */
-		uint quantityTransport = resources ["Transports"].quantity;
-		float ind =  (100f * (float) quantityTransport) / (12f * 160f * Mathf.Sqrt(population.country.superficie));
-
-		return (Mathf.Min (1f, ind));
+		return indiceProduction ("Loisirs");
 	}
 
 	/**
@@ -313,8 +307,8 @@ public class Pays : MonoBehaviour
 		 * • Ratio entre la moyenne de soignés, et le nombre de nouveaux infectés par jour
 		 * • On borne le produit des deux ratio à 1
 		 */
-		float ratioInfecteSain = 1f - population.nbInfectedDetected / population.totalPopulation;
-		Medecine medecineCategorie = ((Medecine)population.categoriesPop.categories ["Medecine"]);
+		float ratioInfecteSain = 1f - (float) population.nbInfectedDetected / (float) population.totalPopulation;
+		Medecine medecineCategorie = ((Medecine)population.categories.categories ["Medecine"]);
 
 		float moy1 = medecineCategorie.moyenneSoignes ();
 		float moy2 = medecineCategorie.moyenneNouveauxInfectes ();
@@ -338,11 +332,11 @@ public class Pays : MonoBehaviour
 		 */
 		float somme = 0;
 		//for ( int i = 0 ; i < population.categoriesPop.categories[nomCate].productions.Count ; i++ ) {
-		foreach ( int i in population.categoriesPop.categories[nomCate].productions ) {
+		foreach ( int i in population.categories.categories[nomCate].productions ) {
 			somme += i;
 		}
-		float moyenne = somme / population.categoriesPop.categories[nomCate].productions.Count;
-		float ideal = (float) population.categoriesPop.categories [nomCate].ideal ();
+		float moyenne = somme / population.categories.categories[nomCate].productions.Count;
+		float ideal = (float) population.categories.categories [nomCate].ideal ();
 		float indice = moyenne / ( ideal != 0 ? ideal : 1f);
 
 		indice = Mathf.Min (indice, 2f);
@@ -372,8 +366,8 @@ public class Pays : MonoBehaviour
 	 * Renvoie une valeur entre 0 (mauvais) et 1 (bien)
 	 */
 	public float indiceMedecine() {
-		Medecine medecine = (Medecine) (population.categoriesPop.categories ["Medecine"]);
-		return medecine.moyenneSoignes() / medecine.ideal ();
+		Medecine medecine = (Medecine) (population.categories.categories ["Medecine"]);
+		return medecine.moyenneSoignes() / (1f + medecine.ideal ());
 	}
 
 	/**
@@ -381,8 +375,8 @@ public class Pays : MonoBehaviour
 	 * Renvoie une valeur entre 0 (mauvais) et 1 (bien)
 	 */
 	public float indiceRecherche() {
-		Recherche recherche = (Recherche) (population.categoriesPop.categories ["Recherche"]);
-		return recherche.moyennePoints() / recherche.ideal();
+		Recherche recherche = (Recherche) (population.categories.categories ["Recherche"]);
+		return Mathf.Min(1f, recherche.moyennePoints() / ( 1f + recherche.ideal()));
 	}
 
 
@@ -427,7 +421,7 @@ public class Pays : MonoBehaviour
 	 */
 	public float getPourcentageCategory(string category)
 	{
-		return this.population.categoriesPop.categories [category].assignedPopulation / (float)this.population.totalPopulation;
+		return this.population.categories.categories [category].assignedPopulation / (float)this.population.totalPopulation;
 	}
 }
 

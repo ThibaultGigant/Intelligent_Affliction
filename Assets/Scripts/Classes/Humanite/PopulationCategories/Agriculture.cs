@@ -83,8 +83,8 @@ public class Agriculture : APopulationCategory
 	 */
 	public override float besoins()
 	{
-		Pays country = population.country;
-		uint quantityNourriture = country.resources ["Nourriture"].quantity;
+		/*Pays country = population.country;
+		uint quantityNourriture = country.resources ["Nourriture"].quantity;*/
 
 		/**
 		 * Prise en compte du ratio entre la taille de la population, et la nourriture
@@ -92,7 +92,7 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * Facteur discriminant pour le signe de la valeur finale
 		 */
-		float indiceNourriture = (float) population.totalPopulation / (float) quantityNourriture;
+		/*float indiceNourriture = (float) population.totalPopulation / (float) quantityNourriture;
 		if (indiceNourriture >= 1f)
 			indiceNourriture = Mathf.Atan (indiceNourriture - 1) / (2f * Mathf.PI);
 		else
@@ -104,7 +104,9 @@ public class Agriculture : APopulationCategory
 																	{ population.country.indiceHI (), 0f,1f,0.75f,1f, 1f }
 																});
 
-		return indiceNourriture * resultat;
+		return indiceNourriture * resultat;*/
+
+		return 1f - population.country.indiceProduction ("Agriculture");
 	}
 
 	/**

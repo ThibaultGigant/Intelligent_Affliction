@@ -36,11 +36,11 @@ public class PaysRessources
 		resources.Add ("KnowledgeToux", new Knowledge (pays, "Toux", 1));
 		resources.Add ("KnowledgeEternuements", new Knowledge (pays, "Eternuements", 1));
 		resources.Add ("KnowledgeFievre", new Knowledge (pays, "Fievre", 1));
-		resources.Add ("KnowledgeDiarrhees", new Knowledge (pays, "Diarrhees", 1));
+		resources.Add ("KnowledgeDiarrhee", new Knowledge (pays, "Diarrhee", 1));
 		resources.Add ("KnowledgeSueurs", new Knowledge (pays, "Sueurs", 1));
-		resources.Add ("KnowledgeArretOrganes", new Knowledge (pays, "ArretOrganes", 1));
-		resources.Add ("KnowledgeResistance", new Knowledge (pays, "Resistance", 1));
-		resources.Add ("KnowledgeSpreading", new Knowledge (pays, "Spreading", 1));
+		resources.Add ("KnowledgeArretDesOrganes", new Knowledge (pays, "ArretDesOrganes", 1));
+		//resources.Add ("KnowledgeResistance", new Knowledge (pays, "Resistance", 1));
+		//resources.Add ("KnowledgeSpreading", new Knowledge (pays, "Spreading", 1));
 		resources.Add ("Transports", new RessourceTransports (pays));
 		resources.Add ("Loisirs", new RessourceLoisirs (pays));
 	}

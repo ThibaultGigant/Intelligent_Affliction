@@ -48,14 +48,14 @@ public class Inactifs : APopulationCategory
 	 */
 	public override float besoins () {
 
-		float indiceLoisirs = population.categoriesPop.categories ["Loisirs"].besoins ();
+		float indiceLoisirs = population.categories.categories ["Loisirs"].besoins ();
 		if (indiceLoisirs >= 0f)
 			indiceLoisirs = Mathf.Atan (indiceLoisirs) / (2f * Mathf.PI);
 		else
 			indiceLoisirs = Mathf.Atan ((indiceLoisirs) * 10) / (2f * Mathf.PI);
 
 		float resultat = Utils.indicesNormalises(new float[,] {	{ population.country.indiceClimat(CHALEUR_IDEALE, HUMIDITE_IDEALE ), 0f,1f,0.6f,1f, 0f },
-																	{ population.country.indiceHI (), 0f,1f,0f,0.3f, 1f } // Jusqu'a 30% d'inactifs
+																	{ -population.country.indiceHI (), -1f,0f,0.3f,0f, 0f } // Jusqu'a 30% d'inactifs
 																});
 
 		return indiceLoisirs * resultat;
@@ -77,7 +77,7 @@ public class Inactifs : APopulationCategory
 		 * Un climat non clément incite les délinquant à rester chez eux (=> parti pris)
 		 */
 
-		float indiceLoisirs = population.categoriesPop.categories ["Loisirs"].besoins ();
+		float indiceLoisirs = population.categories.categories ["Loisirs"].besoins ();
 		if (indiceLoisirs >= 0f)
 			indiceLoisirs = Mathf.Atan (indiceLoisirs) / (2f * Mathf.PI);
 		else

@@ -63,8 +63,8 @@ public class CategoriesObserver : MonoBehaviour {
 			if (Parametres.paysSelected == null) {
 				isVisible = false;
 			}
-			else if (ClockManager.newDay) {
-				categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
+			else if (ClockManager.newDay || Parametres.switchPays) {
+				categories = Parametres.paysSelected.GetComponent<Pays> ().population.categories;
 				setValues ();
 			}
 		}
@@ -103,7 +103,7 @@ public class CategoriesObserver : MonoBehaviour {
 	public void toggleVisible() {
 		isVisible = !isVisible;
 		if (isVisible && Parametres.paysSelected != null) {
-			categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
+			categories = Parametres.paysSelected.GetComponent<Pays> ().population.categories;
 			if (gameObject.activeSelf)
 				setValues ();
 		}

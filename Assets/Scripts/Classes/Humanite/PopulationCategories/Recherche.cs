@@ -42,9 +42,7 @@ public class Recherche : APopulationCategory
 
 		float indiceRecherche = population.country.indiceRecherche ();
 
-		float indiceSoin = population.country.indiceMedecine();
-
-		return 1f / (1f + indiceRecherche * indiceSoin );
+		return (1f - indiceRecherche);
 	}
 
 	public override int production()
@@ -69,8 +67,8 @@ public class Recherche : APopulationCategory
 		 * qui s'y consacre (le nombre de chercheur en lui même est considéré dans l'apport en points de recherche, donc un grans pays sera quand même favorisé)
 		 */
 
-		float ratioInfectes = population.nbInfectedDetected = population.totalPopulation;
-		int points = (int)(assignedPopulation / 7000f * population.country.indiceHI () * (0.5f + ratioInfectes / 2f ));
+		float ratioInfectes = (float) population.nbInfectedDetected / (float) population.totalPopulation;
+		int points = (int)((float) assignedPopulation / 7000f *  Mathf.Sqrt( population.country.indiceHI () )* (0.5f + ratioInfectes / 2f ));
 
 		population.country.pointsRecherche += points;
 
@@ -114,7 +112,7 @@ public class Recherche : APopulationCategory
 		/**
 		 * Formule
 		 * 
-		 * Arbitrairement, il faudrait qu'il y ai 1 points par groupe de 7 000 personnes (en réalité 40 millions, pluisqu'on compte en milliers)
+		 * Arbitrairement, il faudrait qu'il y ai 1 points par groupe de x personnes (x = 10% de la population assignée à la recherche)
 		 * Plus il y a eu d'avancement, moins on a besoin de se développer (?)
 		 */
 		float somme = 0f;
@@ -122,7 +120,9 @@ public class Recherche : APopulationCategory
 			somme +=  DonneeSouche.lethalitySymptomes[ DonneeSouche.listSymptoms[i]  ] / ( 1f +((Knowledge) population.country.resources["Knowledge" + DonneeSouche.listSymptoms[i] ]).developpement);
 		}
 
-		return (int) (assignedPopulation / (7000f * somme));
+		float ratioInfectes = population.nbInfectedDetected / population.totalPopulation;
+
+		return (int) ( somme * ratioInfectes) + 1;
 	}
 
 	/**

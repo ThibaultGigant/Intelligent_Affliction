@@ -28,7 +28,7 @@ public class Exclamation : MonoBehaviour
 	 * @param valeur Valeur à fournir, entre 0 (mauvais) et 100 (bon)
 	 */
 	public void setExclamation(float valeur) {
-		int exclamationIndice = (int)((valeur + 1f) * exclamations.Length / 2f);
+		int exclamationIndice =  Mathf.Min(exclamations.Length - 1, (int)((valeur + 1f) * exclamations.Length / 2f));
 
 		for  ( int i = 0 ; i < exclamations.Length ; i++ ) {
 			exclamations [i].SetActive (false);

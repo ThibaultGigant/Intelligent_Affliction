@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GraphiquesCategories : MonoBehaviour
 {
+	public GameObject[] morePanel;
 
 	/**
 	 * Indique si le panel des catégories est affiché ou non
@@ -19,14 +20,14 @@ public class GraphiquesCategories : MonoBehaviour
 	/**
 	 * Graphique correspondant à la catégorie
 	 */
-	private GameObject graphique;
+	public GameObject graphique;
 
 	// Use this for initialization
 	void Awake ()
 	{
-		graphique = GameObject.Find ("/GameManager/Menus/Menu Gauche/More Infos/Graphiques/Catégories/" + gameObject.name);
-		graphique.transform.FindChild("Production").GetComponent<RawImage>().texture = new Texture2D(100,100);
-		graphique.transform.FindChild("Consommation").GetComponent<RawImage>().texture = new Texture2D(100,100);
+		Debug.Log ("Graph Cate Awake");
+		transform.FindChild("Production").GetComponent<RawImage>().texture = new Texture2D(100,100);
+		transform.FindChild("Consommation").GetComponent<RawImage>().texture = new Texture2D(100,100);
 	}
 	
 	// Update is called once per frame
@@ -38,7 +39,7 @@ public class GraphiquesCategories : MonoBehaviour
 				isVisible = false;
 			}
 			else if (ClockManager.newDay) {
-				categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
+				categories = Parametres.paysSelected.GetComponent<Pays> ().population.categories;
 				setGraphique ();
 			}
 		}
@@ -46,8 +47,10 @@ public class GraphiquesCategories : MonoBehaviour
 	}
 
 	public void setGraphique() {
-		categories.categories[gameObject.name].createGraphiqueProduction ((Texture2D) (graphique.transform.FindChild("Production").GetComponent<RawImage>().texture));
-		categories.categories[gameObject.name].createGraphiqueConsommation ((Texture2D) (graphique.transform.FindChild("Consommation").GetComponent<RawImage>().texture));
+		if (transform.FindChild("Production") != null)
+			categories[gameObject.name].createGraphiqueProduction ( (transform.FindChild("Production").gameObject));
+		if (transform.FindChild("Consommation") != null)
+			categories[gameObject.name].createGraphiqueConsommation ( (transform.FindChild("Consommation").gameObject));
 		//graphique.transform.FindChild ("Consommation/Data").GetComponentInChildren<LineChart> ().UpdateData( categories.categories[gameObject.name].createGraphiqueConsommation () );
 	}
 
@@ -57,9 +60,26 @@ public class GraphiquesCategories : MonoBehaviour
 	public void toggleVisible() {
 		isVisible = !isVisible;
 		if (isVisible && Parametres.paysSelected != null) {
-			transform.Find ("/GameManager/Menus/Menu Gauche/More Infos/Graphiques").gameObject.SetActive(true);
-			categories = Parametres.paysSelected.GetComponent<Pays> ().population.categoriesPop;
+			gameObject.SetActive (true);
+			graphique.SetActive(true);
+			categories = Parametres.paysSelected.GetComponent<Pays> ().population.categories;
 			setGraphique ();
+			foreach( GameObject g in morePanel) {
+				if (g.activeSelf)
+					g.SetActive (false);
+			}
+			foreach (Transform t in graphique.transform.FindChild("Catégories")) {
+				if (t != transform)
+					t.gameObject.SetActive (false);
+			}
+		}
+		else {
+			GameObject graph = transform.Find ("/GameManager/Menus/Menu Gauche/More Infos/Graphiques").gameObject;
+			foreach (Transform t in graph.transform.FindChild("Catégories")) {
+				t.gameObject.SetActive (false);
+			}
+			graph.SetActive(false);
+			gameObject.SetActive (false);
 		}
 	}
 }

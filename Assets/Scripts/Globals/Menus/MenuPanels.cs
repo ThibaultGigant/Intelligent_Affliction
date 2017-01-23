@@ -47,7 +47,13 @@ public class MenuPanels : MonoBehaviour
 
 	void Update () {
 		if (Parametres.paysSelected != null)
-			smileyHappiness.setSmiley (Parametres.paysSelected.GetComponentInChildren<Pays> ().population.getHappinessIndex());
+			smileyHappiness.setSmiley (Parametres.paysSelected.GetComponentInChildren<Pays> ().population.getHappinessIndex ());
+		else {
+			CategoriesPanel.SetActive (false);
+			Image image = Happiness.transform.FindChild("More").GetComponent<Image> ();
+			image.sprite = plusButton;
+		}
+			
 	}
 
 	/**
@@ -79,9 +85,10 @@ public class MenuPanels : MonoBehaviour
 	}
 
 	public void GraphiqueAgrOnClick () {
-		Debug.Log ("Hakuna Menu Panel");
-		graphiquesPanel.SetActive (true);
-		GraphiqueOnClick ("Agriculture");
+		if (graphiquesPanel.activeSelf)
+			graphiquesPanel.SetActive (false);
+		else
+			graphiquesPanel.SetActive (true);
 	}
 
 	/**
@@ -100,11 +107,11 @@ public class MenuPanels : MonoBehaviour
 		}
 
 		if (image.sprite == plusButton) {
-			CategoriesPanel.SetActive (true);
+			//CategoriesPanel.SetActive (true);
 			image.sprite = moinsButton;
 		}
 		else {
-			CategoriesPanel.SetActive (false);
+			//CategoriesPanel.SetActive (false);
 			image.sprite = plusButton;
 		}
 

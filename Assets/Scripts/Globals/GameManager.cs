@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject miniEarth;
 	public Text nombrePopulationText;
 	private PaysManager paysManager;
+	private Pays lastPaysSelected = null;
 
 	private float largeurMenuPrincipal = Screen.width * 1.0f;
 
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		updateMenuPricipal ();
+		if (lastPaysSelected != Parametres.paysSelected)
+			Parametres.switchPays = true;
+		else
+			Parametres.switchPays = false;
 	}
 
 	private void updateMenuPricipal () {

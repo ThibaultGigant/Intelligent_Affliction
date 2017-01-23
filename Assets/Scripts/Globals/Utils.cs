@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Globalization;
+using UnityEngine.UI;
 
 /**
  * Utils
@@ -35,11 +36,7 @@ public static class Utils
 				return i;
 		}
 
-		/**
-		 * Si un problème à été rencontré,
-		 * par exemple, la liste ne somme pas à 100
-		 */
-		return -1;
+		return liste.Count - 1;
 	}
 
 	public static Couple<float, float> moyenneVariance(uint[] liste) {
@@ -90,44 +87,50 @@ public static class Utils
 	 * @return Le résultat
 	 */
 	public static float indicesNormalises(float[,] indices) {
-		float resultat = 1;
+		float resultat = 1f;
 		for ( int i = 0 ; i < indices.GetLength(0) ; i++ ) {
-			if (indices[i,5] == 0f)
+			if (indices [i, 5] == 0f) {
 				resultat *= ((indices [i, 0] * (indices [i, 4] - indices [i, 3]) / (indices [i, 2] - indices [i, 1])) + indices [i, 3]);
+			}
 			else
 				resultat /= ((indices [i, 0] * (indices [i, 4] - indices [i, 3]) / (indices [i, 2] - indices [i, 1])) + indices [i, 3]);
 		}
 		return resultat;
 	}
 
-	public static void createGraphique(Texture2D texture, LimitedQueue<int> liste) {
+	public static void createGraphique(GameObject graphique, LimitedQueue<int> liste) {
+		Texture2D texture = (Texture2D) (graphique.GetComponent<RawImage>().texture);
 		UnityEngine.Color backgroundColor = new UnityEngine.Color (30f/255f,30f/255f,30f/255f,200f/255f);
 		int i = 0;
-		int max = liste.Peek();
-		foreach (int nb in liste)
-			if (max < nb)
-				max = nb;
-			
-		foreach (int nb in liste) {
-			for (int j = 0; j < texture.height; j++) {
-				texture.SetPixel (i, j, backgroundColor);
+		if (liste.Count != 0) {
+			int max = liste.Peek ();
+			foreach (int nb in liste)
+				if (max < nb)
+					max = nb;
+				
+			foreach (int nb in liste) {
+				for (int j = 0; j < texture.height; j++) {
+					texture.SetPixel (i, j, backgroundColor);
+				}
+
+				float nb_norma = (float)nb;
+				nb_norma /= max;
+				nb_norma *= texture.height;
+
+
+				//texture.SetPixel (i, Mathf.Max((int)nb_norma - 1, 0), Color.white);
+				texture.SetPixel (i, (int)nb_norma, Color.white);
+
+				i++;
 			}
-
-			float nb_norma = (float) nb;
-			nb_norma /= max;
-			nb_norma *= texture.height;
-
-
-			//texture.SetPixel (i, Mathf.Max((int)nb_norma - 1, 0), Color.white);
-			texture.SetPixel (i, (int)nb_norma, Color.white);
-
-			i++;
+			graphique.transform.FindChild ("Max").GetComponent<Text> ().text = "" + max;
 		}
 		for ( i = liste.Count ; i < texture.width ; i++ ) {
 			for ( int j = 0 ; j < texture.height ; j ++) {
 				texture.SetPixel (i, j, backgroundColor);
 			}
 		}
+
 
 		texture.Apply ();
 	}

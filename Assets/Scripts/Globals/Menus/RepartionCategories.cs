@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class RepartionCategories : MonoBehaviour {
 
+	public GameObject[] morePanel;
+
 	/**
 	 * Pays sélectionné
 	 */
@@ -33,10 +35,10 @@ public class RepartionCategories : MonoBehaviour {
 				isVisible = false;
 				gameObject.SetActive(false);
 			}
-			else if (ClockManager.newDay) {
+			else if (ClockManager.newDay || Parametres.switchPays) {
 				if (pays == null || pays.nomPays != Parametres.paysSelected.name) {
 					pays = Parametres.paysSelected.GetComponent<Pays> ();
-					categories = pays.population.categoriesPop;
+					categories = pays.population.categories;
 				}
 				setRepartition ();
 			}
@@ -66,15 +68,19 @@ public class RepartionCategories : MonoBehaviour {
 	 */
 	public void toggleVisible() {
 		isVisible = !isVisible;
-		if (Parametres.paysSelected == null) {
+		if (!isVisible || Parametres.paysSelected == null) {
 			isVisible = false;
 			gameObject.SetActive(false);
 		}
 		if (isVisible && Parametres.paysSelected != null) {
 			gameObject.SetActive(true);
 			pays = Parametres.paysSelected.GetComponent<Pays> ();
-			categories = pays.population.categoriesPop;
+			categories = pays.population.categories;
 			setRepartition ();
+			foreach( GameObject g in morePanel) {
+				if (g.activeSelf)
+					g.SetActive (false);
+			}
 		}
 	}
 

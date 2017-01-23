@@ -61,11 +61,11 @@ public class Medecine : APopulationCategory
 
 		foreach ( Ressource resource in population.country.resources.resources.Values ) {
 			if (resource.GetType () != typeof(Knowledge))
-				return;
+				continue;
 			knowledge = (Knowledge) resource;
 
-			knowledgesFacteurDetection 	+= knowledge.developpement * DonneeSouche.detectabilitySymptomes[resource.nom.Substring(9)];
-			knowledgesFacteurSoin		+= knowledge.developpement / DonneeSouche.lethalitySymptomes[resource.nom.Substring(9)];
+			knowledgesFacteurDetection 	+= knowledge.developpement * DonneeSouche.detectabilitySymptomes[knowledge.sujetKnowledge];
+			knowledgesFacteurSoin		+= knowledge.developpement / DonneeSouche.lethalitySymptomes[knowledge.sujetKnowledge];
 		}
 
 		int soigne = (int) (assignedPopulation * ratioInfectedPopulation * knowledgesFacteurDetection / 20f);
@@ -89,18 +89,12 @@ public class Medecine : APopulationCategory
 	 * @return Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE
 	 */
 	public override float besoins () {
-		/**
-		 * Si la recherche n'avance pas assez (est loin de sa production idéale), et qu'il n'y a assez de soignés
-		 * on peut se permettre de relacher des médecins
-		 * 
-		 * S'il n'y a pas assez de soignés, ce n'est pas bien
-		 */
-
-		float indiceRecherche = population.country.indiceRecherche ();
-
 		float indiceSoin = population.country.indiceMedecine();
 
-		return indiceRecherche / (1f + indiceSoin);
+		if (ideal () == 0)
+			return -0.2f;
+
+		return 1f - indiceSoin;
 	}
 
 	public override int production()
@@ -126,6 +120,8 @@ public class Medecine : APopulationCategory
 	}
 
 	public float moyenneSoignes() {
+		if (soignes.Count == 0)
+			return 0f;
 		float moyenne = 0f;
 		foreach (float nb in soignes) {
 			moyenne += nb;
@@ -135,12 +131,24 @@ public class Medecine : APopulationCategory
 	}
 
 	public float moyenneNouveauxInfectes() {
+
+		if (infectesDecouverts.Count == 0)
+			return 0f;
+
 		float moyenne = 0f;
 		foreach (float nb in infectesDecouverts) {
 			moyenne += nb;
 		}
 		moyenne /= infectesDecouverts.Count;
 		return moyenne;
+	}
+
+	public override void createGraphiqueProduction (GameObject graphique) {
+		Utils.createGraphique (graphique, infectesDecouverts);
+	}
+
+	public override void createGraphiqueConsommation(GameObject graphique) {
+		Utils.createGraphique (graphique, soignes);
 	}
 
 }

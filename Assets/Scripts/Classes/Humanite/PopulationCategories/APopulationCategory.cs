@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class APopulationCategory
 {
@@ -164,44 +165,17 @@ public abstract class APopulationCategory
 		return false;
 	}
 
-	public void createGraphiqueProduction (Texture2D texture) {
-		Utils.createGraphique (texture, productions);
-		/*UnityEngine.Color backgroundColor = new UnityEngine.Color (30f/255f,30f/255f,30f/255f,200f/255f);
-		int i = 0;
-		int max = getMaxProduction ();
-		foreach (int nb in productions) {
-			for (int j = 0; j < texture.height; j++) {
-				texture.SetPixel (i, j, backgroundColor);
-			}
-
-			float nb_norma = (float) nb;
-			nb_norma /= max;
-			nb_norma *= texture.height;
-
-			Debug.Log (nb_norma + " " + nb);
-
-				
-			//texture.SetPixel (i, Mathf.Max((int)nb_norma - 1, 0), Color.white);
-			texture.SetPixel (i, (int)nb_norma, Color.white);
-
-			i++;
-		}
-		for ( i = productions.Count ; i < texture.width ; i++ ) {
-			for ( int j = 0 ; j < texture.height ; j ++) {
-				texture.SetPixel (i, j, backgroundColor);
-			}
-		}
-
-		texture.Apply ();*/
+	public virtual void createGraphiqueProduction (GameObject graphique) {
+		Utils.createGraphique (graphique, productions);
 	}
 
-	public void createGraphiqueConsommation(Texture2D texture) {
+	public virtual void createGraphiqueConsommation(GameObject graphique) {
 		if (nom == "Agriculture")
-			Utils.createGraphique (texture, population.country.resources ["Nourriture"].consommation);
+			Utils.createGraphique (graphique, population.country.resources ["Nourriture"].consommation);
 		else if (nom == "Loisirs")
-			Utils.createGraphique (texture, population.country.resources ["RessourceLoisirs"].consommation);
+			Utils.createGraphique (graphique, population.country.resources ["Loisirs"].consommation);
 		else if (nom == "Transports")
-			Utils.createGraphique (texture, population.country.resources ["Transports"].consommation);
+			Utils.createGraphique (graphique, population.country.resources ["Transports"].consommation);
 	}
 		
 	/**
