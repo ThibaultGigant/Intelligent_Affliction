@@ -36,27 +36,39 @@ public class Links
 	 * Ajout d'un lien terrestre
 	 * @param pays Pays avec lequel le lien est créé. Le lien ne doit pas déjà exister
 	 */
-	public void addTerrestre(Pays pays) {
-		if (!terrestres.ContainsKey(pays.nomPays))
-			terrestres.Add (pays.nomPays, new Link(country, pays, "Terrestre"));
+	public Link addTerrestre(Pays pays) {
+		Link newLink = null;
+		if (!terrestres.ContainsKey(pays.nomPays)) {
+			newLink = new Link (country, pays, "Terrestre");
+			terrestres.Add (pays.nomPays, newLink);
+		}
+		return newLink;
 	}
 
 	/**
 	 * Ajout d'un lien aérien
 	 * @param pays Pays avec lequel le lien est créé. Le lien ne doit pas déjà exister
 	 */
-	public void addAerien(Pays pays) {
-		if (!aeriens.ContainsKey(pays.nomPays))
-			aeriens.Add (pays.nomPays, new Link(country, pays, "Aerien"));
+	public Link addAerien(Pays pays) {
+		Link newLink = null;
+		if (!aeriens.ContainsKey(pays.nomPays)) {
+			newLink = new Link (country, pays, "Aerien");
+			aeriens.Add (pays.nomPays, newLink);
+		}
+		return newLink;
 	}
 
 	/**
 	 * Ajout d'un lien maritime
 	 * @param pays Pays avec lequel le lien est créé. Le lien ne doit pas déjà exister
 	 */
-	public void addMaritime(Pays pays) {
-		if (!maritimes.ContainsKey(pays.nomPays))
-			maritimes.Add (pays.nomPays, new Link(country, pays, "Maritime"));
+	public Link addMaritime(Pays pays) {
+		Link newLink = null;
+		if (!maritimes.ContainsKey(pays.nomPays)) {
+			newLink = new Link (country, pays, "Maritime");
+			maritimes.Add (pays.nomPays, newLink);
+		}
+		return newLink;
 	}
 
 	/**

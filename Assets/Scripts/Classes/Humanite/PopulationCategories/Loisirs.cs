@@ -135,6 +135,7 @@ public class Loisirs : APopulationCategory
 
 	public override Ressource demande () {
 		RessourceLoisirs lsr = new RessourceLoisirs (population.country);
+		lsr.quantity = population.country.resources ["Loisirs"].quantity;
 
 		// Pas la peine de préciser des choses, la carte de visite dit tout
 		// Ici on va seulement dire qu'on a besoin de plus de savoir faire

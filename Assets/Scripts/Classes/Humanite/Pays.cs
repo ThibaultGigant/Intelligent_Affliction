@@ -115,6 +115,7 @@ public class Pays : MonoBehaviour
 		 * • Consomation des ressources
 		 */
 		if (ClockManager.newDay) {
+			Debug.Log ("Pays Update" + population.categories);
 			population.categories.produce ();
 			resources.consome ();
 			population.reorganizePopulationCategories ();
@@ -157,22 +158,13 @@ public class Pays : MonoBehaviour
 
 		if (Parametres.paysSelected && Parametres.paysSelected.name == name && mat.GetFloat ("_Metallic") != 0f) {
 			mat.SetFloat ("_Metallic", 0f);
-//			if (light)
-//				light.SetActive (true);
 		}
 		else if (Parametres.paysSelected && Parametres.paysSelected.name != name && mat.GetFloat ("_Metallic") == 0f) {
 			mat.SetFloat ("_Metallic", 0.5f);
-//			if (light)
-//				light.SetActive (false);
 		}
 		else if (!Parametres.paysSelected && mat.GetFloat ("_Metallic") != 0f) {
 			mat.SetFloat ("_Metallic", 0f);
-//			if (light)
-//				light.SetActive (false);
 		}
-//		else if (Parametres.paysSelected && Parametres.paysSelected.name == name && light && !light.activeSelf) {
-//			light.SetActive (true);
-//		}
 			
 	}
 
@@ -533,7 +525,7 @@ public class Pays : MonoBehaviour
 		if (max > Parametres.seuilDAppelALAide) {
 			CarteDeVisite carte = getCarteDeVisite ();
 			Ressource res = cateMax.demande ();
-			res.quantity = (uint)((float)res.quantity / paysNonLies.Count);
+			//res.quantity = (uint)((float)res.quantity / paysNonLies.Count);
 			if (res != null)
 				carte.addRessourceDemandee (res);
 			else {
@@ -555,5 +547,87 @@ public class Pays : MonoBehaviour
 
 	public void addMessage (CarteDeVisite carte) {
 		messages.Add (carte);
+	}
+
+	public void traiteMessages () {
+		if (messages.Count == 0)
+			return;
+		
+		CarteDeVisite msg = messages [0];
+		messages.RemoveAt (0);
+
+		float besoin;
+
+		APopulationCategory cate = null;
+		Ressource finalRessource = null;
+		Ressource finalRessourceSend = null;
+
+		bool flag = false;
+
+		foreach (Ressource res in msg.ressources.resources.Values) {
+			besoin = Mathf.Infinity;
+			cate = null;
+
+			if (res.nom == "Nourriture")
+				cate = population.categories ["Agriculture"];
+
+			if (besoin == Mathf.Infinity && res.nom.Contains ("Knowledge"))
+				cate = population.categories ["Recherche"];
+
+			if (besoin == Mathf.Infinity)
+				cate = population.categories[res.nom];
+
+			if (cate == null)
+				continue;
+
+			besoin = cate.besoins ();
+
+			if (besoin == Mathf.Infinity)
+				continue;
+			
+			if (besoin > 0.3f && res.quantity > 0.2f * (cate.ideal () - cate.moyenneProduction ())) {
+				flag = true;
+				finalRessource = res;
+				break;
+			}
+		}
+
+		foreach (Ressource res in msg.ressourcesDemandees.resources.Values) {
+			if (res.nom == "Nourriture" && res.quantity <= 0.3f * resources [res.nom].offre ().quantity)
+				finalRessourceSend = resources [res.nom];
+
+			if (res.nom.Contains ("Knowledge"))
+				finalRessourceSend = resources [res.nom];
+
+			if (finalRessourceSend != null)
+				break;
+		}
+
+		if (flag && finalRessourceSend != null) {
+			string type;
+			Link newLink;
+			if (UnityEngine.Random.value < 0.5f) {
+				newLink = links.addMaritime (msg.pays);
+				msg.pays.links.addMaritime (this);
+			}
+			else {
+				newLink = links.addAerien (msg.pays);
+				msg.pays.links.addAerien (this);
+			}
+
+			if (newLink == null)
+				return;
+			
+
+			Echange echange = new Echange ( finalRessourceSend.nom, finalRessourceSend.offre().quantity, finalRessource.nom, finalRessource.quantity, newLink);
+			createLink (this, msg.pays, echange, true);
+		}
+	}
+
+	public void createLink(Pays paysOne, Pays paysTwo, Echange echange, bool flag) {
+		echangeSet.echanges.Add (echange);
+		paysNonLies.Remove (paysTwo);
+		if (flag)
+			paysTwo.createLink (paysTwo, paysOne, echange, false);
 	}
 }

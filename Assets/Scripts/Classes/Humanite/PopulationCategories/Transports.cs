@@ -152,7 +152,7 @@ public class Transports : APopulationCategory
 
 	public override Ressource demande () {
 		RessourceTransports trs = new RessourceTransports (population.country);
-
+		trs.quantity = population.country.resources ["Transports"].quantity;
 		// Pas la peine de préciser des choses, la carte de visite dit tout
 		// Ici on va seulement dire qu'on a besoin de plus de savoir faire
 		return (Ressource) trs;

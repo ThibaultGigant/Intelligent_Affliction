@@ -157,7 +157,8 @@ public class Recherche : APopulationCategory
 		}
 
 		Knowledge know = new Knowledge (population.country, minKnowledge.sujetKnowledge, minKnowledge.coutDeRecherche);
-
+		know.quantity = minKnowledge.quantity;
+		know.developpement = minKnowledge.developpement;
 		return (Ressource) know;
 	}
 }

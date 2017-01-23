@@ -207,5 +207,16 @@ public abstract class APopulationCategory
 	 */
 	public abstract Ressource demande ();
 
+	public float moyenneProduction() {
+		if (productions.Count == 0)
+			return 0f;
+		
+		float somme = 0f;
+		foreach (int nb in productions) {
+			somme += (float) nb;
+		}
+		return somme / (float)(productions.Count);
+	}
+
 }
 
