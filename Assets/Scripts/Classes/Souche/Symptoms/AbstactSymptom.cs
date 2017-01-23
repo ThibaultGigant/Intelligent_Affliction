@@ -24,14 +24,6 @@ public abstract class AbstactSymptom
 	protected float detectableIndex;
 
 	/**
-	 * Coût de l'évolution du symptome
-	 */
-	public int coutEvolution {
-		get { return coutEvolution; }
-		set { coutEvolution = value; }
-	}
-
-	/**
 	 * Retourne le nom du symptôme
 	 * @return Nom du symptôme
 	 */
@@ -79,31 +71,46 @@ public abstract class AbstactSymptom
 	 * Altère la résistance au froid de la souche.
 	 * @return Facteur multiplicateur qui sera appliqué à cette compétence
 	 */
-	public abstract float affectSkillResistanceCold();
+	public float affectSkillResistanceCold()
+	{
+		return DonneeSouche.influenceSymptomes[this.name][0] * getAffectedByHumans();
+	}
 
 	/**
 	 * Altère la résistance à la chaleur de la souche.
 	 * @return Facteur multiplicateur qui sera appliqué à cette compétence
 	 */
-	public abstract float affectSkillResistanceHeat();
+	public float affectSkillResistanceHeat()
+	{
+		return DonneeSouche.influenceSymptomes[this.name][1] * getAffectedByHumans();
+	}
 
 	/**
 	 * Altère la transmission par l'eau de la souche.
 	 * @return Facteur multiplicateur qui sera appliqué à cette compétence
 	 */
-	public abstract float affectSkillWaterSpreading();
+	public float affectSkillWaterSpreading()
+	{
+		return DonneeSouche.influenceSymptomes[this.name][2] * getAffectedByHumans();
+	}
 
 	/**
 	 * Altère la transmission par l'air de la souche.
 	 * @return Facteur multiplicateur qui sera appliqué à cette compétence
 	 */
-	public abstract float affectSkillAirSpreading();
+	public float affectSkillAirSpreading()
+	{
+		return DonneeSouche.influenceSymptomes[this.name][3] * getAffectedByHumans();
+	}
 
 	/**
 	 * Altère la transmission par le contact de la souche.
 	 * @return Facteur multiplicateur qui sera appliqué à cette compétence
 	 */
-	public abstract float affectSkillContactSpreading();
+	public float affectSkillContactSpreading()
+	{
+		return DonneeSouche.influenceSymptomes[this.name][4] * getAffectedByHumans();
+	}
 
 }
 

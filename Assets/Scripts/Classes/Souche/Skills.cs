@@ -159,4 +159,32 @@ public class Skills {
 			return 0;
 		}
 	}
+
+	/**
+	 * Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument
+	 * @param skillName Nom de la compétence
+	 * @param nb Quantité à ajouter à la compétence
+	 */
+	public void addSkillValue(string skillName, int nb)
+	{
+		switch (skillName) {
+		case "Cold":
+			this.resistanceToCold += nb;
+			break;
+		case "Heat":
+			this.resistanceToHeat += nb;
+			break;
+		case "Water":
+			this.waterSpreading += nb;
+			break;
+		case "Air":
+			this.airSpreading += nb;
+			break;
+		case "Contact":
+			this.contactSpreading += nb;
+			break;
+		default:
+			break;
+		}
+	}
 }
