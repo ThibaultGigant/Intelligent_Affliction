@@ -1,0 +1,7 @@
+<map id="Ressource.addRessource" name="Ressource.addRessource">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#ae0675f5f378ff4af2bb1fcc4223df9d5" title="Fournie une carte de visite, indiquant les ressources qu&#39;il est prêt à échanger aux autres pays..." alt="" coords="233,5,388,32"/>
+<area shape="rect" id="node4" href="$d4/dbc/class_nourriture.html#a7260fcda5f31905571f281e9744f1a09" title="Nourriture.offre" alt="" coords="257,56,364,83"/>
+<area shape="rect" id="node5" href="$d8/df6/class_ressource_loisirs.html#af43cc00a99d706f0c1cb2d541ba69ee1" title="RessourceLoisirs.offre" alt="" coords="235,107,386,133"/>
+<area shape="rect" id="node6" href="$d1/d7b/class_ressource_transports.html#a98af0013a6de66d54318b7a02e29b380" title="RessourceTransports.offre" alt="" coords="224,157,397,184"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a772045c804795a69d4b2bd733814d5d4" title="Appel aux autres pays, pour commencer des échanges. " alt="" coords="445,5,563,32"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="Souche.getNbInfected" name="Souche.getNbInfected">
+<area shape="rect" id="node2" href="$d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="241,5,369,32"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="479,237,583,264"/>
+<area shape="rect" id="node5" href="$d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1" title="Production de points d&#39;évolution En fonction des facteurs suivants : " alt="" coords="473,107,589,133"/>
+<area shape="rect" id="node6" href="$d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="203,157,408,184"/>
+<area shape="rect" id="node7" href="$d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="209,208,402,235"/>
+<area shape="rect" id="node8" href="$d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="215,259,395,301"/>
+<area shape="rect" id="node9" href="$d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="217,325,394,352"/>
+<area shape="rect" id="node10" href="$d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="229,376,382,403"/>
+<area shape="rect" id="node11" href="$d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="456,343,607,369"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="655,237,765,264"/>
+</map>

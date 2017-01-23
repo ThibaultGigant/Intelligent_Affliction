@@ -1,0 +1,5 @@
+<map id="Skills.setResistanceCold" name="Skills.setResistanceCold">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="220,5,356,32"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="236,56,340,83"/>
+<area shape="rect" id="node4" href="$d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="404,56,547,83"/>
+</map>

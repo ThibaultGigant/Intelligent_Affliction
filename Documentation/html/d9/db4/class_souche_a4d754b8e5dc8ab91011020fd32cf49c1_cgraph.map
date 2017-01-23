@@ -1,0 +1,5 @@
+<map id="Souche.produce" name="Souche.produce">
+<area shape="rect" id="node2" href="$d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3" title="Date et Gradient d&#39;infection du dernier recueil gradient d&#39;infection. " alt="" coords="169,5,367,47"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="193,71,343,98"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="193,122,343,149"/>
+</map>

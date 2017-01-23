@@ -1,3 +1,6 @@
 <map id="Souche.removeInfectedPeople" name="Souche.removeInfectedPeople">
 <area shape="rect" id="node2" href="$dd/dbe/class_pays.html#ad32a53b2f2f9ae4055af30441190f03a" title="Pays.removeInfectedPeople" alt="" coords="249,5,432,32"/>
+<area shape="rect" id="node3" href="$d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="277,56,405,83"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="265,107,416,133"/>
+<area shape="rect" id="node5" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="480,107,591,133"/>
 </map>

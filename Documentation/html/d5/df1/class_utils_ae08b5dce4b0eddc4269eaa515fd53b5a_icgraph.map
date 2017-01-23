@@ -1,0 +1,7 @@
+<map id="Utils.tirageAlatoireList" name="Utils.tirageAlatoireList">
+<area shape="rect" id="node2" href="$df/d6a/class_population_categories.html#a5b9281e84abd366a5edf855d0cd8cace" title="Réorganisation de la population dans les catégories sans la présence du joueur. " alt="" coords="203,5,412,47"/>
+<area shape="rect" id="node5" href="$dd/d10/class_recherche.html#aa15e5a06d9ba5d7b30e897c409574bda" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="233,71,381,98"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736" title="Population.reorganizePopulation\lCategories" alt="" coords="460,5,668,47"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="716,13,813,39"/>
+<area shape="rect" id="node6" href="$dd/d10/class_recherche.html#ada9a65031923dfc821cfd5c4b5b240b8" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="497,71,631,98"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="AbstractSymptom.getAffectedByHumans" name="AbstractSymptom.getAffectedByHumans">
+<area shape="rect" id="node2" href="$d0/d63/class_abstract_symptom.html#afbb960981a918c1d78722c1592729740" title="Retourne l&#39;indice de létalité " alt="" coords="261,87,460,128"/>
+<area shape="rect" id="node3" href="$d0/d63/class_abstract_symptom.html#aa0525b5e1ad7123e409c519cb35542be" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur le..." alt="" coords="249,152,472,193"/>
+<area shape="rect" id="node10" href="$d0/d63/class_abstract_symptom.html#ab7cc3febcddbca55231472a44b299743" title="Altère la résistance au froid de la souche. " alt="" coords="267,217,454,259"/>
+<area shape="rect" id="node11" href="$d0/d63/class_abstract_symptom.html#aa1db8a952db8f2909a25b0689d95acd7" title="Altère la résistance à la chaleur de la souche. " alt="" coords="267,283,454,324"/>
+<area shape="rect" id="node12" href="$d0/d63/class_abstract_symptom.html#a47fd6921ad49f944b6466dafa8d4fc86" title="Altère la transmission par l&#39;eau de la souche. " alt="" coords="267,348,454,389"/>
+<area shape="rect" id="node13" href="$d0/d63/class_abstract_symptom.html#a0df5d9fc6b28809e024f9bdd92f3a910" title="Altère la transmission par l&#39;air de la souche. " alt="" coords="267,413,454,455"/>
+<area shape="rect" id="node14" href="$d0/d63/class_abstract_symptom.html#a2d1d497c8dc9c616fccc2ba5f11d9a53" title="Altère la transmission par le contact de la souche. " alt="" coords="267,479,454,520"/>
+<area shape="rect" id="node4" href="$d1/d6f/class_arret_des_organes.html#ad9e3a8377761467b31e9721b087c6dad" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="526,5,717,47"/>
+<area shape="rect" id="node5" href="$d7/d32/class_diarrhee.html#a6e95d35cb52f71050d115adbd02b79f9" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="520,71,723,98"/>
+<area shape="rect" id="node6" href="$d9/d48/class_eternuements.html#a77e4d409c54328930d64b3ab8b63a857" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="535,123,707,164"/>
+<area shape="rect" id="node7" href="$d2/d9c/class_fievre.html#a21c517ddf19f60e31f1a21461fdcaaef" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="527,189,716,215"/>
+<area shape="rect" id="node8" href="$d0/dc6/class_sueurs.html#a97444e374df695f5ca3f0d99e3956097" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="523,239,719,266"/>
+<area shape="rect" id="node9" href="$d1/d49/class_toux.html#a23ef87aa9c790a06c102b13037f63f00" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="530,290,713,317"/>
+</map>

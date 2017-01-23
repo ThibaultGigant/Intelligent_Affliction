@@ -1,5 +1,6 @@
 <map id="GameManager.updateMenuPricipal" name="GameManager.updateMenuPricipal">
-<area shape="rect" id="node2" href="$db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="285,5,520,32"/>
-<area shape="rect" id="node3" href="$df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="293,56,512,83"/>
-<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="568,56,721,83"/>
+<area shape="rect" id="node2" href="$db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="279,5,507,32"/>
+<area shape="rect" id="node3" href="$df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="286,56,499,83"/>
+<area shape="rect" id="node5" href="$d5/df1/class_utils.html#aad335fc7483db362ea9250bac1ed9ae4" title="Utils.toStringFormat" alt="" coords="323,107,462,133"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="555,56,705,83"/>
 </map>

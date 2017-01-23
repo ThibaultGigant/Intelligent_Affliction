@@ -1,0 +1,6 @@
+<map id="Inactifs.besoins" name="Inactifs.besoins">
+<area shape="rect" id="node2" href="$d5/df1/class_utils.html#a562d5a7f1cda04c97558fce50ca504f8" title="Renvoie le produit des indices, chacun normalisées comme décris dans la structure donnée en paramètre..." alt="" coords="165,5,324,32"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e" title="indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l&#39;humidi..." alt="" coords="181,56,308,83"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="193,107,296,133"/>
+<area shape="rect" id="node5" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="372,107,569,133"/>
+</map>

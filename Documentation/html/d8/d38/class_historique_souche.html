@@ -76,7 +76,7 @@ Graphe de collaboration de HistoriqueSouche:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d8/d9d/class_historique_souche__coll__graph.png" border="0" usemap="#_historique_souche_coll__map" alt="Collaboration graph"/></div>
 <map name="_historique_souche_coll__map" id="_historique_souche_coll__map">
-<area shape="rect" id="node2" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="5,5,145,32"/>
+<area shape="rect" id="node2" href="../../d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,5,181,47"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -85,33 +85,78 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a025fe0bcfc1240b481ac23148dd77dee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a025fe0bcfc1240b481ac23148dd77dee">HistoriqueSouche</a> ()</td></tr>
 <tr class="memdesc:a025fe0bcfc1240b481ac23148dd77dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a025fe0bcfc1240b481ac23148dd77dee">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a025fe0bcfc1240b481ac23148dd77dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70689708d16798cb98c5aef592c88f9"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ae70689708d16798cb98c5aef592c88f9">getPreviousNbInfected</a> ()</td></tr>
+<tr class="memdesc:ae70689708d16798cb98c5aef592c88f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre d'infectés qu'il y avait à l'itération précédente.  <a href="#ae70689708d16798cb98c5aef592c88f9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae70689708d16798cb98c5aef592c88f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88cf5c16bdd7b080a540f1ece5194bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ac88cf5c16bdd7b080a540f1ece5194bb">setPreviousNbInfected</a> (uint previous)</td></tr>
+<tr class="memdesc:ac88cf5c16bdd7b080a540f1ece5194bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Règle le nombre d'infectés à l'itération précédente à la valeur voulue.  <a href="#ac88cf5c16bdd7b080a540f1ece5194bb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac88cf5c16bdd7b080a540f1ece5194bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eec4309278b140bc86d744649eb242a"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a9eec4309278b140bc86d744649eb242a">lastEvolutionTransmission</a> ()</td></tr>
+<tr class="memdesc:a9eec4309278b140bc86d744649eb242a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date de la dernière évolution d'une transmission Renvoie DateTime.MinValue si on n'a pas encore fait évoluer la transmission.  <a href="#a9eec4309278b140bc86d744649eb242a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9eec4309278b140bc86d744649eb242a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fb373426ac777a22bc78ddcf1f2323"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ab2fb373426ac777a22bc78ddcf1f2323">lastEvolutionResistance</a> ()</td></tr>
+<tr class="memdesc:ab2fb373426ac777a22bc78ddcf1f2323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date de la dernière évolution de la résistance Renvoie DateTime.MinValue si on n'a pas encore fait évoluer la résistance.  <a href="#ab2fb373426ac777a22bc78ddcf1f2323">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab2fb373426ac777a22bc78ddcf1f2323"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0048eba6530fd01a7b45c75edf1144fe"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a0048eba6530fd01a7b45c75edf1144fe">lastEvolutionEvolutionSpeed</a> ()</td></tr>
+<tr class="memdesc:a0048eba6530fd01a7b45c75edf1144fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date de la dernière évolution de la vitesse d'évolution.  <a href="#a0048eba6530fd01a7b45c75edf1144fe">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0048eba6530fd01a7b45c75edf1144fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1fa942fa83446360a8c0f06d55bb209"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#aa1fa942fa83446360a8c0f06d55bb209">lastEvolutionSymptomes</a> ()</td></tr>
+<tr class="memdesc:aa1fa942fa83446360a8c0f06d55bb209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date de la dernière évolution des symptômes Renvoie DateTime.MinValue si on n'a pas encore fait évoluer les symptômes.  <a href="#aa1fa942fa83446360a8c0f06d55bb209">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa1fa942fa83446360a8c0f06d55bb209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae184354281c889bc4704ec10a12bec3"><td class="memItemLeft" align="right" valign="top">KeyValuePair&lt; DateTime, uint &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3">lastInfectionGradient</a> ()</td></tr>
+<tr class="memdesc:aae184354281c889bc4704ec10a12bec3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Date et Gradient d'infection du dernier recueil gradient d'infection.  <a href="#aae184354281c889bc4704ec10a12bec3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aae184354281c889bc4704ec10a12bec3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45fa8c493fd5a0a25459d15d8ccd879a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a">followingInfectionGradient</a> (DateTime date)</td></tr>
+<tr class="memdesc:a45fa8c493fd5a0a25459d15d8ccd879a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcule le pourcentage d'augmentation du gradient d'infection sur les 10 updates suivant la date passée en paramètres.  <a href="#a45fa8c493fd5a0a25459d15d8ccd879a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a45fa8c493fd5a0a25459d15d8ccd879a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab89fe759151227fd9e5de30a73dcef64"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64">lastBestEvolutionTransmissionDate</a> ()</td></tr>
+<tr class="memdesc:ab89fe759151227fd9e5de30a73dcef64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d'infection.  <a href="#ab89fe759151227fd9e5de30a73dcef64">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab89fe759151227fd9e5de30a73dcef64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c987b43eb546edbaed06e14c3359f6"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6">lastBestEvolutionResistanceDate</a> ()</td></tr>
+<tr class="memdesc:ad9c987b43eb546edbaed06e14c3359f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d'infection.  <a href="#ad9c987b43eb546edbaed06e14c3359f6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad9c987b43eb546edbaed06e14c3359f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f96687fbbf049b3408abf3fdb01e41"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a81f96687fbbf049b3408abf3fdb01e41">lastBestEvolutionSymptomsDate</a> ()</td></tr>
+<tr class="memdesc:a81f96687fbbf049b3408abf3fdb01e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la date de la fois où on a augmenté les symptomes et ça a grandement augmenté le gradient d'infection.  <a href="#a81f96687fbbf049b3408abf3fdb01e41">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a81f96687fbbf049b3408abf3fdb01e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae55c55b516290c566b2d6f639a2d00ae"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae">getCorrespondingProperty</a> (DateTime date)</td></tr>
+<tr class="memdesc:ae55c55b516290c566b2d6f639a2d00ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la date passée en argument.  <a href="#ae55c55b516290c566b2d6f639a2d00ae">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae55c55b516290c566b2d6f639a2d00ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28f683aa480fe35fa8306188775b0792"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a28f683aa480fe35fa8306188775b0792">addTransmissionEvolution</a> (string s, DateTime date)</td></tr>
+<tr class="memdesc:a28f683aa480fe35fa8306188775b0792"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre.  <a href="#a28f683aa480fe35fa8306188775b0792">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a28f683aa480fe35fa8306188775b0792"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a252c114d378c141e1cc4830a2d9a075a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a252c114d378c141e1cc4830a2d9a075a">addResistanceEvolution</a> (string s, DateTime date)</td></tr>
+<tr class="memdesc:a252c114d378c141e1cc4830a2d9a075a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre.  <a href="#a252c114d378c141e1cc4830a2d9a075a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a252c114d378c141e1cc4830a2d9a075a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0c19824127b6f70cf6124d2ee2272e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ae0c19824127b6f70cf6124d2ee2272e4">addSymptomEvolution</a> (string s, DateTime date)</td></tr>
+<tr class="memdesc:ae0c19824127b6f70cf6124d2ee2272e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une évolution d'un symptôme dans le sens signifié par la string passée en paramètre.  <a href="#ae0c19824127b6f70cf6124d2ee2272e4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae0c19824127b6f70cf6124d2ee2272e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a34f5b9143ea50bcd5af19ba8b3be4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ae1a34f5b9143ea50bcd5af19ba8b3be4">addEvolutionSpeedEvolution</a> (DateTime date)</td></tr>
+<tr class="memdesc:ae1a34f5b9143ea50bcd5af19ba8b3be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une évolution de la vitesse d'évolution.  <a href="#ae1a34f5b9143ea50bcd5af19ba8b3be4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae1a34f5b9143ea50bcd5af19ba8b3be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a211ae8264bf4e3913d957f74588c6f02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a211ae8264bf4e3913d957f74588c6f02">addInfectionGradient</a> (DateTime date, uint gradient)</td></tr>
+<tr class="memdesc:a211ae8264bf4e3913d957f74588c6f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute un gradient d'infection à la date indiquée.  <a href="#a211ae8264bf4e3913d957f74588c6f02">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a211ae8264bf4e3913d957f74588c6f02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:a64967a6049d41fc6e488fdde23a1b542"><td class="memItemLeft" align="right" valign="top">List&lt; DateTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a64967a6049d41fc6e488fdde23a1b542">datesEvolutionTransmission</a></td></tr>
-<tr class="memdesc:a64967a6049d41fc6e488fdde23a1b542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des dates d'évolution de la transmission.  <a href="#a64967a6049d41fc6e488fdde23a1b542">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a64967a6049d41fc6e488fdde23a1b542"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a705b0b5577f82cfc2254e3c7cbdb5de6"><td class="memItemLeft" align="right" valign="top">List&lt; DateTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a705b0b5577f82cfc2254e3c7cbdb5de6">datesEvolutionResistance</a></td></tr>
-<tr class="memdesc:a705b0b5577f82cfc2254e3c7cbdb5de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des dates d'évolution de la Resistance.  <a href="#a705b0b5577f82cfc2254e3c7cbdb5de6">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a705b0b5577f82cfc2254e3c7cbdb5de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864bd4cc193e81fe86983f5bdd076992"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a864bd4cc193e81fe86983f5bdd076992">previousNbInfected</a> = 0</td></tr>
+<tr class="memdesc:a864bd4cc193e81fe86983f5bdd076992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de personnes infectées par cette souche dans ce pays à l'itération précédente.  <a href="#a864bd4cc193e81fe86983f5bdd076992">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a864bd4cc193e81fe86983f5bdd076992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceca6ca2a806e594bfc05d518c876389"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, List&lt; DateTime &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#aceca6ca2a806e594bfc05d518c876389">datesEvolutionTransmission</a></td></tr>
+<tr class="memdesc:aceca6ca2a806e594bfc05d518c876389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionnaire contenant les dates d'évolution des compétences de transmission Clé = mode de transmission Valeur = liste des dates d'évolution.  <a href="#aceca6ca2a806e594bfc05d518c876389">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aceca6ca2a806e594bfc05d518c876389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f84187c6da82a070bacf63469e5bf30"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, List&lt; DateTime &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a5f84187c6da82a070bacf63469e5bf30">datesEvolutionResistance</a></td></tr>
+<tr class="memdesc:a5f84187c6da82a070bacf63469e5bf30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionnaire contenant les dates d'évolution des compétences de résistance Clé = mode de résistance Valeur = liste des dates d'évolution.  <a href="#a5f84187c6da82a070bacf63469e5bf30">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5f84187c6da82a070bacf63469e5bf30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c01ee9b5255c87c95600e1b6b8d4dc"><td class="memItemLeft" align="right" valign="top">List&lt; DateTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ac9c01ee9b5255c87c95600e1b6b8d4dc">datesEvolutionEvolutionSpeed</a></td></tr>
 <tr class="memdesc:ac9c01ee9b5255c87c95600e1b6b8d4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des dates d'évolution de la vitesse d'évolution.  <a href="#ac9c01ee9b5255c87c95600e1b6b8d4dc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac9c01ee9b5255c87c95600e1b6b8d4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ab2e50b4ddc219d3cc095e5f58b92a8"><td class="memItemLeft" align="right" valign="top">List&lt; DateTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a0ab2e50b4ddc219d3cc095e5f58b92a8">datesEvolutionSymptomes</a></td></tr>
-<tr class="memdesc:a0ab2e50b4ddc219d3cc095e5f58b92a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des dates d'évolution de la transmission.  <a href="#a0ab2e50b4ddc219d3cc095e5f58b92a8">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a0ab2e50b4ddc219d3cc095e5f58b92a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1aca3fbff03704a991c184503a313f"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a5e1aca3fbff03704a991c184503a313f">transmissionEvolutionList</a></td></tr>
-<tr class="memdesc:a5e1aca3fbff03704a991c184503a313f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des types de transmission améliorée dans l'ordre.  <a href="#a5e1aca3fbff03704a991c184503a313f">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a5e1aca3fbff03704a991c184503a313f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a868a3f72db81e2ad4386086af9f86151"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#a868a3f72db81e2ad4386086af9f86151">resistanceEvolutionList</a></td></tr>
-<tr class="memdesc:a868a3f72db81e2ad4386086af9f86151"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des types de résistance améliorée dans l'ordre.  <a href="#a868a3f72db81e2ad4386086af9f86151">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a868a3f72db81e2ad4386086af9f86151"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa886f83268ebf2122de2135662893528"><td class="memItemLeft" align="right" valign="top">List&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#aa886f83268ebf2122de2135662893528">symptomsEvolutionList</a></td></tr>
-<tr class="memdesc:aa886f83268ebf2122de2135662893528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des types de symptômes amélioré dans l'ordre.  <a href="#aa886f83268ebf2122de2135662893528">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aa886f83268ebf2122de2135662893528"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac53f0c05be8cc66dd269eb9d75bbdf4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d92/class_limited_queue.html">LimitedQueue</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ac53f0c05be8cc66dd269eb9d75bbdf4f">infectionGradient</a></td></tr>
-<tr class="memdesc:ac53f0c05be8cc66dd269eb9d75bbdf4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A changer en limitedqueue.  <a href="#ac53f0c05be8cc66dd269eb9d75bbdf4f">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ac53f0c05be8cc66dd269eb9d75bbdf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab144f5e9161288ed39b77c6d81c5f99f"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, List&lt; DateTime &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#ab144f5e9161288ed39b77c6d81c5f99f">datesEvolutionSymptoms</a></td></tr>
+<tr class="memdesc:ab144f5e9161288ed39b77c6d81c5f99f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dictionnaire contenant les dates d'évolution des symptômes Clé = symptôme Valeur = liste des dates d'évolution.  <a href="#ab144f5e9161288ed39b77c6d81c5f99f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab144f5e9161288ed39b77c6d81c5f99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0471f5c2f8f1b66b7cd0690fff74c81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d11/class_limited_list.html">LimitedList</a>&lt; KeyValuePair&lt; DateTime, uint &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d38/class_historique_souche.html#aa0471f5c2f8f1b66b7cd0690fff74c81">infectionGradient</a></td></tr>
+<tr class="memdesc:aa0471f5c2f8f1b66b7cd0690fff74c81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gradient d'infection des dernières itérations.  <a href="#aa0471f5c2f8f1b66b7cd0690fff74c81">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa0471f5c2f8f1b66b7cd0690fff74c81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Classe représentant la "mémoire" de la souche, qui va lui permettre de faire des choix. </p>
@@ -132,6 +177,586 @@ Attributs privés</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Constructeur. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="ae1a34f5b9143ea50bcd5af19ba8b3be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a34f5b9143ea50bcd5af19ba8b3be4">&sect;&nbsp;</a></span>addEvolutionSpeedEvolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HistoriqueSouche.addEvolutionSpeedEvolution </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une évolution de la vitesse d'évolution. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ae1a34f5b9143ea50bcd5af19ba8b3be4_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ae1a34f5b9143ea50bcd5af19ba8b3be4_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ae1a34f5b9143ea50bcd5af19ba8b3be4_icgraph" id="d8/d38/class_historique_souche_ae1a34f5b9143ea50bcd5af19ba8b3be4_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#ae1d8037866dc94d5ad3a4f3c41ec757b" title="Application de l&#39;augmentation de la vitesse d&#39;évolution. " alt="" coords="255,13,448,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="496,13,600,39"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="648,13,759,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a211ae8264bf4e3913d957f74588c6f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a211ae8264bf4e3913d957f74588c6f02">&sect;&nbsp;</a></span>addInfectionGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HistoriqueSouche.addInfectionGradient </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>gradient</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute un gradient d'infection à la date indiquée. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date d'ajout </td></tr>
+    <tr><td class="paramname">gradient</td><td>Gradient d'infection à ajouter </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_a211ae8264bf4e3913d957f74588c6f02_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_a211ae8264bf4e3913d957f74588c6f02_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_a211ae8264bf4e3913d957f74588c6f02_icgraph" id="d8/d38/class_historique_souche_a211ae8264bf4e3913d957f74588c6f02_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="251,13,355,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="403,13,513,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a252c114d378c141e1cc4830a2d9a075a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a252c114d378c141e1cc4830a2d9a075a">&sect;&nbsp;</a></span>addResistanceEvolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HistoriqueSouche.addResistanceEvolution </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Chaine de caractères donnant le sens de l'évolution </td></tr>
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_a252c114d378c141e1cc4830a2d9a075a_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_a252c114d378c141e1cc4830a2d9a075a_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_a252c114d378c141e1cc4830a2d9a075a_icgraph" id="d8/d38/class_historique_souche_a252c114d378c141e1cc4830a2d9a075a_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="268,13,437,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="485,13,589,39"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="637,13,748,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae0c19824127b6f70cf6124d2ee2272e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0c19824127b6f70cf6124d2ee2272e4">&sect;&nbsp;</a></span>addSymptomEvolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HistoriqueSouche.addSymptomEvolution </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une évolution d'un symptôme dans le sens signifié par la string passée en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Chaine de caractères donnant le sens de l'évolution </td></tr>
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28f683aa480fe35fa8306188775b0792"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28f683aa480fe35fa8306188775b0792">&sect;&nbsp;</a></span>addTransmissionEvolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HistoriqueSouche.addTransmissionEvolution </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Chaine de caractères donnant le sens de l'évolution </td></tr>
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_a28f683aa480fe35fa8306188775b0792_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_a28f683aa480fe35fa8306188775b0792_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_a28f683aa480fe35fa8306188775b0792_icgraph" id="d8/d38/class_historique_souche_a28f683aa480fe35fa8306188775b0792_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="280,13,461,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="509,13,613,39"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="661,13,772,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a45fa8c493fd5a0a25459d15d8ccd879a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45fa8c493fd5a0a25459d15d8ccd879a">&sect;&nbsp;</a></span>followingInfectionGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float HistoriqueSouche.followingInfectionGradient </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcule le pourcentage d'augmentation du gradient d'infection sur les 10 updates suivant la date passée en paramètres. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date après laquelle on calcule l'augmentation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Pourcentage d'augmentation du gradient d'infection suivant cette date </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_a45fa8c493fd5a0a25459d15d8ccd879a_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_a45fa8c493fd5a0a25459d15d8ccd879a_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_a45fa8c493fd5a0a25459d15d8ccd879a_icgraph" id="d8/d38/class_historique_souche_a45fa8c493fd5a0a25459d15d8ccd879a_icgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64" title="Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d..." alt="" coords="231,41,409,82"/>
+<area shape="rect" id="node7" href="../../d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6" title="Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="232,106,408,147"/>
+<area shape="rect" id="node10" href="../../d8/d38/class_historique_souche.html#a81f96687fbbf049b3408abf3fdb01e41" title="Renvoie la date de la fois où on a augmenté les symptomes et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="232,171,408,213"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="457,5,663,32"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="469,56,651,83"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="711,81,815,108"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="863,81,973,108"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="463,107,657,133"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="475,157,645,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae55c55b516290c566b2d6f639a2d00ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae55c55b516290c566b2d6f639a2d00ae">&sect;&nbsp;</a></span>getCorrespondingProperty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string HistoriqueSouche.getCorrespondingProperty </td>
+          <td>(</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la date passée en argument. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date où s'est déroulée l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Propriété améliorée à la date passée en paramètres </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ae55c55b516290c566b2d6f639a2d00ae_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ae55c55b516290c566b2d6f639a2d00ae_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ae55c55b516290c566b2d6f639a2d00ae_icgraph" id="d8/d38/class_historique_souche_ae55c55b516290c566b2d6f639a2d00ae_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="283,5,488,32"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="289,56,482,83"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="295,107,476,133"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="301,157,470,184"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="536,81,640,108"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="688,81,799,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae70689708d16798cb98c5aef592c88f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70689708d16798cb98c5aef592c88f9">&sect;&nbsp;</a></span>getPreviousNbInfected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint HistoriqueSouche.getPreviousNbInfected </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne le nombre d'infectés qu'il y avait à l'itération précédente. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Nombre d'infectés à l'itération précédente </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ae70689708d16798cb98c5aef592c88f9_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ae70689708d16798cb98c5aef592c88f9_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ae70689708d16798cb98c5aef592c88f9_icgraph" id="d8/d38/class_historique_souche_ae70689708d16798cb98c5aef592c88f9_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="248,13,352,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="400,13,511,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad9c987b43eb546edbaed06e14c3359f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c987b43eb546edbaed06e14c3359f6">&sect;&nbsp;</a></span>lastBestEvolutionResistanceDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastBestEvolutionResistanceDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d'infection. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Date voulue </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_cgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_cgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_cgraph" id="d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="229,5,407,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_icgraph" id="d8/d38/class_historique_souche_ad9c987b43eb546edbaed06e14c3359f6_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="229,5,423,32"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="241,56,411,83"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="471,31,575,57"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="623,31,733,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a81f96687fbbf049b3408abf3fdb01e41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f96687fbbf049b3408abf3fdb01e41">&sect;&nbsp;</a></span>lastBestEvolutionSymptomsDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastBestEvolutionSymptomsDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la date de la fois où on a augmenté les symptomes et ça a grandement augmenté le gradient d'infection. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Date voulue </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_a81f96687fbbf049b3408abf3fdb01e41_cgraph.png" border="0" usemap="#d8/d38/class_historique_souche_a81f96687fbbf049b3408abf3fdb01e41_cgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_a81f96687fbbf049b3408abf3fdb01e41_cgraph" id="d8/d38/class_historique_souche_a81f96687fbbf049b3408abf3fdb01e41_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="229,5,407,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab89fe759151227fd9e5de30a73dcef64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89fe759151227fd9e5de30a73dcef64">&sect;&nbsp;</a></span>lastBestEvolutionTransmissionDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastBestEvolutionTransmissionDate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d'infection. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Date voulue </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_cgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_cgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_cgraph" id="d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="232,5,409,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_icgraph" id="d8/d38/class_historique_souche_ab89fe759151227fd9e5de30a73dcef64_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="232,5,437,32"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="244,56,425,83"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="485,31,589,57"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="637,31,748,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0048eba6530fd01a7b45c75edf1144fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0048eba6530fd01a7b45c75edf1144fe">&sect;&nbsp;</a></span>lastEvolutionEvolutionSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastEvolutionEvolutionSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Date de la dernière évolution de la vitesse d'évolution. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_a0048eba6530fd01a7b45c75edf1144fe_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_a0048eba6530fd01a7b45c75edf1144fe_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_a0048eba6530fd01a7b45c75edf1144fe_icgraph" id="d8/d38/class_historique_souche_a0048eba6530fd01a7b45c75edf1144fe_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="255,5,435,47"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="256,71,433,98"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="483,42,587,69"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="635,42,745,69"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab2fb373426ac777a22bc78ddcf1f2323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fb373426ac777a22bc78ddcf1f2323">&sect;&nbsp;</a></span>lastEvolutionResistance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastEvolutionResistance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Date de la dernière évolution de la résistance Renvoie DateTime.MinValue si on n'a pas encore fait évoluer la résistance. </p>
+
+</div>
+</div>
+<a id="aa1fa942fa83446360a8c0f06d55bb209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1fa942fa83446360a8c0f06d55bb209">&sect;&nbsp;</a></span>lastEvolutionSymptomes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastEvolutionSymptomes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Date de la dernière évolution des symptômes Renvoie DateTime.MinValue si on n'a pas encore fait évoluer les symptômes. </p>
+
+</div>
+</div>
+<a id="a9eec4309278b140bc86d744649eb242a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eec4309278b140bc86d744649eb242a">&sect;&nbsp;</a></span>lastEvolutionTransmission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime HistoriqueSouche.lastEvolutionTransmission </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Date de la dernière évolution d'une transmission Renvoie DateTime.MinValue si on n'a pas encore fait évoluer la transmission. </p>
+
+</div>
+</div>
+<a id="aae184354281c889bc4704ec10a12bec3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae184354281c889bc4704ec10a12bec3">&sect;&nbsp;</a></span>lastInfectionGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyValuePair&lt;DateTime, uint&gt; HistoriqueSouche.lastInfectionGradient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Date et Gradient d'infection du dernier recueil gradient d'infection. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Dernier gradient d'infection </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_aae184354281c889bc4704ec10a12bec3_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_aae184354281c889bc4704ec10a12bec3_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_aae184354281c889bc4704ec10a12bec3_icgraph" id="d8/d38/class_historique_souche_aae184354281c889bc4704ec10a12bec3_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1" title="Production de points d&#39;évolution En fonction des facteurs suivants : " alt="" coords="504,5,620,32"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="251,56,456,83"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="257,107,450,133"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="668,31,779,57"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="510,56,614,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac88cf5c16bdd7b080a540f1ece5194bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88cf5c16bdd7b080a540f1ece5194bb">&sect;&nbsp;</a></span>setPreviousNbInfected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HistoriqueSouche.setPreviousNbInfected </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>previous</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Règle le nombre d'infectés à l'itération précédente à la valeur voulue. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d8/d38/class_historique_souche_ac88cf5c16bdd7b080a540f1ece5194bb_icgraph.png" border="0" usemap="#d8/d38/class_historique_souche_ac88cf5c16bdd7b080a540f1ece5194bb_icgraph" alt=""/></div>
+<map name="d8/d38/class_historique_souche_ac88cf5c16bdd7b080a540f1ece5194bb_icgraph" id="d8/d38/class_historique_souche_ac88cf5c16bdd7b080a540f1ece5194bb_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="248,13,352,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="400,13,511,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -160,8 +785,8 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<a id="a705b0b5577f82cfc2254e3c7cbdb5de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a705b0b5577f82cfc2254e3c7cbdb5de6">&sect;&nbsp;</a></span>datesEvolutionResistance</h2>
+<a id="a5f84187c6da82a070bacf63469e5bf30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f84187c6da82a070bacf63469e5bf30">&sect;&nbsp;</a></span>datesEvolutionResistance</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -170,7 +795,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;DateTime&gt; HistoriqueSouche.datesEvolutionResistance</td>
+          <td class="memname">IDictionary&lt;string, List&lt;DateTime&gt; &gt; HistoriqueSouche.datesEvolutionResistance</td>
         </tr>
       </table>
   </td>
@@ -180,12 +805,12 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Liste des dates d'évolution de la Resistance. </p>
+<p>Dictionnaire contenant les dates d'évolution des compétences de résistance Clé = mode de résistance Valeur = liste des dates d'évolution. </p>
 
 </div>
 </div>
-<a id="a0ab2e50b4ddc219d3cc095e5f58b92a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ab2e50b4ddc219d3cc095e5f58b92a8">&sect;&nbsp;</a></span>datesEvolutionSymptomes</h2>
+<a id="ab144f5e9161288ed39b77c6d81c5f99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab144f5e9161288ed39b77c6d81c5f99f">&sect;&nbsp;</a></span>datesEvolutionSymptoms</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +819,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;DateTime&gt; HistoriqueSouche.datesEvolutionSymptomes</td>
+          <td class="memname">IDictionary&lt;string, List&lt;DateTime&gt; &gt; HistoriqueSouche.datesEvolutionSymptoms</td>
         </tr>
       </table>
   </td>
@@ -204,12 +829,12 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Liste des dates d'évolution de la transmission. </p>
+<p>Dictionnaire contenant les dates d'évolution des symptômes Clé = symptôme Valeur = liste des dates d'évolution. </p>
 
 </div>
 </div>
-<a id="a64967a6049d41fc6e488fdde23a1b542"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64967a6049d41fc6e488fdde23a1b542">&sect;&nbsp;</a></span>datesEvolutionTransmission</h2>
+<a id="aceca6ca2a806e594bfc05d518c876389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceca6ca2a806e594bfc05d518c876389">&sect;&nbsp;</a></span>datesEvolutionTransmission</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +843,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;DateTime&gt; HistoriqueSouche.datesEvolutionTransmission</td>
+          <td class="memname">IDictionary&lt;string, List&lt;DateTime&gt; &gt; HistoriqueSouche.datesEvolutionTransmission</td>
         </tr>
       </table>
   </td>
@@ -228,12 +853,12 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Liste des dates d'évolution de la transmission. </p>
+<p>Dictionnaire contenant les dates d'évolution des compétences de transmission Clé = mode de transmission Valeur = liste des dates d'évolution. </p>
 
 </div>
 </div>
-<a id="ac53f0c05be8cc66dd269eb9d75bbdf4f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac53f0c05be8cc66dd269eb9d75bbdf4f">&sect;&nbsp;</a></span>infectionGradient</h2>
+<a id="aa0471f5c2f8f1b66b7cd0690fff74c81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0471f5c2f8f1b66b7cd0690fff74c81">&sect;&nbsp;</a></span>infectionGradient</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +867,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../da/d92/class_limited_queue.html">LimitedQueue</a>&lt;int&gt; HistoriqueSouche.infectionGradient</td>
+          <td class="memname"><a class="el" href="../../d0/d11/class_limited_list.html">LimitedList</a>&lt; KeyValuePair&lt;DateTime, uint&gt; &gt; HistoriqueSouche.infectionGradient</td>
         </tr>
       </table>
   </td>
@@ -252,12 +877,12 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A changer en limitedqueue. </p>
+<p>Gradient d'infection des dernières itérations. </p>
 
 </div>
 </div>
-<a id="a868a3f72db81e2ad4386086af9f86151"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a868a3f72db81e2ad4386086af9f86151">&sect;&nbsp;</a></span>resistanceEvolutionList</h2>
+<a id="a864bd4cc193e81fe86983f5bdd076992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a864bd4cc193e81fe86983f5bdd076992">&sect;&nbsp;</a></span>previousNbInfected</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -266,7 +891,7 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;String&gt; HistoriqueSouche.resistanceEvolutionList</td>
+          <td class="memname">uint HistoriqueSouche.previousNbInfected = 0</td>
         </tr>
       </table>
   </td>
@@ -276,55 +901,7 @@ Attributs privés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Liste des types de résistance améliorée dans l'ordre. </p>
-
-</div>
-</div>
-<a id="aa886f83268ebf2122de2135662893528"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa886f83268ebf2122de2135662893528">&sect;&nbsp;</a></span>symptomsEvolutionList</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;String&gt; HistoriqueSouche.symptomsEvolutionList</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Liste des types de symptômes amélioré dans l'ordre. </p>
-
-</div>
-</div>
-<a id="a5e1aca3fbff03704a991c184503a313f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e1aca3fbff03704a991c184503a313f">&sect;&nbsp;</a></span>transmissionEvolutionList</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">List&lt;String&gt; HistoriqueSouche.transmissionEvolutionList</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Liste des types de transmission améliorée dans l'ordre. </p>
+<p>Nombre de personnes infectées par cette souche dans ce pays à l'itération précédente. </p>
 
 </div>
 </div>

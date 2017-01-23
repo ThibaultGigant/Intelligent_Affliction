@@ -1,0 +1,5 @@
+<map id="APopulationCategory.removeAssigned" name="APopulationCategory.removeAssigned">
+<area shape="rect" id="node2" href="$df/d6a/class_population_categories.html#a5b9281e84abd366a5edf855d0cd8cace" title="Réorganisation de la population dans les catégories sans la présence du joueur. " alt="" coords="243,5,452,47"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736" title="Population.reorganizePopulation\lCategories" alt="" coords="500,5,708,47"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="756,13,853,39"/>
+</map>

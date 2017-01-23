@@ -1,0 +1,9 @@
+<map id="Medecine.moyenneSoignes" name="Medecine.moyenneSoignes">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#ad0eaa101d5a5b1ecea1a342d4caafe14" title="Pays.indiceInfection" alt="" coords="244,5,383,32"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#a630208abe54387464beac552b47ed3ab" title="Indice de la médecine Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="240,56,387,83"/>
+<area shape="rect" id="node7" href="$dd/dbe/class_pays.html#ae0675f5f378ff4af2bb1fcc4223df9d5" title="Fournie une carte de visite, indiquant les ressources qu&#39;il est prêt à échanger aux autres pays..." alt="" coords="236,107,391,133"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a0cb7e43e149c0527b3fec663faf934e5" title="Population.updateHappiness" alt="" coords="439,5,625,32"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="673,5,771,32"/>
+<area shape="rect" id="node6" href="$d2/de3/class_medecine.html#ae5c0487341c4cb588683aaf9497cce4a" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="469,56,595,83"/>
+<area shape="rect" id="node8" href="$dd/dbe/class_pays.html#a772045c804795a69d4b2bd733814d5d4" title="Appel aux autres pays, pour commencer des échanges. " alt="" coords="473,107,591,133"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Pays.appelPays" name="Pays.appelPays">
+<area shape="rect" id="node2" href="$db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="181,56,375,83"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#ae0675f5f378ff4af2bb1fcc4223df9d5" title="Fournie une carte de visite, indiquant les ressources qu&#39;il est prêt à échanger aux autres pays..." alt="" coords="201,107,355,133"/>
+<area shape="rect" id="node8" href="$d7/dab/class_carte_de_visite.html#ab721737dab6567b8de048f48db9e8400" title="CarteDeVisite.addRessource\lDemandee" alt="" coords="183,158,373,199"/>
+<area shape="rect" id="node9" href="$dd/dbe/class_pays.html#a251f77d5737fcf688b630c1745f2665c" title="Envoie un message à tous les pays susceptible de pouvoir apporter de l&#39;aide. " alt="" coords="171,224,385,251"/>
+<area shape="rect" id="node4" href="$d4/d33/class_ressource.html#ac8da249f31144863157c3a045efdde9b" title="Ressource.offre" alt="" coords="473,5,585,32"/>
+<area shape="rect" id="node5" href="$d4/d33/class_ressource.html#a1ae241e66d6c4bba588e8bd1cca4d046" title="Ajout de ressources. " alt="" coords="443,56,614,83"/>
+<area shape="rect" id="node6" href="$d2/de3/class_medecine.html#a21c7a0962d76534b5827a89ed1ba4f5e" title="Medecine.moyenneSoignes" alt="" coords="437,107,620,133"/>
+<area shape="rect" id="node7" href="$d2/de3/class_medecine.html#ac6547520140f0ad1b795fd8c5c87c2ee" title="Medecine.moyenneNouveaux\lInfectes" alt="" coords="433,158,624,199"/>
+<area shape="rect" id="node10" href="$dd/dbe/class_pays.html#ab025027f3b59bad11432efba34a7cee9" title="Pays.addMessage" alt="" coords="463,224,594,251"/>
+</map>

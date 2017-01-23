@@ -1,13 +1,19 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node2" href="$d0/d6b/class_cargo.html" title="Cargo" alt="" coords="203,5,259,32"/>
-<area shape="rect" id="node3" href="$d2/d39/class_categories_observer.html" title="CategoriesObserver" alt="" coords="164,56,299,83"/>
-<area shape="rect" id="node4" href="$de/d73/class_clock_manager.html" title="ClockManager" alt="" coords="179,107,284,133"/>
-<area shape="rect" id="node5" href="$db/d10/class_game_manager.html" title="GameManager" alt="" coords="178,157,285,184"/>
-<area shape="rect" id="node6" href="$d5/df3/class_menu_panels.html" title="MenuPanels" alt="" coords="184,208,279,235"/>
-<area shape="rect" id="node7" href="$dd/dc5/class_mouse_manager.html" title="MouseManager" alt="" coords="176,259,287,285"/>
-<area shape="rect" id="node8" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="205,309,257,336"/>
-<area shape="rect" id="node9" href="$df/da2/class_pays_manager.html" title="PaysManager" alt="" coords="180,360,283,387"/>
-<area shape="rect" id="node10" href="$d7/db3/class_rotate_earth.html" title="RotateEarth" alt="" coords="186,411,277,437"/>
-<area shape="rect" id="node11" href="$d4/db8/class_sun_rotation.html" title="Simule l&#39;alternance jour/nuit par rotation du Soleil autour de la Terre et non l&#39;inverse. " alt="" coords="185,461,278,488"/>
-<area shape="rect" id="node12" href="$d6/da4/class_zoom_pays.html" title="ZoomPays" alt="" coords="189,512,273,539"/>
+<area shape="rect" id="node2" href="$d0/d6b/class_cargo.html" title="Cargo" alt="" coords="211,5,267,32"/>
+<area shape="rect" id="node3" href="$d2/d39/class_categories_observer.html" title="CategoriesObserver" alt="" coords="172,56,307,83"/>
+<area shape="rect" id="node4" href="$de/d73/class_clock_manager.html" title="ClockManager" alt="" coords="187,107,292,133"/>
+<area shape="rect" id="node5" href="$d4/df6/class_exclamation.html" title="Exclamation" alt="" coords="192,157,287,184"/>
+<area shape="rect" id="node6" href="$db/d10/class_game_manager.html" title="GameManager" alt="" coords="186,208,293,235"/>
+<area shape="rect" id="node7" href="$d7/def/class_graphiques_categories.html" title="GraphiquesCategories" alt="" coords="164,259,315,285"/>
+<area shape="rect" id="node8" href="$d5/df3/class_menu_panels.html" title="MenuPanels" alt="" coords="192,309,287,336"/>
+<area shape="rect" id="node9" href="$dd/dc5/class_mouse_manager.html" title="MouseManager" alt="" coords="184,360,295,387"/>
+<area shape="rect" id="node10" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="213,411,265,437"/>
+<area shape="rect" id="node11" href="$df/da2/class_pays_manager.html" title="PaysManager" alt="" coords="188,461,291,488"/>
+<area shape="rect" id="node12" href="$dd/d94/class_repartion_categories.html" title="RepartionCategories" alt="" coords="170,512,309,539"/>
+<area shape="rect" id="node13" href="$d7/db3/class_rotate_earth.html" title="RotateEarth" alt="" coords="194,563,285,589"/>
+<area shape="rect" id="node14" href="$d4/df8/class_smiley.html" title="Smiley" alt="" coords="208,613,271,640"/>
+<area shape="rect" id="node15" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="206,664,273,691"/>
+<area shape="rect" id="node16" href="$d6/d96/class_stocks.html" title="Stocks" alt="" coords="208,715,271,741"/>
+<area shape="rect" id="node17" href="$d4/db8/class_sun_rotation.html" title="Simule l&#39;alternance jour/nuit par rotation du Soleil autour de la Terre et non l&#39;inverse. " alt="" coords="193,765,286,792"/>
+<area shape="rect" id="node18" href="$d6/da4/class_zoom_pays.html" title="ZoomPays" alt="" coords="197,816,281,843"/>
 </map>

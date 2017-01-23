@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class Souche {
+public class Souche : MonoBehaviour{
 	/**
 	 * Pays que la souche a infecté
 	 */
@@ -52,6 +52,19 @@ public class Souche {
 		symptoms = new Dictionary<string, AbstractSymptom> ();
 		skills = new Skills (this);
 		historique = new HistoriqueSouche ();
+	}
+
+	/**
+	 * Méthode appelée à chaque frame
+	 * Elle permet d'effectuer une évolution si possible, ainsi que d'effectuer la contamination
+	 */
+	public void Update()
+	{
+		if (ClockManager.newDay) {
+			this.produce ();
+			this.evolve ();
+			this.contamination ();
+		}
 	}
 
 	/**
@@ -142,7 +155,7 @@ public class Souche {
 
 		// Ajout du gradient d'infection
 		this.historique.addInfectionGradient (date, this.getNbInfected () - this.historique.getPreviousNbInfected ());
-
+		this.historique.setPreviousNbInfected (this.getNbInfected ());
 	}
 
 	/**
@@ -152,6 +165,7 @@ public class Souche {
 	 * 	- nbInfectes : nombre d'infectés actuels
 	 * 	- pourc : ratio des infectés
 	 * 	- evolutionSpeed : la vitesse d'évolution
+	 * 
 	 * On suit la formule : evolutionSpeed * pourc * 10 *(1 + grad) / nbInfectes
 	 */
 	public void produce()
@@ -168,7 +182,8 @@ public class Souche {
 	 * 	- pourc : Pourcentage d'infectés dans la population
 	 * 	- grad : Augmentation du gradient d'infection après la dernière évolution de ce caratère
 	 * 	- val : La valeur actuelle de la compétence de la souche, 
-	 * 		Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains
+	 * 	Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains
+	 * 
 	 * On suit la formule : duree/100 * ((1 - pourc)*5 + (1 / grad)*2) * (100 - val)
 	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
@@ -195,6 +210,7 @@ public class Souche {
 	 * 	- grad : Augmentation du gradient d'infection après la dernière évolution de ce caratère
 	 * 	- val : La valeur actuelle de la compétence de la souche, 
 	 * 		Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains
+	 * 
 	 * On suit la formule : duree/100 * ((1 - pourc) + 5*(1/grad)) * (100 - val)
 	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
@@ -220,6 +236,7 @@ public class Souche {
 	 * 	- pourc : Pourcentage d'infectés dans la population
 	 * 	- speed : la vitesse actuelle
 	 * 	- val : le nombre de points d'évolution que l'on a actuellement
+	 * 
 	 * On suit la formule : duree/100 * (1-pourc)^3 * (val / speed)
 	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
@@ -240,6 +257,7 @@ public class Souche {
 	 * 	- duree : Temps écoulé (en secondes) depuis la dernière évolution d'un symptôme
 	 * 	- pourc : Pourcentage d'infectés dans la population
 	 * 	- val : Nombre de symptômes restant à déveloper
+	 * 
 	 * On suit la formule : duree/100 * (5 * pourc) * val
 	 * @param date Date à laquelle la méthode est sensée avoir été appelée
 	 * @return L'indicateur en question
@@ -484,7 +502,7 @@ public class Souche {
 		foreach (string temp in DonneeSouche.listSymptoms) {
 			if (!this.symptoms.ContainsKey (temp) && souche.symptoms.ContainsKey (temp)) {
 				if (UnityEngine.Random.value * nbInfectedComing < 1 / DonneeSouche.coutsSymptomes [temp]) {
-					this.symptoms.Add (temp, souche.symptoms [temp]);
+					this.symptoms.Add (temp, DonneeSouche.getSymptomFromName(temp));
 				}
 			}
 		}

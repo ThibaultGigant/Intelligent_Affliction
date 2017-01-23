@@ -1,6 +1,3 @@
 <map id="Agriculture.besoins" name="Agriculture.besoins">
-<area shape="rect" id="node2" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="385,52,583,79"/>
-<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e" title="indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l&#39;humidi..." alt="" coords="199,27,325,54"/>
-<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61" title="indiceTransportSuperficie " alt="" coords="187,78,337,104"/>
-<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="211,128,313,155"/>
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#aa0f2a5887661c695ac7184f7c000ff84" title="Pays.indiceProduction" alt="" coords="187,5,339,32"/>
 </map>

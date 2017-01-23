@@ -1,4 +1,22 @@
 <map id="Population.getHappinessIndex" name="Population.getHappinessIndex">
-<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="251,5,353,32"/>
-<area shape="rect" id="node3" href="$d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="401,31,535,57"/>
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="269,312,371,339"/>
+<area shape="rect" id="node21" href="$d5/df3/class_menu_panels.html#a00f20f99ab5c0f51a24b0741a5d0ed48" title="MenuPanels.Update" alt="" coords="251,363,389,389"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736" title="Population.reorganizePopulation\lCategories" alt="" coords="949,157,1157,198"/>
+<area shape="rect" id="node5" href="$d4/d42/class_agriculture.html#a73423fa32014fb8d8291f19f55dc3958" title="Estimation de la production de Nourriture chaque jour. " alt="" coords="467,84,615,111"/>
+<area shape="rect" id="node7" href="$db/dbb/class_a_population_category.html#a063f69991be5c9c9273ef299381dd539" title="APopulationCategory.modeAuto" alt="" coords="437,135,644,161"/>
+<area shape="rect" id="node8" href="$df/d6a/class_population_categories.html#a5b9281e84abd366a5edf855d0cd8cace" title="Réorganisation de la population dans les catégories sans la présence du joueur. " alt="" coords="692,157,901,198"/>
+<area shape="rect" id="node9" href="$df/dee/class_inactifs.html#a1d134880ff952146d8f852b4a06e5c45" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="485,236,597,263"/>
+<area shape="rect" id="node10" href="$df/dee/class_inactifs.html#ab25e52c0323060c11e6ff3ec2e9d0212" title="Renvoie le pourcentage de dégradation des infrastructures entre 0 et 10%. " alt="" coords="477,287,604,313"/>
+<area shape="rect" id="node12" href="$da/d41/class_loisirs.html#abf53fe77683e4c39dec4382cc19d15d9" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="486,337,595,364"/>
+<area shape="rect" id="node13" href="$da/d41/class_loisirs.html#a8c410290026180541d52717a94d16cce" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="479,388,603,415"/>
+<area shape="rect" id="node15" href="$df/d6a/class_population_categories.html#a3c6e2119149c7eb54c78be7804ae9b1f" title="PopulationCategories.reorganize\lPopulationCategoriesForPlayer" alt="" coords="692,423,901,465"/>
+<area shape="rect" id="node16" href="$dd/d10/class_recherche.html#aa15e5a06d9ba5d7b30e897c409574bda" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="467,489,615,516"/>
+<area shape="rect" id="node18" href="$d6/d8e/class_transports.html#ad4f89cf5571bc0222393ca16fd1faafd" title="Estimation de la production de Transport chaque jour. " alt="" coords="467,540,614,567"/>
+<area shape="rect" id="node20" href="$d6/d8e/class_transports.html#a7524c2bbb0dc684401aea07a2d9d6ce4" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="475,591,607,617"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="1205,164,1303,191"/>
+<area shape="rect" id="node6" href="$d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1" title="Production de Nourriture Plus la population assignée à cette catégorie est grande, plus la production sera importante. " alt="" coords="729,84,864,111"/>
+<area shape="rect" id="node11" href="$df/dee/class_inactifs.html#ac0463ac47ab4c738c3ea563e735eba94" title="Peut casser des infrastructures, liées aux transports ou aux loisirs. " alt="" coords="740,287,853,313"/>
+<area shape="rect" id="node14" href="$da/d41/class_loisirs.html#a6d234487c20c891d1d9b7ba985813761" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="741,372,852,399"/>
+<area shape="rect" id="node17" href="$dd/d10/class_recherche.html#ada9a65031923dfc821cfd5c4b5b240b8" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="729,489,864,516"/>
+<area shape="rect" id="node19" href="$d6/d8e/class_transports.html#a0aa448dcce1df02b979452eeb01298d7" title="Production de Transport Cette ressource se congrège deux informations : la longueur des lignes et leu..." alt="" coords="730,540,863,567"/>
 </map>

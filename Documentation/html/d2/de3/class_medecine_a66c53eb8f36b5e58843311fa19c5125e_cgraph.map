@@ -1,0 +1,5 @@
+<map id="Medecine.produce" name="Medecine.produce">
+<area shape="rect" id="node2" href="$d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="205,5,354,32"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b" title="Suppression de Personnes infectées, probablement soignées ou tuées par la maladie. " alt="" coords="181,56,377,83"/>
+<area shape="rect" id="node4" href="$da/d92/class_limited_queue.html#a894394592f567dd34cd51cd5667f6e9f" title="Permet d&#39;ajouter un objet tout en gardant la file de la taille voulue. " alt="" coords="201,107,358,133"/>
+</map>

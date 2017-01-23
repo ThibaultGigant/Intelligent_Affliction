@@ -1,0 +1,6 @@
+<map id="Recherche.demande" name="Recherche.demande">
+<area shape="rect" id="node2" href="$dd/d10/class_recherche.html#a06fca65a6cc6de4685bd189939db0072" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="195,31,328,57"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a5bc4c8e78a6431a6c88d4cc76b3f4ea1" title="Indice de la recherche Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="376,31,528,57"/>
+<area shape="rect" id="node4" href="$dd/d10/class_recherche.html#a6e256248a44f669b114f690361eae4e5" title="Revoie la moyenne des points produits par jour. " alt="" coords="576,5,755,32"/>
+<area shape="rect" id="node5" href="$dd/d10/class_recherche.html#a78e9eca53a11d7d85bf5615ffcf8d59a" title="Indique le nombre de points qui devraient être produits par jour idéalement. " alt="" coords="608,56,723,83"/>
+</map>

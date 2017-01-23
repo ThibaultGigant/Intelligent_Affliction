@@ -1,3 +1,8 @@
 <map id="APopulationCategory.besoins" name="APopulationCategory.besoins">
-<area shape="rect" id="node2" href="$db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4" title="Enlève des personnes de cette catégorie. " alt="" coords="247,5,436,47"/>
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a772045c804795a69d4b2bd733814d5d4" title="Appel aux autres pays, pour commencer des échanges. " alt="" coords="291,5,409,32"/>
+<area shape="rect" id="node3" href="$db/dbb/class_a_population_category.html#a93301109e29c4a7230f00e264c0e54d1" title="Enlève des personnes de cette catégorie. " alt="" coords="255,57,445,98"/>
+<area shape="rect" id="node4" href="$db/dbb/class_a_population_category.html#a063f69991be5c9c9273ef299381dd539" title="APopulationCategory.modeAuto" alt="" coords="247,123,453,149"/>
+<area shape="rect" id="node5" href="$df/d6a/class_population_categories.html#a5b9281e84abd366a5edf855d0cd8cace" title="Réorganisation de la population dans les catégories sans la présence du joueur. " alt="" coords="501,141,711,182"/>
+<area shape="rect" id="node6" href="$dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736" title="Population.reorganizePopulation\lCategories" alt="" coords="759,141,967,182"/>
+<area shape="rect" id="node7" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="1015,148,1112,175"/>
 </map>

@@ -4,7 +4,6 @@ public class Eternuements : AbstractSymptom
 {
 	/**
 	 * Constructeur
-	 * @param cout Coût de l'évolution du symptom
 	 */
 	public Eternuements ()
 	{

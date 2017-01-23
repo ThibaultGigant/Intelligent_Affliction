@@ -1,5 +1,7 @@
 <map id="Population.removePeople" name="Population.removePeople">
 <area shape="rect" id="node2" href="$dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c" title="Pays.removePeople" alt="" coords="221,5,359,32"/>
-<area shape="rect" id="node3" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="229,56,351,83"/>
-<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="407,56,545,83"/>
+<area shape="rect" id="node5" href="$dd/d36/class_population.html#a3ede0931a77c9adbb789245ed9c2553f" title="Nombre de décès &quot;fixe&quot; en fonction de la taille de la population. " alt="" coords="229,56,351,83"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="407,5,557,32"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="605,5,716,32"/>
+<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755" title="Fonction temporaire, qui nous servira de test. " alt="" coords="413,56,551,83"/>
 </map>

@@ -1,0 +1,8 @@
+<map id="Nourriture.offre" name="Nourriture.offre">
+<area shape="rect" id="node2" href="$d4/d42/class_agriculture.html#a2d1128c74d5ba738e61bf868c65a38c2" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="179,5,312,32"/>
+<area shape="rect" id="node4" href="$d4/d42/class_agriculture.html#ad339a8eb189e321310b39ef18467cf6f" title="Evalue l&#39;offre que le pays proposerait à un autre, en fonction du montant demandé et du pourcentage d..." alt="" coords="189,56,301,83"/>
+<area shape="rect" id="node6" href="$d4/dbc/class_nourriture.html#ae56f909febf5d04ece00f81f6f2f299a" title="Constructeur Nomme la ressource. " alt="" coords="176,107,315,133"/>
+<area shape="rect" id="node7" href="$d4/d33/class_ressource.html#a1ae241e66d6c4bba588e8bd1cca4d046" title="Ajout de ressources. " alt="" coords="160,157,331,184"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#aa0f2a5887661c695ac7184f7c000ff84" title="Pays.indiceProduction" alt="" coords="392,5,544,32"/>
+<area shape="rect" id="node5" href="$db/d02/class_pays_ressources.html#abb4f9697c9f904764cc7d46e9eb79701" title="PaysRessources.consome" alt="" coords="379,56,557,83"/>
+</map>

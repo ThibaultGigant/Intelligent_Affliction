@@ -81,29 +81,53 @@ Graphe de collaboration de Knowledge:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d6/d2c/class_knowledge__coll__graph.png" border="0" usemap="#_knowledge_coll__map" alt="Collaboration graph"/></div>
 <map name="_knowledge_coll__map" id="_knowledge_coll__map">
-<area shape="rect" id="node2" href="../../d4/d33/class_ressource.html" title="Ressource" alt="" coords="7,5,92,32"/>
+<area shape="rect" id="node2" href="../../d4/d33/class_ressource.html" title="Ressource" alt="" coords="886,199,970,225"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="498,109,550,136"/>
+<area shape="rect" id="node5" href="../../db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="658,288,779,315"/>
+<area shape="rect" id="node6" href="../../dd/d36/class_population.html" title="Population" alt="" coords="515,199,597,225"/>
+<area shape="rect" id="node8" href="../../de/d73/class_links.html" title="Links" alt="" coords="412,199,465,225"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="224,199,291,225"/>
+<area shape="rect" id="node7" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="387,288,533,315"/>
+<area shape="rect" id="node10" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="277,288,331,315"/>
+<area shape="rect" id="node11" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="41,109,165,136"/>
+<area shape="rect" id="node12" href="../../d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node13" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="557,13,616,39"/>
+<area shape="rect" id="node14" href="../../d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="436,13,529,39"/>
+<area shape="rect" id="node15" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="858,109,998,136"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a533bd2c55a7283bda150aa07dd735774"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a533bd2c55a7283bda150aa07dd735774">Knowledge</a> (string sujet, int cout)</td></tr>
-<tr class="separator:a533bd2c55a7283bda150aa07dd735774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84f74a557e0667f67cf212f197fb4e55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a84f74a557e0667f67cf212f197fb4e55">Knowledge</a> (<a class="el" href="../../dd/dbe/class_pays.html">Pays</a> <a class="el" href="../../d4/d33/class_ressource.html#ae443c6970870a9dcec76e323450bf839">pays</a>, string sujet, int cout)</td></tr>
+<tr class="separator:a84f74a557e0667f67cf212f197fb4e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff52062a6cc290a54437ea09d6529302"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#aff52062a6cc290a54437ea09d6529302">send</a> (int toSend)</td></tr>
 <tr class="memdesc:aff52062a6cc290a54437ea09d6529302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue l'envoi de la ressource à un autre pays.  <a href="#aff52062a6cc290a54437ea09d6529302">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aff52062a6cc290a54437ea09d6529302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49cc9580fb938713201d78006c8039db"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a49cc9580fb938713201d78006c8039db">receive</a> (<a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> toReceive)</td></tr>
 <tr class="memdesc:a49cc9580fb938713201d78006c8039db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue la réception d'une ressource d'un autre pays.  <a href="#a49cc9580fb938713201d78006c8039db">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a49cc9580fb938713201d78006c8039db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ee82f351ebd321e7804c6cf5fb2560"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a63ee82f351ebd321e7804c6cf5fb2560">consome</a> (bool flag)</td></tr>
+<tr class="memdesc:a63ee82f351ebd321e7804c6cf5fb2560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consommation journalière de ressources.  <a href="#a63ee82f351ebd321e7804c6cf5fb2560">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a63ee82f351ebd321e7804c6cf5fb2560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69249be76f4f57ddab51420fc1795fd3"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a69249be76f4f57ddab51420fc1795fd3">offre</a> ()</td></tr>
+<tr class="separator:a69249be76f4f57ddab51420fc1795fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_ressource"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_ressource')"><img src="../../closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a></td></tr>
-<tr class="memitem:a135c6fe41f95e990e9af9294fedd882d inherit pub_methods_class_ressource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a135c6fe41f95e990e9af9294fedd882d">Ressource</a> ()</td></tr>
-<tr class="separator:a135c6fe41f95e990e9af9294fedd882d inherit pub_methods_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbaf95ab4f96054adebf920ac3fc1030 inherit pub_methods_class_ressource"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#adbaf95ab4f96054adebf920ac3fc1030">Ressource</a> (<a class="el" href="../../dd/dbe/class_pays.html">Pays</a> <a class="el" href="../../d4/d33/class_ressource.html#ae443c6970870a9dcec76e323450bf839">pays</a>)</td></tr>
+<tr class="memdesc:adbaf95ab4f96054adebf920ac3fc1030 inherit pub_methods_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Les class qui héritières doivent se nommer en initialisant "nom".  <a href="../../d4/d33/class_ressource.html#adbaf95ab4f96054adebf920ac3fc1030">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adbaf95ab4f96054adebf920ac3fc1030 inherit pub_methods_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9fee33783f3c4940d43af5820584076 inherit pub_methods_class_ressource"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#ab9fee33783f3c4940d43af5820584076">getQuantity</a> ()</td></tr>
+<tr class="memdesc:ab9fee33783f3c4940d43af5820584076 inherit pub_methods_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la quantité de la ressource qui est possédée par le pays.  <a href="../../d4/d33/class_ressource.html#ab9fee33783f3c4940d43af5820584076">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab9fee33783f3c4940d43af5820584076 inherit pub_methods_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ae241e66d6c4bba588e8bd1cca4d046 inherit pub_methods_class_ressource"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a1ae241e66d6c4bba588e8bd1cca4d046">addRessource</a> (int nb)</td></tr>
 <tr class="memdesc:a1ae241e66d6c4bba588e8bd1cca4d046 inherit pub_methods_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout de ressources.  <a href="../../d4/d33/class_ressource.html#a1ae241e66d6c4bba588e8bd1cca4d046">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1ae241e66d6c4bba588e8bd1cca4d046 inherit pub_methods_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317b48f00c6bc7b3c5bb46506e62dd33 inherit pub_methods_class_ressource"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a317b48f00c6bc7b3c5bb46506e62dd33">removeRessource</a> (int nb)</td></tr>
 <tr class="memdesc:a317b48f00c6bc7b3c5bb46506e62dd33 inherit pub_methods_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrait de ressources.  <a href="../../d4/d33/class_ressource.html#a317b48f00c6bc7b3c5bb46506e62dd33">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a317b48f00c6bc7b3c5bb46506e62dd33 inherit pub_methods_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83f52838cc1bd1bf220f50e3a2a02f41 inherit pub_methods_class_ressource"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a83f52838cc1bd1bf220f50e3a2a02f41">removeRessource</a> (float nb)</td></tr>
+<tr class="memdesc:a83f52838cc1bd1bf220f50e3a2a02f41 inherit pub_methods_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrait de ressources.  <a href="../../d4/d33/class_ressource.html#a83f52838cc1bd1bf220f50e3a2a02f41">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a83f52838cc1bd1bf220f50e3a2a02f41 inherit pub_methods_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
@@ -113,17 +137,28 @@ Attributs publics</h2></td></tr>
 <tr class="memitem:a02fc206467d846260306a6b7e37ab2e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a02fc206467d846260306a6b7e37ab2e6">coutDeRecherche</a></td></tr>
 <tr class="memdesc:a02fc206467d846260306a6b7e37ab2e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coût en point de recherche nécessaire pour acquérir une connaissance de ce sujet.  <a href="#a02fc206467d846260306a6b7e37ab2e6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a02fc206467d846260306a6b7e37ab2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a672e731dcf31467eb50b513a6c28b6a6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db1/class_knowledge.html#a672e731dcf31467eb50b513a6c28b6a6">developpement</a></td></tr>
+<tr class="memdesc:a672e731dcf31467eb50b513a6c28b6a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valeur de développement des connaissances Entre 0 (aucune connaissance) et 1 (fortes connaissances)  <a href="#a672e731dcf31467eb50b513a6c28b6a6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a672e731dcf31467eb50b513a6c28b6a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_ressource"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_ressource')"><img src="../../closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a></td></tr>
-<tr class="memitem:a290095859cad3f8b014bc9bcfd6a8ed1 inherit pub_attribs_class_ressource"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a290095859cad3f8b014bc9bcfd6a8ed1">quantity</a> = 0</td></tr>
-<tr class="memdesc:a290095859cad3f8b014bc9bcfd6a8ed1 inherit pub_attribs_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quantité possédée de cette ressource.  <a href="../../d4/d33/class_ressource.html#a290095859cad3f8b014bc9bcfd6a8ed1">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a290095859cad3f8b014bc9bcfd6a8ed1 inherit pub_attribs_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e07466fb1f1713bf66a610b92c3bfb7 inherit pub_attribs_class_ressource"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a6e07466fb1f1713bf66a610b92c3bfb7">quantity</a> = 0</td></tr>
+<tr class="memdesc:a6e07466fb1f1713bf66a610b92c3bfb7 inherit pub_attribs_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quantité possédée de cette ressource.  <a href="../../d4/d33/class_ressource.html#a6e07466fb1f1713bf66a610b92c3bfb7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6e07466fb1f1713bf66a610b92c3bfb7 inherit pub_attribs_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b22939ad2a4715bc8aa22b8f1c6277 inherit pub_attribs_class_ressource"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a06b22939ad2a4715bc8aa22b8f1c6277">exchangeable</a></td></tr>
 <tr class="memdesc:a06b22939ad2a4715bc8aa22b8f1c6277 inherit pub_attribs_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">La ressource est-elle échangeable ?  <a href="../../d4/d33/class_ressource.html#a06b22939ad2a4715bc8aa22b8f1c6277">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a06b22939ad2a4715bc8aa22b8f1c6277 inherit pub_attribs_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a827099b8e6107cdc28f81d8a9fdd9901 inherit pub_attribs_class_ressource"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#a827099b8e6107cdc28f81d8a9fdd9901">nom</a></td></tr>
+<tr class="separator:a827099b8e6107cdc28f81d8a9fdd9901 inherit pub_attribs_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae443c6970870a9dcec76e323450bf839 inherit pub_attribs_class_ressource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#ae443c6970870a9dcec76e323450bf839">pays</a></td></tr>
+<tr class="memdesc:ae443c6970870a9dcec76e323450bf839 inherit pub_attribs_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> auquel est rattaché la ressource.  <a href="../../d4/d33/class_ressource.html#ae443c6970870a9dcec76e323450bf839">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae443c6970870a9dcec76e323450bf839 inherit pub_attribs_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6d501765fddd18c379eef9bf756f3dc inherit pub_attribs_class_ressource"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d92/class_limited_queue.html">LimitedQueue</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d33/class_ressource.html#af6d501765fddd18c379eef9bf756f3dc">consommation</a></td></tr>
+<tr class="memdesc:af6d501765fddd18c379eef9bf756f3dc inherit pub_attribs_class_ressource"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste du nombre de ressources consommées par jour.  <a href="../../d4/d33/class_ressource.html#af6d501765fddd18c379eef9bf756f3dc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af6d501765fddd18c379eef9bf756f3dc inherit pub_attribs_class_ressource"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
-<a id="a533bd2c55a7283bda150aa07dd735774"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a533bd2c55a7283bda150aa07dd735774">&sect;&nbsp;</a></span>Knowledge()</h2>
+<a id="a84f74a557e0667f67cf212f197fb4e55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84f74a557e0667f67cf212f197fb4e55">&sect;&nbsp;</a></span>Knowledge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,6 +166,12 @@ Attributs publics</h2></td></tr>
         <tr>
           <td class="memname">Knowledge.Knowledge </td>
           <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td>
+          <td class="paramname"><em>pays</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>sujet</em>, </td>
         </tr>
@@ -147,10 +188,90 @@ Attributs publics</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db1/class_knowledge_a84f74a557e0667f67cf212f197fb4e55_icgraph.png" border="0" usemap="#d9/db1/class_knowledge_a84f74a557e0667f67cf212f197fb4e55_icgraph" alt=""/></div>
+<map name="d9/db1/class_knowledge_a84f74a557e0667f67cf212f197fb4e55_icgraph" id="d9/db1/class_knowledge_a84f74a557e0667f67cf212f197fb4e55_icgraph">
+<area shape="rect" id="node2" href="../../d9/db1/class_knowledge.html#a69249be76f4f57ddab51420fc1795fd3" title="Knowledge.offre" alt="" coords="205,5,319,32"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a63ee82f351ebd321e7804c6cf5fb2560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63ee82f351ebd321e7804c6cf5fb2560">&sect;&nbsp;</a></span>consome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int Knowledge.consome </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Consommation journalière de ressources. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag</td><td>Indique si l'on souhaite une consommation effective, ou seulement une estimation de la consommation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Si flag est vrai, retourne le nombre d'insatisfaits, sinon, retourne le montant à consommer </dd></dl>
+
+<p>Implémente <a class="el" href="../../d4/d33/class_ressource.html#ae2f880307a73ac4a12e083aa6dc062cc">Ressource</a>.</p>
+
+</div>
+</div>
+<a id="a69249be76f4f57ddab51420fc1795fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69249be76f4f57ddab51420fc1795fd3">&sect;&nbsp;</a></span>offre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> Knowledge.offre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implémente <a class="el" href="../../d4/d33/class_ressource.html#ac8da249f31144863157c3a045efdde9b">Ressource</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db1/class_knowledge_a69249be76f4f57ddab51420fc1795fd3_cgraph.png" border="0" usemap="#d9/db1/class_knowledge_a69249be76f4f57ddab51420fc1795fd3_cgraph" alt=""/></div>
+<map name="d9/db1/class_knowledge_a69249be76f4f57ddab51420fc1795fd3_cgraph" id="d9/db1/class_knowledge_a69249be76f4f57ddab51420fc1795fd3_cgraph">
+<area shape="rect" id="node2" href="../../d9/db1/class_knowledge.html#a84f74a557e0667f67cf212f197fb4e55" title="Knowledge.Knowledge" alt="" coords="167,5,319,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a49cc9580fb938713201d78006c8039db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a49cc9580fb938713201d78006c8039db">&sect;&nbsp;</a></span>receive()</h2>
 
@@ -239,6 +360,22 @@ Attributs publics</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Coût en point de recherche nécessaire pour acquérir une connaissance de ce sujet. </p>
+
+</div>
+</div>
+<a id="a672e731dcf31467eb50b513a6c28b6a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a672e731dcf31467eb50b513a6c28b6a6">&sect;&nbsp;</a></span>developpement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Knowledge.developpement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Valeur de développement des connaissances Entre 0 (aucune connaissance) et 1 (fortes connaissances) </p>
 
 </div>
 </div>

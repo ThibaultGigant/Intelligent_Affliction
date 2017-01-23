@@ -1,7 +1,21 @@
 <map id="Pays.getNbPopulation" name="Pays.getNbPopulation">
-<area shape="rect" id="node2" href="$df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="204,5,417,32"/>
-<area shape="rect" id="node5" href="$d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="223,56,399,83"/>
+<area shape="rect" id="node2" href="$df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="204,19,417,45"/>
+<area shape="rect" id="node5" href="$d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="221,157,400,184"/>
+<area shape="rect" id="node8" href="$d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="739,309,944,336"/>
+<area shape="rect" id="node11" href="$d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="745,259,938,285"/>
+<area shape="rect" id="node12" href="$d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="766,461,917,488"/>
+<area shape="rect" id="node13" href="$d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="501,56,655,83"/>
+<area shape="rect" id="node16" href="$d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="223,512,399,539"/>
+<area shape="rect" id="node18" href="$d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1" title="Production de points d&#39;évolution En fonction des facteurs suivants : " alt="" coords="992,563,1108,589"/>
+<area shape="rect" id="node19" href="$d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="221,345,401,386"/>
+<area shape="rect" id="node20" href="$d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="222,411,399,437"/>
 <area shape="rect" id="node3" href="$db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295" title="GameManager.updateMenuPricipal" alt="" coords="465,5,691,32"/>
-<area shape="rect" id="node4" href="$db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title="GameManager.Update" alt="" coords="739,5,891,32"/>
-<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#ac4ed0bd20ebc9aa5a80d5239b1b8fe58" title="Pays.addInfectedPeople" alt="" coords="497,56,659,83"/>
+<area shape="rect" id="node4" href="$db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title="GameManager.Update" alt="" coords="765,5,917,32"/>
+<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="510,157,646,184"/>
+<area shape="rect" id="node7" href="$d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="511,259,645,285"/>
+<area shape="rect" id="node14" href="$d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="526,107,630,133"/>
+<area shape="rect" id="node9" href="$d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="998,335,1102,361"/>
+<area shape="rect" id="node10" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="1156,461,1267,488"/>
+<area shape="rect" id="node15" href="$d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="770,107,913,133"/>
+<area shape="rect" id="node17" href="$dd/dbe/class_pays.html#ac4ed0bd20ebc9aa5a80d5239b1b8fe58" title="Pays.addInfectedPeople" alt="" coords="497,563,659,589"/>
 </map>

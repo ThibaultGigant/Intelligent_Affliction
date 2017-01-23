@@ -1,0 +1,10 @@
+<map id="Loisirs.produce" name="Loisirs.produce">
+<area shape="rect" id="node2" href="$da/d41/class_loisirs.html#a8c410290026180541d52717a94d16cce" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="181,81,305,108"/>
+<area shape="rect" id="node9" href="$da/d92/class_limited_queue.html#a894394592f567dd34cd51cd5667f6e9f" title="Permet d&#39;ajouter un objet tout en gardant la file de la taille voulue. " alt="" coords="164,132,321,159"/>
+<area shape="rect" id="node3" href="$d5/df1/class_utils.html#a562d5a7f1cda04c97558fce50ca504f8" title="Renvoie le produit des indices, chacun normalisées comme décris dans la structure donnée en paramètre..." alt="" coords="369,5,528,32"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e" title="indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l&#39;humidi..." alt="" coords="385,56,512,83"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61" title="indiceTransportSuperficie " alt="" coords="373,107,524,133"/>
+<area shape="rect" id="node7" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="397,157,500,184"/>
+<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#aa0f2a5887661c695ac7184f7c000ff84" title="Pays.indiceProduction" alt="" coords="599,107,751,133"/>
+<area shape="rect" id="node8" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="576,157,773,184"/>
+</map>

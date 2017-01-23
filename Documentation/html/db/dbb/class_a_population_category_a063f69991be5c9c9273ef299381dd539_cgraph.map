@@ -1,0 +1,5 @@
+<map id="APopulationCategory.modeAuto" name="APopulationCategory.modeAuto">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="305,5,408,32"/>
+<area shape="rect" id="node4" href="$db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="260,56,453,83"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="501,5,699,32"/>
+</map>

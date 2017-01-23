@@ -1,0 +1,8 @@
+<map id="AbstractSymptom.computeHumanEffectOnSymptom" name="AbstractSymptom.computeHumanEffectOnSymptom">
+<area shape="rect" id="node2" href="$d1/d6f/class_arret_des_organes.html#ad9e3a8377761467b31e9721b087c6dad" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="282,5,473,47"/>
+<area shape="rect" id="node3" href="$d7/d32/class_diarrhee.html#a6e95d35cb52f71050d115adbd02b79f9" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="276,71,479,98"/>
+<area shape="rect" id="node4" href="$d9/d48/class_eternuements.html#a77e4d409c54328930d64b3ab8b63a857" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="291,123,463,164"/>
+<area shape="rect" id="node5" href="$d2/d9c/class_fievre.html#a21c517ddf19f60e31f1a21461fdcaaef" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="283,189,472,215"/>
+<area shape="rect" id="node6" href="$d0/dc6/class_sueurs.html#a97444e374df695f5ca3f0d99e3956097" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="279,239,475,266"/>
+<area shape="rect" id="node7" href="$d1/d49/class_toux.html#a23ef87aa9c790a06c102b13037f63f00" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="286,290,469,317"/>
+</map>

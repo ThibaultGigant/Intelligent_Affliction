@@ -1,0 +1,6 @@
+<map id="Medecine.besoins" name="Medecine.besoins">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a630208abe54387464beac552b47ed3ab" title="Indice de la médecine Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="180,5,327,32"/>
+<area shape="rect" id="node4" href="$d2/de3/class_medecine.html#a5e4a8dd4dc1b76c99cc5739c5e8be79d" title="Medecine.ideal" alt="" coords="411,56,521,83"/>
+<area shape="rect" id="node3" href="$d2/de3/class_medecine.html#a21c7a0962d76534b5827a89ed1ba4f5e" title="Medecine.moyenneSoignes" alt="" coords="375,5,557,32"/>
+<area shape="rect" id="node5" href="$d2/de3/class_medecine.html#ac6547520140f0ad1b795fd8c5c87c2ee" title="Medecine.moyenneNouveaux\lInfectes" alt="" coords="605,49,796,90"/>
+</map>

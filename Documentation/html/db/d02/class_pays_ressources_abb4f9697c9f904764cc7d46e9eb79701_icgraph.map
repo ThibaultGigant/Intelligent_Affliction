@@ -1,0 +1,7 @@
+<map id="PaysRessources.consome" name="PaysRessources.consome">
+<area shape="rect" id="node2" href="$dc/d3e/class_echange.html#a66b957a6589379dee1e148706397db18" title="Met à jour le nombre de ressource que le pays continu de nous envoyer. " alt="" coords="232,5,453,32"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af" title="Fonction appelée à chaque frame Fait vivre la population. " alt="" coords="294,56,391,83"/>
+<area shape="rect" id="node5" href="$d4/d42/class_agriculture.html#ad339a8eb189e321310b39ef18467cf6f" title="Evalue l&#39;offre que le pays proposerait à un autre, en fonction du montant demandé et du pourcentage d..." alt="" coords="287,107,399,133"/>
+<area shape="rect" id="node3" href="$d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="501,5,644,32"/>
+<area shape="rect" id="node6" href="$d4/dbc/class_nourriture.html#a7260fcda5f31905571f281e9744f1a09" title="Nourriture.offre" alt="" coords="519,107,626,133"/>
+</map>

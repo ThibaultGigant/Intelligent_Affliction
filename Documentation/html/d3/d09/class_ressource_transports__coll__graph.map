@@ -1,3 +1,15 @@
 <map id="RessourceTransports" name="RessourceTransports">
-<area shape="rect" id="node2" href="$d4/d33/class_ressource.html" title="Ressource" alt="" coords="37,5,123,32"/>
+<area shape="rect" id="node2" href="$d4/d33/class_ressource.html" title="Ressource" alt="" coords="886,199,970,225"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="498,109,550,136"/>
+<area shape="rect" id="node5" href="$db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="658,288,779,315"/>
+<area shape="rect" id="node6" href="$dd/d36/class_population.html" title="Population" alt="" coords="515,199,597,225"/>
+<area shape="rect" id="node8" href="$de/d73/class_links.html" title="Links" alt="" coords="412,199,465,225"/>
+<area shape="rect" id="node9" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="224,199,291,225"/>
+<area shape="rect" id="node7" href="$df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="387,288,533,315"/>
+<area shape="rect" id="node10" href="$d4/d3b/class_skills.html" title="Skills" alt="" coords="277,288,331,315"/>
+<area shape="rect" id="node11" href="$d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="41,109,165,136"/>
+<area shape="rect" id="node12" href="$d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node13" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="557,13,616,39"/>
+<area shape="rect" id="node14" href="$d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="436,13,529,39"/>
+<area shape="rect" id="node15" href="$da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="858,109,998,136"/>
 </map>

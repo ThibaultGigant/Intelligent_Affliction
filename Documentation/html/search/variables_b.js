@@ -1,9 +1,15 @@
 var searchData=
 [
-  ['panelitem',['panelItem',['../db/dbb/class_a_population_category.html#a488697743825f7cf59fa5237ab56c0d0',1,'APopulationCategory']]],
-  ['paysmanager',['paysManager',['../db/d10/class_game_manager.html#a15c27125fc9d2ecc4fc84ce3acb3c419',1,'GameManager']]],
-  ['paysselected',['paysSelected',['../df/dfc/class_parametres.html#a3208346c635d499ab01401096e426768',1,'Parametres']]],
-  ['plusbutton',['plusButton',['../d5/df3/class_menu_panels.html#a78bc9b99b10ea5aa8798024ebc4eb258',1,'MenuPanels']]],
-  ['pointsrecherche',['pointsRecherche',['../dd/dbe/class_pays.html#a5db813e35f457335192a016eb0ffa189',1,'Pays']]],
-  ['population',['population',['../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29',1,'Pays.population()'],['../db/dbb/class_a_population_category.html#ac52e705ca852bb107955fff851f19ee3',1,'APopulationCategory.population()'],['../df/d6a/class_population_categories.html#a9d3b7185a237033733ab53af09778873',1,'PopulationCategories.population()']]]
+  ['name',['name',['../d0/d63/class_abstract_symptom.html#aae44c22da82dc7b7fb1ef7b329ea280d',1,'AbstractSymptom']]],
+  ['nbinfected',['nbInfected',['../d0/d6b/class_cargo.html#a8e291833015c3afbae93f092023370ee',1,'Cargo.nbInfected()'],['../d9/db4/class_souche.html#a5cacbd27e9e216b44af8befd612ecf6f',1,'Souche.nbInfected()']]],
+  ['nbinfecteddetected',['nbInfectedDetected',['../dd/d36/class_population.html#a1ab3da5f60c0f89723be1e1fc936d54a',1,'Population']]],
+  ['nbinfectedtourists',['nbInfectedTourists',['../d0/d6b/class_cargo.html#ad91add6014465f42e631a272fcd2cb4c',1,'Cargo']]],
+  ['nbpersonnes',['nbPersonnes',['../d0/d6b/class_cargo.html#ad8eac0b79859eefe796011b2c01c6818',1,'Cargo']]],
+  ['nbressourceenvoye',['nbRessourceEnvoye',['../dc/d3e/class_echange.html#a0c2b0e7033a380ab352b51088a43e87a',1,'Echange']]],
+  ['nbressourcerecu',['nbRessourceRecu',['../dc/d3e/class_echange.html#aa4e70472b6b7d20d79c1cc707b437e59',1,'Echange']]],
+  ['newday',['newDay',['../de/d73/class_clock_manager.html#a5ff3e15862bd43d1fce4d8d1ce968fe0',1,'ClockManager']]],
+  ['nom',['nom',['../db/dbb/class_a_population_category.html#a730b34f0b4cd6685623ef5b054ea4d6b',1,'APopulationCategory.nom()'],['../d4/d33/class_ressource.html#a827099b8e6107cdc28f81d8a9fdd9901',1,'Ressource.nom()']]],
+  ['nombrepopulationtext',['nombrePopulationText',['../db/d10/class_game_manager.html#ae40319d852b087565c0feaa6a267fe4e',1,'GameManager']]],
+  ['nomcate',['nomCate',['../d2/d39/class_categories_observer.html#a25b8c4de2e40fe9bf578092c7deeae54',1,'CategoriesObserver']]],
+  ['nompays',['nomPays',['../dd/dbe/class_pays.html#a93e2eee362a3804bcd38c68729e27262',1,'Pays']]]
 ];

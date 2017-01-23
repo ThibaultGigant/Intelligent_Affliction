@@ -1,0 +1,13 @@
+<map id="GraphiquesCategories" name="GraphiquesCategories">
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="502,109,554,136"/>
+<area shape="rect" id="node8" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="275,199,341,225"/>
+<area shape="rect" id="node3" href="$df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="422,288,567,315"/>
+<area shape="rect" id="node4" href="$dd/d36/class_population.html" title="Population" alt="" coords="565,199,648,225"/>
+<area shape="rect" id="node6" href="$db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="709,288,830,315"/>
+<area shape="rect" id="node7" href="$de/d73/class_links.html" title="Links" alt="" coords="463,199,516,225"/>
+<area shape="rect" id="node9" href="$d4/d3b/class_skills.html" title="Skills" alt="" coords="311,288,366,315"/>
+<area shape="rect" id="node10" href="$d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="42,109,166,136"/>
+<area shape="rect" id="node11" href="$d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node12" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="448,13,507,39"/>
+<area shape="rect" id="node13" href="$d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="531,13,624,39"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="LimitedQueue.Enqueue" name="LimitedQueue.Enqueue">
+<area shape="rect" id="node2" href="$d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="213,5,356,32"/>
+<area shape="rect" id="node3" href="$d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1" title="Production de Nourriture Plus la population assignée à cette catégorie est grande, plus la production sera importante. " alt="" coords="217,56,352,83"/>
+<area shape="rect" id="node4" href="$df/dee/class_inactifs.html#ac0463ac47ab4c738c3ea563e735eba94" title="Peut casser des infrastructures, liées aux transports ou aux loisirs. " alt="" coords="228,107,341,133"/>
+<area shape="rect" id="node5" href="$da/d41/class_loisirs.html#a6d234487c20c891d1d9b7ba985813761" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="229,157,340,184"/>
+<area shape="rect" id="node6" href="$d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="221,208,349,235"/>
+<area shape="rect" id="node7" href="$dd/d10/class_recherche.html#aa15e5a06d9ba5d7b30e897c409574bda" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="211,259,359,285"/>
+<area shape="rect" id="node9" href="$d6/d8e/class_transports.html#a0aa448dcce1df02b979452eeb01298d7" title="Production de Transport Cette ressource se congrège deux informations : la longueur des lignes et leu..." alt="" coords="218,309,351,336"/>
+<area shape="rect" id="node10" href="$d4/dbc/class_nourriture.html#a9cf832efbb48b13dcd8a7cb3c313696b" title="Consommation journalière de nourriture par la population. " alt="" coords="217,360,352,387"/>
+<area shape="rect" id="node8" href="$dd/d10/class_recherche.html#ada9a65031923dfc821cfd5c4b5b240b8" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="407,259,541,285"/>
+</map>

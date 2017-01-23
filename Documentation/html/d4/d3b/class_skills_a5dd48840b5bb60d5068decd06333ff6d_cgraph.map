@@ -1,0 +1,4 @@
+<map id="Skills.getResistanceHeat" name="Skills.getResistanceHeat">
+<area shape="rect" id="node2" href="$d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="221,5,404,47"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="452,13,651,39"/>
+</map>

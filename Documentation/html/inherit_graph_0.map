@@ -1,9 +1,9 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$db/df1/class_abstact_symptom.html" title="AbstactSymptom" alt="" coords="5,132,128,159"/>
-<area shape="rect" id="node2" href="$d1/d6f/class_arret_des_organes.html" title="ArretDesOrganes" alt="" coords="176,5,299,32"/>
-<area shape="rect" id="node3" href="$d7/d32/class_diarrhee.html" title="Diarrhee" alt="" coords="202,56,273,83"/>
-<area shape="rect" id="node4" href="$d9/d48/class_eternuements.html" title="Eternuements" alt="" coords="186,107,289,133"/>
-<area shape="rect" id="node5" href="$d2/d9c/class_fievre.html" title="Fievre" alt="" coords="209,157,265,184"/>
-<area shape="rect" id="node6" href="$d0/dc6/class_sueurs.html" title="Sueurs" alt="" coords="206,208,269,235"/>
-<area shape="rect" id="node7" href="$d1/d49/class_toux.html" title="Toux" alt="" coords="212,259,263,285"/>
+<area shape="rect" id="node1" href="$d0/d63/class_abstract_symptom.html" title="AbstractSymptom" alt="" coords="5,132,132,159"/>
+<area shape="rect" id="node2" href="$d1/d6f/class_arret_des_organes.html" title="ArretDesOrganes" alt="" coords="180,5,303,32"/>
+<area shape="rect" id="node3" href="$d7/d32/class_diarrhee.html" title="Diarrhee" alt="" coords="206,56,277,83"/>
+<area shape="rect" id="node4" href="$d9/d48/class_eternuements.html" title="Eternuements" alt="" coords="190,107,293,133"/>
+<area shape="rect" id="node5" href="$d2/d9c/class_fievre.html" title="Fievre" alt="" coords="213,157,269,184"/>
+<area shape="rect" id="node6" href="$d0/dc6/class_sueurs.html" title="Sueurs" alt="" coords="210,208,273,235"/>
+<area shape="rect" id="node7" href="$d1/d49/class_toux.html" title="Toux" alt="" coords="216,259,267,285"/>
 </map>

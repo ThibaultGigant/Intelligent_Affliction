@@ -1,0 +1,7 @@
+<map id="HistoriqueSouche.lastInfectionGradient" name="HistoriqueSouche.lastInfectionGradient">
+<area shape="rect" id="node2" href="$d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1" title="Production de points d&#39;évolution En fonction des facteurs suivants : " alt="" coords="504,5,620,32"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="251,56,456,83"/>
+<area shape="rect" id="node6" href="$d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="257,107,450,133"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="668,31,779,57"/>
+<area shape="rect" id="node5" href="$d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="510,56,614,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Medecine.ideal" name="Medecine.ideal">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a630208abe54387464beac552b47ed3ab" title="Indice de la médecine Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="163,5,309,32"/>
+<area shape="rect" id="node3" href="$d2/de3/class_medecine.html#ae5c0487341c4cb588683aaf9497cce4a" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="357,31,484,57"/>
+</map>

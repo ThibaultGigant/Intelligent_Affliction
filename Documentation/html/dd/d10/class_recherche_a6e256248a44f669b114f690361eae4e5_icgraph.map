@@ -1,0 +1,5 @@
+<map id="Recherche.moyennePoints" name="Recherche.moyennePoints">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a5bc4c8e78a6431a6c88d4cc76b3f4ea1" title="Indice de la recherche Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="232,5,384,32"/>
+<area shape="rect" id="node3" href="$dd/d10/class_recherche.html#a06fca65a6cc6de4685bd189939db0072" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="432,5,565,32"/>
+<area shape="rect" id="node4" href="$dd/d10/class_recherche.html#a71f75a055f0e6f92275d04cfd332fc5f" title="Indique combien de ressource mensuel il voudrait réccupérer. " alt="" coords="613,5,755,32"/>
+</map>

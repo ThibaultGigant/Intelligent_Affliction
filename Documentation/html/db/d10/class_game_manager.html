@@ -79,7 +79,18 @@ Graphe de collaboration de GameManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/d7e/class_game_manager__coll__graph.png" border="0" usemap="#_game_manager_coll__map" alt="Collaboration graph"/></div>
 <map name="_game_manager_coll__map" id="_game_manager_coll__map">
-<area shape="rect" id="node3" href="../../df/da2/class_pays_manager.html" title="PaysManager" alt="" coords="77,81,181,108"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="414,109,466,136"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="793,199,860,225"/>
+<area shape="rect" id="node14" href="../../df/da2/class_pays_manager.html" title="PaysManager" alt="" coords="75,109,178,136"/>
+<area shape="rect" id="node4" href="../../db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="295,288,417,315"/>
+<area shape="rect" id="node5" href="../../dd/d36/class_population.html" title="Population" alt="" coords="441,199,524,225"/>
+<area shape="rect" id="node7" href="../../de/d73/class_links.html" title="Links" alt="" coords="587,199,640,225"/>
+<area shape="rect" id="node6" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="479,288,625,315"/>
+<area shape="rect" id="node9" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="799,288,854,315"/>
+<area shape="rect" id="node10" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="898,109,1022,136"/>
+<area shape="rect" id="node11" href="../../d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="872,5,1048,47"/>
+<area shape="rect" id="node12" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="361,13,420,39"/>
+<area shape="rect" id="node13" href="../../d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="444,13,537,39"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -89,6 +100,8 @@ Attributs publics</h2></td></tr>
 <tr class="separator:a839b46b0c176d06eebe013abd2270baa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab8dfbc69591d9959a0f0b67caf82306"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d10/class_game_manager.html#aab8dfbc69591d9959a0f0b67caf82306">earth</a></td></tr>
 <tr class="separator:aab8dfbc69591d9959a0f0b67caf82306"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4541b6bc3b5e973322ede973ee1867c4"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d10/class_game_manager.html#a4541b6bc3b5e973322ede973ee1867c4">miniEarth</a></td></tr>
+<tr class="separator:a4541b6bc3b5e973322ede973ee1867c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae40319d852b087565c0feaa6a267fe4e"><td class="memItemLeft" align="right" valign="top">Text&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d10/class_game_manager.html#ae40319d852b087565c0feaa6a267fe4e">nombrePopulationText</a></td></tr>
 <tr class="separator:ae40319d852b087565c0feaa6a267fe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -107,6 +120,8 @@ Fonctions membres privées</h2></td></tr>
 Attributs privés</h2></td></tr>
 <tr class="memitem:a15c27125fc9d2ecc4fc84ce3acb3c419"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/da2/class_pays_manager.html">PaysManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d10/class_game_manager.html#a15c27125fc9d2ecc4fc84ce3acb3c419">paysManager</a></td></tr>
 <tr class="separator:a15c27125fc9d2ecc4fc84ce3acb3c419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a771611bddb62ff429afc3d020c906"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d10/class_game_manager.html#ab5a771611bddb62ff429afc3d020c906">lastPaysSelected</a> = null</td></tr>
+<tr class="separator:ab5a771611bddb62ff429afc3d020c906"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa001fc987f9e80f0c69494ea67ba299e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d10/class_game_manager.html#aa001fc987f9e80f0c69494ea67ba299e">largeurMenuPrincipal</a> = Screen.width * 1.0f</td></tr>
 <tr class="separator:aa001fc987f9e80f0c69494ea67ba299e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -206,10 +221,11 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d10/class_game_manager_a44c79b205dec16bfe650e21259860c5b_cgraph.png" border="0" usemap="#db/d10/class_game_manager_a44c79b205dec16bfe650e21259860c5b_cgraph" alt=""/></div>
 <map name="db/d10/class_game_manager_a44c79b205dec16bfe650e21259860c5b_cgraph" id="db/d10/class_game_manager_a44c79b205dec16bfe650e21259860c5b_cgraph">
-<area shape="rect" id="node2" href="../../db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295" title="GameManager.updateMenuPricipal" alt="" coords="211,31,443,57"/>
-<area shape="rect" id="node3" href="../../db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="491,5,725,32"/>
-<area shape="rect" id="node4" href="../../df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="499,56,717,83"/>
-<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="773,56,927,83"/>
+<area shape="rect" id="node2" href="../../db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295" title="GameManager.updateMenuPricipal" alt="" coords="205,56,431,83"/>
+<area shape="rect" id="node3" href="../../db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="479,5,707,32"/>
+<area shape="rect" id="node4" href="../../df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="486,56,699,83"/>
+<area shape="rect" id="node6" href="../../d5/df1/class_utils.html#aad335fc7483db362ea9250bac1ed9ae4" title="Utils.toStringFormat" alt="" coords="523,107,662,133"/>
+<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="755,56,905,83"/>
 </map>
 </div>
 
@@ -242,9 +258,10 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_cgraph.png" border="0" usemap="#db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_cgraph" alt=""/></div>
 <map name="db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_cgraph" id="db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_cgraph">
-<area shape="rect" id="node2" href="../../db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="285,5,520,32"/>
-<area shape="rect" id="node3" href="../../df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="293,56,512,83"/>
-<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="568,56,721,83"/>
+<area shape="rect" id="node2" href="../../db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174" title="GameManager.resizeMenuPrincipal" alt="" coords="279,5,507,32"/>
+<area shape="rect" id="node3" href="../../df/da2/class_pays_manager.html#acb3dc6f15952699366d2979e8822765b" title="Retourne la population mondiale actuelle. " alt="" coords="286,56,499,83"/>
+<area shape="rect" id="node5" href="../../d5/df1/class_utils.html#aad335fc7483db362ea9250bac1ed9ae4" title="Utils.toStringFormat" alt="" coords="323,107,462,133"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="555,56,705,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -252,7 +269,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_icgraph.png" border="0" usemap="#db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_icgraph" alt=""/></div>
 <map name="db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_icgraph" id="db/d10/class_game_manager_a6e4b6554b251d108056a1604b2305295_icgraph">
-<area shape="rect" id="node2" href="../../db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title="GameManager.Update" alt="" coords="285,5,443,32"/>
+<area shape="rect" id="node2" href="../../db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b" title="GameManager.Update" alt="" coords="279,5,431,32"/>
 </map>
 </div>
 
@@ -295,6 +312,28 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
+<a id="ab5a771611bddb62ff429afc3d020c906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5a771611bddb62ff429afc3d020c906">&sect;&nbsp;</a></span>lastPaysSelected</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> GameManager.lastPaysSelected = null</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a839b46b0c176d06eebe013abd2270baa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a839b46b0c176d06eebe013abd2270baa">&sect;&nbsp;</a></span>menuPrincipal</h2>
 
@@ -303,6 +342,20 @@ Voici le graphe des appelants de cette fonction :</div>
       <table class="memname">
         <tr>
           <td class="memname">RawImage GameManager.menuPrincipal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4541b6bc3b5e973322ede973ee1867c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4541b6bc3b5e973322ede973ee1867c4">&sect;&nbsp;</a></span>miniEarth</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject GameManager.miniEarth</td>
         </tr>
       </table>
 </div><div class="memdoc">

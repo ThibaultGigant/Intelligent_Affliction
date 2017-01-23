@@ -1,0 +1,4 @@
+<map id="AbstractSymptom.computeHumanEffectOnSymptom" name="AbstractSymptom.computeHumanEffectOnSymptom">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="276,5,475,32"/>
+<area shape="rect" id="node3" href="$d0/d63/class_abstract_symptom.html#ad5d5c7e1a4b4c124682c363d5c0157f4" title="Renvoie un facteur influençant la puissance du symptôme Dépend des connaissances accumulées sur le sy..." alt="" coords="277,57,473,98"/>
+</map>

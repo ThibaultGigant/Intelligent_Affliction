@@ -1,0 +1,9 @@
+<map id="PopulationCategories.reorganizePopulationCategoriesAuto" name="PopulationCategories.reorganizePopulationCategoriesAuto">
+<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="579,13,681,40"/>
+<area shape="rect" id="node4" href="$db/dbb/class_a_population_category.html#a063f69991be5c9c9273ef299381dd539" title="APopulationCategory.modeAuto" alt="" coords="271,38,477,65"/>
+<area shape="rect" id="node5" href="$db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="533,76,727,102"/>
+<area shape="rect" id="node6" href="$d5/df1/class_utils.html#ae08b5dce4b0eddc4269eaa515fd53b5a" title="tirageAlatoireList Tire aléatoirement un nombre, suivant la distribution donnée en paramètre..." alt="" coords="299,140,449,166"/>
+<area shape="rect" id="node7" href="$db/dbb/class_a_population_category.html#ad309093da961d6736559586cd43dd8aa" title="Ajoute des personnes à cette catégorie. " alt="" coords="263,190,485,217"/>
+<area shape="rect" id="node8" href="$db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4" title="Enlève des personnes de cette catégorie. " alt="" coords="279,242,469,283"/>
+<area shape="rect" id="node3" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="775,13,972,40"/>
+</map>

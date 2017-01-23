@@ -1,4 +1,8 @@
 <map id="Agriculture.production" name="Agriculture.production">
-<area shape="rect" id="node2" href="$dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e" title="indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l&#39;humidi..." alt="" coords="213,5,340,32"/>
-<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61" title="indiceTransportSuperficie " alt="" coords="201,56,352,83"/>
+<area shape="rect" id="node2" href="$d5/df1/class_utils.html#a562d5a7f1cda04c97558fce50ca504f8" title="Renvoie le produit des indices, chacun normalisées comme décris dans la structure donnée en paramètre..." alt="" coords="201,5,360,32"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a113d60d16efa007da44249bd96b8b10e" title="indiceClimat Donne une indication quant à la condition climatique du pays Plus la chaleur et l&#39;humidi..." alt="" coords="217,56,344,83"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61" title="indiceTransportSuperficie " alt="" coords="205,107,356,133"/>
+<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="229,157,332,184"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#aa0f2a5887661c695ac7184f7c000ff84" title="Pays.indiceProduction" alt="" coords="431,107,583,133"/>
+<area shape="rect" id="node7" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="408,157,605,184"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="Pays.SelectionPays" name="Pays.SelectionPays">
 <area shape="rect" id="node2" href="$dd/dc5/class_mouse_manager.html#a0ac175111c76943a24e8bde95fe291c7" title="MouseManager.doesHit" alt="" coords="211,5,370,32"/>
 <area shape="rect" id="node3" href="$df/dfc/class_parametres.html#a036b0997ec70162b559e28c2043e237c" title="Parametres.SetPaysSelected" alt="" coords="193,56,388,83"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#aa6cb26f6504621eb5c82f2e791754d82" title="Pays.checkSelection" alt="" coords="218,107,363,133"/>
 </map>

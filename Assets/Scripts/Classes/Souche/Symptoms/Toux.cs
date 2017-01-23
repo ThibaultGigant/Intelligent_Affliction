@@ -4,7 +4,6 @@ public class Toux : AbstractSymptom
 {
 	/**
 	 * Constructeur
-	 * @param cout Coût de l'évolution du symptom
 	 */
 	public Toux ()
 	{

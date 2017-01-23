@@ -90,7 +90,7 @@ public class Pays : MonoBehaviour
 		climat = new Climat (DonneePays.getChaleur(nomPays), DonneePays.getHumidite(nomPays));
 		superficie = DonneePays.getSuperficie(nomPays);
 		resources = new PaysRessources (this);
-		souche = new Souche (this);
+		souche = null;
 		messages = new List<CarteDeVisite> ();
 		paysNonLies = new List<Pays> ();
 		paysEnAttente = new List<Pays> ();
@@ -408,6 +408,44 @@ public class Pays : MonoBehaviour
 		return Mathf.Min(1f, recherche.moyennePoints() / ( 1f + recherche.ideal()));
 	}
 
+	/**
+	 * Crée une nouvelle souche à associer au pays.
+	 * 
+	 * Cette méthode ne devrait être appelée que lors du démarrage de l'application,
+	 * sur le pays qui démarrera avec la maladie
+	 */
+	public void createSouche()
+	{
+		this.souche = new Souche (this);
+	}
+
+	/**
+	 * Crée une nouvelle souche à associer au pays
+	 * 
+	 * Cette méthode est appelée lorsque le pays est sain et reçoit une population de malades
+	 * @param souche Souche qui arrive avec les malades
+	 * @param nbInfected Nombre d'infectés arrivant avec cette souche
+	 */
+	public void createSouche(Souche souche, uint nbInfected)
+	{
+		this.souche = new Souche (this);
+
+		// Récupération des capacités
+		this.souche.skills.setWaterSpreading (souche.skills.getWaterSpreading ());
+		this.souche.skills.setAirSpreading (souche.skills.getAirSpreading ());
+		this.souche.skills.setContactSpreading (souche.skills.getContactSpreading ());
+		this.souche.skills.setResistanceCold (souche.skills.getResistanceCold ());
+		this.souche.skills.setResistanceHeat (souche.skills.getResistanceHeat ());
+
+		// Copie des symptômes
+		foreach (KeyValuePair<string, AbstractSymptom> pair in souche.symptoms) {
+			this.souche.symptoms.Add (pair.Key, DonneeSouche.getSymptomFromName (pair.Key));
+		}
+
+		// Mise en place du nombre d'infectés
+		this.souche.setNbInfected (nbInfected);
+	}
+
 
 
 	/**
@@ -495,7 +533,7 @@ public class Pays : MonoBehaviour
 		if (max > Parametres.seuilDAppelALAide) {
 			CarteDeVisite carte = getCarteDeVisite ();
 			Ressource res = cateMax.demande ();
-			res.quantity = (int)((float)res.quantity / paysNonLies.Count);
+			res.quantity = (uint)((float)res.quantity / paysNonLies.Count);
 			if (res != null)
 				carte.addRessourceDemandee (res);
 			else {

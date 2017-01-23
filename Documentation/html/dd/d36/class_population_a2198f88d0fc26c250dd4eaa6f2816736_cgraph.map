@@ -1,3 +1,11 @@
 <map id="Population.reorganizePopulationCategories" name="Population.reorganizePopulationCategories">
-<area shape="rect" id="node2" href="$df/d6a/class_population_categories.html#a52aacf9734ef3c59c40ddfa5f65a413f" title="PopulationCategories.reorganize\lPopulationCategories" alt="" coords="261,5,471,47"/>
+<area shape="rect" id="node2" href="$df/d6a/class_population_categories.html#a3c6e2119149c7eb54c78be7804ae9b1f" title="PopulationCategories.reorganize\lPopulationCategoriesForPlayer" alt="" coords="261,5,471,47"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="835,97,937,123"/>
+<area shape="rect" id="node5" href="$df/d6a/class_population_categories.html#a5b9281e84abd366a5edf855d0cd8cace" title="Réorganisation de la population dans les catégories sans la présence du joueur. " alt="" coords="261,216,471,257"/>
+<area shape="rect" id="node4" href="$dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="1031,97,1228,123"/>
+<area shape="rect" id="node6" href="$db/dbb/class_a_population_category.html#a063f69991be5c9c9273ef299381dd539" title="APopulationCategory.modeAuto" alt="" coords="527,173,733,199"/>
+<area shape="rect" id="node7" href="$db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f" title="besoins Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à bes..." alt="" coords="789,198,983,225"/>
+<area shape="rect" id="node8" href="$d5/df1/class_utils.html#ae08b5dce4b0eddc4269eaa515fd53b5a" title="tirageAlatoireList Tire aléatoirement un nombre, suivant la distribution donnée en paramètre..." alt="" coords="555,274,705,301"/>
+<area shape="rect" id="node9" href="$db/dbb/class_a_population_category.html#ad309093da961d6736559586cd43dd8aa" title="Ajoute des personnes à cette catégorie. " alt="" coords="519,325,741,351"/>
+<area shape="rect" id="node10" href="$db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4" title="Enlève des personnes de cette catégorie. " alt="" coords="535,376,725,417"/>
 </map>

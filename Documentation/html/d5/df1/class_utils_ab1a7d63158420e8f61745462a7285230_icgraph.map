@@ -1,0 +1,6 @@
+<map id="Utils.createGraphique" name="Utils.createGraphique">
+<area shape="rect" id="node2" href="$db/dbb/class_a_population_category.html#accce466bde6006fd9e46170a86253ac9" title="APopulationCategory.create\lGraphiqueProduction" alt="" coords="200,5,384,47"/>
+<area shape="rect" id="node3" href="$db/dbb/class_a_population_category.html#a4201f3453596c9b4b84239efac5dbcd3" title="APopulationCategory.create\lGraphiqueConsommation" alt="" coords="200,71,384,112"/>
+<area shape="rect" id="node4" href="$d2/de3/class_medecine.html#a6a6b2042f9f60d9143ff7cf0e2f97b49" title="Medecine.createGraphique\lProduction" alt="" coords="203,136,381,177"/>
+<area shape="rect" id="node5" href="$d2/de3/class_medecine.html#ac78ab0a43b943c3d82f14ff09f922bd8" title="Medecine.createGraphique\lConsommation" alt="" coords="203,201,381,243"/>
+</map>

@@ -62,6 +62,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-attribs">Attributs publics</a> &#124;
 <a href="../../d0/d7a/class_recherche-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Recherche</div>  </div>
@@ -80,16 +81,20 @@ Graphe de collaboration de Recherche:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dd/dec/class_recherche__coll__graph.png" border="0" usemap="#_recherche_coll__map" alt="Collaboration graph"/></div>
 <map name="_recherche_coll__map" id="_recherche_coll__map">
-<area shape="rect" id="node2" href="../../db/dbb/class_a_population_category.html" title="APopulationCategory" alt="" coords="5,95,149,121"/>
-<area shape="rect" id="node3" href="../../dd/d36/class_population.html" title="Population" alt="" coords="249,5,332,32"/>
-<area shape="rect" id="node4" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="195,95,341,121"/>
-<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="563,95,615,121"/>
-<area shape="rect" id="node8" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="588,184,655,211"/>
-<area shape="rect" id="node7" href="../../de/d73/class_links.html" title="Links" alt="" coords="515,5,568,32"/>
-<area shape="rect" id="node9" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="485,95,539,121"/>
-<area shape="rect" id="node10" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="782,95,906,121"/>
-<area shape="rect" id="node11" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="810,5,950,32"/>
-<area shape="rect" id="node12" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="592,5,651,32"/>
+<area shape="rect" id="node2" href="../../db/dbb/class_a_population_category.html" title="APopulationCategory" alt="" coords="181,109,325,136"/>
+<area shape="rect" id="node3" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="160,13,300,39"/>
+<area shape="rect" id="node4" href="../../dd/d36/class_population.html" title="Population" alt="" coords="523,13,606,39"/>
+<area shape="rect" id="node5" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="392,109,537,136"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="799,109,851,136"/>
+<area shape="rect" id="node8" href="../../db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="591,199,712,225"/>
+<area shape="rect" id="node9" href="../../de/d73/class_links.html" title="Links" alt="" coords="811,199,865,225"/>
+<area shape="rect" id="node10" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="1026,199,1093,225"/>
+<area shape="rect" id="node11" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="1032,288,1087,315"/>
+<area shape="rect" id="node12" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="1144,109,1268,136"/>
+<area shape="rect" id="node13" href="../../d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="1125,5,1301,47"/>
+<area shape="rect" id="node14" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="789,13,847,39"/>
+<area shape="rect" id="node15" href="../../d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="871,13,965,39"/>
+<area shape="rect" id="node16" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; float \&gt;" alt="" coords="5,109,156,136"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -107,6 +112,18 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aa15e5a06d9ba5d7b30e897c409574bda"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/class_recherche.html#aa15e5a06d9ba5d7b30e897c409574bda">production</a> ()</td></tr>
 <tr class="memdesc:aa15e5a06d9ba5d7b30e897c409574bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estimation de la production de "ressources".  <a href="#aa15e5a06d9ba5d7b30e897c409574bda">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa15e5a06d9ba5d7b30e897c409574bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a568db33cd815f0680b5e71bfc8785226"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/class_recherche.html#a568db33cd815f0680b5e71bfc8785226">offre</a> (int montant, float pourcentage)</td></tr>
+<tr class="memdesc:a568db33cd815f0680b5e71bfc8785226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evalue l'offre que le pays proposerait à un autre.  <a href="#a568db33cd815f0680b5e71bfc8785226">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a568db33cd815f0680b5e71bfc8785226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78e9eca53a11d7d85bf5615ffcf8d59a"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/class_recherche.html#a78e9eca53a11d7d85bf5615ffcf8d59a">ideal</a> ()</td></tr>
+<tr class="memdesc:a78e9eca53a11d7d85bf5615ffcf8d59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique le nombre de points qui devraient être produits par jour idéalement.  <a href="#a78e9eca53a11d7d85bf5615ffcf8d59a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a78e9eca53a11d7d85bf5615ffcf8d59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e256248a44f669b114f690361eae4e5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/class_recherche.html#a6e256248a44f669b114f690361eae4e5">moyennePoints</a> ()</td></tr>
+<tr class="memdesc:a6e256248a44f669b114f690361eae4e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Revoie la moyenne des points produits par jour.  <a href="#a6e256248a44f669b114f690361eae4e5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a6e256248a44f669b114f690361eae4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f75a055f0e6f92275d04cfd332fc5f"><td class="memItemLeft" align="right" valign="top">override <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/class_recherche.html#a71f75a055f0e6f92275d04cfd332fc5f">demande</a> ()</td></tr>
+<tr class="memdesc:a71f75a055f0e6f92275d04cfd332fc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indique combien de ressource mensuel il voudrait réccupérer.  <a href="#a71f75a055f0e6f92275d04cfd332fc5f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a71f75a055f0e6f92275d04cfd332fc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_a_population_category"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_a_population_category')"><img src="../../closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="../../db/dbb/class_a_population_category.html">APopulationCategory</a></td></tr>
 <tr class="memitem:a80fbb576e993aa8ab9ec1bac39290312 inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a80fbb576e993aa8ab9ec1bac39290312">APopulationCategory</a> (<a class="el" href="../../dd/d36/class_population.html">Population</a> pop, uint nb)</td></tr>
 <tr class="memdesc:a80fbb576e993aa8ab9ec1bac39290312 inherit pub_methods_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="../../db/dbb/class_a_population_category.html#a80fbb576e993aa8ab9ec1bac39290312">Plus de détails...</a><br /></td></tr>
@@ -114,22 +131,52 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ad309093da961d6736559586cd43dd8aa inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#ad309093da961d6736559586cd43dd8aa">addAssigned</a> (uint nb)</td></tr>
 <tr class="memdesc:ad309093da961d6736559586cd43dd8aa inherit pub_methods_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute des personnes à cette catégorie.  <a href="../../db/dbb/class_a_population_category.html#ad309093da961d6736559586cd43dd8aa">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad309093da961d6736559586cd43dd8aa inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5416fd6ff2b8fee25a6ff559b6d732e inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#ac5416fd6ff2b8fee25a6ff559b6d732e">addAssigned</a> (int nb)</td></tr>
+<tr class="memdesc:ac5416fd6ff2b8fee25a6ff559b6d732e inherit pub_methods_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute des personnes à cette catégorie.  <a href="../../db/dbb/class_a_population_category.html#ac5416fd6ff2b8fee25a6ff559b6d732e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac5416fd6ff2b8fee25a6ff559b6d732e inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4c7cff2cd1c98dbb4c5bee42b9af0a4 inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4">removeAssigned</a> (uint nb)</td></tr>
 <tr class="memdesc:af4c7cff2cd1c98dbb4c5bee42b9af0a4 inherit pub_methods_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlève des personnes de cette catégorie.  <a href="../../db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af4c7cff2cd1c98dbb4c5bee42b9af0a4 inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93301109e29c4a7230f00e264c0e54d1 inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a93301109e29c4a7230f00e264c0e54d1">removeAssigned</a> (int nb_int)</td></tr>
+<tr class="memdesc:a93301109e29c4a7230f00e264c0e54d1 inherit pub_methods_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enlève des personnes de cette catégorie.  <a href="../../db/dbb/class_a_population_category.html#a93301109e29c4a7230f00e264c0e54d1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a93301109e29c4a7230f00e264c0e54d1 inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a063f69991be5c9c9273ef299381dd539 inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a063f69991be5c9c9273ef299381dd539">modeAuto</a> ()</td></tr>
+<tr class="separator:a063f69991be5c9c9273ef299381dd539 inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accce466bde6006fd9e46170a86253ac9 inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#accce466bde6006fd9e46170a86253ac9">createGraphiqueProduction</a> (GameObject graphique)</td></tr>
+<tr class="separator:accce466bde6006fd9e46170a86253ac9 inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4201f3453596c9b4b84239efac5dbcd3 inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a4201f3453596c9b4b84239efac5dbcd3">createGraphiqueConsommation</a> (GameObject graphique)</td></tr>
+<tr class="separator:a4201f3453596c9b4b84239efac5dbcd3 inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11bd6beebcec2b8e92723b7c337bcddd inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a11bd6beebcec2b8e92723b7c337bcddd">getMaxProduction</a> ()</td></tr>
+<tr class="separator:a11bd6beebcec2b8e92723b7c337bcddd inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de2bcbf36b1a4a8bbe4a2629f17385d inherit pub_methods_class_a_population_category"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a4de2bcbf36b1a4a8bbe4a2629f17385d">getMinProduction</a> ()</td></tr>
+<tr class="separator:a4de2bcbf36b1a4a8bbe4a2629f17385d inherit pub_methods_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Membres hérités additionnels</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Attributs publics</h2></td></tr>
+<tr class="memitem:a919b1896868fc372296978f7a71d4c21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d92/class_limited_queue.html">LimitedQueue</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d10/class_recherche.html#a919b1896868fc372296978f7a71d4c21">ameliorations</a></td></tr>
+<tr class="memdesc:a919b1896868fc372296978f7a71d4c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des dernières améliorations.  <a href="#a919b1896868fc372296978f7a71d4c21">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a919b1896868fc372296978f7a71d4c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_a_population_category"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_a_population_category')"><img src="../../closed.png" alt="-"/>&#160;Attributs publics hérités de <a class="el" href="../../db/dbb/class_a_population_category.html">APopulationCategory</a></td></tr>
+<tr class="memitem:a730b34f0b4cd6685623ef5b054ea4d6b inherit pub_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a730b34f0b4cd6685623ef5b054ea4d6b">nom</a></td></tr>
+<tr class="memdesc:a730b34f0b4cd6685623ef5b054ea4d6b inherit pub_attribs_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nom de la catégorie.  <a href="../../db/dbb/class_a_population_category.html#a730b34f0b4cd6685623ef5b054ea4d6b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a730b34f0b4cd6685623ef5b054ea4d6b inherit pub_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac52e705ca852bb107955fff851f19ee3 inherit pub_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d36/class_population.html">Population</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#ac52e705ca852bb107955fff851f19ee3">population</a></td></tr>
 <tr class="memdesc:ac52e705ca852bb107955fff851f19ee3 inherit pub_attribs_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">La population à laquelle est ratachée cette catégorie.  <a href="../../db/dbb/class_a_population_category.html#ac52e705ca852bb107955fff851f19ee3">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac52e705ca852bb107955fff851f19ee3 inherit pub_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a853933346e87818e4dda8ee3b7e45e35 inherit pub_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a853933346e87818e4dda8ee3b7e45e35">assignedPopulation</a></td></tr>
 <tr class="memdesc:a853933346e87818e4dda8ee3b7e45e35 inherit pub_attribs_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Taille de la population assignée à cette catégorie, en nombre d'habitants.  <a href="../../db/dbb/class_a_population_category.html#a853933346e87818e4dda8ee3b7e45e35">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a853933346e87818e4dda8ee3b7e45e35 inherit pub_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02ed0f704ed90ad0a42c37fc2f01d7e inherit pub_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/d92/class_limited_queue.html">LimitedQueue</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#ac02ed0f704ed90ad0a42c37fc2f01d7e">productions</a></td></tr>
+<tr class="separator:ac02ed0f704ed90ad0a42c37fc2f01d7e inherit pub_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a42419925a0f8a336408094f7727013 inherit pub_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a7a42419925a0f8a336408094f7727013">wantedPercentage</a> = -1f</td></tr>
 <tr class="memdesc:a7a42419925a0f8a336408094f7727013 inherit pub_attribs_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pourcentage de population que le joueur souhaiterait voir affectée à cette catégorie.  <a href="../../db/dbb/class_a_population_category.html#a7a42419925a0f8a336408094f7727013">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7a42419925a0f8a336408094f7727013 inherit pub_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83b0ac55253f1ad7363b1fe45204a097 inherit pub_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a83b0ac55253f1ad7363b1fe45204a097">stepReajusteForPlayer</a> = 0</td></tr>
+<tr class="memdesc:a83b0ac55253f1ad7363b1fe45204a097 inherit pub_attribs_class_a_population_category"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de tour que l'on réajuste les catégories depuis que le joueur l'a demandé  <a href="../../db/dbb/class_a_population_category.html#a83b0ac55253f1ad7363b1fe45204a097">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a83b0ac55253f1ad7363b1fe45204a097 inherit pub_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Membres hérités additionnels</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_a_population_category"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_a_population_category')"><img src="../../closed.png" alt="-"/>&#160;Attributs protégés hérités de <a class="el" href="../../db/dbb/class_a_population_category.html">APopulationCategory</a></td></tr>
 <tr class="memitem:a488697743825f7cf59fa5237ab56c0d0 inherit pro_attribs_class_a_population_category"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dbb/class_a_population_category.html#a488697743825f7cf59fa5237ab56c0d0">panelItem</a></td></tr>
 <tr class="separator:a488697743825f7cf59fa5237ab56c0d0 inherit pro_attribs_class_a_population_category"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,8 +245,186 @@ Membres hérités additionnels</h2></td></tr>
 
 <p>offre Indique les besoins de la catégorie La valeur est d'autant plus élevée que la catégorie à besoin d'effectif supplémentaire, et inversement </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Une valeur indiquant ses besoins en effectif, entre MIN_OFFRE et MAX_OFFRE </dd></dl>
+<p>Si la recherche n'avance pas assez (est loin de sa production idéale), il faut plus d'effectif</p>
+<p>Si le nombre de soigné est assez élevé, peut considérer qu'on a fait notre travail</p>
 
 <p>Implémente <a class="el" href="../../db/dbb/class_a_population_category.html#a0133096a38fa5d8c43ced0544677048f">APopulationCategory</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_cgraph.png" border="0" usemap="#dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_cgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_cgraph" id="dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_cgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a5bc4c8e78a6431a6c88d4cc76b3f4ea1" title="Indice de la recherche Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="187,31,339,57"/>
+<area shape="rect" id="node3" href="../../dd/d10/class_recherche.html#a6e256248a44f669b114f690361eae4e5" title="Revoie la moyenne des points produits par jour. " alt="" coords="387,5,565,32"/>
+<area shape="rect" id="node4" href="../../dd/d10/class_recherche.html#a78e9eca53a11d7d85bf5615ffcf8d59a" title="Indique le nombre de points qui devraient être produits par jour idéalement. " alt="" coords="419,56,533,83"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_icgraph.png" border="0" usemap="#dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_icgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_icgraph" id="dd/d10/class_recherche_a06fca65a6cc6de4685bd189939db0072_icgraph">
+<area shape="rect" id="node2" href="../../dd/d10/class_recherche.html#a71f75a055f0e6f92275d04cfd332fc5f" title="Indique combien de ressource mensuel il voudrait réccupérer. " alt="" coords="187,5,328,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a71f75a055f0e6f92275d04cfd332fc5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f75a055f0e6f92275d04cfd332fc5f">&sect;&nbsp;</a></span>demande()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override <a class="el" href="../../d4/d33/class_ressource.html">Ressource</a> Recherche.demande </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique combien de ressource mensuel il voudrait réccupérer. </p>
+
+<p>Implémente <a class="el" href="../../db/dbb/class_a_population_category.html#a0c43c97f1dbc082259961fd8a2ade134">APopulationCategory</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_a71f75a055f0e6f92275d04cfd332fc5f_cgraph.png" border="0" usemap="#dd/d10/class_recherche_a71f75a055f0e6f92275d04cfd332fc5f_cgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_a71f75a055f0e6f92275d04cfd332fc5f_cgraph" id="dd/d10/class_recherche_a71f75a055f0e6f92275d04cfd332fc5f_cgraph">
+<area shape="rect" id="node2" href="../../dd/d10/class_recherche.html#a06fca65a6cc6de4685bd189939db0072" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="195,31,328,57"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a5bc4c8e78a6431a6c88d4cc76b3f4ea1" title="Indice de la recherche Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="376,31,528,57"/>
+<area shape="rect" id="node4" href="../../dd/d10/class_recherche.html#a6e256248a44f669b114f690361eae4e5" title="Revoie la moyenne des points produits par jour. " alt="" coords="576,5,755,32"/>
+<area shape="rect" id="node5" href="../../dd/d10/class_recherche.html#a78e9eca53a11d7d85bf5615ffcf8d59a" title="Indique le nombre de points qui devraient être produits par jour idéalement. " alt="" coords="608,56,723,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a78e9eca53a11d7d85bf5615ffcf8d59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e9eca53a11d7d85bf5615ffcf8d59a">&sect;&nbsp;</a></span>ideal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int Recherche.ideal </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Indique le nombre de points qui devraient être produits par jour idéalement. </p>
+<p>Formule</p>
+<p>Arbitrairement, il faudrait qu'il y ai 1 points par groupe de x personnes (x = 10% de la population assignée à la recherche) Plus il y a eu d'avancement, moins on a besoin de se développer (?)</p>
+
+<p>Implémente <a class="el" href="../../db/dbb/class_a_population_category.html#a373398fbe30860a1338ecdfec418eeaf">APopulationCategory</a>.</p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_a78e9eca53a11d7d85bf5615ffcf8d59a_icgraph.png" border="0" usemap="#dd/d10/class_recherche_a78e9eca53a11d7d85bf5615ffcf8d59a_icgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_a78e9eca53a11d7d85bf5615ffcf8d59a_icgraph" id="dd/d10/class_recherche_a78e9eca53a11d7d85bf5615ffcf8d59a_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a5bc4c8e78a6431a6c88d4cc76b3f4ea1" title="Indice de la recherche Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="168,5,320,32"/>
+<area shape="rect" id="node3" href="../../dd/d10/class_recherche.html#a06fca65a6cc6de4685bd189939db0072" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="368,5,501,32"/>
+<area shape="rect" id="node4" href="../../dd/d10/class_recherche.html#a71f75a055f0e6f92275d04cfd332fc5f" title="Indique combien de ressource mensuel il voudrait réccupérer. " alt="" coords="549,5,691,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6e256248a44f669b114f690361eae4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e256248a44f669b114f690361eae4e5">&sect;&nbsp;</a></span>moyennePoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Recherche.moyennePoints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Revoie la moyenne des points produits par jour. </p>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_a6e256248a44f669b114f690361eae4e5_icgraph.png" border="0" usemap="#dd/d10/class_recherche_a6e256248a44f669b114f690361eae4e5_icgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_a6e256248a44f669b114f690361eae4e5_icgraph" id="dd/d10/class_recherche_a6e256248a44f669b114f690361eae4e5_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a5bc4c8e78a6431a6c88d4cc76b3f4ea1" title="Indice de la recherche Renvoie une valeur entre 0 (mauvais) et 1 (bien) " alt="" coords="232,5,384,32"/>
+<area shape="rect" id="node3" href="../../dd/d10/class_recherche.html#a06fca65a6cc6de4685bd189939db0072" title="offre Indique les besoins de la catégorie La valeur est d&#39;autant plus élevée que la catégorie à besoi..." alt="" coords="432,5,565,32"/>
+<area shape="rect" id="node4" href="../../dd/d10/class_recherche.html#a71f75a055f0e6f92275d04cfd332fc5f" title="Indique combien de ressource mensuel il voudrait réccupérer. " alt="" coords="613,5,755,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a568db33cd815f0680b5e71bfc8785226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a568db33cd815f0680b5e71bfc8785226">&sect;&nbsp;</a></span>offre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int Recherche.offre </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>montant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>pourcentage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evalue l'offre que le pays proposerait à un autre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">montant</td><td>Montant de ressources par mois demandé </td></tr>
+    <tr><td class="paramname">pourcentage</td><td>Pourcentage d'excédant de production que l'on est prêt à offrir </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Indique combien l'on est prêt à fournir par mois à un autre pays </dd></dl>
+
+<p>Implémente <a class="el" href="../../db/dbb/class_a_population_category.html#ae86e4c750f6db1d7150caceff2715ccd">APopulationCategory</a>.</p>
 
 </div>
 </div>
@@ -229,6 +454,18 @@ Membres hérités additionnels</h2></td></tr>
 <p>Production de "ressources", en fonction de ce qu'apporte la catégorie. </p>
 
 <p>Implémente <a class="el" href="../../db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141">APopulationCategory</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_ada9a65031923dfc821cfd5c4b5b240b8_cgraph.png" border="0" usemap="#dd/d10/class_recherche_ada9a65031923dfc821cfd5c4b5b240b8_cgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_ada9a65031923dfc821cfd5c4b5b240b8_cgraph" id="dd/d10/class_recherche_ada9a65031923dfc821cfd5c4b5b240b8_cgraph">
+<area shape="rect" id="node2" href="../../dd/d10/class_recherche.html#aa15e5a06d9ba5d7b30e897c409574bda" title="Estimation de la production de &quot;ressources&quot;. " alt="" coords="188,56,336,83"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="411,5,514,32"/>
+<area shape="rect" id="node5" href="../../d5/df1/class_utils.html#ae08b5dce4b0eddc4269eaa515fd53b5a" title="tirageAlatoireList Tire aléatoirement un nombre, suivant la distribution donnée en paramètre..." alt="" coords="388,56,537,83"/>
+<area shape="rect" id="node6" href="../../da/d92/class_limited_queue.html#a894394592f567dd34cd51cd5667f6e9f" title="Permet d&#39;ajouter un objet tout en gardant la file de la taille voulue. " alt="" coords="384,107,541,133"/>
+<area shape="rect" id="node4" href="../../dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="589,5,787,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -256,8 +493,48 @@ Membres hérités additionnels</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Estimation de la production de "ressources". </p>
+<p>Formule</p>
+<p>Nombre de points de recherche produit Un par groupe de 1000 chercheurs, chaque semaine Plus il y a d'infectes, plus il est simple de faire des recherches sur la maladie Plus on a déjà de points, moins il est simple de avoir de nouveaux</p>
+<p>Choix du symptome à traiter Plus le symptome est développé, moins il est urgent de s'en occuper Plus la léthalité d'un tel symptome est grande, plus il faut se presser Tirage aléatoire, selon le ratio</p>
+<p>Développement des connaissaces Plus il y a de chercheurs, mieux c'est Plus il est simple de détecter le symptom, mieux c'est Pour "normaliser", on ne prend pas en compte le nombre de chercheur, mais le pourcentage de la population qui s'y consacre (le nombre de chercheur en lui même est considéré dans l'apport en points de recherche, donc un grans pays sera quand même favorisé)</p>
 
 <p>Implémente <a class="el" href="../../db/dbb/class_a_population_category.html#af0a02e25080a6245110d71bbca5509db">APopulationCategory</a>.</p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_cgraph.png" border="0" usemap="#dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_cgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_cgraph" id="dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_cgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a8b1a5819c7b0d4fc3ca233b837a9dea1" title="indiceHI Renvoie un facteur prenant en considération le HappinessIndex du pays Formule : la même que ..." alt="" coords="229,5,331,32"/>
+<area shape="rect" id="node4" href="../../d5/df1/class_utils.html#ae08b5dce4b0eddc4269eaa515fd53b5a" title="tirageAlatoireList Tire aléatoirement un nombre, suivant la distribution donnée en paramètre..." alt="" coords="205,56,355,83"/>
+<area shape="rect" id="node5" href="../../da/d92/class_limited_queue.html#a894394592f567dd34cd51cd5667f6e9f" title="Permet d&#39;ajouter un objet tout en gardant la file de la taille voulue. " alt="" coords="201,107,359,133"/>
+<area shape="rect" id="node3" href="../../dd/d36/class_population.html#a9ec72ed10b059d1732137eed0ac5f8a5" title="Revoi la valeur du happinessIndex. " alt="" coords="407,5,604,32"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_icgraph.png" border="0" usemap="#dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_icgraph" alt=""/></div>
+<map name="dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_icgraph" id="dd/d10/class_recherche_aa15e5a06d9ba5d7b30e897c409574bda_icgraph">
+<area shape="rect" id="node2" href="../../dd/d10/class_recherche.html#ada9a65031923dfc821cfd5c4b5b240b8" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="201,5,336,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a id="a919b1896868fc372296978f7a71d4c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a919b1896868fc372296978f7a71d4c21">&sect;&nbsp;</a></span>ameliorations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d92/class_limited_queue.html">LimitedQueue</a>&lt;float&gt; Recherche.ameliorations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Liste des dernières améliorations. </p>
 
 </div>
 </div>

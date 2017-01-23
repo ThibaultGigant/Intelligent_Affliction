@@ -1,0 +1,8 @@
+<map id="AbstractSymptom" name="AbstractSymptom">
+<area shape="rect" id="node2" href="$d1/d6f/class_arret_des_organes.html" title="ArretDesOrganes" alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$d7/d32/class_diarrhee.html" title="Diarrhee" alt="" coords="153,80,223,107"/>
+<area shape="rect" id="node4" href="$d9/d48/class_eternuements.html" title="Eternuements" alt="" coords="247,80,350,107"/>
+<area shape="rect" id="node5" href="$d2/d9c/class_fievre.html" title="Fievre" alt="" coords="375,80,431,107"/>
+<area shape="rect" id="node6" href="$d0/dc6/class_sueurs.html" title="Sueurs" alt="" coords="455,80,518,107"/>
+<area shape="rect" id="node7" href="$d1/d49/class_toux.html" title="Toux" alt="" coords="543,80,593,107"/>
+</map>

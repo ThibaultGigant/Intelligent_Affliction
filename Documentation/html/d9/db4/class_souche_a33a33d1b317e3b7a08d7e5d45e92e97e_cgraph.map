@@ -1,0 +1,7 @@
+<map id="Souche.evolveTransmission" name="Souche.evolveTransmission">
+<area shape="rect" id="node2" href="$d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64" title="Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d..." alt="" coords="260,5,439,47"/>
+<area shape="rect" id="node4" href="$d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="235,71,464,112"/>
+<area shape="rect" id="node5" href="$d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1" title="Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. " alt="" coords="281,137,418,163"/>
+<area shape="rect" id="node6" href="$d8/d38/class_historique_souche.html#a28f683aa480fe35fa8306188775b0792" title="Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre..." alt="" coords="236,188,463,229"/>
+<area shape="rect" id="node3" href="$d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="512,5,689,47"/>
+</map>

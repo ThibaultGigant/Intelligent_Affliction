@@ -71,18 +71,25 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
+Graphe d'héritage de Souche:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/dd0/class_souche__inherit__graph.png" border="0" usemap="#_souche_inherit__map" alt="Inheritance graph"/></div>
+<center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
+<div class="dynheader">
 Graphe de collaboration de Souche:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../dc/da7/class_souche__coll__graph.png" border="0" usemap="#_souche_coll__map" alt="Collaboration graph"/></div>
 <map name="_souche_coll__map" id="_souche_coll__map">
-<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="212,273,264,300"/>
-<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="288,95,343,121"/>
-<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="367,95,491,121"/>
-<area shape="rect" id="node4" href="../../da/d92/class_limited_queue.html" title="LimitedQueue\&lt; int \&gt;" alt="" coords="359,5,499,32"/>
-<area shape="rect" id="node9" href="../../dd/d36/class_population.html" title="Population" alt="" coords="197,363,279,389"/>
-<area shape="rect" id="node7" href="../../de/d73/class_links.html" title="Links" alt="" coords="141,184,194,211"/>
-<area shape="rect" id="node8" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="218,184,277,211"/>
-<area shape="rect" id="node10" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="165,452,311,479"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html" title="Skills" alt="" coords="779,283,833,309"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="780,135,832,161"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="331,215,455,241"/>
+<area shape="rect" id="node5" href="../../d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,207,181,249"/>
+<area shape="rect" id="node7" href="../../db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="1153,117,1275,144"/>
+<area shape="rect" id="node8" href="../../dd/d36/class_population.html" title="Population" alt="" coords="945,28,1028,55"/>
+<area shape="rect" id="node10" href="../../de/d73/class_links.html" title="Links" alt="" coords="960,184,1013,211"/>
+<area shape="rect" id="node9" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="1141,5,1287,32"/>
+<area shape="rect" id="node11" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="581,33,640,60"/>
+<area shape="rect" id="node12" href="../../d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="564,84,657,111"/>
 </map>
 <center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
@@ -91,24 +98,35 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5ccd498345fbf837e1e4388b8a4dfb8b">Souche</a> (<a class="el" href="../../dd/dbe/class_pays.html">Pays</a> pays)</td></tr>
 <tr class="memdesc:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur.  <a href="#a5ccd498345fbf837e1e4388b8a4dfb8b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5ccd498345fbf837e1e4388b8a4dfb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7728de48ef31bd85b6f06601d5cbb49b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b">Update</a> ()</td></tr>
+<tr class="memdesc:a7728de48ef31bd85b6f06601d5cbb49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Méthode appelée à chaque frame Elle permet d'effectuer une évolution si possible, ainsi que d'effectuer la contamination.  <a href="#a7728de48ef31bd85b6f06601d5cbb49b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7728de48ef31bd85b6f06601d5cbb49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a368abf0a6702c50d67372c5e71b04f49"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49">getNbInfected</a> ()</td></tr>
 <tr class="memdesc:a368abf0a6702c50d67372c5e71b04f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne le nombre d'infectés du pays.  <a href="#a368abf0a6702c50d67372c5e71b04f49">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a368abf0a6702c50d67372c5e71b04f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ae4110d905045fd7483d6c78cae6d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a3ae4110d905045fd7483d6c78cae6d7f">setNbInfected</a> (uint nb)</td></tr>
+<tr class="memdesc:a3ae4110d905045fd7483d6c78cae6d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie le nombre d'infectés.  <a href="#a3ae4110d905045fd7483d6c78cae6d7f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3ae4110d905045fd7483d6c78cae6d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f9f56bcd1bc188aac54531422aafac6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a3f9f56bcd1bc188aac54531422aafac6">setEvolutionSpeed</a> (float speed)</td></tr>
+<tr class="memdesc:a3f9f56bcd1bc188aac54531422aafac6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la vitesse d'évolution.  <a href="#a3f9f56bcd1bc188aac54531422aafac6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3f9f56bcd1bc188aac54531422aafac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11b7202dd88f1073148107b785eb6b03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03">addInfectedPeople</a> (uint toAdd)</td></tr>
 <tr class="memdesc:a11b7202dd88f1073148107b785eb6b03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout de Personnes infectées.  <a href="#a11b7202dd88f1073148107b785eb6b03">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a11b7202dd88f1073148107b785eb6b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21e262ffa63efaab12f88f8102e2396b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b">removeInfectedPeople</a> (uint toRemove)</td></tr>
-<tr class="memdesc:a21e262ffa63efaab12f88f8102e2396b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression de Personnes infectées, probablement soignées.  <a href="#a21e262ffa63efaab12f88f8102e2396b">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a21e262ffa63efaab12f88f8102e2396b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression de Personnes infectées, probablement soignées ou tuées par la maladie.  <a href="#a21e262ffa63efaab12f88f8102e2396b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a21e262ffa63efaab12f88f8102e2396b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469">evolve</a> ()</td></tr>
-<tr class="memdesc:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue une évolution de la souche en fonction des motivations et points disponibles.  <a href="#a4888e2e7ec13dcba0e437c2d9e3c1469">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Effectue une évolution de la souche en fonction des motivations.  <a href="#a4888e2e7ec13dcba0e437c2d9e3c1469">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4888e2e7ec13dcba0e437c2d9e3c1469"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1">produce</a> ()</td></tr>
-<tr class="memdesc:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Production de points d'évolution En fonction de gradient d'infection et/ou ratio des infectés, vitesse d'évolution.  <a href="#a4d754b8e5dc8ab91011020fd32cf49c1">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Production de points d'évolution En fonction des facteurs suivants :  <a href="#a4d754b8e5dc8ab91011020fd32cf49c1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4d754b8e5dc8ab91011020fd32cf49c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56e4763350da857124a8bdc20113e9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc">fusion</a> (<a class="el" href="../../d9/db4/class_souche.html">Souche</a> souche, uint nbInfectedComing)</td></tr>
+<tr class="memdesc:a56e4763350da857124a8bdc20113e9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application de la fusion entre une souche arrivante, et la souche actuelle.  <a href="#a56e4763350da857124a8bdc20113e9dc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a56e4763350da857124a8bdc20113e9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93a84891b818cb2bb6380d5589342abf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf">contamination</a> ()</td></tr>
+<tr class="memdesc:a93a84891b818cb2bb6380d5589342abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application de la contamination de nouveaux habitants et de la mort de certains d'entre eux si c'est nécessaire La Contamination suit la formule suivante : nbInfected * somme des skills * (1 - pourcentage d'infectés)  <a href="#a93a84891b818cb2bb6380d5589342abf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a93a84891b818cb2bb6380d5589342abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -116,42 +134,50 @@ Attributs publics</h2></td></tr>
 <tr class="memitem:a83e37b941effdc02e615a6b36d4bfc9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a83e37b941effdc02e615a6b36d4bfc9d">country</a></td></tr>
 <tr class="memdesc:a83e37b941effdc02e615a6b36d4bfc9d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dd/dbe/class_pays.html">Pays</a> que la souche a infecté  <a href="#a83e37b941effdc02e615a6b36d4bfc9d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a83e37b941effdc02e615a6b36d4bfc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5119cbfa06d2c50a4867cd117b9e61a"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../db/df1/class_abstact_symptom.html">AbstactSymptom</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae5119cbfa06d2c50a4867cd117b9e61a">symptoms</a></td></tr>
-<tr class="memdesc:ae5119cbfa06d2c50a4867cd117b9e61a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des symptomes de la souche.  <a href="#ae5119cbfa06d2c50a4867cd117b9e61a">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae5119cbfa06d2c50a4867cd117b9e61a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4885f352f035ee6d3ee486291481259d"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; string, <a class="el" href="../../d0/d63/class_abstract_symptom.html">AbstractSymptom</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a4885f352f035ee6d3ee486291481259d">symptoms</a></td></tr>
+<tr class="memdesc:a4885f352f035ee6d3ee486291481259d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des symptomes de la souche.  <a href="#a4885f352f035ee6d3ee486291481259d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4885f352f035ee6d3ee486291481259d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a499998f4af10da48bf2feb5fdfbb319b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/d3b/class_skills.html">Skills</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a499998f4af10da48bf2feb5fdfbb319b">skills</a></td></tr>
 <tr class="memdesc:a499998f4af10da48bf2feb5fdfbb319b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensemble des skills de la souche.  <a href="#a499998f4af10da48bf2feb5fdfbb319b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a499998f4af10da48bf2feb5fdfbb319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Fonctions membres privées</h2></td></tr>
-<tr class="memitem:a66e85e656d8b465ed3a087b8f03ed80b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a66e85e656d8b465ed3a087b8f03ed80b">motivationTransmission</a> ()</td></tr>
-<tr class="separator:a66e85e656d8b465ed3a087b8f03ed80b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1dcf9b25bd35532e5be63192ab537495"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a1dcf9b25bd35532e5be63192ab537495">motivationResistance</a> ()</td></tr>
-<tr class="separator:a1dcf9b25bd35532e5be63192ab537495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ab44edcb784b4b991e601d29e63a4a5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a9ab44edcb784b4b991e601d29e63a4a5">motivationEvolutionSpeed</a> ()</td></tr>
-<tr class="separator:a9ab44edcb784b4b991e601d29e63a4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafa01c742c48bd63178f09fe9eb30d9e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#aafa01c742c48bd63178f09fe9eb30d9e">motivationLethality</a> ()</td></tr>
-<tr class="separator:aafa01c742c48bd63178f09fe9eb30d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae876b1bb090c46bf09444e76a1974856"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae876b1bb090c46bf09444e76a1974856">evolveTransmission</a> ()</td></tr>
-<tr class="separator:ae876b1bb090c46bf09444e76a1974856"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afecaf5015d39dcebc350c6e1722f12fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#afecaf5015d39dcebc350c6e1722f12fd">evolveResistance</a> ()</td></tr>
-<tr class="separator:afecaf5015d39dcebc350c6e1722f12fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9033bb9b9ed999dd00d42be97ca6f3a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a9033bb9b9ed999dd00d42be97ca6f3a9">evolveEvolutionSpeed</a> ()</td></tr>
-<tr class="separator:a9033bb9b9ed999dd00d42be97ca6f3a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5aabb4949e934ce38011da294b773ddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5aabb4949e934ce38011da294b773ddf">evolveLethality</a> ()</td></tr>
-<tr class="separator:a5aabb4949e934ce38011da294b773ddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbae2d486cbbfcb2effb9dcc3c26ad92"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92">motivationTransmission</a> (DateTime date)</td></tr>
+<tr class="memdesc:acbae2d486cbbfcb2effb9dcc3c26ad92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de la volonté de la souche d'augmenter sa faculté de transmission Calculé en prenant en compte plusieurs facteurs :  <a href="#acbae2d486cbbfcb2effb9dcc3c26ad92">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acbae2d486cbbfcb2effb9dcc3c26ad92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a630b6b4779c09cabbad5e18432ce9c35"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35">motivationResistance</a> (DateTime date)</td></tr>
+<tr class="memdesc:a630b6b4779c09cabbad5e18432ce9c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de la volonté de la souche d'augmenter sa faculté de résistance Calculé en prenant en compte plusieurs facteurs :  <a href="#a630b6b4779c09cabbad5e18432ce9c35">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a630b6b4779c09cabbad5e18432ce9c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aba2e7c358bb72f0586264b8cd202cd"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd">motivationEvolutionSpeed</a> (DateTime date)</td></tr>
+<tr class="memdesc:a8aba2e7c358bb72f0586264b8cd202cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de la volonté de la souche d'augmenter sa vitesse d'évolution Calculé en prenant en compte plusieurs facteurs :  <a href="#a8aba2e7c358bb72f0586264b8cd202cd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8aba2e7c358bb72f0586264b8cd202cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b43f870e6c20a42e26b6dafe2c73710"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710">motivationLethality</a> (DateTime date)</td></tr>
+<tr class="memdesc:a2b43f870e6c20a42e26b6dafe2c73710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicateur de la volonté de la souche d'augmenter la "puissance" de l'un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs :  <a href="#a2b43f870e6c20a42e26b6dafe2c73710">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2b43f870e6c20a42e26b6dafe2c73710"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33a33d1b317e3b7a08d7e5d45e92e97e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e">evolveTransmission</a> (DateTime date)</td></tr>
+<tr class="memdesc:a33a33d1b317e3b7a08d7e5d45e92e97e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choix du type de transmission à améliorer et application de l'évolution de cette transmission.  <a href="#a33a33d1b317e3b7a08d7e5d45e92e97e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a33a33d1b317e3b7a08d7e5d45e92e97e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade8548280be49f0bc8d3b809c1b07aee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee">evolveResistance</a> (DateTime date)</td></tr>
+<tr class="memdesc:ade8548280be49f0bc8d3b809c1b07aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choix du type de résistance à améliorer et application de l'évolution de cette résistance.  <a href="#ade8548280be49f0bc8d3b809c1b07aee">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ade8548280be49f0bc8d3b809c1b07aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d8037866dc94d5ad3a4f3c41ec757b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ae1d8037866dc94d5ad3a4f3c41ec757b">evolveEvolutionSpeed</a> (DateTime date)</td></tr>
+<tr class="memdesc:ae1d8037866dc94d5ad3a4f3c41ec757b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application de l'augmentation de la vitesse d'évolution.  <a href="#ae1d8037866dc94d5ad3a4f3c41ec757b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae1d8037866dc94d5ad3a4f3c41ec757b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac02c3686b2e5a9eec93f8edd5e017f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82">evolveLethality</a> (DateTime date)</td></tr>
+<tr class="memdesc:ac02c3686b2e5a9eec93f8edd5e017f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Choix du type de transmission à améliorer et application de l'évolution vers la transmission.  <a href="#ac02c3686b2e5a9eec93f8edd5e017f82">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac02c3686b2e5a9eec93f8edd5e017f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:a5cacbd27e9e216b44af8befd612ecf6f"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5cacbd27e9e216b44af8befd612ecf6f">nbInfected</a></td></tr>
+<tr class="memitem:a5cacbd27e9e216b44af8befd612ecf6f"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a5cacbd27e9e216b44af8befd612ecf6f">nbInfected</a> = 0</td></tr>
 <tr class="memdesc:a5cacbd27e9e216b44af8befd612ecf6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de personnes infectées par cette souche dans ce pays.  <a href="#a5cacbd27e9e216b44af8befd612ecf6f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5cacbd27e9e216b44af8befd612ecf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7eab675dbf9ae74d3e2c44e25960f64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#ac7eab675dbf9ae74d3e2c44e25960f64">evolutionPoints</a> = 0</td></tr>
 <tr class="memdesc:ac7eab675dbf9ae74d3e2c44e25960f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Points qui serviront à évoluer.  <a href="#ac7eab675dbf9ae74d3e2c44e25960f64">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac7eab675dbf9ae74d3e2c44e25960f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02a308c6239e60e24003a6430e7f21a7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a02a308c6239e60e24003a6430e7f21a7">evolutionSpeed</a> = 0</td></tr>
-<tr class="memdesc:a02a308c6239e60e24003a6430e7f21a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Facteur vitesse d'évolution de la souche.  <a href="#a02a308c6239e60e24003a6430e7f21a7">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a02a308c6239e60e24003a6430e7f21a7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a02a308c6239e60e24003a6430e7f21a7">evolutionSpeed</a> = 1</td></tr>
+<tr class="memdesc:a02a308c6239e60e24003a6430e7f21a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Facteur vitesse d'évolution de la souche Influe sur le nombre de points gagnés lors de la production.  <a href="#a02a308c6239e60e24003a6430e7f21a7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a02a308c6239e60e24003a6430e7f21a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a196d6078fd018e4ba28dbba619cac86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d8/d38/class_historique_souche.html">HistoriqueSouche</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/db4/class_souche.html#a196d6078fd018e4ba28dbba619cac86c">historique</a></td></tr>
 <tr class="memdesc:a196d6078fd018e4ba28dbba619cac86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Historique des évolutions de la souche, pour le calcul des motivations.  <a href="#a196d6078fd018e4ba28dbba619cac86c">Plus de détails...</a><br /></td></tr>
@@ -216,6 +242,8 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="../../d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph.png" border="0" usemap="#d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph" alt=""/></div>
 <map name="d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph" id="d9/db4/class_souche_a11b7202dd88f1073148107b785eb6b03_icgraph">
 <area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ac4ed0bd20ebc9aa5a80d5239b1b8fe58" title="Pays.addInfectedPeople" alt="" coords="229,5,392,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="235,56,386,83"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="440,56,551,83"/>
 </map>
 </div>
 
@@ -236,6 +264,37 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
+<p>Application de la contamination de nouveaux habitants et de la mort de certains d'entre eux si c'est nécessaire La Contamination suit la formule suivante : nbInfected * somme des skills * (1 - pourcentage d'infectés) </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_cgraph.png" border="0" usemap="#d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_cgraph" id="d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_cgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="227,107,377,133"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="691,259,841,285"/>
+<area shape="rect" id="node4" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="235,157,369,184"/>
+<area shape="rect" id="node12" href="../../d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="214,259,390,285"/>
+<area shape="rect" id="node13" href="../../d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b" title="Suppression de Personnes infectées, probablement soignées ou tuées par la maladie. " alt="" coords="204,360,400,387"/>
+<area shape="rect" id="node14" href="../../dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c" title="Pays.removePeople" alt="" coords="233,411,371,437"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="454,157,621,184"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="453,5,621,32"/>
+<area shape="rect" id="node9" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="453,56,622,83"/>
+<area shape="rect" id="node10" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="462,107,613,133"/>
+<area shape="rect" id="node11" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="448,208,627,235"/>
+<area shape="rect" id="node6" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="675,99,857,141"/>
+<area shape="rect" id="node7" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="905,107,1104,133"/>
+<area shape="rect" id="node15" href="../../dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="453,411,621,437"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_icgraph.png" border="0" usemap="#d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_icgraph" id="d9/db4/class_souche_a93a84891b818cb2bb6380d5589342abf_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="204,5,315,32"/>
+</map>
+</div>
+
 </div>
 </div>
 <a id="a4888e2e7ec13dcba0e437c2d9e3c1469"></a>
@@ -253,13 +312,58 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Effectue une évolution de la souche en fonction des motivations et points disponibles. </p>
-<p>Inhibition des connaissances de la population </p>
+<p>Effectue une évolution de la souche en fonction des motivations. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_cgraph.png" border="0" usemap="#d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_cgraph" id="d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_cgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="157,523,363,550"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="451,152,600,179"/>
+<area shape="rect" id="node17" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="163,574,357,600"/>
+<area shape="rect" id="node19" href="../../d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="170,61,350,102"/>
+<area shape="rect" id="node21" href="../../d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="171,134,349,160"/>
+<area shape="rect" id="node22" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="169,647,351,674"/>
+<area shape="rect" id="node25" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="175,698,345,724"/>
+<area shape="rect" id="node27" href="../../d9/db4/class_souche.html#ae1d8037866dc94d5ad3a4f3c41ec757b" title="Application de l&#39;augmentation de la vitesse d&#39;évolution. " alt="" coords="163,748,357,775"/>
+<area shape="rect" id="node29" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="183,272,337,299"/>
+<area shape="rect" id="node30" href="../../d8/d38/class_historique_souche.html#a211ae8264bf4e3913d957f74588c6f02" title="Ajoute un gradient d&#39;infection à la date indiquée. " alt="" coords="161,800,359,841"/>
+<area shape="rect" id="node31" href="../../d8/d38/class_historique_souche.html#ae70689708d16798cb98c5aef592c88f9" title="Retourne le nombre d&#39;infectés qu&#39;il y avait à l&#39;itération précédente. " alt="" coords="163,865,357,906"/>
+<area shape="rect" id="node32" href="../../d8/d38/class_historique_souche.html#ac88cf5c16bdd7b080a540f1ece5194bb" title="Règle le nombre d&#39;infectés à l&#39;itération précédente à la valeur voulue. " alt="" coords="163,930,357,972"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64" title="Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d..." alt="" coords="436,625,615,666"/>
+<area shape="rect" id="node5" href="../../d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3" title="Date et Gradient d&#39;infection du dernier recueil gradient d&#39;infection. " alt="" coords="427,457,624,498"/>
+<area shape="rect" id="node7" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="931,236,1081,263"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="458,523,593,550"/>
+<area shape="rect" id="node16" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="411,690,640,732"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="689,690,866,732"/>
+<area shape="rect" id="node9" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="694,523,861,550"/>
+<area shape="rect" id="node12" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="693,472,861,499"/>
+<area shape="rect" id="node13" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="693,371,862,398"/>
+<area shape="rect" id="node14" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="702,422,853,448"/>
+<area shape="rect" id="node15" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="688,320,867,347"/>
+<area shape="rect" id="node10" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="915,414,1097,456"/>
+<area shape="rect" id="node11" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="1145,422,1344,448"/>
+<area shape="rect" id="node18" href="../../d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6" title="Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="437,756,613,797"/>
+<area shape="rect" id="node20" href="../../d8/d38/class_historique_souche.html#a0048eba6530fd01a7b45c75edf1144fe" title="Date de la dernière évolution de la vitesse d&#39;évolution. " alt="" coords="425,36,626,77"/>
+<area shape="rect" id="node23" href="../../d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1" title="Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. " alt="" coords="457,887,594,914"/>
+<area shape="rect" id="node24" href="../../d8/d38/class_historique_souche.html#a28f683aa480fe35fa8306188775b0792" title="Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre..." alt="" coords="412,821,639,862"/>
+<area shape="rect" id="node26" href="../../d8/d38/class_historique_souche.html#a252c114d378c141e1cc4830a2d9a075a" title="Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre..." alt="" coords="418,938,633,980"/>
+<area shape="rect" id="node28" href="../../d8/d38/class_historique_souche.html#ae1a34f5b9143ea50bcd5af19ba8b3be4" title="Ajoute une évolution de la vitesse d&#39;évolution. " alt="" coords="425,1004,626,1045"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_icgraph.png" border="0" usemap="#d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_icgraph" id="d9/db4/class_souche_a4888e2e7ec13dcba0e437c2d9e3c1469_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="157,5,268,32"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a9033bb9b9ed999dd00d42be97ca6f3a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9033bb9b9ed999dd00d42be97ca6f3a9">&sect;&nbsp;</a></span>evolveEvolutionSpeed()</h2>
+<a id="ae1d8037866dc94d5ad3a4f3c41ec757b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d8037866dc94d5ad3a4f3c41ec757b">&sect;&nbsp;</a></span>evolveEvolutionSpeed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,7 +374,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">void Souche.evolveEvolutionSpeed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -281,10 +386,35 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Application de l'augmentation de la vitesse d'évolution. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_cgraph.png" border="0" usemap="#d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_cgraph" id="d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#ae1a34f5b9143ea50bcd5af19ba8b3be4" title="Ajoute une évolution de la vitesse d&#39;évolution. " alt="" coords="247,5,448,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_icgraph.png" border="0" usemap="#d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_icgraph" id="d9/db4/class_souche_ae1d8037866dc94d5ad3a4f3c41ec757b_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="247,5,351,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="399,5,509,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a5aabb4949e934ce38011da294b773ddf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5aabb4949e934ce38011da294b773ddf">&sect;&nbsp;</a></span>evolveLethality()</h2>
+<a id="ac02c3686b2e5a9eec93f8edd5e017f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac02c3686b2e5a9eec93f8edd5e017f82">&sect;&nbsp;</a></span>evolveLethality()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -295,7 +425,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">void Souche.evolveLethality </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -306,10 +437,41 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Choix du type de transmission à améliorer et application de l'évolution vers la transmission. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_cgraph.png" border="0" usemap="#d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_cgraph" id="d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_cgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="221,5,371,32"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="449,77,600,104"/>
+<area shape="rect" id="node4" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="211,157,381,184"/>
+<area shape="rect" id="node7" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="221,208,371,235"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="207,107,385,133"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="433,150,616,191"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="664,157,863,184"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_icgraph.png" border="0" usemap="#d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_icgraph" id="d9/db4/class_souche_ac02c3686b2e5a9eec93f8edd5e017f82_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="207,5,311,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="359,5,469,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="afecaf5015d39dcebc350c6e1722f12fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afecaf5015d39dcebc350c6e1722f12fd">&sect;&nbsp;</a></span>evolveResistance()</h2>
+<a id="ade8548280be49f0bc8d3b809c1b07aee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade8548280be49f0bc8d3b809c1b07aee">&sect;&nbsp;</a></span>evolveResistance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -320,7 +482,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">void Souche.evolveResistance </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -331,10 +494,39 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Choix du type de résistance à améliorer et application de l'évolution de cette résistance. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_cgraph.png" border="0" usemap="#d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_cgraph" id="d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6" title="Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="249,5,425,47"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="223,71,452,112"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1" title="Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. " alt="" coords="269,137,406,163"/>
+<area shape="rect" id="node6" href="../../d8/d38/class_historique_souche.html#a252c114d378c141e1cc4830a2d9a075a" title="Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre..." alt="" coords="230,188,445,229"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="500,5,677,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_icgraph.png" border="0" usemap="#d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_icgraph" id="d9/db4/class_souche_ade8548280be49f0bc8d3b809c1b07aee_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="223,5,327,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="375,5,485,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="ae876b1bb090c46bf09444e76a1974856"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae876b1bb090c46bf09444e76a1974856">&sect;&nbsp;</a></span>evolveTransmission()</h2>
+<a id="a33a33d1b317e3b7a08d7e5d45e92e97e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33a33d1b317e3b7a08d7e5d45e92e97e">&sect;&nbsp;</a></span>evolveTransmission()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -345,7 +537,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">void Souche.evolveTransmission </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -355,6 +548,35 @@ Voici le graphe des appelants de cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Choix du type de transmission à améliorer et application de l'évolution de cette transmission. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date de l'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_cgraph.png" border="0" usemap="#d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_cgraph" id="d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64" title="Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d..." alt="" coords="260,5,439,47"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="235,71,464,112"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1" title="Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. " alt="" coords="281,137,418,163"/>
+<area shape="rect" id="node6" href="../../d8/d38/class_historique_souche.html#a28f683aa480fe35fa8306188775b0792" title="Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre..." alt="" coords="236,188,463,229"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="512,5,689,47"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_icgraph.png" border="0" usemap="#d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_icgraph" id="d9/db4/class_souche_a33a33d1b317e3b7a08d7e5d45e92e97e_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="235,5,339,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="387,5,497,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -383,6 +605,36 @@ Voici le graphe des appelants de cette fonction :</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Application de la fusion entre une souche arrivante, et la souche actuelle. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">souche</td><td><a class="el" href="../../d9/db4/class_souche.html">Souche</a> qui arrive avec les migrants </td></tr>
+    <tr><td class="paramname">nbInfectedComing</td><td>Nombre de migrants qui arrivent avec cette souche : Influencera l'impact des caractéristiques de la souche arrivante sur la souche courante </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_cgraph.png" border="0" usemap="#d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_cgraph" id="d9/db4/class_souche_a56e4763350da857124a8bdc20113e9dc_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="199,309,368,336"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html#ab93a1a939dd68d54c03ed330544f83fe" title="Modifie la valeur de la transmission par l&#39;eau. " alt="" coords="199,56,368,83"/>
+<area shape="rect" id="node6" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="208,5,359,32"/>
+<area shape="rect" id="node7" href="../../d4/d3b/class_skills.html#a7591decd4ef79e0b818195fd8646a80a" title="Modifie la valeur de la transmission par l&#39;air. " alt="" coords="208,157,359,184"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="194,411,373,437"/>
+<area shape="rect" id="node10" href="../../d4/d3b/class_skills.html#a645e607b2710816a1b313d25351f4496" title="Modifie la valeur de la transmission par le contact. " alt="" coords="194,259,373,285"/>
+<area shape="rect" id="node11" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="200,107,367,133"/>
+<area shape="rect" id="node12" href="../../d4/d3b/class_skills.html#a3bf92211909df9cf374da1be041996eb" title="Modifie la valeur de la résistance au froid. " alt="" coords="200,360,367,387"/>
+<area shape="rect" id="node13" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="199,208,367,235"/>
+<area shape="rect" id="node14" href="../../d4/d3b/class_skills.html#aa76421b191e322e8aca818040e7d2d5e" title="Modifie la valeur de la résistance à la chaleur. " alt="" coords="199,461,367,488"/>
+<area shape="rect" id="node15" href="../../dd/d81/class_donnee_souche.html#a4df7d0388476188766e6a2a7937fdd04" title="Renvoie un nouveau symptôme correspondant au nom passé en paramètre. " alt="" coords="157,512,409,539"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="457,201,640,242"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="688,208,887,235"/>
+<area shape="rect" id="node9" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="473,411,624,437"/>
+</map>
+</div>
 <div class="dynheader">
 Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
@@ -411,11 +663,28 @@ Voici le graphe des appelants de cette fonction :</div>
 
 <p>Retourne le nombre d'infectés du pays. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>Entier donnant ce nombre </dd></dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a368abf0a6702c50d67372c5e71b04f49_icgraph.png" border="0" usemap="#d9/db4/class_souche_a368abf0a6702c50d67372c5e71b04f49_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a368abf0a6702c50d67372c5e71b04f49_icgraph" id="d9/db4/class_souche_a368abf0a6702c50d67372c5e71b04f49_icgraph">
+<area shape="rect" id="node2" href="../../d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="241,5,369,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="479,237,583,264"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1" title="Production de points d&#39;évolution En fonction des facteurs suivants : " alt="" coords="473,107,589,133"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="203,157,408,184"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="209,208,402,235"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="215,259,395,301"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="217,325,394,352"/>
+<area shape="rect" id="node10" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="229,376,382,403"/>
+<area shape="rect" id="node11" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="456,343,607,369"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="655,237,765,264"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="a9ab44edcb784b4b991e601d29e63a4a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ab44edcb784b4b991e601d29e63a4a5">&sect;&nbsp;</a></span>motivationEvolutionSpeed()</h2>
+<a id="a8aba2e7c358bb72f0586264b8cd202cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aba2e7c358bb72f0586264b8cd202cd">&sect;&nbsp;</a></span>motivationEvolutionSpeed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +695,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">float Souche.motivationEvolutionSpeed </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -437,10 +707,44 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Indicateur de la volonté de la souche d'augmenter sa vitesse d'évolution Calculé en prenant en compte plusieurs facteurs : </p>
+<ul>
+<li>duree : Temps écoulé (en secondes) depuis la dernière évolution de ce caractère</li>
+<li>pourc : Pourcentage d'infectés dans la population</li>
+<li>speed : la vitesse actuelle</li>
+<li>val : le nombre de points d'évolution que l'on a actuellement</li>
+</ul>
+<p>On suit la formule : duree/100 * (1-pourc)^3 * (val / speed) </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date à laquelle la méthode est sensée avoir été appelée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'indicateur en question </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_cgraph.png" border="0" usemap="#d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_cgraph" id="d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#a0048eba6530fd01a7b45c75edf1144fe" title="Date de la dernière évolution de la vitesse d&#39;évolution. " alt="" coords="233,5,435,47"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="259,71,409,98"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="259,122,409,149"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_icgraph.png" border="0" usemap="#d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_icgraph" id="d9/db4/class_souche_a8aba2e7c358bb72f0586264b8cd202cd_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="233,13,337,39"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="385,13,496,39"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="aafa01c742c48bd63178f09fe9eb30d9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aafa01c742c48bd63178f09fe9eb30d9e">&sect;&nbsp;</a></span>motivationLethality()</h2>
+<a id="a2b43f870e6c20a42e26b6dafe2c73710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b43f870e6c20a42e26b6dafe2c73710">&sect;&nbsp;</a></span>motivationLethality()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,7 +755,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">float Souche.motivationLethality </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -462,10 +767,43 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Indicateur de la volonté de la souche d'augmenter la "puissance" de l'un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : </p>
+<ul>
+<li>duree : Temps écoulé (en secondes) depuis la dernière évolution d'un symptôme</li>
+<li>pourc : Pourcentage d'infectés dans la population</li>
+<li>val : Nombre de symptômes restant à déveloper</li>
+</ul>
+<p>On suit la formule : duree/100 * (5 * pourc) * val </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date à laquelle la méthode est sensée avoir été appelée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'indicateur en question </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_cgraph.png" border="0" usemap="#d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_cgraph" id="d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#a0048eba6530fd01a7b45c75edf1144fe" title="Date de la dernière évolution de la vitesse d&#39;évolution. " alt="" coords="231,5,432,47"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="257,71,406,98"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="256,122,407,149"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_icgraph.png" border="0" usemap="#d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_icgraph" id="d9/db4/class_souche_a2b43f870e6c20a42e26b6dafe2c73710_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="231,5,335,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="383,5,493,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a1dcf9b25bd35532e5be63192ab537495"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dcf9b25bd35532e5be63192ab537495">&sect;&nbsp;</a></span>motivationResistance()</h2>
+<a id="a630b6b4779c09cabbad5e18432ce9c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a630b6b4779c09cabbad5e18432ce9c35">&sect;&nbsp;</a></span>motivationResistance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +814,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">float Souche.motivationResistance </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -487,10 +826,55 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
+<p>Indicateur de la volonté de la souche d'augmenter sa faculté de résistance Calculé en prenant en compte plusieurs facteurs : </p>
+<ul>
+<li>duree : Temps écoulé (en secondes) depuis la dernière évolution de ce caractère</li>
+<li>pourc : Pourcentage d'infectés dans la population</li>
+<li>grad : Augmentation du gradient d'infection après la dernière évolution de ce caratère</li>
+<li>val : La valeur actuelle de la compétence de la souche, Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains</li>
+</ul>
+<p>On suit la formule : duree/100 * ((1 - pourc) + 5*(1/grad)) * (100 - val) </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date à laquelle la méthode est sensée avoir été appelée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'indicateur en question </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_cgraph.png" border="0" usemap="#d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_cgraph" id="d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6" title="Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="273,5,449,47"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3" title="Date et Gradient d&#39;infection du dernier recueil gradient d&#39;infection. " alt="" coords="263,71,460,112"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="287,137,436,163"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="767,213,917,239"/>
+<area shape="rect" id="node7" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="294,289,429,315"/>
+<area shape="rect" id="node15" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="247,340,476,381"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="525,5,702,47"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="530,289,697,315"/>
+<area shape="rect" id="node11" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="529,339,697,366"/>
+<area shape="rect" id="node12" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="529,390,698,417"/>
+<area shape="rect" id="node13" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="538,441,689,467"/>
+<area shape="rect" id="node14" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="524,238,703,265"/>
+<area shape="rect" id="node9" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="751,332,933,373"/>
+<area shape="rect" id="node10" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="981,339,1180,366"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_icgraph.png" border="0" usemap="#d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_icgraph" id="d9/db4/class_souche_a630b6b4779c09cabbad5e18432ce9c35_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="247,5,351,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="399,5,509,32"/>
+</map>
+</div>
+
 </div>
 </div>
-<a id="a66e85e656d8b465ed3a087b8f03ed80b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66e85e656d8b465ed3a087b8f03ed80b">&sect;&nbsp;</a></span>motivationTransmission()</h2>
+<a id="acbae2d486cbbfcb2effb9dcc3c26ad92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbae2d486cbbfcb2effb9dcc3c26ad92">&sect;&nbsp;</a></span>motivationTransmission()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -501,7 +885,8 @@ Voici le graphe des appelants de cette fonction :</div>
         <tr>
           <td class="memname">float Souche.motivationTransmission </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">DateTime&#160;</td>
+          <td class="paramname"><em>date</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -511,6 +896,51 @@ Voici le graphe des appelants de cette fonction :</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Indicateur de la volonté de la souche d'augmenter sa faculté de transmission Calculé en prenant en compte plusieurs facteurs : </p>
+<ul>
+<li>duree : Temps écoulé (en secondes) depuis la dernière évolution de ce caractère</li>
+<li>pourc : Pourcentage d'infectés dans la population</li>
+<li>grad : Augmentation du gradient d'infection après la dernière évolution de ce caratère</li>
+<li>val : La valeur actuelle de la compétence de la souche, Cette dernière prend en compte les effets des symptomes de la souche, ainsi que de la recherche et medecine des humains</li>
+</ul>
+<p>On suit la formule : duree/100 * ((1 - pourc)*5 + (1 / grad)*2) * (100 - val) </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">date</td><td>Date à laquelle la méthode est sensée avoir été appelée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'indicateur en question </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_cgraph.png" border="0" usemap="#d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_cgraph" id="d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64" title="Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d..." alt="" coords="284,5,463,47"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3" title="Date et Gradient d&#39;infection du dernier recueil gradient d&#39;infection. " alt="" coords="275,71,472,112"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="299,137,448,163"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="779,213,929,239"/>
+<area shape="rect" id="node7" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="306,289,441,315"/>
+<area shape="rect" id="node15" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="259,340,488,381"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="537,5,714,47"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="542,289,709,315"/>
+<area shape="rect" id="node11" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="541,339,709,366"/>
+<area shape="rect" id="node12" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="541,390,710,417"/>
+<area shape="rect" id="node13" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="550,441,701,467"/>
+<area shape="rect" id="node14" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="536,238,715,265"/>
+<area shape="rect" id="node9" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="763,332,945,373"/>
+<area shape="rect" id="node10" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="993,339,1192,366"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_icgraph.png" border="0" usemap="#d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_icgraph" id="d9/db4/class_souche_acbae2d486cbbfcb2effb9dcc3c26ad92_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="259,5,363,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="411,5,521,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -529,7 +959,32 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Production de points d'évolution En fonction de gradient d'infection et/ou ratio des infectés, vitesse d'évolution. </p>
+<p>Production de points d'évolution En fonction des facteurs suivants : </p>
+<ul>
+<li>grad :gradient d'infection</li>
+<li>nbInfectes : nombre d'infectés actuels</li>
+<li>pourc : ratio des infectés</li>
+<li>evolutionSpeed : la vitesse d'évolution</li>
+</ul>
+<p>On suit la formule : evolutionSpeed * pourc * 10 *(1 + grad) / nbInfectes </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_cgraph.png" border="0" usemap="#d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_cgraph" id="d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_cgraph">
+<area shape="rect" id="node2" href="../../d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3" title="Date et Gradient d&#39;infection du dernier recueil gradient d&#39;infection. " alt="" coords="169,5,367,47"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="193,71,343,98"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="193,122,343,149"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_icgraph.png" border="0" usemap="#d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_icgraph" id="d9/db4/class_souche_a4d754b8e5dc8ab91011020fd32cf49c1_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="169,5,280,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -549,7 +1004,7 @@ Voici le graphe des appelants de cette fonction :</div>
       </table>
 </div><div class="memdoc">
 
-<p>Suppression de Personnes infectées, probablement soignées. </p>
+<p>Suppression de Personnes infectées, probablement soignées ou tuées par la maladie. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">toRemove</td><td>Nombre de personnes infectées à rajouter. Ce nombre doit être positif et inférieur au nombre de personnes infectées. </td></tr>
@@ -562,6 +1017,133 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="center"><img src="../../d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph.png" border="0" usemap="#d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph" alt=""/></div>
 <map name="d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph" id="d9/db4/class_souche_a21e262ffa63efaab12f88f8102e2396b_icgraph">
 <area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#ad32a53b2f2f9ae4055af30441190f03a" title="Pays.removeInfectedPeople" alt="" coords="249,5,432,32"/>
+<area shape="rect" id="node3" href="../../d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e" title="Production de &quot;ressources&quot;, en fonction de ce qu&#39;apporte la catégorie. " alt="" coords="277,56,405,83"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="265,107,416,133"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="480,107,591,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f9f56bcd1bc188aac54531422aafac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9f56bcd1bc188aac54531422aafac6">&sect;&nbsp;</a></span>setEvolutionSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.setEvolutionSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la vitesse d'évolution. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>Nouvelle vitesse d'évolution </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ae4110d905045fd7483d6c78cae6d7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ae4110d905045fd7483d6c78cae6d7f">&sect;&nbsp;</a></span>setNbInfected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.setNbInfected </td>
+          <td>(</td>
+          <td class="paramtype">uint&#160;</td>
+          <td class="paramname"><em>nb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie le nombre d'infectés. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nb</td><td>Nouveau nombre d'infectés </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a3ae4110d905045fd7483d6c78cae6d7f_icgraph.png" border="0" usemap="#d9/db4/class_souche_a3ae4110d905045fd7483d6c78cae6d7f_icgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a3ae4110d905045fd7483d6c78cae6d7f_icgraph" id="d9/db4/class_souche_a3ae4110d905045fd7483d6c78cae6d7f_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="203,5,339,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7728de48ef31bd85b6f06601d5cbb49b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7728de48ef31bd85b6f06601d5cbb49b">&sect;&nbsp;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Souche.Update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Méthode appelée à chaque frame Elle permet d'effectuer une évolution si possible, ainsi que d'effectuer la contamination. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/db4/class_souche_a7728de48ef31bd85b6f06601d5cbb49b_cgraph.png" border="0" usemap="#d9/db4/class_souche_a7728de48ef31bd85b6f06601d5cbb49b_cgraph" alt=""/></div>
+<map name="d9/db4/class_souche_a7728de48ef31bd85b6f06601d5cbb49b_cgraph" id="d9/db4/class_souche_a7728de48ef31bd85b6f06601d5cbb49b_cgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1" title="Production de points d&#39;évolution En fonction des facteurs suivants : " alt="" coords="361,632,477,659"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="164,552,268,579"/>
+<area shape="rect" id="node35" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="343,157,494,184"/>
+<area shape="rect" id="node3" href="../../d8/d38/class_historique_souche.html#aae184354281c889bc4704ec10a12bec3" title="Date et Gradient d&#39;infection du dernier recueil gradient d&#39;infection. " alt="" coords="585,899,783,941"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a368abf0a6702c50d67372c5e71b04f49" title="Retourne le nombre d&#39;infectés du pays. " alt="" coords="609,443,759,469"/>
+<area shape="rect" id="node5" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="1089,493,1240,520"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="316,823,521,849"/>
+<area shape="rect" id="node19" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="322,873,515,900"/>
+<area shape="rect" id="node21" href="../../d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="329,267,509,309"/>
+<area shape="rect" id="node23" href="../../d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="330,333,507,360"/>
+<area shape="rect" id="node24" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="328,1037,509,1064"/>
+<area shape="rect" id="node27" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="334,1103,503,1129"/>
+<area shape="rect" id="node29" href="../../d9/db4/class_souche.html#ae1d8037866dc94d5ad3a4f3c41ec757b" title="Application de l&#39;augmentation de la vitesse d&#39;évolution. " alt="" coords="322,216,515,243"/>
+<area shape="rect" id="node31" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="342,683,495,709"/>
+<area shape="rect" id="node32" href="../../d8/d38/class_historique_souche.html#a211ae8264bf4e3913d957f74588c6f02" title="Ajoute un gradient d&#39;infection à la date indiquée. " alt="" coords="320,385,517,426"/>
+<area shape="rect" id="node33" href="../../d8/d38/class_historique_souche.html#ae70689708d16798cb98c5aef592c88f9" title="Retourne le nombre d&#39;infectés qu&#39;il y avait à l&#39;itération précédente. " alt="" coords="321,450,516,491"/>
+<area shape="rect" id="node34" href="../../d8/d38/class_historique_souche.html#ac88cf5c16bdd7b080a540f1ece5194bb" title="Règle le nombre d&#39;infectés à l&#39;itération précédente à la valeur voulue. " alt="" coords="321,515,516,557"/>
+<area shape="rect" id="node8" href="../../d8/d38/class_historique_souche.html#ab89fe759151227fd9e5de30a73dcef64" title="Renvoie la date de la fois où on a augmenté la transmission et ça a grandement augmenté le gradient d..." alt="" coords="595,965,773,1006"/>
+<area shape="rect" id="node10" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="617,848,751,875"/>
+<area shape="rect" id="node18" href="../../d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="569,1030,799,1071"/>
+<area shape="rect" id="node9" href="../../d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="847,1073,1025,1114"/>
+<area shape="rect" id="node11" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="853,949,1019,976"/>
+<area shape="rect" id="node14" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="852,1000,1020,1027"/>
+<area shape="rect" id="node15" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="851,848,1021,875"/>
+<area shape="rect" id="node16" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="861,899,1011,925"/>
+<area shape="rect" id="node17" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="847,797,1025,824"/>
+<area shape="rect" id="node12" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="1073,891,1256,933"/>
+<area shape="rect" id="node13" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="1304,899,1503,925"/>
+<area shape="rect" id="node20" href="../../d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6" title="Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="596,1095,772,1137"/>
+<area shape="rect" id="node22" href="../../d8/d38/class_historique_souche.html#a0048eba6530fd01a7b45c75edf1144fe" title="Date de la dernière évolution de la vitesse d&#39;évolution. " alt="" coords="583,326,785,367"/>
+<area shape="rect" id="node25" href="../../d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1" title="Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. " alt="" coords="615,1227,753,1253"/>
+<area shape="rect" id="node26" href="../../d8/d38/class_historique_souche.html#a28f683aa480fe35fa8306188775b0792" title="Ajoute une évolution de la transmission dans le sens signifié par la string passée en paramètre..." alt="" coords="571,1161,797,1202"/>
+<area shape="rect" id="node28" href="../../d8/d38/class_historique_souche.html#a252c114d378c141e1cc4830a2d9a075a" title="Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre..." alt="" coords="577,1278,791,1319"/>
+<area shape="rect" id="node30" href="../../d8/d38/class_historique_souche.html#ae1a34f5b9143ea50bcd5af19ba8b3be4" title="Ajoute une évolution de la vitesse d&#39;évolution. " alt="" coords="583,209,785,250"/>
+<area shape="rect" id="node36" href="../../d9/db4/class_souche.html#a11b7202dd88f1073148107b785eb6b03" title="Ajout de Personnes infectées. " alt="" coords="848,191,1024,217"/>
+<area shape="rect" id="node37" href="../../d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b" title="Suppression de Personnes infectées, probablement soignées ou tuées par la maladie. " alt="" coords="586,5,782,32"/>
+<area shape="rect" id="node38" href="../../dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c" title="Pays.removePeople" alt="" coords="615,56,753,83"/>
+<area shape="rect" id="node39" href="../../dd/d36/class_population.html#a5400bdca00298b18677274069975b944" title="Retire des habitants de la population TODO : De quelle catégorie les enlever ? " alt="" coords="852,56,1020,83"/>
 </map>
 </div>
 
@@ -618,7 +1200,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">float Souche.evolutionSpeed = 0</td>
+          <td class="memname">float Souche.evolutionSpeed = 1</td>
         </tr>
       </table>
   </td>
@@ -628,7 +1210,7 @@ Voici le graphe des appelants de cette fonction :</div>
 </table>
 </div><div class="memdoc">
 
-<p>Facteur vitesse d'évolution de la souche. </p>
+<p>Facteur vitesse d'évolution de la souche Influe sur le nombre de points gagnés lors de la production. </p>
 
 </div>
 </div>
@@ -666,7 +1248,7 @@ Voici le graphe des appelants de cette fonction :</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint Souche.nbInfected</td>
+          <td class="memname">uint Souche.nbInfected = 0</td>
         </tr>
       </table>
   </td>
@@ -696,14 +1278,14 @@ Voici le graphe des appelants de cette fonction :</div>
 
 </div>
 </div>
-<a id="ae5119cbfa06d2c50a4867cd117b9e61a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5119cbfa06d2c50a4867cd117b9e61a">&sect;&nbsp;</a></span>symptoms</h2>
+<a id="a4885f352f035ee6d3ee486291481259d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4885f352f035ee6d3ee486291481259d">&sect;&nbsp;</a></span>symptoms</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">IDictionary&lt;string, <a class="el" href="../../db/df1/class_abstact_symptom.html">AbstactSymptom</a>&gt; Souche.symptoms</td>
+          <td class="memname">IDictionary&lt;string, <a class="el" href="../../d0/d63/class_abstract_symptom.html">AbstractSymptom</a>&gt; Souche.symptoms</td>
         </tr>
       </table>
 </div><div class="memdoc">

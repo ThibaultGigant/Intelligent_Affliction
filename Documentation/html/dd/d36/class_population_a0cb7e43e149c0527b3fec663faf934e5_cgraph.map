@@ -1,0 +1,10 @@
+<map id="Population.updateHappiness" name="Population.updateHappiness">
+<area shape="rect" id="node2" href="$d5/df1/class_utils.html#a562d5a7f1cda04c97558fce50ca504f8" title="Renvoie le produit des indices, chacun normalisées comme décris dans la structure donnée en paramètre..." alt="" coords="240,5,399,32"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#a61c317c8fe2d38a8c3d3e96ae002fa61" title="indiceTransportSuperficie " alt="" coords="244,56,395,83"/>
+<area shape="rect" id="node5" href="$dd/dbe/class_pays.html#a41b2aadcb8c21af72a37a21822464aad" title="indiceTransportSuperficie " alt="" coords="255,107,383,133"/>
+<area shape="rect" id="node6" href="$dd/dbe/class_pays.html#ad0eaa101d5a5b1ecea1a342d4caafe14" title="Pays.indiceInfection" alt="" coords="250,208,389,235"/>
+<area shape="rect" id="node9" href="$dd/dbe/class_pays.html#a5513f4ca9db51cfcfae71c24dd5502b3" title="indiceTransportSuperficie " alt="" coords="246,157,393,184"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#aa0f2a5887661c695ac7184f7c000ff84" title="Pays.indiceProduction" alt="" coords="466,107,618,133"/>
+<area shape="rect" id="node7" href="$d2/de3/class_medecine.html#a21c7a0962d76534b5827a89ed1ba4f5e" title="Medecine.moyenneSoignes" alt="" coords="451,183,633,209"/>
+<area shape="rect" id="node8" href="$d2/de3/class_medecine.html#ac6547520140f0ad1b795fd8c5c87c2ee" title="Medecine.moyenneNouveaux\lInfectes" alt="" coords="447,234,637,275"/>
+</map>

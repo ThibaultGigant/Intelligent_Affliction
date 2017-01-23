@@ -1,0 +1,17 @@
+<map id="Skills.computeHumanEffectOnSkill" name="Skills.computeHumanEffectOnSkill">
+<area shape="rect" id="node2" href="$d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="242,208,409,235"/>
+<area shape="rect" id="node12" href="$d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="241,157,409,184"/>
+<area shape="rect" id="node13" href="$d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="241,107,410,133"/>
+<area shape="rect" id="node15" href="$d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="250,5,401,32"/>
+<area shape="rect" id="node16" href="$d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="236,56,415,83"/>
+<area shape="rect" id="node3" href="$dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="471,56,607,83"/>
+<area shape="rect" id="node4" href="$d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="472,107,607,133"/>
+<area shape="rect" id="node10" href="$d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="487,157,591,184"/>
+<area shape="rect" id="node5" href="$d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="664,107,869,133"/>
+<area shape="rect" id="node8" href="$d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="670,56,863,83"/>
+<area shape="rect" id="node9" href="$d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="917,145,1068,172"/>
+<area shape="rect" id="node6" href="$d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="941,69,1045,96"/>
+<area shape="rect" id="node7" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="1116,108,1227,135"/>
+<area shape="rect" id="node11" href="$d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="695,208,838,235"/>
+<area shape="rect" id="node14" href="$d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="463,5,616,32"/>
+</map>

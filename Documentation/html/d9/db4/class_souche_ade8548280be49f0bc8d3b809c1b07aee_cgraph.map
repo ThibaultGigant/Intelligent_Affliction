@@ -1,0 +1,7 @@
+<map id="Souche.evolveResistance" name="Souche.evolveResistance">
+<area shape="rect" id="node2" href="$d8/d38/class_historique_souche.html#ad9c987b43eb546edbaed06e14c3359f6" title="Renvoie la date de la fois où on a augmenté la résistance et ça a grandement augmenté le gradient d&#39;i..." alt="" coords="249,5,425,47"/>
+<area shape="rect" id="node4" href="$d8/d38/class_historique_souche.html#ae55c55b516290c566b2d6f639a2d00ae" title="Renvoie la propriété (compétence de transmission, résistance, ou un symptome) qui a été augmenté à la..." alt="" coords="223,71,452,112"/>
+<area shape="rect" id="node5" href="$d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1" title="Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. " alt="" coords="269,137,406,163"/>
+<area shape="rect" id="node6" href="$d8/d38/class_historique_souche.html#a252c114d378c141e1cc4830a2d9a075a" title="Ajoute une évolution de la résistance dans le sens signifié par la string passée en paramètre..." alt="" coords="230,188,445,229"/>
+<area shape="rect" id="node3" href="$d8/d38/class_historique_souche.html#a45fa8c493fd5a0a25459d15d8ccd879a" title="Calcule le pourcentage d&#39;augmentation du gradient d&#39;infection sur les 10 updates suivant la date pass..." alt="" coords="500,5,677,47"/>
+</map>

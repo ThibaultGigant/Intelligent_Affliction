@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['ray',['ray',['../dd/dc5/class_mouse_manager.html#a7f10847ed0a772f14cc1926811d30989',1,'MouseManager']]],
-  ['resetflag',['resetFlag',['../d7/db3/class_rotate_earth.html#a53b363729487f5910d377d140f387840',1,'RotateEarth']]],
-  ['resistanceevolutionlist',['resistanceEvolutionList',['../d8/d38/class_historique_souche.html#a868a3f72db81e2ad4386086af9f86151',1,'HistoriqueSouche']]],
-  ['resistancetocold',['resistanceToCold',['../d4/d3b/class_skills.html#ae4f5c26161e519b948a06822979600cb',1,'Skills']]],
-  ['resistancetoheat',['resistanceToHeat',['../d4/d3b/class_skills.html#a89320fe8a3a2f974b9d20109a54c80d2',1,'Skills']]],
-  ['resources',['resources',['../d0/d6b/class_cargo.html#ad13fe8c4df16f1ba8074933bf5d27e4f',1,'Cargo.resources()'],['../dd/dbe/class_pays.html#a3d823dd0287addabe3cb113c471ddcae',1,'Pays.resources()']]],
-  ['richesse',['richesse',['../dd/dbe/class_pays.html#adf555b1a6e074f9f5beaecc6e4b1d075',1,'Pays']]],
-  ['rightclickpushed',['rightClickPushed',['../dd/dc5/class_mouse_manager.html#a37015dff61e4bbebf66103e43ccc1fcc',1,'MouseManager']]]
+  ['panelitem',['panelItem',['../db/dbb/class_a_population_category.html#a488697743825f7cf59fa5237ab56c0d0',1,'APopulationCategory']]],
+  ['pays',['pays',['../d7/dab/class_carte_de_visite.html#a835f4872961c119bfbdd432c8d6bc886',1,'CarteDeVisite.pays()'],['../dd/dbe/class_pays.html#a8e64d991695d17596104c836d6f22c04',1,'Pays.pays()'],['../db/d02/class_pays_ressources.html#aa5c46752498afc688e2391265e9b0b7f',1,'PaysRessources.pays()'],['../d4/d33/class_ressource.html#ae443c6970870a9dcec76e323450bf839',1,'Ressource.pays()'],['../dd/d94/class_repartion_categories.html#a6c3c278809edd3fc2ccb08b265cf769e',1,'RepartionCategories.pays()'],['../d6/d96/class_stocks.html#a7b5cdb10ba839f03ada058369e2cdb84',1,'Stocks.pays()']]],
+  ['paysenattente',['paysEnAttente',['../dd/dbe/class_pays.html#ae271b9b1dd0d5aacd2b854d3c0b72974',1,'Pays']]],
+  ['paysmanager',['paysManager',['../db/d10/class_game_manager.html#a15c27125fc9d2ecc4fc84ce3acb3c419',1,'GameManager']]],
+  ['paysnonlies',['paysNonLies',['../dd/dbe/class_pays.html#a9fd89cba583e687745ea05e476504813',1,'Pays']]],
+  ['paysselected',['paysSelected',['../df/dfc/class_parametres.html#a3208346c635d499ab01401096e426768',1,'Parametres']]],
+  ['plusbutton',['plusButton',['../d5/df3/class_menu_panels.html#a78bc9b99b10ea5aa8798024ebc4eb258',1,'MenuPanels']]],
+  ['pointsrecherche',['pointsRecherche',['../dd/dbe/class_pays.html#a5db813e35f457335192a016eb0ffa189',1,'Pays']]],
+  ['population',['population',['../dd/dbe/class_pays.html#ad5b3f5352d956262b3d560430ef37e29',1,'Pays.population()'],['../db/dbb/class_a_population_category.html#ac52e705ca852bb107955fff851f19ee3',1,'APopulationCategory.population()'],['../df/d6a/class_population_categories.html#a9d3b7185a237033733ab53af09778873',1,'PopulationCategories.population()'],['../db/d02/class_pays_ressources.html#a170038049fa62003f6bc828987f14a07',1,'PaysRessources.population()']]],
+  ['previousnbinfected',['previousNbInfected',['../d8/d38/class_historique_souche.html#a864bd4cc193e81fe86983f5bdd076992',1,'HistoriqueSouche']]],
+  ['productions',['productions',['../db/dbb/class_a_population_category.html#ac02ed0f704ed90ad0a42c37fc2f01d7e',1,'APopulationCategory']]]
 ];

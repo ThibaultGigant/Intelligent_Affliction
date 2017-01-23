@@ -61,13 +61,76 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pub-attribs">Attributs publics</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="../../d6/d8a/class_skills-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Skills</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Graphe de collaboration de Skills:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d49/class_skills__coll__graph.png" border="0" usemap="#_skills_coll__map" alt="Collaboration graph"/></div>
+<map name="_skills_coll__map" id="_skills_coll__map">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html" title="Souche" alt="" coords="577,97,644,123"/>
+<area shape="rect" id="node6" href="../../dd/dbe/class_pays.html" title="Pays" alt="" coords="779,181,831,207"/>
+<area shape="rect" id="node4" href="../../d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="331,13,455,39"/>
+<area shape="rect" id="node5" href="../../d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,5,181,47"/>
+<area shape="rect" id="node7" href="../../db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="1151,163,1272,190"/>
+<area shape="rect" id="node8" href="../../dd/d36/class_population.html" title="Population" alt="" coords="943,74,1025,101"/>
+<area shape="rect" id="node10" href="../../de/d73/class_links.html" title="Links" alt="" coords="957,230,1011,257"/>
+<area shape="rect" id="node9" href="../../df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="1139,51,1284,78"/>
+<area shape="rect" id="node11" href="../../d9/d71/class_climat.html" title="Climat" alt="" coords="581,231,640,258"/>
+<area shape="rect" id="node12" href="../../d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="564,282,657,309"/>
+</map>
+<center><span class="legend">[<a href="../../graph_legend.html">légende</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:a54add0324de4c9369cce3d102bdf55ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a54add0324de4c9369cce3d102bdf55ef">Skills</a> (<a class="el" href="../../d9/db4/class_souche.html">Souche</a> <a class="el" href="../../d4/d3b/class_skills.html#aabd80da14784296a8196cf48692b76fd">souche</a>)</td></tr>
+<tr class="separator:a54add0324de4c9369cce3d102bdf55ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad59d600a462feb9bd80cb3a5e0931f4b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b">computeHumanEffectOnSkill</a> (string skillKnowledge)</td></tr>
+<tr class="memdesc:ad59d600a462feb9bd80cb3a5e0931f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcul de l'effet qu'ont les connaissances des humains et la population assignée à la médecine sur la capacité dont la connaissance liée est passée en paramètre.  <a href="#ad59d600a462feb9bd80cb3a5e0931f4b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad59d600a462feb9bd80cb3a5e0931f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dca05ade6897b06bf834a134aa6db34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34">getResistanceCold</a> ()</td></tr>
+<tr class="memdesc:a1dca05ade6897b06bf834a134aa6db34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes.  <a href="#a1dca05ade6897b06bf834a134aa6db34">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1dca05ade6897b06bf834a134aa6db34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5dd48840b5bb60d5068decd06333ff6d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d">getResistanceHeat</a> ()</td></tr>
+<tr class="memdesc:a5dd48840b5bb60d5068decd06333ff6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes.  <a href="#a5dd48840b5bb60d5068decd06333ff6d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5dd48840b5bb60d5068decd06333ff6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c4f1a1825795518f4ccf0b2692dc2b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b">getWaterSpreading</a> ()</td></tr>
+<tr class="memdesc:a25c4f1a1825795518f4ccf0b2692dc2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la transmission par l'eau calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes.  <a href="#a25c4f1a1825795518f4ccf0b2692dc2b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a25c4f1a1825795518f4ccf0b2692dc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeeaf0ee9d560b43f916ca216de72652d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d">getAirSpreading</a> ()</td></tr>
+<tr class="memdesc:aeeaf0ee9d560b43f916ca216de72652d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la transmission par l'air calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes.  <a href="#aeeaf0ee9d560b43f916ca216de72652d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeeaf0ee9d560b43f916ca216de72652d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808a3edbb42c61bd33dc8a2163dafebb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb">getContactSpreading</a> ()</td></tr>
+<tr class="memdesc:a808a3edbb42c61bd33dc8a2163dafebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes.  <a href="#a808a3edbb42c61bd33dc8a2163dafebb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a808a3edbb42c61bd33dc8a2163dafebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a1c4f9fedd65f4449b03adc2fe713e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e">getSkillValue</a> (string skillName)</td></tr>
+<tr class="memdesc:a05a1c4f9fedd65f4449b03adc2fe713e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retourne la valeur actuelle de la compétence dont le nom est passé en argument.  <a href="#a05a1c4f9fedd65f4449b03adc2fe713e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a05a1c4f9fedd65f4449b03adc2fe713e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bf92211909df9cf374da1be041996eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a3bf92211909df9cf374da1be041996eb">setResistanceCold</a> (int value)</td></tr>
+<tr class="memdesc:a3bf92211909df9cf374da1be041996eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de la résistance au froid.  <a href="#a3bf92211909df9cf374da1be041996eb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3bf92211909df9cf374da1be041996eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76421b191e322e8aca818040e7d2d5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#aa76421b191e322e8aca818040e7d2d5e">setResistanceHeat</a> (int value)</td></tr>
+<tr class="memdesc:aa76421b191e322e8aca818040e7d2d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de la résistance à la chaleur.  <a href="#aa76421b191e322e8aca818040e7d2d5e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa76421b191e322e8aca818040e7d2d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab93a1a939dd68d54c03ed330544f83fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#ab93a1a939dd68d54c03ed330544f83fe">setWaterSpreading</a> (int value)</td></tr>
+<tr class="memdesc:ab93a1a939dd68d54c03ed330544f83fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de la transmission par l'eau.  <a href="#ab93a1a939dd68d54c03ed330544f83fe">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab93a1a939dd68d54c03ed330544f83fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7591decd4ef79e0b818195fd8646a80a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a7591decd4ef79e0b818195fd8646a80a">setAirSpreading</a> (int value)</td></tr>
+<tr class="memdesc:a7591decd4ef79e0b818195fd8646a80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de la transmission par l'air.  <a href="#a7591decd4ef79e0b818195fd8646a80a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7591decd4ef79e0b818195fd8646a80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a645e607b2710816a1b313d25351f4496"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a645e607b2710816a1b313d25351f4496">setContactSpreading</a> (int value)</td></tr>
+<tr class="memdesc:a645e607b2710816a1b313d25351f4496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de la transmission par le contact.  <a href="#a645e607b2710816a1b313d25351f4496">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a645e607b2710816a1b313d25351f4496"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f05121efde1ff43369e85f212da9e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a66f05121efde1ff43369e85f212da9e1">addSkillValue</a> (string skillName, int nb)</td></tr>
+<tr class="memdesc:a66f05121efde1ff43369e85f212da9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument.  <a href="#a66f05121efde1ff43369e85f212da9e1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a66f05121efde1ff43369e85f212da9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Attributs publics</h2></td></tr>
 <tr class="memitem:ae4f5c26161e519b948a06822979600cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#ae4f5c26161e519b948a06822979600cb">resistanceToCold</a></td></tr>
@@ -85,7 +148,596 @@ Attributs publics</h2></td></tr>
 <tr class="memitem:a24d471e3e588a039684e3e0c46f07743"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#a24d471e3e588a039684e3e0c46f07743">contactSpreading</a></td></tr>
 <tr class="memdesc:a24d471e3e588a039684e3e0c46f07743"><td class="mdescLeft">&#160;</td><td class="mdescRight">Habileté de propagation par le contact.  <a href="#a24d471e3e588a039684e3e0c46f07743">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a24d471e3e588a039684e3e0c46f07743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:aabd80da14784296a8196cf48692b76fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/db4/class_souche.html">Souche</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d3b/class_skills.html#aabd80da14784296a8196cf48692b76fd">souche</a></td></tr>
+<tr class="memdesc:aabd80da14784296a8196cf48692b76fd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d9/db4/class_souche.html">Souche</a> dont on décrit les compétences.  <a href="#aabd80da14784296a8196cf48692b76fd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aabd80da14784296a8196cf48692b76fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a54add0324de4c9369cce3d102bdf55ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54add0324de4c9369cce3d102bdf55ef">&sect;&nbsp;</a></span>Skills()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Skills.Skills </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/db4/class_souche.html">Souche</a>&#160;</td>
+          <td class="paramname"><em>souche</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="a66f05121efde1ff43369e85f212da9e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66f05121efde1ff43369e85f212da9e1">&sect;&nbsp;</a></span>addSkillValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skills.addSkillValue </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>skillName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ajoute la valeur en paramètre à la compétence dont le nom est passé en argument. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skillName</td><td>Nom de la compétence </td></tr>
+    <tr><td class="paramname">nb</td><td>Quantité à ajouter à la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a66f05121efde1ff43369e85f212da9e1_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a66f05121efde1ff43369e85f212da9e1_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a66f05121efde1ff43369e85f212da9e1_icgraph" id="d4/d3b/class_skills_a66f05121efde1ff43369e85f212da9e1_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#a33a33d1b317e3b7a08d7e5d45e92e97e" title="Choix du type de transmission à améliorer et application de l&#39;évolution de cette transmission. " alt="" coords="191,5,372,32"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#ade8548280be49f0bc8d3b809c1b07aee" title="Choix du type de résistance à améliorer et application de l&#39;évolution de cette résistance. " alt="" coords="197,56,366,83"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="420,31,524,57"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="572,31,683,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad59d600a462feb9bd80cb3a5e0931f4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad59d600a462feb9bd80cb3a5e0931f4b">&sect;&nbsp;</a></span>computeHumanEffectOnSkill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Skills.computeHumanEffectOnSkill </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>skillKnowledge</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calcul de l'effet qu'ont les connaissances des humains et la population assignée à la médecine sur la capacité dont la connaissance liée est passée en paramètre. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skillKnowledge</td><td>Connaissance associée à la capacité qu'on étudie </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Facteur d'atténuation dû aux humains </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_cgraph.png" border="0" usemap="#d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_cgraph" id="d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_cgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="236,13,435,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_icgraph.png" border="0" usemap="#d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_icgraph" id="d4/d3b/class_skills_ad59d600a462feb9bd80cb3a5e0931f4b_icgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="242,208,409,235"/>
+<area shape="rect" id="node12" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="241,157,409,184"/>
+<area shape="rect" id="node13" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="241,107,410,133"/>
+<area shape="rect" id="node15" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="250,5,401,32"/>
+<area shape="rect" id="node16" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="236,56,415,83"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="471,56,607,83"/>
+<area shape="rect" id="node4" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="472,107,607,133"/>
+<area shape="rect" id="node10" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="487,157,591,184"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="664,107,869,133"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="670,56,863,83"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="917,145,1068,172"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="941,69,1045,96"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="1116,108,1227,135"/>
+<area shape="rect" id="node11" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="695,208,838,235"/>
+<area shape="rect" id="node14" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="463,5,616,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeeaf0ee9d560b43f916ca216de72652d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeeaf0ee9d560b43f916ca216de72652d">&sect;&nbsp;</a></span>getAirSpreading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skills.getAirSpreading </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la transmission par l'air calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_cgraph.png" border="0" usemap="#d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_cgraph" id="d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="204,5,387,47"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="435,13,633,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_icgraph.png" border="0" usemap="#d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_icgraph" id="d4/d3b/class_skills_aeeaf0ee9d560b43f916ca216de72652d_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="204,48,340,74"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="205,98,339,125"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="414,149,567,176"/>
+<area shape="rect" id="node10" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="220,200,324,226"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="388,98,593,125"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="394,48,587,74"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="641,10,792,37"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="665,86,769,113"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="840,49,951,76"/>
+<area shape="rect" id="node11" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="419,200,562,226"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a808a3edbb42c61bd33dc8a2163dafebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a808a3edbb42c61bd33dc8a2163dafebb">&sect;&nbsp;</a></span>getContactSpreading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skills.getContactSpreading </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_cgraph.png" border="0" usemap="#d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_cgraph" id="d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="232,5,415,47"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="248,71,399,98"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="463,13,661,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_icgraph" id="d4/d3b/class_skills_a808a3edbb42c61bd33dc8a2163dafebb_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="232,48,368,74"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="233,98,367,125"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="442,149,595,176"/>
+<area shape="rect" id="node10" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="248,200,352,226"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="416,98,621,125"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="422,48,615,74"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="669,10,820,37"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="693,86,797,113"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="868,49,979,76"/>
+<area shape="rect" id="node11" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="447,200,590,226"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1dca05ade6897b06bf834a134aa6db34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dca05ade6897b06bf834a134aa6db34">&sect;&nbsp;</a></span>getResistanceCold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skills.getResistanceCold </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_cgraph.png" border="0" usemap="#d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_cgraph" id="d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="220,5,403,47"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="451,13,649,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_icgraph" id="d4/d3b/class_skills_a1dca05ade6897b06bf834a134aa6db34_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="220,19,356,45"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="221,69,355,96"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="236,132,340,159"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="404,5,609,32"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="410,56,603,83"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="657,107,808,133"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="681,56,785,83"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="856,81,967,108"/>
+<area shape="rect" id="node10" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="435,157,578,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5dd48840b5bb60d5068decd06333ff6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd48840b5bb60d5068decd06333ff6d">&sect;&nbsp;</a></span>getResistanceHeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skills.getResistanceHeat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_cgraph.png" border="0" usemap="#d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_cgraph" id="d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="221,5,404,47"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="452,13,651,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_icgraph" id="d4/d3b/class_skills_a5dd48840b5bb60d5068decd06333ff6d_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="221,19,357,45"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="222,69,357,96"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="237,132,341,159"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="405,5,611,32"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="411,56,605,83"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="659,107,809,133"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="682,56,786,83"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="857,81,968,108"/>
+<area shape="rect" id="node10" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="437,157,579,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a05a1c4f9fedd65f4449b03adc2fe713e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a1c4f9fedd65f4449b03adc2fe713e">&sect;&nbsp;</a></span>getSkillValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skills.getSkillValue </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>skillName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la valeur actuelle de la compétence dont le nom est passé en argument. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">skillName</td><td>Nom de la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Valeur de la compétence </dd></dl>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_cgraph.png" border="0" usemap="#d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_cgraph" id="d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="194,5,361,32"/>
+<area shape="rect" id="node5" href="../../d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="193,56,361,83"/>
+<area shape="rect" id="node6" href="../../d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="193,107,362,133"/>
+<area shape="rect" id="node7" href="../../d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="202,157,353,184"/>
+<area shape="rect" id="node8" href="../../d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="188,208,367,235"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="415,99,597,141"/>
+<area shape="rect" id="node4" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="645,107,844,133"/>
+<area shape="rect" id="node9" href="../../dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="431,208,581,235"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_icgraph" id="d4/d3b/class_skills_a05a1c4f9fedd65f4449b03adc2fe713e_icgraph">
+<area shape="rect" id="node2" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="188,5,393,32"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="194,56,387,83"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="441,107,592,133"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="465,56,569,83"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="640,81,751,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a25c4f1a1825795518f4ccf0b2692dc2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c4f1a1825795518f4ccf0b2692dc2b">&sect;&nbsp;</a></span>getWaterSpreading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Skills.getWaterSpreading </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retourne la transmission par l'eau calculée pour cette souche On prend en compte les facteurs multiplicateurs des symptomes. </p>
+<div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_cgraph.png" border="0" usemap="#d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_cgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_cgraph" id="d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_cgraph">
+<area shape="rect" id="node2" href="../../d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="223,5,405,47"/>
+<area shape="rect" id="node3" href="../../dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="453,13,652,39"/>
+</map>
+</div>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_icgraph" id="d4/d3b/class_skills_a25c4f1a1825795518f4ccf0b2692dc2b_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="223,48,359,74"/>
+<area shape="rect" id="node3" href="../../d4/d3b/class_skills.html#a05a1c4f9fedd65f4449b03adc2fe713e" title="Retourne la valeur actuelle de la compétence dont le nom est passé en argument. " alt="" coords="223,98,358,125"/>
+<area shape="rect" id="node9" href="../../d9/db4/class_souche.html#ac02c3686b2e5a9eec93f8edd5e017f82" title="Choix du type de transmission à améliorer et application de l&#39;évolution vers la transmission. " alt="" coords="433,149,586,176"/>
+<area shape="rect" id="node10" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="239,200,343,226"/>
+<area shape="rect" id="node4" href="../../d9/db4/class_souche.html#acbae2d486cbbfcb2effb9dcc3c26ad92" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de transmission Calculé en prenant en co..." alt="" coords="407,98,612,125"/>
+<area shape="rect" id="node7" href="../../d9/db4/class_souche.html#a630b6b4779c09cabbad5e18432ce9c35" title="Indicateur de la volonté de la souche d&#39;augmenter sa faculté de résistance Calculé en prenant en comp..." alt="" coords="413,48,606,74"/>
+<area shape="rect" id="node8" href="../../d9/db4/class_souche.html#a93a84891b818cb2bb6380d5589342abf" title="Application de la contamination de nouveaux habitants et de la mort de certains d&#39;entre eux si c&#39;est ..." alt="" coords="660,10,811,37"/>
+<area shape="rect" id="node5" href="../../d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="683,86,787,113"/>
+<area shape="rect" id="node6" href="../../d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="859,49,969,76"/>
+<area shape="rect" id="node11" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="438,200,581,226"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7591decd4ef79e0b818195fd8646a80a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7591decd4ef79e0b818195fd8646a80a">&sect;&nbsp;</a></span>setAirSpreading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skills.setAirSpreading </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la valeur de la transmission par l'air. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Nouvelle valeur de la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a7591decd4ef79e0b818195fd8646a80a_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a7591decd4ef79e0b818195fd8646a80a_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a7591decd4ef79e0b818195fd8646a80a_icgraph" id="d4/d3b/class_skills_a7591decd4ef79e0b818195fd8646a80a_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="204,5,340,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="220,56,324,83"/>
+<area shape="rect" id="node4" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="388,56,531,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a645e607b2710816a1b313d25351f4496"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a645e607b2710816a1b313d25351f4496">&sect;&nbsp;</a></span>setContactSpreading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skills.setContactSpreading </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la valeur de la transmission par le contact. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Nouvelle valeur de la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a645e607b2710816a1b313d25351f4496_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a645e607b2710816a1b313d25351f4496_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a645e607b2710816a1b313d25351f4496_icgraph" id="d4/d3b/class_skills_a645e607b2710816a1b313d25351f4496_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="232,5,368,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="248,56,352,83"/>
+<area shape="rect" id="node4" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="416,56,559,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3bf92211909df9cf374da1be041996eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bf92211909df9cf374da1be041996eb">&sect;&nbsp;</a></span>setResistanceCold()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skills.setResistanceCold </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la valeur de la résistance au froid. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Nouvelle valeur de la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_a3bf92211909df9cf374da1be041996eb_icgraph.png" border="0" usemap="#d4/d3b/class_skills_a3bf92211909df9cf374da1be041996eb_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_a3bf92211909df9cf374da1be041996eb_icgraph" id="d4/d3b/class_skills_a3bf92211909df9cf374da1be041996eb_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="220,5,356,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="236,56,340,83"/>
+<area shape="rect" id="node4" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="404,56,547,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa76421b191e322e8aca818040e7d2d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76421b191e322e8aca818040e7d2d5e">&sect;&nbsp;</a></span>setResistanceHeat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skills.setResistanceHeat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la valeur de la résistance à la chaleur. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Nouvelle valeur de la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_aa76421b191e322e8aca818040e7d2d5e_icgraph.png" border="0" usemap="#d4/d3b/class_skills_aa76421b191e322e8aca818040e7d2d5e_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_aa76421b191e322e8aca818040e7d2d5e_icgraph" id="d4/d3b/class_skills_aa76421b191e322e8aca818040e7d2d5e_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="221,5,357,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="237,56,341,83"/>
+<area shape="rect" id="node4" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="405,56,548,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab93a1a939dd68d54c03ed330544f83fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab93a1a939dd68d54c03ed330544f83fe">&sect;&nbsp;</a></span>setWaterSpreading()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Skills.setWaterSpreading </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la valeur de la transmission par l'eau. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Nouvelle valeur de la compétence </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d4/d3b/class_skills_ab93a1a939dd68d54c03ed330544f83fe_icgraph.png" border="0" usemap="#d4/d3b/class_skills_ab93a1a939dd68d54c03ed330544f83fe_icgraph" alt=""/></div>
+<map name="d4/d3b/class_skills_ab93a1a939dd68d54c03ed330544f83fe_icgraph" id="d4/d3b/class_skills_ab93a1a939dd68d54c03ed330544f83fe_icgraph">
+<area shape="rect" id="node2" href="../../dd/dbe/class_pays.html#abca5dd07c2307616b3ca2d5758e2d5da" title="Crée une nouvelle souche à associer au pays. " alt="" coords="223,5,359,32"/>
+<area shape="rect" id="node3" href="../../d9/db4/class_souche.html#a56e4763350da857124a8bdc20113e9dc" title="Application de la fusion entre une souche arrivante, et la souche actuelle. " alt="" coords="239,56,343,83"/>
+<area shape="rect" id="node4" href="../../d0/d6b/class_cargo.html#a59eff40f3fb403ce834674f644ffbdf8" title="Application du déchargement. " alt="" coords="407,56,549,83"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Documentation des données membres</h2>
 <a id="acbaed3fb9ba4971e0417213d066fbbdd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbaed3fb9ba4971e0417213d066fbbdd">&sect;&nbsp;</a></span>airSpreading</h2>
@@ -148,6 +800,30 @@ Attributs publics</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Résistance à la chaleur. </p>
+
+</div>
+</div>
+<a id="aabd80da14784296a8196cf48692b76fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd80da14784296a8196cf48692b76fd">&sect;&nbsp;</a></span>souche</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d9/db4/class_souche.html">Souche</a> Skills.souche</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d9/db4/class_souche.html">Souche</a> dont on décrit les compétences. </p>
 
 </div>
 </div>

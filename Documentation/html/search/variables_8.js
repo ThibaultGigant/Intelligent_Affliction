@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['marginscreen',['marginScreen',['../d7/db3/class_rotate_earth.html#aafc996cf08c1d74b8ff8cf96929f5606',1,'RotateEarth.marginScreen()'],['../d6/da4/class_zoom_pays.html#a74b4ad295f45c7a9f3ef22e71b78a7ee',1,'ZoomPays.marginScreen()']]],
-  ['maritimes',['maritimes',['../de/d73/class_links.html#a6d4836e35c2f5c4ae81a87c606932864',1,'Links']]],
-  ['max_5foffre',['MAX_OFFRE',['../db/dbb/class_a_population_category.html#aa044ce39c4a6ea33027062ce7b0cbde7',1,'APopulationCategory']]],
-  ['menucate',['menuCate',['../d2/d39/class_categories_observer.html#ab7ce9865f1c3f832f9a866e0fc55712d',1,'CategoriesObserver']]],
-  ['menuprincipal',['menuPrincipal',['../db/d10/class_game_manager.html#a839b46b0c176d06eebe013abd2270baa',1,'GameManager']]],
-  ['min_5foffre',['MIN_OFFRE',['../db/dbb/class_a_population_category.html#af224e4030e84246a4d5b4c932fc6a7d3',1,'APopulationCategory']]],
-  ['moinsbutton',['moinsButton',['../d5/df3/class_menu_panels.html#acef0f1e3631abbdf521e87b1937ad026',1,'MenuPanels']]]
+  ['imagecate',['imageCate',['../d2/d39/class_categories_observer.html#a6e619fd33c386073c77b257e40148424',1,'CategoriesObserver']]],
+  ['infectesdecouverts',['infectesDecouverts',['../d2/de3/class_medecine.html#a46b0b7e80916bea9649c6258961ea82f',1,'Medecine']]],
+  ['infectiongradient',['infectionGradient',['../d8/d38/class_historique_souche.html#aa0471f5c2f8f1b66b7cd0690fff74c81',1,'HistoriqueSouche']]],
+  ['influencesymptomes',['influenceSymptomes',['../dd/d81/class_donnee_souche.html#a6b82c55c02b8fb72651f6ff137c3a0e4',1,'DonneeSouche']]],
+  ['initialnumberpopulation',['initialNumberPopulation',['../dd/d36/class_population.html#a3ab323c67e2ee796ae5f09bd3b77e88c',1,'Population']]],
+  ['interet',['interet',['../dd/dbe/class_pays.html#ad5d846fb56153bea168c7518916d2419',1,'Pays']]],
+  ['isready',['isReady',['../df/dfc/class_parametres.html#a20306fa83efbb50b1aaf3ad32b478e14',1,'Parametres']]],
+  ['isselected',['isSelected',['../dd/dbe/class_pays.html#a6c0ff18b33fc7b958a417df40c695d8b',1,'Pays']]],
+  ['isvisible',['isVisible',['../d2/d39/class_categories_observer.html#a74a4b8e6888d66eeff22b7968838fed7',1,'CategoriesObserver.isVisible()'],['../d7/def/class_graphiques_categories.html#afcecdc70d99b7c7c4ed29939fb3fc40f',1,'GraphiquesCategories.isVisible()'],['../dd/d94/class_repartion_categories.html#afb0ccce1d9d8dfb73607b303bc624f73',1,'RepartionCategories.isVisible()']]]
 ];

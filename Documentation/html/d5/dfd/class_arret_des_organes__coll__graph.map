@@ -1,3 +1,14 @@
 <map id="ArretDesOrganes" name="ArretDesOrganes">
-<area shape="rect" id="node2" href="$db/df1/class_abstact_symptom.html" title="AbstactSymptom" alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node2" href="$d0/d63/class_abstract_symptom.html" title="AbstractSymptom" alt="" coords="779,239,905,265"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html" title="Souche" alt="" coords="577,220,644,247"/>
+<area shape="rect" id="node5" href="$d4/d3b/class_skills.html" title="Skills" alt="" coords="815,309,869,336"/>
+<area shape="rect" id="node8" href="$dd/dbe/class_pays.html" title="Pays" alt="" coords="816,107,868,133"/>
+<area shape="rect" id="node6" href="$d8/d38/class_historique_souche.html" title="Classe représentant la &quot;mémoire&quot; de la souche, qui va lui permettre de faire des choix. " alt="" coords="331,220,455,247"/>
+<area shape="rect" id="node7" href="$d0/d11/class_limited_list.html" title="LimitedList\&lt; KeyValuePair\l\&lt; DateTime, uint \&gt; \&gt;" alt="" coords="5,213,181,254"/>
+<area shape="rect" id="node9" href="$db/d02/class_pays_ressources.html" title="PaysRessources" alt="" coords="1265,27,1387,53"/>
+<area shape="rect" id="node10" href="$dd/d36/class_population.html" title="Population" alt="" coords="1037,107,1120,133"/>
+<area shape="rect" id="node12" href="$de/d73/class_links.html" title="Links" alt="" coords="1052,173,1105,200"/>
+<area shape="rect" id="node11" href="$df/d6a/class_population_categories.html" title="PopulationCategories" alt="" coords="1253,129,1399,156"/>
+<area shape="rect" id="node13" href="$d9/d71/class_climat.html" title="Climat" alt="" coords="581,8,640,35"/>
+<area shape="rect" id="node14" href="$d4/da9/class_echange_set.html" title="EchangeSet" alt="" coords="564,59,657,85"/>
 </map>

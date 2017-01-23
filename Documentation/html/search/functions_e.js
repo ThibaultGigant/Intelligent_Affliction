@@ -1,22 +1,8 @@
 var searchData=
 [
-  ['receive',['receive',['../d9/db1/class_knowledge.html#a49cc9580fb938713201d78006c8039db',1,'Knowledge.receive()'],['../d4/dbc/class_nourriture.html#aa8787cab1bd3cbf8079c1a562d38175b',1,'Nourriture.receive()'],['../d4/d33/class_ressource.html#a3fd6142be9b5d722b52acfa0109221ec',1,'Ressource.receive()'],['../d8/df6/class_ressource_loisirs.html#a81b2cd90520af1ff8bfd4b6f1ae7b539',1,'RessourceLoisirs.receive()'],['../d1/d7b/class_ressource_transports.html#ae7190e29709e7f3be8e7040c09017bee',1,'RessourceTransports.receive()']]],
-  ['recherche',['Recherche',['../dd/d10/class_recherche.html#a0db2d4f468d084db63aa71c7cba719c0',1,'Recherche']]],
-  ['removeaerien',['removeAerien',['../de/d73/class_links.html#a5892bdbf9e5fb38b78525fcd95b46f0a',1,'Links']]],
-  ['removeairlink',['removeAirLink',['../dd/dbe/class_pays.html#a94ca103b5c1abbf97670999c1f1a2a17',1,'Pays']]],
-  ['removeassigned',['removeAssigned',['../db/dbb/class_a_population_category.html#af4c7cff2cd1c98dbb4c5bee42b9af0a4',1,'APopulationCategory']]],
-  ['removeinfectedpeople',['removeInfectedPeople',['../dd/dbe/class_pays.html#ad32a53b2f2f9ae4055af30441190f03a',1,'Pays.removeInfectedPeople()'],['../d9/db4/class_souche.html#a21e262ffa63efaab12f88f8102e2396b',1,'Souche.removeInfectedPeople()']]],
-  ['removemaritime',['removeMaritime',['../de/d73/class_links.html#ae9fbde312b1c33cba4d14245ffdc0ee9',1,'Links']]],
-  ['removemaritimelink',['removeMaritimeLink',['../dd/dbe/class_pays.html#a8cf729c47f0fe8aaab544a67149f7e47',1,'Pays']]],
-  ['removepeople',['removePeople',['../dd/dbe/class_pays.html#aa91d663c69218e31fd3eeaf848926e6c',1,'Pays.removePeople()'],['../dd/d36/class_population.html#a5400bdca00298b18677274069975b944',1,'Population.removePeople()']]],
-  ['removeressource',['removeRessource',['../d4/d33/class_ressource.html#a317b48f00c6bc7b3c5bb46506e62dd33',1,'Ressource']]],
-  ['removeterrestre',['removeTerrestre',['../de/d73/class_links.html#a7c739b11207a86115ba3d5fe3b57172b',1,'Links']]],
-  ['removeterrestriallink',['removeTerrestrialLink',['../dd/dbe/class_pays.html#ab82619d1624fde396ac6295c31271d75',1,'Pays']]],
-  ['reorganizepopulationcategories',['reorganizePopulationCategories',['../dd/d36/class_population.html#a2198f88d0fc26c250dd4eaa6f2816736',1,'Population.reorganizePopulationCategories()'],['../df/d6a/class_population_categories.html#a52aacf9734ef3c59c40ddfa5f65a413f',1,'PopulationCategories.reorganizePopulationCategories()']]],
-  ['resetactionbooleans',['ResetActionBooleans',['../dd/dc5/class_mouse_manager.html#abe5a6f75ea4344b80fa0ec8dc767b7a4',1,'MouseManager']]],
-  ['resetrotation',['resetRotation',['../d7/db3/class_rotate_earth.html#aba3ec14270b1ef054704c787e57371bc',1,'RotateEarth']]],
-  ['resetrotationbutton',['resetRotationButton',['../d7/db3/class_rotate_earth.html#a9af94b521bdf3dc0a783f965d303069b',1,'RotateEarth']]],
-  ['resizemenuprincipal',['resizeMenuPrincipal',['../db/d10/class_game_manager.html#a89755b669977f4cffeb1da2f5ee4d174',1,'GameManager']]],
-  ['ressource',['Ressource',['../d4/d33/class_ressource.html#a135c6fe41f95e990e9af9294fedd882d',1,'Ressource']]],
-  ['rotate',['rotate',['../d7/db3/class_rotate_earth.html#adc960e9c7d441a5ebe64df0cf10510b0',1,'RotateEarth']]]
+  ['paysressources',['PaysRessources',['../db/d02/class_pays_ressources.html#a0542e52ec980e9bb1b9699ac4980bd99',1,'PaysRessources']]],
+  ['population',['Population',['../dd/d36/class_population.html#a9075207ad38bbd13534b2d55d922a5ac',1,'Population']]],
+  ['populationcategories',['PopulationCategories',['../df/d6a/class_population_categories.html#afb4983990ff336577d96cc954b5107b6',1,'PopulationCategories']]],
+  ['produce',['produce',['../d4/d42/class_agriculture.html#a8a094b8cc88af236e525d67cffe69bc1',1,'Agriculture.produce()'],['../db/dbb/class_a_population_category.html#ac31dab210c79faf15b005c67b7a70141',1,'APopulationCategory.produce()'],['../df/dee/class_inactifs.html#ac0463ac47ab4c738c3ea563e735eba94',1,'Inactifs.produce()'],['../da/d41/class_loisirs.html#a6d234487c20c891d1d9b7ba985813761',1,'Loisirs.produce()'],['../d2/de3/class_medecine.html#a66c53eb8f36b5e58843311fa19c5125e',1,'Medecine.produce()'],['../df/d6a/class_population_categories.html#a0a65e564ee05ff80bc2f8562cd11abc1',1,'PopulationCategories.produce()'],['../dd/d10/class_recherche.html#ada9a65031923dfc821cfd5c4b5b240b8',1,'Recherche.produce()'],['../d6/d8e/class_transports.html#a0aa448dcce1df02b979452eeb01298d7',1,'Transports.produce()'],['../d9/db4/class_souche.html#a4d754b8e5dc8ab91011020fd32cf49c1',1,'Souche.produce()']]],
+  ['production',['production',['../d4/d42/class_agriculture.html#a73423fa32014fb8d8291f19f55dc3958',1,'Agriculture.production()'],['../db/dbb/class_a_population_category.html#af0a02e25080a6245110d71bbca5509db',1,'APopulationCategory.production()'],['../df/dee/class_inactifs.html#ab25e52c0323060c11e6ff3ec2e9d0212',1,'Inactifs.production()'],['../da/d41/class_loisirs.html#a8c410290026180541d52717a94d16cce',1,'Loisirs.production()'],['../d2/de3/class_medecine.html#a5b579aed344da63a02794d7f6e3de360',1,'Medecine.production()'],['../dd/d10/class_recherche.html#aa15e5a06d9ba5d7b30e897c409574bda',1,'Recherche.production()'],['../d6/d8e/class_transports.html#ad4f89cf5571bc0222393ca16fd1faafd',1,'Transports.production()']]]
 ];

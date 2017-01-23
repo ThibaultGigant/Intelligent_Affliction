@@ -1,0 +1,10 @@
+<map id="Skills.getSkillValue" name="Skills.getSkillValue">
+<area shape="rect" id="node2" href="$d4/d3b/class_skills.html#a1dca05ade6897b06bf834a134aa6db34" title="Retourne la résistance au froid calculée pour cette souche On prend en compte les facteurs multiplica..." alt="" coords="194,5,361,32"/>
+<area shape="rect" id="node5" href="$d4/d3b/class_skills.html#a5dd48840b5bb60d5068decd06333ff6d" title="Retourne la résistance à la chaleur calculée pour cette souche On prend en compte les facteurs multip..." alt="" coords="193,56,361,83"/>
+<area shape="rect" id="node6" href="$d4/d3b/class_skills.html#a25c4f1a1825795518f4ccf0b2692dc2b" title="Retourne la transmission par l&#39;eau calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="193,107,362,133"/>
+<area shape="rect" id="node7" href="$d4/d3b/class_skills.html#aeeaf0ee9d560b43f916ca216de72652d" title="Retourne la transmission par l&#39;air calculée pour cette souche On prend en compte les facteurs multipl..." alt="" coords="202,157,353,184"/>
+<area shape="rect" id="node8" href="$d4/d3b/class_skills.html#a808a3edbb42c61bd33dc8a2163dafebb" title="Retourne la transmission par contact calculée pour cette souche On prend en compte les facteurs multi..." alt="" coords="188,208,367,235"/>
+<area shape="rect" id="node3" href="$d4/d3b/class_skills.html#ad59d600a462feb9bd80cb3a5e0931f4b" title="Calcul de l&#39;effet qu&#39;ont les connaissances des humains et la population assignée à la médecine sur la..." alt="" coords="415,99,597,141"/>
+<area shape="rect" id="node4" href="$dd/dbe/class_pays.html#a4e3a604687ef48b1db1928fc08675d62" title="Retourne le pourcentage de personnes assignée à la catégorie passée en paramètre. ..." alt="" coords="645,107,844,133"/>
+<area shape="rect" id="node9" href="$dd/dbe/class_pays.html#a0376ef40297c65a21a1b67566c1c86c0" title="Retourne le nombre d&#39;habitants actuel du pays. " alt="" coords="431,208,581,235"/>
+</map>

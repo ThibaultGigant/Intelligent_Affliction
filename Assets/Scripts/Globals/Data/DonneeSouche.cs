@@ -103,5 +103,29 @@ public static class DonneeSouche
 	 * Facteur de randomisation : Si un random est plus bas que ce chiffre, on fait autre chose
 	 */
 	public static float epsilonGreedyFactor = 0.05f;
+
+	/**
+	 * Renvoie un nouveau symptôme correspondant au nom passé en paramètre
+	 * @param symptomName Nom du symptôme
+	 * @return Nouveau symptôme créé
+	 */
+	public static AbstractSymptom getSymptomFromName(string symptomName)
+	{
+		switch (symptomName) {
+		case "ArretDesOrganes":
+			return new ArretDesOrganes ();
+		case "Diarrhee":
+			return new Diarrhee ();
+		case "Eternuements":
+			return new Eternuements ();
+		case "Fievre":
+			return new Fievre ();
+		case "Sueurs":
+			return new Sueurs ();
+		case "Toux":
+			return new Toux ();
+		}
+		return null;
+	}
 }
 

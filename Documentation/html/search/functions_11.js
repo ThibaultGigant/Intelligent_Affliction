@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['update',['Update',['../d0/d6b/class_cargo.html#a96df165053b97b95ff0ea8a4aeb478b8',1,'Cargo.Update()'],['../dd/dbe/class_pays.html#adacd96cffd32266281659d95786c49af',1,'Pays.Update()'],['../df/da2/class_pays_manager.html#afafa7a93a1d5bb89fef6e5126606d466',1,'PaysManager.Update()'],['../de/d73/class_clock_manager.html#aaf2b126530e01e1ba4960f83062b46ef',1,'ClockManager.Update()'],['../db/d10/class_game_manager.html#a44c79b205dec16bfe650e21259860c5b',1,'GameManager.Update()'],['../d2/d39/class_categories_observer.html#aa0c234e5ba46ba3f7162200194231fac',1,'CategoriesObserver.Update()'],['../dd/dc5/class_mouse_manager.html#a1630e85a445d6d3f9676fc032e242d80',1,'MouseManager.Update()'],['../d7/db3/class_rotate_earth.html#a6bed28f8b4574f58d6dc5d3f51b5fe2f',1,'RotateEarth.Update()'],['../d4/db8/class_sun_rotation.html#a3c1a55e34503d225157a22ed517e2257',1,'SunRotation.Update()'],['../d6/da4/class_zoom_pays.html#aed5d608ea703f85e3c00e2e24287f1fe',1,'ZoomPays.Update()']]],
-  ['updatehappinessindex',['updateHappinessIndex',['../dd/dbe/class_pays.html#a254eab541604d05e2d7e492a7b4c229f',1,'Pays']]],
-  ['updatemenupricipal',['updateMenuPricipal',['../db/d10/class_game_manager.html#a6e4b6554b251d108056a1604b2305295',1,'GameManager']]]
+  ['testfunctions',['TestFunctions',['../dd/dbe/class_pays.html#a6a5dc62d3240e1a50469295121899755',1,'Pays']]],
+  ['tiragealatoirelist',['tirageAlatoireList',['../d5/df1/class_utils.html#ae08b5dce4b0eddc4269eaa515fd53b5a',1,'Utils']]],
+  ['togglevisible',['toggleVisible',['../d2/d39/class_categories_observer.html#a5de5ff0b6b2fc58b090adc9b709399b5',1,'CategoriesObserver.toggleVisible()'],['../d7/def/class_graphiques_categories.html#a7d8572118912d835189fd40981e8b295',1,'GraphiquesCategories.toggleVisible()'],['../dd/d94/class_repartion_categories.html#a6f3d6fd8a4679575104c3c874e130e25',1,'RepartionCategories.toggleVisible()']]],
+  ['tostring',['ToString',['../d0/d11/class_limited_list.html#a4a76a5b6331d26bd117669a4e8516fb3',1,'LimitedList.ToString()'],['../da/d92/class_limited_queue.html#a0bee9aab5fad5c4dc94374e318a7d77a',1,'LimitedQueue.ToString()']]],
+  ['tostringformat',['toStringFormat',['../d5/df1/class_utils.html#aad335fc7483db362ea9250bac1ed9ae4',1,'Utils']]],
+  ['toux',['Toux',['../d1/d49/class_toux.html#a3d7737bfd3134f38c9aec65ba94e9af9',1,'Toux']]],
+  ['transfertbetweencategories',['transfertBetweenCategories',['../df/d6a/class_population_categories.html#aaffd05f9b4dfde8d2860b228682ae789',1,'PopulationCategories']]],
+  ['transports',['Transports',['../d6/d8e/class_transports.html#a4f8b597416960b85c532060708d2df5b',1,'Transports']]]
 ];

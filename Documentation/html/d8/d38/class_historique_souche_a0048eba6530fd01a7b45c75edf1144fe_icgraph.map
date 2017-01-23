@@ -1,0 +1,6 @@
+<map id="HistoriqueSouche.lastEvolutionEvolutionSpeed" name="HistoriqueSouche.lastEvolutionEvolutionSpeed">
+<area shape="rect" id="node2" href="$d9/db4/class_souche.html#a8aba2e7c358bb72f0586264b8cd202cd" title="Indicateur de la volonté de la souche d&#39;augmenter sa vitesse d&#39;évolution Calculé en prenant en compte..." alt="" coords="255,5,435,47"/>
+<area shape="rect" id="node5" href="$d9/db4/class_souche.html#a2b43f870e6c20a42e26b6dafe2c73710" title="Indicateur de la volonté de la souche d&#39;augmenter la &quot;puissance&quot; de l&#39;un de ses symptômes, et donc sa létalité Calculé en prenant en compte plusieurs facteurs : " alt="" coords="256,71,433,98"/>
+<area shape="rect" id="node3" href="$d9/db4/class_souche.html#a4888e2e7ec13dcba0e437c2d9e3c1469" title="Effectue une évolution de la souche en fonction des motivations. " alt="" coords="483,42,587,69"/>
+<area shape="rect" id="node4" href="$d9/db4/class_souche.html#a7728de48ef31bd85b6f06601d5cbb49b" title="Méthode appelée à chaque frame Elle permet d&#39;effectuer une évolution si possible, ainsi que d&#39;effectu..." alt="" coords="635,42,745,69"/>
+</map>

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['oneclick',['oneClick',['../dd/dc5/class_mouse_manager.html#ae0c5f0116272adca6214e0280bdf91b1',1,'MouseManager']]]
+  ['offre',['offre',['../d4/d42/class_agriculture.html#ad339a8eb189e321310b39ef18467cf6f',1,'Agriculture.offre()'],['../db/dbb/class_a_population_category.html#ae86e4c750f6db1d7150caceff2715ccd',1,'APopulationCategory.offre()'],['../df/dee/class_inactifs.html#a45b6accb453b8f30cef17c2836b3d0ca',1,'Inactifs.offre()'],['../da/d41/class_loisirs.html#af05f9ed9c340946b629b58a4df87b195',1,'Loisirs.offre()'],['../d2/de3/class_medecine.html#a957ce2cb8ee76c4d9e707d79b6d8eece',1,'Medecine.offre()'],['../dd/d10/class_recherche.html#a568db33cd815f0680b5e71bfc8785226',1,'Recherche.offre()'],['../d6/d8e/class_transports.html#a1745a0ade4dddeb02ecc450907c90212',1,'Transports.offre()'],['../d9/db1/class_knowledge.html#a69249be76f4f57ddab51420fc1795fd3',1,'Knowledge.offre()'],['../d4/dbc/class_nourriture.html#a7260fcda5f31905571f281e9744f1a09',1,'Nourriture.offre()'],['../d4/d33/class_ressource.html#ac8da249f31144863157c3a045efdde9b',1,'Ressource.offre()'],['../d8/df6/class_ressource_loisirs.html#af43cc00a99d706f0c1cb2d541ba69ee1',1,'RessourceLoisirs.offre()'],['../d1/d7b/class_ressource_transports.html#a98af0013a6de66d54318b7a02e29b380',1,'RessourceTransports.offre()']]],
+  ['oneclick',['oneClick',['../dd/dc5/class_mouse_manager.html#ae0c5f0116272adca6214e0280bdf91b1',1,'MouseManager']]],
+  ['origincountry',['originCountry',['../d5/d25/class_link.html#ab1c6c0797d3e58bdff67c442b4cdae17',1,'Link']]]
 ];
