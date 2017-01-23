@@ -43,6 +43,12 @@ public class Parametres {
 	public static float hauteurMenuPrincipal = 85f;
 
 	/**
+	 * Seuil à partir duquel, on estime qu'il faut demander de l'aide à d'autre pays
+	 * pour nous aider dans une des catégories
+	 */
+	public static float seuilDAppelALAide = 0.5f;
+
+	/**
 	 * earth : La Terre
 	 */
 	public static GameObject earth;

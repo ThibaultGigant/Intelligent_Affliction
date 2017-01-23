@@ -120,4 +120,6 @@ public abstract class Ressource
 	 * sinon, retourne le montant à consommer
 	 */
 	public abstract int consome (bool flag);
+
+	public abstract Ressource offre ();
 }

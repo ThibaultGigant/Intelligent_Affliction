@@ -132,4 +132,12 @@ public class Loisirs : APopulationCategory
 		 */
 		return (int) (population.totalPopulation / 10f * 2.4657f / 10000f);
 	}
+
+	public override Ressource demande () {
+		RessourceLoisirs lsr = new RessourceLoisirs (population.country);
+
+		// Pas la peine de préciser des choses, la carte de visite dit tout
+		// Ici on va seulement dire qu'on a besoin de plus de savoir faire
+		return (Ressource) lsr;
+	}
 }
