@@ -29,6 +29,13 @@ public class Medecine : APopulationCategory
 	 * Production de "ressources", en fonction de ce qu'apporte la catégorie
 	 */
 	public override void produce () {
+
+		if (population.country.souche == null) {
+			infectesDecouverts.Enqueue (0);
+			soignes.Enqueue (0);
+			return;
+		}
+
 		/**
 		 * Formule
 		 * 
@@ -70,7 +77,8 @@ public class Medecine : APopulationCategory
 
 		int soigne = (int) (assignedPopulation * ratioInfectedPopulation * knowledgesFacteurDetection / 20f);
 
-		int detectes = (int)(((float) (population.country.souche.getNbInfected() - population.nbInfectedDetected) * knowledgesFacteurDetection) /
+		int detectes;
+		detectes = (int)(((float) (population.country.souche.getNbInfected() - population.nbInfectedDetected) * knowledgesFacteurDetection) /
 			(float) population.totalPopulation * (float) assignedPopulation);
 
 		population.nbInfectedDetected += (uint) detectes;
