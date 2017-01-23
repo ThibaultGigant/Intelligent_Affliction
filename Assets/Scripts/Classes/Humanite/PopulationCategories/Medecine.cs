@@ -151,4 +151,9 @@ public class Medecine : APopulationCategory
 		Utils.createGraphique (graphique, soignes);
 	}
 
+	public override Ressource demande () {
+		// Les médecins n'ont rien a demandé, c'est la recherche qui pêche
+		return null;
+	}
+
 }

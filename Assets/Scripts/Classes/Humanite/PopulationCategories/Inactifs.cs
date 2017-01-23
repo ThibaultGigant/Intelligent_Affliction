@@ -98,4 +98,9 @@ public class Inactifs : APopulationCategory
 	public override int ideal () {
 		return 0;
 	}
+
+	public override Ressource demande () {
+		// Pas besoin d'inactifs en plus
+		return null;
+	}
 }

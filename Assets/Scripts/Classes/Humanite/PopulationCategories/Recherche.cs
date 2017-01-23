@@ -136,4 +136,28 @@ public class Recherche : APopulationCategory
 		moyenne /= (float) productions.Count;
 		return moyenne;
 	}
+
+	public override Ressource demande () {
+
+		if (besoins () < Parametres.seuilDAppelALAide)
+			return null;
+
+		Knowledge knowledge;
+		Knowledge minKnowledge = null;
+		float min = Mathf.Infinity;
+		foreach ( Ressource res in population.country.resources.resources.Values ) {
+			if (res.GetType () != typeof(Knowledge))
+				continue;
+
+			knowledge = (Knowledge) res;
+			if (knowledge.developpement < min) {
+				min = knowledge.developpement / DonneeSouche.lethalitySymptomes[ knowledge.sujetKnowledge ];
+				minKnowledge = knowledge;
+			}
+		}
+
+		Knowledge know = new Knowledge (population.country, minKnowledge.sujetKnowledge, minKnowledge.coutDeRecherche);
+
+		return (Ressource) know;
+	}
 }

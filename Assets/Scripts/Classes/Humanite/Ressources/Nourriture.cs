@@ -65,4 +65,19 @@ public class Nourriture : Ressource
 		return insatisfaits;
 
 	}
+
+	public override Ressource offre () {
+		Agriculture agri = (Agriculture)(pays.population.categories ["Agriculture"]);
+		if (agri.besoins () > 0f)
+			return null;
+
+		int nb = agri.offre ((int)quantity, 0.5f);
+
+		if (nb <= 0)
+			return null;
+
+		Nourriture nourriture = new Nourriture (pays);
+		nourriture.addRessource (nb);
+		return (Ressource) nourriture;
+	}
 }

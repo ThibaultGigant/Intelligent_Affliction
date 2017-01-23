@@ -32,4 +32,15 @@ public class RessourceTransports : Ressource {
 	public override int consome (bool flag) {
 		return 0;
 	}
+
+	public override Ressource offre() {
+		Transports loisir = (Transports)(pays.population.categories ["Transports"]);
+		int nb = loisir.offre ((int)quantity, 1f);
+		if (nb <= 0)
+			return null;
+
+		RessourceTransports loisirs = new RessourceTransports (pays);
+		loisirs.addRessource (nb);
+		return (Ressource) loisirs;
+	}
 }

@@ -51,4 +51,10 @@ public class Knowledge : Ressource {
 	public override int consome (bool flag) {
 		return 0;
 	}
+
+	public override Ressource offre() {
+		Knowledge knowledge = new Knowledge (pays, sujetKnowledge, coutDeRecherche);
+		knowledge.developpement = developpement;
+		return (Ressource) knowledge;
+	}
 }

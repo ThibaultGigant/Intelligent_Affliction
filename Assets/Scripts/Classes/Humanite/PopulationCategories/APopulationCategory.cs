@@ -202,5 +202,10 @@ public abstract class APopulationCategory
 		return min;
 	}
 
+	/**
+	 * Indique combien de ressource mensuel il voudrait réccupérer
+	 */
+	public abstract Ressource demande ();
+
 }
 

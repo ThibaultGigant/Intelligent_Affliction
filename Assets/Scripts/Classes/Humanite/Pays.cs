@@ -59,6 +59,26 @@ public class Pays : MonoBehaviour
 	public EchangeSet echangeSet;
 
 	/**
+	 * Messages reçus
+	 */
+	private List<CarteDeVisite> messages;
+
+	/**
+	 * Liste de tous les pays
+	 */
+	public List<Pays> pays;
+
+	/**
+	 * Liste des pays non liés
+	 */
+	public List<Pays> paysNonLies;
+
+	/**
+	 * Liste des pays que l'on a appelé, et dont la réponse est en attente
+	 */
+	public List<Pays> paysEnAttente;
+
+	/**
 	 * Fonction appelée lorsque le pays s'active pour la première fois
 	 * Initialisation du pays
 	 */
@@ -71,6 +91,15 @@ public class Pays : MonoBehaviour
 		superficie = DonneePays.getSuperficie(nomPays);
 		resources = new PaysRessources (this);
 		souche = new Souche (this);
+		messages = new List<CarteDeVisite> ();
+		paysNonLies = new List<Pays> ();
+		paysEnAttente = new List<Pays> ();
+	}
+
+	public void setPaysNonLies() {
+		foreach (Pays p in pays) {
+			paysNonLies.Add (p);
+		}
 	}
 
 	/**
@@ -423,5 +452,70 @@ public class Pays : MonoBehaviour
 	{
 		return this.population.categories.categories [category].assignedPopulation / (float)this.population.totalPopulation;
 	}
-}
 
+	/**
+	 * Fournie une carte de visite, indiquant les ressources qu'il est prêt à échanger aux autres pays
+	 */
+	public CarteDeVisite getCarteDeVisite() {
+		CarteDeVisite carte = new CarteDeVisite (this);
+		Ressource offre;
+		foreach (Ressource resource in resources.resources.Values) {
+			offre = resource.offre ();
+			if (offre == null)
+				continue;
+			carte.addRessource (offre);
+		}
+
+		Medecine medecine = (Medecine) (population.categories.categories ["Medecine"]);
+		float ratio = medecine.moyenneSoignes() / medecine.moyenneNouveauxInfectes();
+		// On ne communique notre efficacité que si le ratio est supérieur à 0.7
+		if (ratio > 0.7f)
+			carte.ratioSoigneInfecteDetecte = ratio;
+
+		return carte;
+	}
+
+	/**
+	 * Appel aux autres pays, pour commencer des échanges
+	 */
+	public void appelPays() {
+		if (paysNonLies.Count == 0)
+			return;
+		
+		float max = Mathf.NegativeInfinity;
+		float tmp;
+		APopulationCategory cateMax = null;
+		foreach (APopulationCategory cate in population.categories.categories.Values) {
+			tmp = cate.besoins ();
+			if (max < tmp) {
+				max = tmp;
+				cateMax = cate;
+			}
+		}
+		if (max > Parametres.seuilDAppelALAide) {
+			CarteDeVisite carte = getCarteDeVisite ();
+			Ressource res = cateMax.demande ();
+			res.quantity = (int)((float)res.quantity / paysNonLies.Count);
+			if (res != null)
+				carte.addRessourceDemandee (res);
+			else {
+				return;
+			}
+
+			sendMessagePaysNonLies (carte);
+		}
+	}
+
+	/**
+	 * Envoie un message à tous les pays susceptible de pouvoir apporter de l'aide
+	 */
+	public void sendMessagePaysNonLies (CarteDeVisite carte) {
+		foreach (Pays pays in paysNonLies) {
+			pays.addMessage (carte);
+		}
+	}
+
+	public void addMessage (CarteDeVisite carte) {
+		messages.Add (carte);
+	}
+}

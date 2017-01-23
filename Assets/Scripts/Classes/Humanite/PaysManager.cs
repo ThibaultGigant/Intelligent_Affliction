@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PaysManager : MonoBehaviour {
 
@@ -8,8 +9,17 @@ public class PaysManager : MonoBehaviour {
 	 * Ajoute un composant Pays à chaque Zone de la carte
 	 */
 	void Start () {
-		foreach ( Transform t in transform )
-			t.gameObject.AddComponent <Pays>();
+		List<Pays> liste = new List<Pays> ();
+		foreach (Transform t in transform) {
+			t.gameObject.AddComponent <Pays> ();
+			liste.Add (t.gameObject.GetComponentInChildren<Pays> ());
+		}
+		Pays p;
+		foreach (Transform t in transform) {
+			p = t.gameObject.GetComponentInChildren<Pays> ();
+			p.pays = liste;
+			p.setPaysNonLies ();
+		}
 	}
 
 	/**

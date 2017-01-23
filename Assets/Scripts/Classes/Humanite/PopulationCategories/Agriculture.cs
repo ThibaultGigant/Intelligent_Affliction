@@ -124,7 +124,11 @@ public class Agriculture : APopulationCategory
 		foreach (int i in productions)
 			sum += i;
 
-		float moyenne = sum / (1.0f * productions.Count);
+		float moyenne;
+		if (productions.Count == 0)
+			moyenne = 0f;
+		else
+			moyenne = sum / (1.0f * productions.Count);
 
 		float excedant = moyenne - population.country.resources["Nourriture"].consome(false);
 
@@ -139,7 +143,7 @@ public class Agriculture : APopulationCategory
 		 * 
 		 * min ( pourcentage * [excédant moyen] , montant )
 		 */
-		if (sum >= 0.1 * population.totalPopulation) {
+		if (excedant >= 0.1 * population.totalPopulation) {
 			int excedantMoyen = (int) (excedant * pourcentage);
 			return excedantMoyen < montant ? excedantMoyen : montant ;
 		}
@@ -153,5 +157,28 @@ public class Agriculture : APopulationCategory
 	 */
 	public override int ideal() {
 		return (int) population.totalPopulation;
+	}
+
+	public override Ressource demande () {
+		Nourriture nourriture = new Nourriture (population.country);
+
+		int sum = 0;
+		foreach (int i in productions)
+			sum += i;
+
+		float moyenne;
+		if (productions.Count == 0)
+			moyenne = 0f;
+		else
+			moyenne = sum / (1.0f * productions.Count);
+
+		int nb = (int) (ideal () - moyenne);
+
+		// On ne demande quelque chose que s'il y a plus de 5% de personnes dans la famine
+		if (nb < 0.05f * population.totalPopulation)
+			return null;
+
+		nourriture.addRessource (nb);
+		return (Ressource) nourriture;
 	}
 }
