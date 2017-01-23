@@ -32,8 +32,9 @@ public class Nourriture : Ressource
 	 */
 	public override int receive(Ressource toReceive)
 	{
-		// TODO
-		return 0;
+		quantity += toReceive.quantity;
+		Debug.Log ("Nourriture receive " + toReceive.quantity);
+		return (int)(toReceive.quantity);
 	}
 
 	/**

@@ -86,7 +86,7 @@ public class Pays : MonoBehaviour
 	{
 		nomPays = gameObject.name;
 		population = new Population(this);
-		links = new Links ();
+		links = new Links (this);
 		climat = new Climat (DonneePays.getChaleur(nomPays), DonneePays.getHumidite(nomPays));
 		superficie = DonneePays.getSuperficie(nomPays);
 		resources = new PaysRessources (this);
@@ -94,6 +94,7 @@ public class Pays : MonoBehaviour
 		messages = new List<CarteDeVisite> ();
 		paysNonLies = new List<Pays> ();
 		paysEnAttente = new List<Pays> ();
+		echangeSet = new EchangeSet ();
 	}
 
 	public void setPaysNonLies() {
@@ -107,7 +108,8 @@ public class Pays : MonoBehaviour
 	 * Fait vivre la population
 	 */
 	public void Update() {
-		SelectionPays ();
+		if (!Parametres.chooseMaritime)
+			SelectionPays ();
 
 		/**
 		 * Chaque jour
@@ -120,6 +122,8 @@ public class Pays : MonoBehaviour
 			population.reorganizePopulationCategories ();
 			population.updateHappiness ();
 			appelPays ();
+			traiteMessages ();
+			effectueEchange ();
 		}
 		if (ClockManager.newMonth) {
 			appelPays ();
@@ -400,7 +404,7 @@ public class Pays : MonoBehaviour
 	 */
 	public float indiceRecherche() {
 		Recherche recherche = (Recherche) (population.categories.categories ["Recherche"]);
-		return Mathf.Min(1f, recherche.moyennePoints() / ( 1f + recherche.ideal()));
+		return Mathf.Min(1f, recherche.moyennePoints() / ( 1f + (float) recherche.ideal()));
 	}
 
 	/**
@@ -426,23 +430,28 @@ public class Pays : MonoBehaviour
 	 */
 	public void createSouche(Souche souche, uint nbInfected)
 	{
-		this.souche = gameObject.AddComponent<Souche> ();
-		this.souche.country = this;
+		if (this.souche == null) {
+			this.souche = gameObject.AddComponent<Souche> ();
+			this.souche.country = this;
 
-		// Récupération des capacités
-		this.souche.skills.setWaterSpreading (souche.skills.getWaterSpreading ());
-		this.souche.skills.setAirSpreading (souche.skills.getAirSpreading ());
-		this.souche.skills.setContactSpreading (souche.skills.getContactSpreading ());
-		this.souche.skills.setResistanceCold (souche.skills.getResistanceCold ());
-		this.souche.skills.setResistanceHeat (souche.skills.getResistanceHeat ());
+			// Récupération des capacités
+			this.souche.skills.setWaterSpreading (souche.skills.getWaterSpreading ());
+			this.souche.skills.setAirSpreading (souche.skills.getAirSpreading ());
+			this.souche.skills.setContactSpreading (souche.skills.getContactSpreading ());
+			this.souche.skills.setResistanceCold (souche.skills.getResistanceCold ());
+			this.souche.skills.setResistanceHeat (souche.skills.getResistanceHeat ());
 
-		// Copie des symptômes
-		foreach (KeyValuePair<string, AbstractSymptom> pair in souche.symptoms) {
-			this.souche.symptoms.Add (pair.Key, DonneeSouche.getSymptomFromName (pair.Key));
+			// Copie des symptômes
+			foreach (KeyValuePair<string, AbstractSymptom> pair in souche.symptoms) {
+				this.souche.symptoms.Add (pair.Key, DonneeSouche.getSymptomFromName (pair.Key));
+			}
+
+			// Mise en place du nombre d'infectés
+			this.souche.setNbInfected (nbInfected);
 		}
-
-		// Mise en place du nombre d'infectés
-		this.souche.setNbInfected (nbInfected);
+		else {
+			this.souche.fusion (souche, nbInfected);
+		}
 	}
 
 
@@ -519,22 +528,31 @@ public class Pays : MonoBehaviour
 		if (paysNonLies.Count == 0)
 			return;
 		
+		
 		float max = Mathf.NegativeInfinity;
 		float tmp;
 		APopulationCategory cateMax = null;
 		foreach (APopulationCategory cate in population.categories.categories.Values) {
 			tmp = cate.besoins ();
-			if (max < tmp) {
+			if (max < tmp && cate.demande() != null) {
 				max = tmp;
 				cateMax = cate;
 			}
+			else if (max == tmp && cate.demande() != null && UnityEngine.Random.value < 0.3f ) {
+				max = tmp;
+				cateMax = cate;
+			}
+			else {
+			}
 		}
+
 		if (max > Parametres.seuilDAppelALAide) {
 			CarteDeVisite carte = getCarteDeVisite ();
 			Ressource res = cateMax.demande ();
 			//res.quantity = (uint)((float)res.quantity / paysNonLies.Count);
-			if (res != null)
+			if (res != null) {
 				carte.addRessourceDemandee (res);
+			}
 			else {
 				return;
 			}
@@ -552,10 +570,16 @@ public class Pays : MonoBehaviour
 		}
 	}
 
+	/**
+	 * Ajoute un message à ce pays (appellé depuis un autre pays)
+	 */
 	public void addMessage (CarteDeVisite carte) {
 		messages.Add (carte);
 	}
 
+	/**
+	 * Traite les messages des autres pays, voulant échanger des ressources
+	 */
 	public void traiteMessages () {
 		if (messages.Count == 0)
 			return;
@@ -584,8 +608,9 @@ public class Pays : MonoBehaviour
 			if (besoin == Mathf.Infinity && res.nom.Contains ("Knowledge"))
 				cate = population.categories ["Recherche"];
 
-			if (besoin == Mathf.Infinity)
-				cate = population.categories[res.nom];
+			if (cate == null) {
+				cate = population.categories [res.nom];
+			}
 
 			if (cate == null)
 				continue;
@@ -603,11 +628,16 @@ public class Pays : MonoBehaviour
 		}
 
 		foreach (Ressource res in msg.ressourcesDemandees.resources.Values) {
-			if (res.nom == "Nourriture" && res.quantity <= 0.3f * resources [res.nom].offre ().quantity)
+			if (res.nom == "Nourriture" && resources [res.nom].offre () != null && res.quantity <= 0.3f * resources [res.nom].offre ().quantity) {
 				finalRessourceSend = resources [res.nom];
+				break;
+			}
 
-			if (res.nom.Contains ("Knowledge"))
+			if (res.nom.Contains ("Knowledge")) {
 				finalRessourceSend = resources [res.nom];
+				if (UnityEngine.Random.value < 0.2f)
+					break;
+			}
 
 			if (finalRessourceSend != null)
 				break;
@@ -627,17 +657,32 @@ public class Pays : MonoBehaviour
 
 			if (newLink == null)
 				return;
-			
 
 			Echange echange = new Echange ( finalRessourceSend.nom, finalRessourceSend.offre().quantity, finalRessource.nom, finalRessource.quantity, newLink);
 			createLink (this, msg.pays, echange, true);
 		}
 	}
 
+	/**
+	 * Création de lien entre deux pays
+	 * @param paysOne Ce pays ci
+	 * @param paysTwo Le pays avec qui on crée le lien
+	 * @param echange Le contract d'échange entre les deux pays
+	 * @param flag Permet de faire faire la même opération à l'autre pays. Mettre à true
+	 */
 	public void createLink(Pays paysOne, Pays paysTwo, Echange echange, bool flag) {
+		if (!echangeSet.echanges.Keys.Contains (paysTwo))
+			echangeSet.echanges [paysTwo] = new Dictionary<string, Echange> ();
 		echangeSet.echanges[paysTwo][echange.ressourceRecu] = echange;
 		paysNonLies.Remove (paysTwo);
 		if (flag)
 			paysTwo.createLink (paysTwo, paysOne, echange, false);
+	}
+
+	/**
+	 * Effectue les échanges définis par les contracts qu'à ce pays
+	 */
+	public void effectueEchange() {
+		echangeSet.effectueEchange ();
 	}
 }

@@ -30,6 +30,10 @@ public class MouseManager : MonoBehaviour {
 	 */
 	private static RaycastHit hitForEarth;
 	/**
+	 * hit du Raycast, ne touchant que les ports
+	 */
+	private static RaycastHit hitMaritimeMode;
+	/**
 	 * Indique si un premier clique gauche à été effectué
 	 */
 	private bool oneClick = false;
@@ -49,6 +53,10 @@ public class MouseManager : MonoBehaviour {
 	 * Indique si le Raycast touche la Terre
 	 */
 	private static bool hitEarth = false;
+	/**
+	 * Indique si le Raycast touche un port dans le mode maritime
+	 */
+	private static bool hitMaritime = false;
 
 	// Use this for initialization
 	void Start () {
@@ -66,6 +74,9 @@ public class MouseManager : MonoBehaviour {
 		}
 		if (Physics.Raycast (ray, out hit)) {
 			hitSomething = true;	
+		}
+		if (Parametres.chooseMaritime && Physics.Raycast (ray, out hitMaritimeMode, Mathf.Infinity, ~LayerMask.NameToLayer ("Maritime"))) {
+			hitMaritime = true;
 		}
 	}
 	
@@ -111,6 +122,7 @@ public class MouseManager : MonoBehaviour {
 		doubleLeftClick = false;
 		rightClickPushed = false;
 		hitSomething = false;
+		hitMaritime = false;
 		hitEarth = false;
 	}
 
@@ -133,5 +145,13 @@ public class MouseManager : MonoBehaviour {
 		}
 		// Sinon
 		return (hitSomething && hit.collider.name == obj.name);
+	}
+
+	public static bool doesHitMaritime(GameObject obj) {
+		if (!Parametres.chooseMaritime)
+			return false;
+		return (hitMaritime && 
+			hitMaritimeMode.collider.name 
+			== obj.name);
 	}
 }

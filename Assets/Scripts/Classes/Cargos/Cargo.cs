@@ -41,15 +41,15 @@ public class Cargo : MonoBehaviour {
 	private bool onGoing = false;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Awake () {
+		resources = new Dictionary<string, Ressource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (ClockManager.newDay && onGoing) {
 			advancement++;
-			if (advancement == 5) {
+			if (advancement >= 1) {
 				dechargement();
 			}
 		}
@@ -76,23 +76,29 @@ public class Cargo : MonoBehaviour {
 		Pays country = link.destinationCountry;
 
 		// Fusion des souches
-		country.souche.fusion (this.souche, this.nbInfected + this.nbInfectedTourists);
+		if (this.souche != null)
+			country.createSouche(this.souche, this.nbInfected + this.nbInfectedTourists);
 
 		// Ajout des ressources
 		foreach (KeyValuePair<string, Ressource> entry in resources)
 		{
+			Debug.Log ("Cargo dechargement " + entry.Key);
 			country.resources [entry.Key].receive (entry.Value);
-
 			// Mise à jour des contrats d'échanges
-			Echange echange = country.echangeSet.echanges[link.originCountry][entry.Key];
-			echange.historiqueReception.Enqueue((uint)entry.Value.quantity);
+			if (country.echangeSet.echanges [link.originCountry].Keys.Contains (entry.Key)) {
+				Echange echange = country.echangeSet.echanges [link.originCountry] [entry.Key];
+				echange.historiqueReception.Enqueue ((uint)entry.Value.quantity);
 
-			echange.checkEchangeReception((uint)entry.Value.quantity);
+				echange.checkEchangeReception((uint)entry.Value.quantity);
+			}
+
 		}
 
 		// Ajout des migrants
 		country.addPeople(this.nbPersonnes);
 		country.addInfectedPeople (this.nbInfected);
+
+		Destroy (gameObject);
 
 	}
 

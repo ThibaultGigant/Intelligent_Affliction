@@ -91,7 +91,7 @@ public static class DonneeSouche
 	public static IDictionary<string, List<float>> influenceSymptomes = new Dictionary<string, List<float>> ()
 	{
 		// Dans l'ordre pour les skill affectés : Cold, Heat, Water, Air, Contact
-		{"ArretDesOrganes", new List<float> {1f, 1f, 1f, 1f, 1f}},
+		{"ArretDesOrganes", new List<float> {1f, 1f, 0.8f, 0.8f, 0.8f}},
 		{"Diarrhee", new List<float> {1f, 1f, 3f, 1f, 1.5f}},
 		{"Eternuements", new List<float> {1f, 1f, 1.1f, 3.5f, 2f}},
 		{"Fievre", new List<float> {1f, 1.3f, 1f, 1f, 1.5f}},

@@ -53,6 +53,11 @@ public class Parametres {
 	public static float seuilDAppelALAide = 0.2f;
 
 	/**
+	 * Indique si l'on est dans le mode de vue "Maritime"
+	 */
+	public static bool chooseMaritime = false;
+
+	/**
 	 * earth : La Terre
 	 */
 	public static GameObject earth;

@@ -25,8 +25,9 @@ public class Links
 	/**
 	 * Constructeur
 	 */
-	public Links ()
+	public Links (Pays country)
 	{
+		this.country = country;
 		terrestres = new Dictionary<string, Link> ();
 		aeriens = new Dictionary<string, Link> ();
 		maritimes = new Dictionary<string, Link> ();

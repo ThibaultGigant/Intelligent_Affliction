@@ -21,5 +21,13 @@ public class EchangeSet {
 		this.echanges = new Dictionary<Pays, IDictionary<String, Echange>> ();
 	}
 
+	public void effectueEchange() {
+		foreach ( IDictionary<String, Echange> echangePays in echanges.Values ) {
+			foreach ( Echange echange in echangePays.Values ) {
+				echange.effectuerEchange ();
+			}
+		}
+	}
+
 	
 }

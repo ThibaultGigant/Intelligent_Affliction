@@ -33,14 +33,14 @@ public class PaysRessources
 	private void SetupRessources() {
 		resources = new Dictionary<string, Ressource> ();
 		resources.Add ("Nourriture", new Nourriture (pays));
-		resources.Add ("KnowledgeToux", new Knowledge (pays, "Toux", 1));
-		resources.Add ("KnowledgeEternuements", new Knowledge (pays, "Eternuements", 1));
-		resources.Add ("KnowledgeFievre", new Knowledge (pays, "Fievre", 1));
-		resources.Add ("KnowledgeDiarrhee", new Knowledge (pays, "Diarrhee", 1));
-		resources.Add ("KnowledgeSueurs", new Knowledge (pays, "Sueurs", 1));
-		resources.Add ("KnowledgeArretDesOrganes", new Knowledge (pays, "ArretDesOrganes", 1));
-		resources.Add ("KnowledgeResistance", new Knowledge (pays, "Resistance", 1));
-		resources.Add ("KnowledgeSpreading", new Knowledge (pays, "Spreading", 1));
+		resources.Add ("KnowledgeToux", new Knowledge (pays, "Toux", DonneeSouche.coutsSymptomes["Toux"]));
+		resources.Add ("KnowledgeEternuements", new Knowledge (pays, "Eternuements", DonneeSouche.coutsSymptomes["Eternuements"]));
+		resources.Add ("KnowledgeFievre", new Knowledge (pays, "Fievre", DonneeSouche.coutsSymptomes["Fievre"]));
+		resources.Add ("KnowledgeDiarrhee", new Knowledge (pays, "Diarrhee", DonneeSouche.coutsSymptomes["Diarrhee"]));
+		resources.Add ("KnowledgeSueurs", new Knowledge (pays, "Sueurs", DonneeSouche.coutsSymptomes["Sueurs"]));
+		resources.Add ("KnowledgeArretDesOrganes", new Knowledge (pays, "ArretDesOrganes", DonneeSouche.coutsSymptomes["ArretDesOrganes"]));
+		resources.Add ("KnowledgeResistance", new Knowledge (pays, "Resistance", 50));
+		resources.Add ("KnowledgeSpreading", new Knowledge (pays, "Spreading", 50));
 		resources.Add ("Transports", new RessourceTransports (pays));
 		resources.Add ("Loisirs", new RessourceLoisirs (pays));
 	}

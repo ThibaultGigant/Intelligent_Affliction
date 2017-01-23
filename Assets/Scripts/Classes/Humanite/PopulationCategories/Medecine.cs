@@ -75,8 +75,11 @@ public class Medecine : APopulationCategory
 			knowledge = (Knowledge) resource;
 
 			if (DonneeSouche.listSymptoms.Contains (knowledge.sujetKnowledge)) {
-				knowledgesFacteurDetection += knowledge.developpement * DonneeSouche.detectabilitySymptomes [knowledge.sujetKnowledge];
-				knowledgesFacteurSoin += knowledge.developpement / DonneeSouche.lethalitySymptomes [knowledge.sujetKnowledge];
+				if (population.country.souche != null && population.country.souche.symptoms.ContainsKey (knowledge.sujetKnowledge)) {
+					knowledgesFacteurDetection += knowledge.developpement * population.country.souche.symptoms [knowledge.sujetKnowledge].getDetectableIndex ();//DonneeSouche.detectabilitySymptomes [knowledge.sujetKnowledge];
+				
+					knowledgesFacteurSoin += knowledge.developpement / population.country.souche.symptoms [knowledge.sujetKnowledge].getLethalityIndex ();//DonneeSouche.lethalitySymptomes [knowledge.sujetKnowledge];
+				}
 			}
 			else {
 				knowledgesFacteurDetection += knowledge.developpement;
@@ -97,6 +100,11 @@ public class Medecine : APopulationCategory
 
 		infectesDecouverts.Enqueue (detectes);
 		soignes.Enqueue (soigne);
+		int i;
+		if (population.country.souche != null) 
+			i = (int)(population.country.souche.getNbInfected());
+		else
+			i = 0;
 	}
 
 	/**

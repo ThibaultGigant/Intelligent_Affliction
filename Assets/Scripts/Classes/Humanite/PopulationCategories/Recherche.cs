@@ -68,15 +68,17 @@ public class Recherche : APopulationCategory
 		 */
 
 		float ratioInfectes = (float) population.nbInfectedDetected / (float) population.totalPopulation;
-		int points = (int)((float) assignedPopulation / 7000f *  Mathf.Sqrt( population.country.indiceHI () )* (0.5f + ratioInfectes / 2f ));
+		int points = (int)((float) assignedPopulation * 0.003f *  Mathf.Sqrt( population.country.indiceHI () )* (0.5f + ratioInfectes / 2f ));
 
 		population.country.pointsRecherche += points;
 
 		float[] choixDeveloppement = new float[DonneeSouche.listSymptoms.Count];
 		float somme = 0f;
 		for ( int i = 0 ; i < DonneeSouche.listSymptoms.Count ; i++ ) {
-			choixDeveloppement[i] =  DonneeSouche.lethalitySymptomes[ DonneeSouche.listSymptoms[i]  ] / (1f + ((Knowledge) population.country.resources["Knowledge" + DonneeSouche.listSymptoms[i] ]).developpement);
-			somme += choixDeveloppement [i];
+			if (population.country.souche != null && population.country.souche.symptoms.ContainsKey (DonneeSouche.listSymptoms [i])) {
+				choixDeveloppement [i] = population.country.souche.symptoms [DonneeSouche.listSymptoms [i]].getDetectableIndex (); // (1f + ((Knowledge)population.country.resources ["Knowledge" + DonneeSouche.listSymptoms [i]]).developpement);
+				somme += choixDeveloppement [i];
+			}
 		}
 
 		int[] choixDeveloppementNorma = new int[DonneeSouche.listSymptoms.Count];
@@ -90,9 +92,11 @@ public class Recherche : APopulationCategory
 
 		float amelioration = 0f;
 		if (DonneeSouche.coutsSymptomes [symptomChoisi] <= population.country.pointsRecherche) {
-			amelioration = assignedPopulation / population.totalPopulation * DonneeSouche.detectabilitySymptomes[symptomChoisi];
-			((Knowledge)population.country.resources ["Knowledge" + symptomChoisi]).developpement += amelioration;
-			population.country.pointsRecherche -= DonneeSouche.coutsSymptomes [symptomChoisi];
+			if (population.country.souche != null && population.country.souche.symptoms.ContainsKey (symptomChoisi)) {
+				amelioration = assignedPopulation / population.totalPopulation * population.country.souche.symptoms [symptomChoisi].getDetectableIndex ();
+				((Knowledge)population.country.resources ["Knowledge" + symptomChoisi]).developpement += amelioration;
+				population.country.pointsRecherche -= DonneeSouche.coutsSymptomes [symptomChoisi];
+			}
 		}
 
 		productions.Enqueue (points);

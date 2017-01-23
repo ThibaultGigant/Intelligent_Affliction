@@ -4,7 +4,7 @@ using System.Collections;
 public class RessourceTransports : Ressource {
 
 	public RessourceTransports(Pays pays) : base(pays) {
-		nom = "RessourceTransports";
+		nom = "Transports";
 	}
 
 	/**
@@ -27,8 +27,13 @@ public class RessourceTransports : Ressource {
 	 */
 	public override int receive(Ressource toReceive)
 	{
-		// TODO
-		return 0;
+		float moyenneQ = ((float)quantity + (float)toReceive.quantity) / 2f;
+
+		uint tmp = quantity;
+
+		quantity = (uint) Mathf.Max(quantity, Utils.tirageNormale (moyenneQ, (float)(tmp - toReceive.quantity) / 2f));
+
+		return (int)(quantity - tmp);
 	}
 
 	public override int consome (bool flag) {

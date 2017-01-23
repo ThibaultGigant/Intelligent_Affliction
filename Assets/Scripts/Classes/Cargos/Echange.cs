@@ -88,7 +88,21 @@ public class Echange {
 		cargo = GameObject.Instantiate(Parametres.prefabCargo, new Vector3(90f, 30f, -10f), Quaternion.identity);
 		cargo.GetComponentInChildren<Cargo> ();
 		Cargo c = cargo.GetComponentInChildren<Cargo>();
-		c.resources.Add (send.nom, send);
+
+
+
+		uint nbPersonnes = (uint)((float)(origin.population.categories["Inactifs"].assignedPopulation) * 0.01f * UnityEngine.Random.value);
+		uint nbInfected;
+		if (origin.souche == null)
+			nbInfected = 0;
+		else
+			nbInfected = (uint) ((float) nbPersonnes * (float) origin.souche.getNbInfected () / ((float) origin.population.totalPopulation)+1f);
+		uint nbInfectedTourists = (uint)((float)nbInfected * (UnityEngine.Random.value * 2f));
+		Dictionary<string, Ressource> ressources = new Dictionary<string, Ressource> ();
+		ressources [send.nom] = send;
+
+		c.setParameters (nbPersonnes , nbInfected, nbInfectedTourists, link, ressources, origin.souche);
+		//c.resources [send.nom] = send;
 		c.go ();
 	}
 }

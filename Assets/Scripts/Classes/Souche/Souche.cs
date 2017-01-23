@@ -143,17 +143,18 @@ public class Souche : MonoBehaviour {
 			}
 		}
 
-		if (index == 0)
+		if (index == 0) {
 			evolveTransmission (date);
-		else if (index == 1)
+		} else if (index == 1) {
 			evolveResistance (date);
-		else if (index == 2)
+		} else if (index == 2) {
 			evolveEvolutionSpeed (date);
-		else if (index == 3)
-			evolveLethality(date);
+		} else if (index == 3) {
+			evolveLethality (date);
+		}
 
 		// Ajout du gradient d'infection
-		this.historique.addInfectionGradient (date, this.getNbInfected () - this.historique.getPreviousNbInfected ());
+		this.historique.addInfectionGradient (date, (int) this.getNbInfected () - (int) this.historique.getPreviousNbInfected ());
 		this.historique.setPreviousNbInfected (this.getNbInfected ());
 	}
 
@@ -278,7 +279,11 @@ public class Souche : MonoBehaviour {
 	private void evolveTransmission(DateTime date)
 	{
 		DateTime d = historique.lastBestEvolutionTransmissionDate();
-		string s = this.historique.getCorrespondingProperty (d);
+		string s;
+		if (d.Equals (DateTime.MinValue))
+			s = DonneeSouche.listTransmissionSkills [UnityEngine.Random.Range (0, DonneeSouche.listTransmissionSkills.Count - 1)];
+		else
+			s = this.historique.getCorrespondingProperty (d);
 
 		// Ajout de random, pour ne pas toujours faire la même chose
 		float r = UnityEngine.Random.value;
@@ -287,9 +292,6 @@ public class Souche : MonoBehaviour {
 			index = UnityEngine.Random.Range (0, DonneeSouche.listTransmissionSkills.Count - 1);
 			s = DonneeSouche.listTransmissionSkills [index];
 		}
-
-		if (s == null)
-			return;
 
 		// On veut faire évoluer la transmission de type s
 		if (evolutionPoints >= DonneeSouche.coutsSkills [s]) {
@@ -306,7 +308,11 @@ public class Souche : MonoBehaviour {
 	private void evolveResistance(DateTime date)
 	{
 		DateTime d = historique.lastBestEvolutionResistanceDate();
-		string s = this.historique.getCorrespondingProperty (d);
+		string s;
+		if (d.Equals (DateTime.MinValue))
+			s = DonneeSouche.listResistanceSkills [UnityEngine.Random.Range (0, DonneeSouche.listResistanceSkills.Count - 1)];
+		else
+			s = this.historique.getCorrespondingProperty (d);
 
 		// Ajout de random, pour ne pas toujours faire la même chose
 		float r = UnityEngine.Random.value;
@@ -347,9 +353,11 @@ public class Souche : MonoBehaviour {
 
 		// Dans le cas où une grande majorité de la population est infectée et qu'on a assez de points, on achève la population
 		if (pourc >= 90
-			&& !(this.symptoms.ContainsKey ("ArretDesOrganes"))
-			&& this.evolutionPoints >= DonneeSouche.coutsSymptomes ["ArretDesOrganes"]) {
-			this.symptoms.Add("ArretDesOrganes", new ArretDesOrganes());
+		    && !(this.symptoms.ContainsKey ("ArretDesOrganes"))
+			&& this.historique.lastInfectionGradient ().Value >= 0){
+			if (this.evolutionPoints >= DonneeSouche.coutsSymptomes ["ArretDesOrganes"]) {
+				this.symptoms.Add ("ArretDesOrganes", new ArretDesOrganes ());
+			}
 			return;
 		}
 
@@ -523,7 +531,7 @@ public class Souche : MonoBehaviour {
 	{
 		/* Contamination */
 		///////////////////
-		float pourc = this.getNbInfected () / this.country.getNbPopulation ();
+		float pourc = (float) this.getNbInfected () / (float) this.country.getNbPopulation ();
 		float skillsSum = 0f;
 		foreach (string s in DonneeSouche.listTransmissionSkills) {
 			skillsSum += this.skills.getSkillValue (s);
@@ -548,15 +556,17 @@ public class Souche : MonoBehaviour {
 		foreach (KeyValuePair<string, AbstractSymptom> pair in this.symptoms) {
 			killSum += Mathf.Max(pair.Value.getLethalityIndex (), 0);
 		}
-		killSum /= 100;
+		killSum /= 100f;
 
 		uint toKill;
 		if (UnityEngine.Random.value > DonneeSouche.epsilonGreedyFactor)
-			toKill = (uint) Mathf.FloorToInt (this.nbInfected * skillsSum);
+			toKill = (uint) Mathf.FloorToInt (this.nbInfected * killSum);
 		else
-			toKill = (uint) Mathf.CeilToInt (this.nbInfected * skillsSum);
-		this.removeInfectedPeople (toKill);
-		this.country.removePeople (toKill);
+			toKill = (uint) Mathf.CeilToInt (this.nbInfected * killSum);
+		if (toKill != 0) {
+			this.removeInfectedPeople (toKill);
+			this.country.removePeople (toKill);
+		}
 
 	}
 

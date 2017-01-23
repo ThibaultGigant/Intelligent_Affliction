@@ -104,17 +104,15 @@ public class Population {
 
 	/**
 	 * Nombre de naissances "fixe" en fonction de la taille de la population. 1.2% de leur nombre par année
-	 * Appel de la fonction tous les mois (TODO : ?) (d'où la division par douze)
 	 */
 	public uint naissances() {
-		uint nbNaissances = (uint) Mathf.Max(0, Mathf.FloorToInt(0.0012f * totalPopulation / 12f)); // TODO : Max ? On n'est jamais < 0, si ?
+		uint nbNaissances = (uint) Mathf.Max(0, Mathf.FloorToInt(0.0012f * totalPopulation / 12f));
 		addPeople (nbNaissances);
 		return nbNaissances;
 	}
 
 	/**
 	 * Nombre de décès "fixe" en fonction de la taille de la population. 0.9% de leur nombre par année
-	 * Appel de la fonction tous les mois (TODO : ?) (d'où la division par douze)
 	 */
 	public uint deces() {
 		uint nbDeces = (uint) Mathf.Max(0, Mathf.FloorToInt(0.009f * totalPopulation / 12f));

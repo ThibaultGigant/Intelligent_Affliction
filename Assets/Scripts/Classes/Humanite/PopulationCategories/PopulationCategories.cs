@@ -89,7 +89,7 @@ public class PopulationCategories
 	 * @return Le nombre de personne ayant changé de catégorie
 	 */
 	public int reorganizePopulationCategoriesAuto() {
-		if (population.country.indiceHI () > 0.8)
+		if (population.country.indiceHI () > 0.6)
 			return 0;
 		/**
 		 * • minBesoins		: Valeur minimale parmi les besoins de chaque catégorie
@@ -128,7 +128,7 @@ public class PopulationCategories
 			// Récupération des besoin de la catégorie
 			besoin = cate.besoins ();
 
-			if (Mathf.Abs (besoin) < 0.2f)
+			if (Mathf.Abs (besoin) < 0.4f)
 				continue;
 
 			// Garde en mémoire les besoins et la catégorie associée,
@@ -294,7 +294,6 @@ public class PopulationCategories
 				foreach (APopulationCategory prenant in positifKeys) {
 					if (echangesToleresPositif [prenant] > 0) {
 						echangeEffectif = Mathf.Min (echangesToleresPositif [prenant], echangesToleresNegatif [donnant]);
-						Debug.Log ("Timon Pop Cate Reorga " + echangeEffectif);
 						prenant.addAssigned (echangeEffectif);
 						donnant.removeAssigned (echangeEffectif);
 						echangesToleresPositif [prenant] -= echangeEffectif;
@@ -311,7 +310,6 @@ public class PopulationCategories
 				foreach ( APopulationCategory donnant in negatifKeys ) {
 					if (echangesToleresNegatif [donnant] > 0) {
 						echangeEffectif = Mathf.Min (echangesToleresNegatif [prenant], echangesToleresPositif [donnant]);
-						Debug.Log ("Timon Pop Cate Reorga " + echangeEffectif);
 						prenant.addAssigned (echangeEffectif);
 						donnant.removeAssigned (echangeEffectif);
 						echangesToleresNegatif [prenant] -= echangeEffectif;

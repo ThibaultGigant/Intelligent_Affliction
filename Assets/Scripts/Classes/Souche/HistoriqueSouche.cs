@@ -36,7 +36,7 @@ public class HistoriqueSouche
 	/**
 	 * Gradient d'infection des dernières itérations
 	 */
-	private LimitedList< KeyValuePair<DateTime, uint> > infectionGradient;
+	private LimitedList< KeyValuePair<DateTime, int> > infectionGradient;
 
 
 	/**
@@ -62,7 +62,7 @@ public class HistoriqueSouche
 
 		this.datesEvolutionEvolutionSpeed = new List<DateTime> ();
 
-		this.infectionGradient = new LimitedList< KeyValuePair<DateTime, uint> > (1000);
+		this.infectionGradient = new LimitedList< KeyValuePair<DateTime, int> > (1000);
 	}
 
 	/**
@@ -153,10 +153,10 @@ public class HistoriqueSouche
 	 * Date et Gradient d'infection du dernier recueil gradient d'infection
 	 * @return Dernier gradient d'infection
 	 */
-	public KeyValuePair<DateTime, uint> lastInfectionGradient()
+	public KeyValuePair<DateTime, int> lastInfectionGradient()
 	{
 		if (infectionGradient.Count == 0)
-			return new KeyValuePair<DateTime, uint> (DateTime.MinValue, 0);
+			return new KeyValuePair<DateTime, int> (DateTime.MinValue, 0);
 		return infectionGradient [infectionGradient.Count - 1];
 	}
 
@@ -180,7 +180,7 @@ public class HistoriqueSouche
 		if (index == infectionGradient.Count)
 			return 0f;
 		
-		uint depart = infectionGradient [index].Value;
+		int depart = infectionGradient [index].Value;
 		int lastIndex = Mathf.Min (index + 10, infectionGradient.Count - 1);
 		return infectionGradient [lastIndex].Value / (float) depart;
 	}
@@ -326,9 +326,9 @@ public class HistoriqueSouche
 	 * @param date Date d'ajout
 	 * @param gradient Gradient d'infection à ajouter
 	 */
-	public void addInfectionGradient (DateTime date, uint gradient)
+	public void addInfectionGradient (DateTime date, int gradient)
 	{
-		this.infectionGradient.Add (new KeyValuePair<DateTime, uint>(date, gradient));
+		this.infectionGradient.Add (new KeyValuePair<DateTime, int>(date, gradient));
 	}
 }
 

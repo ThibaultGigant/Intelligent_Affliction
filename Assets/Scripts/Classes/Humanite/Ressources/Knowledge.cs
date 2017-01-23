@@ -22,7 +22,7 @@ public class Knowledge : Ressource {
 		sujetKnowledge = sujet;
 		coutDeRecherche = cout;
 		developpement = 0;
-		nom = sujet;
+		nom = "Knowledge" + sujet;
 	}
 
 	/**
@@ -43,10 +43,19 @@ public class Knowledge : Ressource {
 	 * @param toReceive Ressource que l'on reçoit
 	 * @return Nombre de ressources reçu
 	 */
-	public override int receive(Ressource toReceive)
+	public override int receive(Ressource toReceiv)
 	{
-		// TODO
-		return 0;
+		Knowledge toReceive = (Knowledge) toReceiv;
+
+		uint tmp = quantity;
+
+		float moyenneQ = ((float)quantity + (float)toReceive.quantity) / 2f;
+		float moyenneD = ((float)developpement + (float)toReceive.developpement) / 2f;
+
+		developpement = Mathf.Max(developpement, Utils.tirageNormale (moyenneD, (float)(developpement - toReceive.developpement) / 2f));
+		quantity = (uint) Mathf.Max(quantity, Utils.tirageNormale (moyenneQ, (float)(tmp - toReceive.quantity) / 2f));
+
+		return (int)(quantity - tmp);
 	}
 
 	public override int consome (bool flag) {

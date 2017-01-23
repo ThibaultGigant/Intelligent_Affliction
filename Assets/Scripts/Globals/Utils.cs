@@ -39,6 +39,10 @@ public static class Utils
 		return liste.Count - 1;
 	}
 
+	public static int tirageNormale( float mu, float sigma ) {
+		return (int)(1f / (sigma * Mathf.Sqrt (2f * Mathf.PI)) * Mathf.Exp (-((UnityEngine.Random.value-0.5f) * 6 * sigma - mu) / (2f * Mathf.Pow (sigma, 2f))));
+	}
+
 	public static Couple<float, float> moyenneVariance(uint[] liste) {
 		float moy = 0, var = 0;
 
