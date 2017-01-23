@@ -29,7 +29,10 @@ public class Smiley : MonoBehaviour
 	 * @param valeur Valeur à fournir, entre 0 (mauvais) et 100 (bon)
 	 */
 	public void setSmiley(float valeur) {
+		Debug.Log ("Smiley " + valeur);
 		int smileyIndice = (int)(valeur * smileys.Length / 100f);
+
+		smileyIndice = Mathf.Min (smileyIndice, smileys.Length - 1);
 
 		for  ( int i = 0 ; i < smileys.Length ; i++ ) {
 			smileys [i].SetActive (false);

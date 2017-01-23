@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class Souche : MonoBehaviour{
+public class Souche : MonoBehaviour {
 	/**
 	 * Pays que la souche a infecté
 	 */
@@ -47,8 +47,7 @@ public class Souche : MonoBehaviour{
 	/**
 	 * Constructeur
 	 */
-	public Souche(Pays pays) {
-		country = pays;
+	public Souche() {
 		symptoms = new Dictionary<string, AbstractSymptom> ();
 		skills = new Skills (this);
 		historique = new HistoriqueSouche ();
@@ -288,6 +287,9 @@ public class Souche : MonoBehaviour{
 			index = UnityEngine.Random.Range (0, DonneeSouche.listTransmissionSkills.Count - 1);
 			s = DonneeSouche.listTransmissionSkills [index];
 		}
+
+		if (s == null)
+			return;
 
 		// On veut faire évoluer la transmission de type s
 		if (evolutionPoints >= DonneeSouche.coutsSkills [s]) {

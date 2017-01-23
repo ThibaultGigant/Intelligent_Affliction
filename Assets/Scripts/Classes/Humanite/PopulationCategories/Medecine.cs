@@ -30,6 +30,9 @@ public class Medecine : APopulationCategory
 	 */
 	public override void produce () {
 
+		if (assignedPopulation == 0)
+			return;
+
 		if (population.country.souche == null) {
 			infectesDecouverts.Enqueue (0);
 			soignes.Enqueue (0);
@@ -59,7 +62,7 @@ public class Medecine : APopulationCategory
 		 * 							* [Facteur de connaissances] * [nombre de médecins]
 		 */
 
-		float ratioInfectedPopulation = population.nbInfectedDetected / population.totalPopulation;
+		float ratioInfectedPopulation = population.nbInfectedDetected / (population.totalPopulation + 1);
 
 		float knowledgesFacteurDetection = 0f;
 		float knowledgesFacteurSoin = 0f;
@@ -71,15 +74,22 @@ public class Medecine : APopulationCategory
 				continue;
 			knowledge = (Knowledge) resource;
 
-			knowledgesFacteurDetection 	+= knowledge.developpement * DonneeSouche.detectabilitySymptomes[knowledge.sujetKnowledge];
-			knowledgesFacteurSoin		+= knowledge.developpement / DonneeSouche.lethalitySymptomes[knowledge.sujetKnowledge];
+			if (DonneeSouche.listSymptoms.Contains (knowledge.sujetKnowledge)) {
+				knowledgesFacteurDetection += knowledge.developpement * DonneeSouche.detectabilitySymptomes [knowledge.sujetKnowledge];
+				knowledgesFacteurSoin += knowledge.developpement / DonneeSouche.lethalitySymptomes [knowledge.sujetKnowledge];
+			}
+			else {
+				knowledgesFacteurDetection += knowledge.developpement;
+				knowledgesFacteurSoin += knowledge.developpement;
+			}
+			
 		}
 
 		int soigne = (int) (assignedPopulation * ratioInfectedPopulation * knowledgesFacteurDetection / 20f);
 
 		int detectes;
 		detectes = (int)(((float) (population.country.souche.getNbInfected() - population.nbInfectedDetected) * knowledgesFacteurDetection) /
-			(float) population.totalPopulation * (float) assignedPopulation);
+			Mathf.Pow((float) population.totalPopulation,2f) * (float) assignedPopulation);
 
 		population.nbInfectedDetected += (uint) detectes;
 		population.nbInfectedDetected -= (uint) soigne;
@@ -124,7 +134,7 @@ public class Medecine : APopulationCategory
 		 * • Pondéré par le ratio entre le nombre d'infectés et la population totale
 		 * • • 1 + [nombre d'infectés détectés] / [population totale] * 3 (=> pour presser les médecins)
 		 */
-		return (int) (moyenneNouveauxInfectes () * ( 1f + (population.nbInfectedDetected / population.totalPopulation) * 3f ));
+		return (int) (moyenneNouveauxInfectes () * ( 1f + (population.nbInfectedDetected / (population.totalPopulation + 1)) * 3f ));
 	}
 
 	public float moyenneSoignes() {

@@ -43,6 +43,7 @@ public class Link
 		this.originCountry = origin;
 		this.destinationCountry = dest;
 		this.type = type;
+		this.taille = 100;
 	}
 }
 

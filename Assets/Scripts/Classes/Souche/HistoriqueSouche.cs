@@ -197,6 +197,8 @@ public class HistoriqueSouche
 		List<DateTime> liste;
 		foreach (string s in DonneeSouche.listTransmissionSkills) {
 			liste = datesEvolutionTransmission [s];
+			if (liste.Count <= 0)
+				continue;
 			temp = followingInfectionGradient (liste [liste.Count - 1]);
 			if (bestImprovement <= temp) {
 				res = liste [liste.Count - 1];
@@ -218,6 +220,8 @@ public class HistoriqueSouche
 		List<DateTime> liste;
 		foreach (string s in DonneeSouche.listResistanceSkills) {
 			liste = datesEvolutionResistance [s];
+			if (liste.Count <= 0)
+				continue;
 			temp = followingInfectionGradient (liste [liste.Count - 1]);
 			if (bestImprovement <= temp) {
 				res = liste [liste.Count - 1];
@@ -239,6 +243,8 @@ public class HistoriqueSouche
 		List<DateTime> liste;
 		foreach (string s in DonneeSouche.listSymptoms) {
 			liste = datesEvolutionSymptoms [s];
+			if (liste.Count <= 0)
+				continue;
 			temp = followingInfectionGradient (liste [liste.Count - 1]);
 			if (bestImprovement <= temp) {
 				res = liste [liste.Count - 1];

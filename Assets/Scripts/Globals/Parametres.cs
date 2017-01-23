@@ -25,6 +25,10 @@ public class Parametres {
 
 	public static bool switchPays = false;
 
+	public static uint nbInfectedInitial = 100;
+
+	public static GameObject prefabCargo;
+
 	public static void setSimuSpeed(int speed) {
 		simuSpeed = speed;
 	}
@@ -46,7 +50,7 @@ public class Parametres {
 	 * Seuil à partir duquel, on estime qu'il faut demander de l'aide à d'autre pays
 	 * pour nous aider dans une des catégories
 	 */
-	public static float seuilDAppelALAide = 0.5f;
+	public static float seuilDAppelALAide = 0.2f;
 
 	/**
 	 * earth : La Terre

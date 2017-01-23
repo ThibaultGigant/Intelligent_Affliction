@@ -4,6 +4,8 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+	public GameObject prefabCargo;
+
 	public RawImage menuPrincipal;
 	public GameObject earth;
 	public GameObject miniEarth;
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour {
 		resizeMenuPrincipal ();
 		Parametres.earth = earth;
 		Parametres.miniEarth = miniEarth;
+		Parametres.prefabCargo = prefabCargo;
 		earth.SetActive (true);
 		paysManager = Parametres.earth.GetComponentInChildren<PaysManager> ();
 	}

@@ -22,6 +22,7 @@ public class Knowledge : Ressource {
 		sujetKnowledge = sujet;
 		coutDeRecherche = cout;
 		developpement = 0;
+		nom = sujet;
 	}
 
 	/**

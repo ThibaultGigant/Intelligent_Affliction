@@ -3,7 +3,9 @@ using System.Collections;
 
 public class RessourceLoisirs : Ressource {
 
-	public RessourceLoisirs(Pays pays) : base(pays) {}
+	public RessourceLoisirs(Pays pays) : base(pays) {
+		nom = "RessourceLoisirs";
+	}
 
 	/**
 	 * Effectue l'envoi de la ressource à un autre pays.

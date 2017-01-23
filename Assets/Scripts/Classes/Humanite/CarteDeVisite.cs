@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 public class CarteDeVisite
 {
@@ -29,11 +30,11 @@ public class CarteDeVisite
 	}
 
 	public void addRessource(Ressource ressource) {
-		ressources.resources.Add (ressource.nom, ressource);
+		ressources.resources[ressource.nom] = ressource;
 	}
 
 	public void addRessourceDemandee(Ressource ressource) {
-		ressourcesDemandees.resources.Add (ressource.nom, ressource);
+		ressourcesDemandees.resources [ressource.nom] = ressource;
 	}
 
 }

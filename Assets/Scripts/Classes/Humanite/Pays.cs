@@ -115,11 +115,14 @@ public class Pays : MonoBehaviour
 		 * • Consomation des ressources
 		 */
 		if (ClockManager.newDay) {
-			Debug.Log ("Pays Update" + population.categories);
 			population.categories.produce ();
 			resources.consome ();
 			population.reorganizePopulationCategories ();
 			population.updateHappiness ();
+			appelPays ();
+		}
+		if (ClockManager.newMonth) {
+			appelPays ();
 		}
 
 		/*
@@ -405,10 +408,13 @@ public class Pays : MonoBehaviour
 	 * 
 	 * Cette méthode ne devrait être appelée que lors du démarrage de l'application,
 	 * sur le pays qui démarrera avec la maladie
+	 * @param nbInfected Nombre d'infectés arrivant avec cette souche
 	 */
-	public void createSouche()
+	public void createSouche(uint nbInfected)
 	{
-		this.souche = new Souche (this);
+		this.souche = gameObject.AddComponent<Souche> ();
+		this.souche.country = this;
+		this.souche.setNbInfected(nbInfected);
 	}
 
 	/**
@@ -420,7 +426,8 @@ public class Pays : MonoBehaviour
 	 */
 	public void createSouche(Souche souche, uint nbInfected)
 	{
-		this.souche = new Souche (this);
+		this.souche = gameObject.AddComponent<Souche> ();
+		this.souche.country = this;
 
 		// Récupération des capacités
 		this.souche.skills.setWaterSpreading (souche.skills.getWaterSpreading ());
@@ -445,7 +452,7 @@ public class Pays : MonoBehaviour
 	 */
 	public void exchangeResources()
 	{
-		
+		//foreach (Echa)
 	}
 
 	public void applyPlayerOrders()
@@ -556,6 +563,9 @@ public class Pays : MonoBehaviour
 		CarteDeVisite msg = messages [0];
 		messages.RemoveAt (0);
 
+		if (!paysNonLies.Contains (msg.pays))
+			return;
+
 		float besoin;
 
 		APopulationCategory cate = null;
@@ -625,7 +635,7 @@ public class Pays : MonoBehaviour
 	}
 
 	public void createLink(Pays paysOne, Pays paysTwo, Echange echange, bool flag) {
-		echangeSet.echanges.Add (echange);
+		echangeSet.echanges[paysTwo][echange.ressourceRecu] = echange;
 		paysNonLies.Remove (paysTwo);
 		if (flag)
 			paysTwo.createLink (paysTwo, paysOne, echange, false);

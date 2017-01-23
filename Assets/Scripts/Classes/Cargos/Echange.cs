@@ -39,6 +39,8 @@ public class Echange {
 	 */
 	public LimitedQueue<uint> historiqueReception;
 
+	private GameObject cargo;
+
 	/**
 	 * Change les paramètres du cargo
 	 */
@@ -73,5 +75,20 @@ public class Echange {
 			&& Mathf.Sqrt(moyVar.second) >  montant / 3.0) {
 			nbRessourceRecu = (uint) moyVar.first;
 		}
+	}
+
+	public void effectuerEchange() {
+		Pays origin = link.originCountry;
+		Ressource send = origin.resources [ressourceEnvoye].offre ();
+
+		send.quantity = (uint)Mathf.Min ((float)nbRessourceRecu, (float)send.quantity * 0.5f);
+
+		origin.resources [ressourceEnvoye].quantity -= send.quantity;
+
+		cargo = GameObject.Instantiate(Parametres.prefabCargo, new Vector3(90f, 30f, -10f), Quaternion.identity);
+		cargo.GetComponentInChildren<Cargo> ();
+		Cargo c = cargo.GetComponentInChildren<Cargo>();
+		c.resources.Add (send.nom, send);
+		c.go ();
 	}
 }

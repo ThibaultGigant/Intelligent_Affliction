@@ -13,6 +13,8 @@ public class PaysManager : MonoBehaviour {
 		foreach (Transform t in transform) {
 			t.gameObject.AddComponent <Pays> ();
 			liste.Add (t.gameObject.GetComponentInChildren<Pays> ());
+			if (t.name == "Afrique")
+				t.gameObject.GetComponentInChildren<Pays> ().createSouche (Parametres.nbInfectedInitial);
 		}
 		Pays p;
 		foreach (Transform t in transform) {

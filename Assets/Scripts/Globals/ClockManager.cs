@@ -18,6 +18,12 @@ public class ClockManager : MonoBehaviour
 	public static bool newDay = true;
 
 	/**
+	 * Booléen informant si durant la frame courrante, un nouveau mois démarre
+	 * true si c'est le cas, false sinon
+	 */
+	public static bool newMonth = true;
+
+	/**
 	 * Horloge. Compte le temps écoulé durant la journée
 	 * Dès quelle dépasse Parametres.timeOfADay,
 	 * une nouvelle journée démarre et on soustrait cette valeur à countTime
@@ -41,6 +47,8 @@ public class ClockManager : MonoBehaviour
 		// newDay doit rester à true durant seulement une frame pour chaque journée
 		if (newDay)
 			newDay = false;
+		if (newMonth)
+			newMonth = false;
 		
 		countTime += Parametres.getTimeSpeed ();
 		if (countTime >= Parametres.timeOfADay) {
@@ -48,6 +56,8 @@ public class ClockManager : MonoBehaviour
 			displayDate ();
 			countTime -= Parametres.timeOfADay;
 			newDay = true;
+			if (Parametres.date.Day == 1)
+				newMonth = true;
 		}
 	}
 

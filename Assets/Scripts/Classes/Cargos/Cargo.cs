@@ -38,6 +38,8 @@ public class Cargo : MonoBehaviour {
 	 */
 	public IDictionary<string, Ressource> resources;
 
+	private bool onGoing = false;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -45,7 +47,12 @@ public class Cargo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (ClockManager.newDay && onGoing) {
+			advancement++;
+			if (advancement == 5) {
+				dechargement();
+			}
+		}
 	}
 
 	/**
@@ -87,5 +94,9 @@ public class Cargo : MonoBehaviour {
 		country.addPeople(this.nbPersonnes);
 		country.addInfectedPeople (this.nbInfected);
 
+	}
+
+	public void go() {
+		onGoing = true;
 	}
 }
