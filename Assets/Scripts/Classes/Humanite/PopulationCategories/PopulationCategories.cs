@@ -309,11 +309,11 @@ public class PopulationCategories
 			foreach (APopulationCategory prenant in positifKeys ) {
 				foreach ( APopulationCategory donnant in negatifKeys ) {
 					if (echangesToleresNegatif [donnant] > 0) {
-						echangeEffectif = Mathf.Min (echangesToleresNegatif [prenant], echangesToleresPositif [donnant]);
+						echangeEffectif = Mathf.Min (echangesToleresNegatif [donnant], echangesToleresPositif [prenant]);
 						prenant.addAssigned (echangeEffectif);
 						donnant.removeAssigned (echangeEffectif);
-						echangesToleresNegatif [prenant] -= echangeEffectif;
-						echangesToleresPositif [donnant] -= echangeEffectif;
+						echangesToleresNegatif [donnant] -= echangeEffectif;
+						echangesToleresPositif [prenant] -= echangeEffectif;
 					}
 
 					if (echangesToleresPositif [prenant] <= 0)
