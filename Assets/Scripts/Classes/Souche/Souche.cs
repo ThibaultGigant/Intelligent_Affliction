@@ -63,6 +63,7 @@ public class Souche : MonoBehaviour {
 			this.produce ();
 			this.evolve ();
 			this.contamination ();
+			Debug.Log ("Souche : " + this.getNbInfected ());
 		}
 	}
 

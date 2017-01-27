@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -53,5 +54,19 @@ public class GameManager : MonoBehaviour {
 
 	private void resizeMenuPrincipal() {
 		menuPrincipal.rectTransform.sizeDelta = new Vector2(largeurMenuPrincipal, Parametres.hauteurMenuPrincipal);
+	}
+
+	public void Restart()
+	{
+		SceneManager.LoadScene ("Main");
+	}
+
+	public void Quitter()
+	{
+		#if UNITY_EDITOR
+		UnityEditor.EditorApplication.isPlaying = false;
+		#else
+		Application.Quit();
+		#endif
 	}
 }

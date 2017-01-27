@@ -13,9 +13,13 @@ public class PaysManager : MonoBehaviour {
 		foreach (Transform t in transform) {
 			t.gameObject.AddComponent <Pays> ();
 			liste.Add (t.gameObject.GetComponentInChildren<Pays> ());
-			if (t.name == "Afrique")
-				t.gameObject.GetComponentInChildren<Pays> ().createSouche (Parametres.nbInfectedInitial);
 		}
+
+		//int indice = (int)Mathf.Min (UnityEngine.Random.value * (liste.Count - 1), liste.Count - 1);
+		int indice = UnityEngine.Random.Range(0, liste.Count - 1);
+		Debug.Log (liste [indice].nomPays);
+		liste[indice].createSouche (Parametres.nbInfectedInitial);
+
 		Pays p;
 		foreach (Transform t in transform) {
 			p = t.gameObject.GetComponentInChildren<Pays> ();
